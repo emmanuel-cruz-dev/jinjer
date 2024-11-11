@@ -1,0 +1,15 @@
+// Variables de color
+$accent-color: #fe0000;
+$primary-color: #070a0d;
+$secondary-color: #cc0000; // por defecto, cambiar despues
+
+// Variables de fuente
+$font-family-primary: "Special Elite", system-ui;
+$font-family-roboto: "Roboto", sans-serif;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

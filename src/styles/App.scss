@@ -1,0 +1,113 @@
+@import "./_variables.scss";
+
+// Estilos globales
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //border: 1px solid red;
+}
+
+// Estilos globales
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-roboto;
+  background-color: $primary-color;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Logo
+.logo {
+  font-family: $font-family-primary;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+// Header
+.header__navbar li a {
+  font-size: 14px;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+// Botones
+
+// .btn-primary {
+//   background-color: $primary-color;
+//   color: white;
+//   padding: 0.5rem 1rem;
+//   border-radius: 4px;
+//   @include flex-center;
+
+//   &:hover {
+//     background-color: darken($primary-color, 10%);
+//   }
+// }
+
+// Footer
+.footer {
+  a {
+    transition: color 0.3s ease;
+
+    &:not(.social-icons):hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.footer__title {
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.posts {
+  h4 {
+    font-size: 18px;
+
+    a {
+      font-weight: 900;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.footer__list {
+  li {
+    padding: 0 10px; // ajusta el padding según sea necesario
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "|";
+      position: absolute;
+      right: -14px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    li:not(:last-child)::after {
+      content: "";
+    }
+  }
+}
