@@ -1,11 +1,11 @@
 import LanguageSwitch from "./LanguageSwitch";
-import { useTranslation } from "react-i18next";
+import BackImage from "../assets/images/bg1.jpg";
 
 const Hero = () => {
   return (
     <section>
       <div className="w-full h-full">
-        <img src="./src/assets/images/bg1.jpg" alt="" />
+        <img src={BackImage} alt="" />
       </div>
       <div className="hidden lg:block fixed top-24 right-6">
         <LanguageSwitch />
