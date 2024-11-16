@@ -4,12 +4,12 @@ import CardImg from "../assets/images/blog03.jpg";
 const LatestNews = () => {
   return (
     <section className="latest-news bg-background py-16" id="latest-news">
-      <article className="flex flex-col justify-center items-center">
-        <div className="text-center">
-          <h2 className="logo text-3xl">
+      <article className="flex flex-col justify-center items-center gap-16">
+        <div className="text-center flex flex-col gap-4">
+          <h2 className="logo text-5xl">
             Latest N<span>ew</span>s
           </h2>
-          <p>
+          <p className="text-lg">
             The latest N3 news is up to events in our concerts here! Welcome to
             the N3 World!
           </p>
@@ -106,10 +106,10 @@ const LatestNews = () => {
             </div>
           </div>
           <div className="flex gap-4">
-            <span className="material-symbols-outlined flex justify-center items-center p-3 font-bold border-2 border-cyan-50">
+            <span className="material-symbols-outlined flex justify-center items-center p-2 px-3 text-lg font-bold border-2 border-cyan-50">
               arrow_back_ios
             </span>
-            <span className="material-symbols-outlined flex justify-center items-center p-3 font-bold border-2 border-cyan-50">
+            <span className="material-symbols-outlined flex justify-center items-center p-2 px-3 text-lg font-bold border-2 border-cyan-50">
               arrow_forward_ios
             </span>
           </div>
