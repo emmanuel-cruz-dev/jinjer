@@ -17,6 +17,7 @@ html {
 body {
   font-family: $font-family-roboto;
   background-color: $primary-color;
+  overflow-x: hidden;
 }
 
 li {
@@ -26,6 +27,45 @@ li {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+// Loader
+.loader__container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary-color;
+  z-index: 1000;
+  animation: fadeOut 0.6s ease forwards 4s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.loader {
+  img {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    animation: fade 1.3s linear infinite alternate;
+  }
+}
+
+@keyframes fade {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
 }
 
 // Logo
@@ -42,6 +82,23 @@ a {
   &:hover {
     color: #fff;
   }
+}
+
+// Hero
+.hero__container {
+  background-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    /* Degradado que oscurece hacia los bordes */
+      url("../assets/images/bg1.jpg");
+  // background-image: url("../assets/images/bg1.jpg");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 140vh;
 }
 
 // Botones
@@ -74,6 +131,19 @@ a {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.footer__nephews-logo {
+  animation: rotate 20s linear infinite 10s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .posts {

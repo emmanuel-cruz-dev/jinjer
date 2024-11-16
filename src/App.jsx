@@ -1,5 +1,5 @@
 import "./styles/App.scss";
-import "./styles/App.scss";
+import Loader from "./components/Loader";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import "./i18n/i18n";
@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <I18nextProvider i18n={i18n}>
+      {/* <Loader /> */}
       <Header />
       <Hero />
       <Footer />
