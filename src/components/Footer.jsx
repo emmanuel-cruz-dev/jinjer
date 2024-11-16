@@ -66,7 +66,7 @@ const Footer = () => {
             <ul>
               <li>
                 <a
-                  href="https://www.metallica.com/help.html"
+                  href="https://www.metallica.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
