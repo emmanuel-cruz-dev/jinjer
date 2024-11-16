@@ -15,7 +15,7 @@ const LatestNews = () => {
           </p>
         </div>
         <div className="flex flex-col justify-center items-center gap-8">
-          <div className="latest-news__cards-container flex justify-center items-center gap-8">
+          <div className="latest-news__cards-container flex flex-col flex-wrap lg:flex-row justify-center items-center gap-8">
             {/* Card 1 */}
             <div className="latest-news__card flex flex-col w-[22rem] gap-3">
               <a href="#">
