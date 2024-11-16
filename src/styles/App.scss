@@ -29,6 +29,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 // Loader
 .loader__container {
   position: fixed;
@@ -73,6 +78,9 @@ a {
   font-family: $font-family-primary;
   text-transform: uppercase;
   padding: 0;
+  span {
+    color: $accent-color;
+  }
 }
 
 // Header
@@ -91,16 +99,40 @@ a {
       rgba(0, 0, 0, 0.4) 40%,
       rgba(0, 0, 0, 1) 100%
     ),
-    /* Degradado que oscurece hacia los bordes */
-      url("../assets/images/bg1.jpg");
-  // background-image: url("../assets/images/bg1.jpg");
-  background-size: auto;
+    radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%),
+    url("../assets/images/bg1.jpg");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 140vh;
+  height: 62vh;
 }
 
+@media (min-width: 640px) {
+  .hero__container {
+    height: 90vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__container {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__container {
+    height: 130vh;
+  }
+}
+
+.hero__title {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url("../assets/images/gradient.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 // Botones
 
 // .btn-primary {

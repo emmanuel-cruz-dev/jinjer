@@ -6,6 +6,7 @@ import "./i18n/i18n";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n/i18n";
 import Footer from "./components/Footer";
+import LatestNews from "./components/LatestNews";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       {/* <Loader /> */}
       <Header />
       <Hero />
+      <LatestNews />
       <Footer />
     </I18nextProvider>
   );

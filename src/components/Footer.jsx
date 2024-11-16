@@ -5,7 +5,7 @@ import CDCover from "../assets/images/blog-masonry-image-5.jpg";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-primary">
+    <footer className="footer bg-footer">
       <article className="flex flex-col lg:flex-row gap-10 justify-between items-center px-20 py-16 border-b border-gray-600">
         <div className="flex flex-col items-center gap-7">
           <div className="flex flex-col items-center gap-2 w-44">
@@ -127,6 +127,7 @@ const Footer = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
+            title="Emmanuel Cruz's Portfolio"
             href="https://emmanuel-cruz.netlify.app/"
           >
             Emmanuel
