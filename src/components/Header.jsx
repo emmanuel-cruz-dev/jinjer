@@ -9,15 +9,16 @@ const Header = () => {
   const { t } = useTranslation();
 
   const toggleMenu = () => {
-    console.log("click");
-
     setIsMenuOpen(!isMenuOpen);
   };
 
   useEffect(() => {
+    const viewporWidth = document.documentElement.clientWidth;
     const handleScroll = () => {
       const heroHeight = document.getElementById("hero").offsetHeight;
-      if (window.scrollY > heroHeight) setIsScrolled(true);
+
+      if (window.scrollY > heroHeight || viewporWidth < 624)
+        setIsScrolled(true);
       else setIsScrolled(false);
     };
 
