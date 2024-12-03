@@ -5,27 +5,33 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      home: "Home",
-      news: "News",
-      about: "About",
-      tour: "Tour",
-      albums: "Albums",
-      media: "Media",
-      store: "Store",
-      follow: "Follow",
+      navbar: {
+        home: "Home",
+        news: "News",
+        about: "About",
+        tour: "Tour",
+        albums: "Albums",
+        media: "Media",
+        store: "Store",
+        follow: "Follow",
+        contact: "Contact",
+      },
       // ... más traducciones
     },
   },
   es: {
     translation: {
-      home: "Inicio",
-      news: "Noticias",
-      about: "Nosotros",
-      tour: "Gira",
-      albums: "Álbumes",
-      media: "Multimedia",
-      store: "Tienda",
-      follow: "Redes",
+      navbar: {
+        home: "Inicio",
+        news: "Noticias",
+        about: "Nosotros",
+        tour: "Gira",
+        albums: "Álbumes",
+        media: "Multimedia",
+        store: "Tienda",
+        follow: "Redes",
+        contact: "Contacto",
+      },
       // ... más traducciones
     },
   },

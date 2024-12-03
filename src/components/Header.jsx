@@ -51,57 +51,57 @@ const Header = () => {
         >
           <li>
             <a href="#" onClick={() => toggleMenu()}>
-              {t("home")}
+              {t("navbar.home")}
             </a>
           </li>
           <li>
             <a href="#latest-news" onClick={() => toggleMenu()}>
-              {t("news")}
+              {t("navbar.news")}
             </a>
           </li>
           <li>
             <a href="#" onClick={() => toggleMenu()}>
-              {t("about")}
+              {t("navbar.about")}
             </a>
           </li>
           <li>
             <a href="#" onClick={() => toggleMenu()}>
-              {t("tour")}
+              {t("navbar.tour")}
             </a>
           </li>
           <li>
             <a href="#" onClick={() => toggleMenu()}>
-              {t("albums")}
+              {t("navbar.albums")}
             </a>
           </li>
           <li>
             <a href="#" onClick={() => toggleMenu()}>
-              {t("media")}
+              {t("navbar.media")}
             </a>
           </li>
           <li>
             <a href="#" onClick={() => toggleMenu()}>
-              {t("store")}
+              {t("navbar.store")}
             </a>
           </li>
           <li>
             <a href="#" onClick={() => toggleMenu()}>
-              {t("contact")}
+              {t("navbar.contact")}
             </a>
           </li>
         </ul>
         <ul className="gap-6 hidden lg:flex">
           <li>
-            <a href="#">{t("home")}</a>
+            <a href="#">{t("navbar.home")}</a>
           </li>
           <li>
-            <a href="#latest-news">{t("news")}</a>
+            <a href="#latest-news">{t("navbar.news")}</a>
           </li>
           <li>
-            <a href="">{t("about")}</a>
+            <a href="">{t("navbar.about")}</a>
           </li>
           <li>
-            <a href="">{t("tour")}</a>
+            <a href="">{t("navbar.tour")}</a>
           </li>
         </ul>
 
@@ -114,16 +114,16 @@ const Header = () => {
 
         <ul className="gap-6 hidden lg:flex">
           <li>
-            <a href="">{t("albums")}</a>
+            <a href="">{t("navbar.albums")}</a>
           </li>
           <li>
-            <a href="">{t("media")}</a>
+            <a href="">{t("navbar.media")}</a>
           </li>
           <li>
-            <a href="">{t("store")}</a>
+            <a href="">{t("navbar.store")}</a>
           </li>
           <li>
-            <a href="">{t("follow")}</a>
+            <a href="">{t("navbar.follow")}</a>
           </li>
         </ul>
 
