@@ -3,7 +3,10 @@ import CardImg from "../assets/images/blog03.jpg";
 
 const LatestNews = () => {
   return (
-    <section className="latest-news bg-background py-16" id="latest-news">
+    <section
+      className="scroll-top-margin latest-news bg-background py-16"
+      id="latest-news"
+    >
       <article className="flex flex-col justify-center items-center gap-16">
         <div className="text-center flex flex-col gap-4">
           <h2 className="logo text-5xl">
@@ -42,7 +45,7 @@ const LatestNews = () => {
               >
                 Read more
               </a>
-              <time className="text-sm uppercase" datetime="2018-01-16">
+              <time className="text-sm uppercase" dateTime="2018-01-16">
                 16 Jan 2018
               </time>
             </div>
@@ -71,7 +74,7 @@ const LatestNews = () => {
               >
                 Read more
               </a>
-              <time className="text-sm uppercase" datetime="2018-01-16">
+              <time className="text-sm uppercase" dateTime="2018-01-16">
                 16 Jan 2018
               </time>
             </div>
@@ -100,7 +103,7 @@ const LatestNews = () => {
               >
                 Read more
               </a>
-              <time className="text-sm uppercase" datetime="2018-01-16">
+              <time className="text-sm uppercase" dateTime="2018-01-16">
                 16 Jan 2018
               </time>
             </div>
