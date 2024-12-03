@@ -42,13 +42,7 @@ const Header = () => {
           {isMenuOpen ? "close" : "menu"}
         </span>
 
-        <ul
-          className={`${
-            isMenuOpen
-              ? "flex absolute top-16 left-0 right-0 flex-col items-center gap-6 py-6 bg-black"
-              : "hidden"
-          }`}
-        >
+        <ul className={`header__menu-list ${isMenuOpen ? "active" : "hidden"}`}>
           <li>
             <a href="#" onClick={() => toggleMenu()}>
               {t("navbar.home")}
