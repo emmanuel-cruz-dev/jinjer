@@ -73,7 +73,6 @@ const Header = () => {
         >
           {isMenuOpen ? "close" : "menu"}
         </span>
-
         <span
           onClick={() => toggleLatestAlbum()}
           className="material-symbols-outlined hidden text-3xl lg:block cursor-pointer"
@@ -123,6 +122,7 @@ const Header = () => {
             </a>
           </li>
         </ul>
+
         <ul className="gap-6 hidden lg:flex">
           <li>
             <a href="#">{t("navbar.home")}</a>
@@ -137,14 +137,12 @@ const Header = () => {
             <a href="">{t("navbar.tour")}</a>
           </li>
         </ul>
-
         <a
           className="text-3xl lg:text-5xl opacity-80 hover:opacity-100 transition-opacity duration-300 ease-in-out"
           href="#"
         >
           <Name />
         </a>
-
         <ul className="gap-6 hidden lg:flex">
           <li>
             <a href="">{t("navbar.albums")}</a>
@@ -159,7 +157,6 @@ const Header = () => {
             <a href="">{t("navbar.follow")}</a>
           </li>
         </ul>
-
         <div>
           <LanguageSwitch />
         </div>
