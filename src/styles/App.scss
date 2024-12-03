@@ -38,7 +38,7 @@ img {
 }
 
 .scroll-top-margin {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 4rem;
 }
 
 // --- Fin: Estilos globales --- //
@@ -98,6 +98,13 @@ img {
 // --- Fin: Logo --- //
 
 // --- Inicio: Header --- //
+
+@media screen and (max-width: 768px) {
+  .header {
+    background-color: $primary-color;
+  }
+}
+
 .header__navbar li a {
   font-size: 14px;
 
@@ -108,7 +115,7 @@ img {
 
 .header__menu-list {
   position: absolute;
-  top: 5rem;
+  top: 4.9rem;
   left: 0;
   right: 0;
   display: flex;

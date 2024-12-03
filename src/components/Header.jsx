@@ -13,12 +13,10 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const viewporWidth = document.documentElement.clientWidth;
     const handleScroll = () => {
       const heroHeight = document.getElementById("hero").offsetHeight;
 
-      if (window.scrollY > heroHeight || viewporWidth < 624)
-        setIsScrolled(true);
+      if (window.scrollY > heroHeight) setIsScrolled(true);
       else setIsScrolled(false);
     };
 
@@ -31,7 +29,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full transition-colors duration-300 z-50 h-20 lg:h-28 ${
+      className={`header fixed top-0 left-0 w-full transition-colors duration-300 z-50 h-20 lg:h-28 ${
         isScrolled ? "bg-background" : "bg-transparent"
       }`}
     >
