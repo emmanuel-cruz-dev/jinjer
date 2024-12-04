@@ -17,33 +17,24 @@ const About = () => {
           <p className="text-lg">{t("about.description")}.</p>
         </div>
         <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
-          <div className="about__text flex flex-col gap-6 w-full xl:w-5/6">
+          <div className="about__text flex flex-col gap-6 w-full xl:w-4/6">
             <h3 className="text-4xl uppercase logo">
               About N<span>3</span>phews
             </h3>
-            <div className="flex flex-col gap-4 text-[18px]">
-              <span className="font-medium">
-                Who are we? Just three cousins chasing a shared passion for
-                music...
+            <div className="flex flex-col gap-4">
+              <span className="font-medium text-[18px]">
+                {t("about.paragraph1")}...
               </span>
-              <p>
-                Vestibulum in facilisis lectus. Praesent sit amet urna pulvinar,
-                gravida magna commodo, molestie purus. Cras laoreet vitae risus
-                vel laoreet. Suspendisse dignissim efficitur urna nec elementum.
-              </p>
-              <p>
-                Aenean id metus nec quam facilisis vulputate. Quisque sem
-                mauris, tempor ac dui eget, fringilla luctus velit. Ut dignissim
-                in diam a tincidunt. Curabitur id neque urna. Nulla laoreet mi
-                sed neque efficitur ultrices.
-              </p>
+              <p>{t("about.paragraph2")}.</p>
+              <p>{t("about.paragraph3")}.</p>
+              <p>{t("about.paragraph4")}.</p>
             </div>
           </div>
-          <div className="about__video xl:w-full">
+          <div className="about__video w-full">
             <iframe
               className="w-full"
               width="680"
-              height="420"
+              height="440"
               src="https://www.youtube.com/embed/0_PUjfgfjmk?si=2E6stU4haVF7VbG4"
               title="YouTube video player"
               frameborder="0"

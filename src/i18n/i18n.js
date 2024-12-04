@@ -31,6 +31,16 @@ const resources = {
         title2: "History",
         description:
           "Who were N3 and what was their purpose? There's no room for such silly questions! We're here for the music",
+        paragraph1:
+          "Who are we? Just three cousins chasing a shared passion for music",
+        paragraph2:
+          "Our musical approach is inspired by the expressive force of metal and the narrative of rap, combining aggressive riffs with innovative melodies to create a soundscape that breaks with traditional genre patterns",
+        paragraph3:
+          "Our sound is a fusion of energy, emotion, and relentless creativity. Each track is a reflection of our journey, balancing aggressive tones with melodic undertones",
+        paragraph4:
+          "Music isn’t just our passion—it’s our way of life. Join us as we carve our path in the world of sound, crafting stories and experiences that resonate far beyond the stage",
+        paragraph5:
+          "Our goal is to give life to music and transmit emotions through music",
       },
       // ... más traducciones
     },
@@ -63,6 +73,16 @@ const resources = {
         title2: "Historia",
         description:
           "¿Quiénes eran N3 y cuál era su propósito? No hay tiempo para preguntas tan tontas. Estamos acá por la música",
+        paragraph1:
+          "¿Quiénes somos? Somos tres primos que perseguimos una pasión compartida por la música",
+        paragraph2:
+          "Nuestra propuesta musical se inspira en la fuerza expresiva del metal y la narrativa del rap, combinando riffs agresivos con melodías innovadoras para crear un landscape sonoro que rompe con los esquemas tradicionales de género",
+        paragraph3:
+          "Nuestro sonido es una fusión de energía, emoción y creatividad incansable. Cada tema es un reflejo de nuestro viaje, que equilibra tonos agresivos con matices melódicos",
+        paragraph4:
+          "La música no es solo nuestra pasión, es nuestra forma de vida. Únase a nosotros mientras forjamos nuestro camino en el mundo del sonido, creando historias y experiencias que resuenan mucho más allá del escenario",
+        paragraph5:
+          "Nuestro objetivo es dar vida a la música y transmitir emociones a traves de la música",
       },
       // ... más traducciones
     },
