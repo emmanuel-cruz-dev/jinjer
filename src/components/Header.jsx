@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import LanguageSwitch from "./LanguageSwitch";
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import Name from "./Name";
 import SocialLinks from "./SocialLinks";
 
@@ -10,7 +10,24 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLatestAlbumOpen, setIsLatestAlbumOpen] = useState(false);
+  const latestAlbumRef = useRef(null);
   const { t } = useTranslation();
+
+  const handleClickOutside = (event) => {
+    if (
+      latestAlbumRef.current &&
+      !latestAlbumRef.current.contains(event.target)
+    ) {
+      setIsLatestAlbumOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const toggleLatestAlbum = () => {
     setIsLatestAlbumOpen(!isLatestAlbumOpen);
@@ -43,6 +60,7 @@ const Header = () => {
     >
       <article
         className={`latest-album z-10 ${isLatestAlbumOpen ? "active" : ""}`}
+        ref={latestAlbumRef}
       >
         <div className="flex items-center">
           <span
