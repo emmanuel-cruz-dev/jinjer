@@ -33,15 +33,16 @@ const resources = {
           "Who were N3 and what was their purpose? There's no room for such silly questions! We're here for the music",
         paragraphTitle: "About",
         paragraph1:
-          "Who are we? Just three cousins chasing a shared passion for music",
+          "Who are we? We are three cousins ​​united by a musical passion that challenges the limits of genres",
         paragraph2:
-          "Our musical approach is inspired by the expressive force of metal and the narrative of rap, combining aggressive riffs with innovative melodies to create a soundscape that breaks with traditional genre patterns",
+          "Our proposal combines the intensity of metal and the narrative of rap, creating a unique sound that fuses aggressive riffs with innovative melodies",
         paragraph3:
-          "Our sound is a fusion of energy, emotion, and relentless creativity. Each track is a reflection of our journey, balancing aggressive tones with melodic undertones",
+          "Each song is a reflection of our journey, where aggressive riffs converse with moments of deep introspection. For us, music is more than an art: it is a personal language, a way of life that is born from our connection and shared experiences",
         paragraph4:
-          "Music isn’t just our passion—it’s our way of life. Join us as we carve our path in the world of sound, crafting stories and experiences that resonate far beyond the stage",
-        paragraph5:
-          "Our goal is to give life to music and transmit emotions through music",
+          "Our compositions are testimonies of a career marked by creativity and commitment, where each note tells a story that goes beyond the stage",
+        naomi: "Vocalist/Bass",
+        july: "Guitar",
+        benja: "Drumms",
       },
       // ... más traducciones
     },
@@ -76,15 +77,16 @@ const resources = {
           "¿Quiénes eran N3 y cuál era su propósito? No hay tiempo para preguntas tan tontas. Estamos acá por la música",
         paragraphTitle: "Sobre",
         paragraph1:
-          "¿Quiénes somos? Somos tres primos que perseguimos una pasión compartida por la música",
+          "¿Quiénes somos? Somos tres primos unidos por una pasión musical que desafía los límites de los géneros",
         paragraph2:
-          "Nuestra propuesta musical se inspira en la fuerza expresiva del metal y la narrativa del rap, combinando riffs agresivos con melodías innovadoras para crear un landscape sonoro que rompe con los esquemas tradicionales de género",
+          "Nuestra propuesta combina la intensidad del metal y la narrativa del rap, creando un sonido único que fusiona riffs agresivos con melodías innovadoras",
         paragraph3:
-          "Nuestro sonido es una fusión de energía, emoción y creatividad incansable. Cada tema es un reflejo de nuestro viaje, que equilibra tonos agresivos con matices melódicos",
+          "Cada canción es un reflejo de nuestro viaje, donde los riffs agresivos conversan con momentos de profunda reflexión. Para nosotros, la música es más que un arte: es un lenguaje personal, una forma de vida que nace de nuestra conexión y experiencias compartidas",
         paragraph4:
-          "La música no es solo nuestra pasión, es nuestra forma de vida. Únase a nosotros mientras forjamos nuestro camino en el mundo del sonido, creando historias y experiencias que resuenan mucho más allá del escenario",
-        paragraph5:
-          "Nuestro objetivo es dar vida a la música y transmitir emociones a traves de la música",
+          "Nuestras composiciones son testimonios de una trayectoria marcada por la creatividad y el compromiso, donde cada nota cuenta una historia que va más allá de los escenarios",
+        naomi: "Vocalista/Bajo",
+        july: "Guitarra",
+        benja: "Batería",
       },
       // ... más traducciones
     },

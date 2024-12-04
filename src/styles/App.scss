@@ -279,6 +279,54 @@ img {
 
 // --- Fin: Latest News --- //
 
+// --- Inicio: About --- //
+
+.about__members__article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  .about__members__image-container {
+    background-color: $accent-color;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $background-color-black;
+    }
+  }
+
+  .about__members__logo {
+    width: 9rem;
+    height: 9rem;
+    padding: 1.5rem;
+  }
+
+  .about__members__image {
+    position: absolute;
+    width: 4.5rem;
+    right: -28px;
+    top: -28px;
+    border-radius: 50%;
+    border: 5px solid $background-color-white;
+  }
+
+  h4 {
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 18px;
+  }
+}
+
+// --- Fin: About --- //
+
 // --- Inicio: Footer --- //
 
 .footer {

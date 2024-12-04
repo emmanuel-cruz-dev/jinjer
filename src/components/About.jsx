@@ -1,5 +1,10 @@
 import { useTranslation } from "react-i18next";
-import Name from "./Name";
+import microfono from "../assets/icons/microfono.png";
+import guitarra from "../assets/icons/guitarra.png";
+import bateria from "../assets/icons/bateria.png";
+import Naomi from "../assets/images/naomi-aldanna.jpg";
+import July from "../assets/images/julian-andre.jpg";
+import Benja from "../assets/images/benjamin-sebastian.jpg";
 
 const About = () => {
   const { t } = useTranslation();
@@ -44,7 +49,43 @@ const About = () => {
             ></iframe>
           </div>
         </div>
-        <div className="about__members"></div>
+        <div className="about__members flex flex-col lg:flex-row justify-around items-center gap-12 w-full py-14">
+          {/* Vocalista y Bajista */}
+          <article className="about__members__article">
+            <div className="about__members__image-container">
+              <img className="about__members__logo" src={microfono} alt="" />
+              <img className="about__members__image" src={Naomi} alt="" />
+            </div>
+            <div className="flex flex-col items-center">
+              <h4>{t("about.naomi")}</h4>
+              <h5>Naomi Aldanna</h5>
+            </div>
+          </article>
+
+          {/* Guitarrista */}
+          <article className="about__members__article">
+            <div className="about__members__image-container">
+              <img className="about__members__logo" src={guitarra} alt="" />
+              <img className="about__members__image" src={July} alt="" />
+            </div>
+            <div className="flex flex-col items-center">
+              <h4>{t("about.july")}</h4>
+              <h5>Julián André</h5>
+            </div>
+          </article>
+
+          {/* Baterista */}
+          <article className="about__members__article">
+            <div className="about__members__image-container">
+              <img className="about__members__logo" src={bateria} alt="" />
+              <img className="about__members__image" src={Benja} alt="" />
+            </div>
+            <div className="flex flex-col items-center">
+              <h4>{t("about.benja")}</h4>
+              <h5>Benjamín Sebastían</h5>
+            </div>
+          </article>
+        </div>
       </article>
     </section>
   );
