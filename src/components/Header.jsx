@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Name from "./Name";
 import SocialLinks from "./SocialLinks";
 
+import SideAreaImg from "../assets/images/sidearea-img.jpg";
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,7 +53,7 @@ const Header = () => {
           </span>
         </div>
 
-        <div className="flex flex-col items-center gap-4 px-4 text-center">
+        <div className="flex flex-col justify-around items-center px-4 text-center h-full">
           <h2 className="text-2xl uppercase font-bold">Latest Album</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus
@@ -60,6 +62,15 @@ const Header = () => {
           <span className="text-2xl">
             <SocialLinks />
           </span>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img
+              src={SideAreaImg}
+              alt="Portada del álbum Alucard"
+              width="220"
+              height="220"
+            />
+          </a>
+          <span className="uppercase font-bold">© 2024 Nephews</span>
         </div>
       </article>
       <nav
