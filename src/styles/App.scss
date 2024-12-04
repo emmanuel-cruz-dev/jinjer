@@ -236,6 +236,47 @@ img {
 
 // Fin: Botones //
 
+// --- Inicio: Latest News --- //
+
+.latest-news__card {
+  width: 21rem;
+}
+
+.latest-news__carousel {
+  width: 90vw;
+  height: 80vh;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Estilos de las flechas personalizadas */
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.slick-arrow.slick-prev::before,
+.slick-arrow.slick-next::before {
+  font-size: 32px;
+  color: #fff;
+}
+
+.slick-arrow.slick-prev {
+  left: -60px; /* Posición a la izquierda */
+}
+
+.slick-arrow.slick-next {
+  right: -20px; /* Posición a la derecha */
+}
+
+// --- Fin: Latest News --- //
+
 // --- Inicio: Footer --- //
 
 .footer {

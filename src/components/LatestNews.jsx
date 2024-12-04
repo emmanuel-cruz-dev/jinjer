@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import CardImg from "../assets/images/blog03.jpg";
+import Carousel from "./Carousel";
 
 const LatestNews = () => {
   const { t } = useTranslation();
@@ -18,105 +19,9 @@ const LatestNews = () => {
           </h2>
           <p className="text-lg">{t("news.description")}</p>
         </div>
-        <div className="flex flex-col justify-center items-center gap-8">
-          <div className="latest-news__cards-container flex flex-col flex-wrap lg:flex-row justify-center items-center gap-8">
-            {/* Card 1 */}
-            <div className="latest-news__card flex flex-col w-[22rem] gap-3">
-              <a href="#">
-                <figure className="overflow-hidden">
-                  <img
-                    className="scale-105 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
-                    src={CardImg}
-                    alt=""
-                  />
-                </figure>
-                <h3 className="uppercase font-bold tracking-wide text-lg">
-                  Neue zwohandbreit EP in arbeit
-                </h3>
-              </a>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-                quaerat tempora. Expedita voluptatem maxime a!
-              </p>
-              <a
-                className="uppercase hover:underline transition-all duration-300 ease-in-out"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read more
-              </a>
-              <time className="text-sm uppercase" dateTime="2018-01-16">
-                16 Jan 2018
-              </time>
-            </div>
 
-            {/* Card 2 */}
-            <div className="latest-news__card flex flex-col w-[22rem] gap-3">
-              <figure className="overflow-hidden">
-                <img
-                  className="scale-105 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
-                  src={CardImg}
-                  alt=""
-                />
-              </figure>
-              <h3 className="uppercase font-bold tracking-wide text-lg">
-                Neue zwohandbreit EP in arbeit
-              </h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-                quaerat tempora. Expedita voluptatem maxime a!
-              </p>
-              <a
-                className="uppercase"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read more
-              </a>
-              <time className="text-sm uppercase" dateTime="2018-01-16">
-                16 Jan 2018
-              </time>
-            </div>
-
-            {/* Card 3 */}
-            <div className="latest-news__card flex flex-col w-[22rem] gap-3">
-              <figure className="overflow-hidden">
-                <img
-                  className="scale-105 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
-                  src={CardImg}
-                  alt=""
-                />
-              </figure>
-              <h3 className="uppercase font-bold tracking-wide text-lg">
-                Neue zwohandbreit EP in arbeit
-              </h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-                quaerat tempora. Expedita voluptatem maxime a!
-              </p>
-              <a
-                className="uppercase"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read more
-              </a>
-              <time className="text-sm uppercase" dateTime="2018-01-16">
-                16 Jan 2018
-              </time>
-            </div>
-          </div>
-          <div className="flex gap-4">
-            <span className="material-symbols-outlined flex justify-center items-center p-2 px-3 text-lg font-bold border-2 border-cyan-50">
-              arrow_back_ios
-            </span>
-            <span className="material-symbols-outlined flex justify-center items-center p-2 px-3 text-lg font-bold border-2 border-cyan-50">
-              arrow_forward_ios
-            </span>
-          </div>
+        <div className="latest-news__carousel">
+          <Carousel />
         </div>
       </article>
     </section>

@@ -46,9 +46,9 @@ const resources = {
           "Furia metálica que emerge de las sombras, transformando el sufrimiento en un himno de resistencia y redención absoluta",
       },
       news: {
-        title1: "Últimas ",
-        titleSpan: "No",
-        title2: "ticias",
+        title1: "Últimas No",
+        titleSpan: "ve",
+        title2: "dades",
         description:
           "Mantente al día con los últimos eventos de nuestros conciertos y mucho más. ¡Bienvenido al mundo de N3!",
       },
