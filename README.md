@@ -1,8 +1,21 @@
-# React + Vite
+![](https://github.com/EmmaLCruz/nephews/blob/main/public/nephews-banner.jpg)
+# N3phews | Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio de artista.
 
-Currently, two official plugins are available:
+## Demo en vivo
+[Visita la página aquí](https://n3phews.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas
+- React
+- Tailwind CSS
+- Sass
+
+## Funcionalidades
+- Selector de idioma: Soporte para inglés y español.
+- Diseño responsive: Adaptado a dispositivos de todos los tamaños.
+- Animaciones on-scroll: Interacciones dinámicas al desplazarse por la página.
+- Navbar funcional: Navegación fluida entre las secciones.
+
+## Estado
+- En desarrollo.
