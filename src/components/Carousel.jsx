@@ -66,7 +66,7 @@ const Carousel = () => {
               Read more
             </a>
             <time className="text-sm uppercase" dateTime="2018-01-16">
-              16 Nov 2018
+              9 Nov 2019
             </time>
           </div>
         </div>
@@ -99,7 +99,7 @@ const Carousel = () => {
               Read more
             </a>
             <time className="text-sm uppercase" dateTime="2018-01-16">
-              11 Feb 2018
+              11 Feb 2013
             </time>
           </div>
         </div>
@@ -132,7 +132,7 @@ const Carousel = () => {
               Read more
             </a>
             <time className="text-sm uppercase" dateTime="2018-01-16">
-              3 Feb 2018
+              3 Feb 2008
             </time>
           </div>
         </div>
@@ -171,6 +171,38 @@ const Carousel = () => {
         </div>
         <div>
           {/* Card 5 */}
+          <div className="latest-news__card flex flex-col w-[22rem] gap-3">
+            <a href="#">
+              <figure className="overflow-hidden">
+                <img
+                  className="scale-105 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
+                  src={CardImg}
+                  alt=""
+                />
+              </figure>
+              <h3 className="uppercase font-bold tracking-wide text-lg">
+                Neue zwohandbreit EP in arbeit
+              </h3>
+            </a>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+              quaerat tempora. Expedita voluptatem maxime a!
+            </p>
+            <a
+              className="uppercase hover:underline transition-all duration-300 ease-in-out"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read more
+            </a>
+            <time className="text-sm uppercase" dateTime="2018-01-16">
+              16 Jan 2018
+            </time>
+          </div>
+        </div>
+        <div>
+          {/* Card 6 */}
           <div className="latest-news__card flex flex-col w-[22rem] gap-3">
             <a href="#">
               <figure className="overflow-hidden">

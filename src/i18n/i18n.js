@@ -26,6 +26,12 @@ const resources = {
         description:
           "Stay updated with the latest events from our concerts and more. Welcome to the N3 World!",
       },
+      about: {
+        title1: "The",
+        title2: "History",
+        description:
+          "Who were N3 and what was their purpose? There's no room for such silly questions! We're here for the music",
+      },
       // ... más traducciones
     },
   },
@@ -51,6 +57,12 @@ const resources = {
         title2: "dades",
         description:
           "Mantente al día con los últimos eventos de nuestros conciertos y mucho más. ¡Bienvenido al mundo de N3!",
+      },
+      about: {
+        title1: "La",
+        title2: "Historia",
+        description:
+          "¿Quiénes eran N3 y cuál era su propósito? No hay tiempo para preguntas tan tontas. Estamos acá por la música",
       },
       // ... más traducciones
     },

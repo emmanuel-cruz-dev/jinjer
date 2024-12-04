@@ -159,13 +159,13 @@ const Header = () => {
               <a href="#">{t("navbar.home")}</a>
             </li>
             <li>
-              <a href="#latest-news">{t("navbar.news")}</a>
+              <a href="#news">{t("navbar.news")}</a>
             </li>
             <li>
-              <a href="">{t("navbar.about")}</a>
+              <a href="#about">{t("navbar.about")}</a>
             </li>
             <li>
-              <a href="">{t("navbar.tour")}</a>
+              <a href="#tour">{t("navbar.tour")}</a>
             </li>
           </ul>
           <a
@@ -176,16 +176,16 @@ const Header = () => {
           </a>
           <ul className="gap-6 hidden lg:flex">
             <li>
-              <a href="">{t("navbar.albums")}</a>
+              <a href="#albums">{t("navbar.albums")}</a>
             </li>
             <li>
-              <a href="">{t("navbar.media")}</a>
+              <a href="#media">{t("navbar.media")}</a>
             </li>
             <li>
-              <a href="">{t("navbar.store")}</a>
+              <a href="#store">{t("navbar.store")}</a>
             </li>
             <li>
-              <a href="">{t("navbar.follow")}</a>
+              <a href="#follow">{t("navbar.follow")}</a>
             </li>
           </ul>
           <div>
@@ -200,37 +200,37 @@ const Header = () => {
           </a>
         </li>
         <li>
-          <a href="#latest-news" onClick={() => toggleMenu()}>
+          <a href="#news" onClick={() => toggleMenu()}>
             {t("navbar.news")}
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => toggleMenu()}>
+          <a href="#about" onClick={() => toggleMenu()}>
             {t("navbar.about")}
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => toggleMenu()}>
+          <a href="#tour" onClick={() => toggleMenu()}>
             {t("navbar.tour")}
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => toggleMenu()}>
+          <a href="#albums" onClick={() => toggleMenu()}>
             {t("navbar.albums")}
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => toggleMenu()}>
+          <a href="#media" onClick={() => toggleMenu()}>
             {t("navbar.media")}
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => toggleMenu()}>
+          <a href="#store" onClick={() => toggleMenu()}>
             {t("navbar.store")}
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => toggleMenu()}>
+          <a href="#contact" onClick={() => toggleMenu()}>
             {t("navbar.contact")}
           </a>
         </li>

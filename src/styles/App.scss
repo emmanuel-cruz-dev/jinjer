@@ -243,10 +243,12 @@ img {
 }
 
 .latest-news__carousel {
-  width: 90vw;
-  height: 80vh;
-  margin: 0 auto;
-  padding: 0 1rem;
+  width: 92vw;
+  height: 88vh;
+
+  & .slick-list {
+    padding-left: 2rem;
+  }
 }
 
 /* Estilos de las flechas personalizadas */
@@ -255,7 +257,7 @@ img {
   position: absolute;
   top: 50%;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  // background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
   border-radius: 50%;
   cursor: pointer;
   transform: translateY(-50%);
@@ -268,11 +270,11 @@ img {
 }
 
 .slick-arrow.slick-prev {
-  left: -60px; /* Posición a la izquierda */
+  left: -10px; /* Posición a la izquierda */
 }
 
 .slick-arrow.slick-next {
-  right: -20px; /* Posición a la derecha */
+  right: -10px; /* Posición a la derecha */
 }
 
 // --- Fin: Latest News --- //
