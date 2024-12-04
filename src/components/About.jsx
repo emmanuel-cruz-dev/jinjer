@@ -16,15 +16,15 @@ const About = () => {
           </h2>
           <p className="text-lg">{t("about.description")}.</p>
         </div>
-        <div className="flex flex-col lg:flex-row items-center gap-10">
-          <div className="about__text flex flex-col gap-6">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
+          <div className="about__text flex flex-col gap-6 w-full xl:w-5/6">
             <h3 className="text-4xl uppercase logo">
               About N<span>3</span>phews
             </h3>
             <div className="flex flex-col gap-4 text-[18px]">
-              <span>
-                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit…
+              <span className="font-medium">
+                Who are we? Just three cousins chasing a shared passion for
+                music...
               </span>
               <p>
                 Vestibulum in facilisis lectus. Praesent sit amet urna pulvinar,
@@ -39,10 +39,11 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="about__video">
+          <div className="about__video xl:w-full">
             <iframe
-              width="640"
-              height="480"
+              className="w-full"
+              width="680"
+              height="420"
               src="https://www.youtube.com/embed/0_PUjfgfjmk?si=2E6stU4haVF7VbG4"
               title="YouTube video player"
               frameborder="0"
