@@ -15,6 +15,9 @@ const resources = {
         store: "Store",
         follow: "Follow",
         contact: "Contact",
+        albumTitle: "Latest Album",
+        albumDescription:
+          "Metallic fury emerges from the shadows, transforming suffering into a hymn of resistance and absolute redemption",
       },
       // ... más traducciones
     },
@@ -31,6 +34,9 @@ const resources = {
         store: "Tienda",
         follow: "Redes",
         contact: "Contacto",
+        albumTitle: "Último Lanzamiento",
+        albumDescription:
+          "Furia metálica que emerge de las sombras, transformando el sufrimiento en un himno de resistencia y redención absoluta",
       },
       // ... más traducciones
     },

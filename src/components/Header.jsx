@@ -73,11 +73,10 @@ const Header = () => {
           </div>
 
           <div className="flex flex-col justify-around items-center px-4 text-center h-full">
-            <h2 className="text-2xl uppercase font-bold">Latest Album</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-              rhoncus risus mauris, et commodo lectus hendrerit ac.
-            </p>
+            <h2 className="text-2xl uppercase font-bold">
+              {t("navbar.albumTitle")}
+            </h2>
+            <p>{t("navbar.albumDescription")}.</p>
             <span className="text-2xl">
               <SocialLinks />
             </span>
