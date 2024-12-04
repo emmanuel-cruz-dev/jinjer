@@ -31,6 +31,7 @@ const resources = {
         title2: "History",
         description:
           "Who were N3 and what was their purpose? There's no room for such silly questions! We're here for the music",
+        paragraphTitle: "About",
         paragraph1:
           "Who are we? Just three cousins chasing a shared passion for music",
         paragraph2:
@@ -73,6 +74,7 @@ const resources = {
         title2: "Historia",
         description:
           "¿Quiénes eran N3 y cuál era su propósito? No hay tiempo para preguntas tan tontas. Estamos acá por la música",
+        paragraphTitle: "Sobre",
         paragraph1:
           "¿Quiénes somos? Somos tres primos que perseguimos una pasión compartida por la música",
         paragraph2:
