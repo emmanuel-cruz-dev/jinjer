@@ -19,6 +19,13 @@ const resources = {
         albumDescription:
           "Metallic fury emerges from the shadows, transforming suffering into a hymn of resistance and absolute redemption",
       },
+      news: {
+        title1: "Latest N",
+        titleSpan: "ew",
+        title2: "s",
+        description:
+          "Stay updated with the latest events from our concerts and more. Welcome to the N3 World!",
+      },
       // ... más traducciones
     },
   },
@@ -37,6 +44,13 @@ const resources = {
         albumTitle: "Último Lanzamiento",
         albumDescription:
           "Furia metálica que emerge de las sombras, transformando el sufrimiento en un himno de resistencia y redención absoluta",
+      },
+      news: {
+        title1: "Últimas ",
+        titleSpan: "No",
+        title2: "ticias",
+        description:
+          "Mantente al día con los últimos eventos de nuestros conciertos y mucho más. ¡Bienvenido al mundo de N3!",
       },
       // ... más traducciones
     },

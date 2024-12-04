@@ -1,7 +1,9 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 import CardImg from "../assets/images/blog03.jpg";
 
 const LatestNews = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       className="scroll-top-margin latest-news bg-background py-16"
@@ -10,12 +12,11 @@ const LatestNews = () => {
       <article className="flex flex-col justify-center items-center gap-16">
         <div className="text-center flex flex-col gap-4">
           <h2 className="logo text-5xl">
-            Latest N<span>ew</span>s
+            {t("news.title1")}
+            <span>{t("news.titleSpan")}</span>
+            {t("news.title2")}
           </h2>
-          <p className="text-lg">
-            The latest N3 news is up to events in our concerts here! Welcome to
-            the N3 World!
-          </p>
+          <p className="text-lg">{t("news.description")}</p>
         </div>
         <div className="flex flex-col justify-center items-center gap-8">
           <div className="latest-news__cards-container flex flex-col flex-wrap lg:flex-row justify-center items-center gap-8">
