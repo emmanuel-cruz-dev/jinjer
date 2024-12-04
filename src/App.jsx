@@ -8,6 +8,7 @@ import i18n from "./i18n/i18n";
 import Footer from "./components/Footer";
 import News from "./components/News";
 import About from "./components/About";
+import Tour from "./components/Tour";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Hero />
       <News />
       <About />
+      <Tour />
       <Footer />
     </I18nextProvider>
   );
