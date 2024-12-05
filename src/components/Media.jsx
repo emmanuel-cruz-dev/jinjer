@@ -1,4 +1,4 @@
-const VideoCard = ({ video, views }) => {
+const VideoCard = ({ video, title, views }) => {
   return (
     <div className="flex justify-center flex-col gap-4 border border-slate-500 p-6">
       <iframe
@@ -13,7 +13,7 @@ const VideoCard = ({ video, views }) => {
       ></iframe>
       <div className="flex flex-col gap-3">
         <a href="#" className="uppercase font-bold text-lg">
-          Hayko Cepkin - yalniz kalsin Rock'n Coke
+          {title}
         </a>
         <p>
           Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc
@@ -51,36 +51,42 @@ const Media = () => {
             video={
               "https://www.youtube.com/embed/n_GFN3a0yj0?si=ZQ-1ic0dnGjxqqPQ"
             }
+            title="AC/DC - Thunderstruck"
             views="339M"
           />
           <VideoCard
             video={
               "https://www.youtube.com/embed/JU5LMG3WFBw?si=fVPXj-FKsBl3RFpx"
             }
+            title="Queen - Hammer to Fall"
             views="28M"
           />
           <VideoCard
             video={
               "https://www.youtube.com/embed/t365MuktYQs?si=APy6Jc1vy6qr8-jR"
             }
+            title="David Bowie - Starman"
             views="48M"
           />
           <VideoCard
             video={
               "https://www.youtube.com/embed/8SbUC-UaAxE?si=LVhwuo2AmHmZVavC"
             }
+            title="Guns N' Roses - November Rain"
             views="225M"
           />
           <VideoCard
             video={
               "https://www.youtube.com/embed/a9eNQZbjpJk?si=KG1QnQPcEovxztWN"
             }
+            title="Red Hot Chili Peppers - Around The World"
             views="104M"
           />
           <VideoCard
             video={
               "https://www.youtube.com/embed/R8OOWcsFj0U?si=O7WO0kqj7AiiDgzS"
             }
+            title="Muse - Undisclosed Desires"
             views="121M"
           />
         </div>
