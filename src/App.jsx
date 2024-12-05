@@ -10,6 +10,7 @@ import News from "./components/News";
 import About from "./components/About";
 import Tour from "./components/Tour";
 import Albums from "./components/Albums";
+import Media from "./components/Media";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <About />
       <Tour />
       <Albums />
+      <Media />
       <Footer />
     </I18nextProvider>
   );
