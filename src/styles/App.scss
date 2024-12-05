@@ -425,7 +425,7 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .album__images__container {
@@ -470,10 +470,11 @@ img {
 .album__year {
   position: absolute;
   border: 2px solid $background-color-black;
-  padding: 0.2rem 0.6rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.2rem 0.7rem;
   font-weight: 900;
   font-size: 1.1em;
-  right: -12px;
+  right: -10px;
   bottom: 8px;
   z-index: 3;
 }
