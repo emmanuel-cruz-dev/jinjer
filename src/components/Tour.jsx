@@ -7,12 +7,11 @@ const Tour = () => {
       <article className="flex flex-col justify-center items-center gap-12 w-11/12 mx-auto">
         <div className="text-center flex flex-col gap-4">
           <h2 className="logo text-5xl">
-            T<span>ou</span>r Dates
+            {t("tour.title1")}
+            <span>{t("tour.titleSpan")}</span>
+            {t("tour.title2")}
           </h2>
-          <p className="text-lg">
-            A complete list of festivals and concerts to be held soon! You can
-            buy the latest concert tickets here!
-          </p>
+          <p className="text-lg">{t("tour.description")}.</p>
         </div>
         <div className="w-full overflow-x-auto">
           <table className="table table-auto w-full border-collapse">
@@ -20,7 +19,7 @@ const Tour = () => {
               <tr className="table__header">
                 <th>{t("tour.table.th1")}</th>
                 <th>{t("tour.table.th2")}</th>
-                <th>{t("tour.table.th3")}</th>
+                <th className="hidden lg:table-cell">{t("tour.table.th3")}</th>
                 <th>{t("tour.table.th4")}</th>
               </tr>
             </thead>
@@ -32,7 +31,7 @@ const Tour = () => {
                     Rock Am Ring Festival
                   </a>
                 </td>
-                <td>
+                <td className="hidden lg:table-cell">
                   Paris/<span>{t("tour.table.france")}</span>
                 </td>
                 <td>
@@ -48,7 +47,7 @@ const Tour = () => {
                     Resurrection Fest
                   </a>
                 </td>
-                <td>
+                <td className="hidden lg:table-cell">
                   Galicia/<span>{t("tour.table.spain")}</span>
                 </td>
                 <td>
@@ -64,7 +63,7 @@ const Tour = () => {
                     Rock'n'Roll Camping
                   </a>
                 </td>
-                <td>
+                <td className="hidden lg:table-cell">
                   <span>Austria</span>
                 </td>
                 <td>
@@ -80,7 +79,7 @@ const Tour = () => {
                     Electric Daisy Carnival
                   </a>
                 </td>
-                <td>
+                <td className="hidden lg:table-cell">
                   Las Vegas/<span>{t("tour.table.usa")}</span>
                 </td>
                 <td>
@@ -96,7 +95,7 @@ const Tour = () => {
                     Glastonbury Festival
                   </a>
                 </td>
-                <td>
+                <td className="hidden lg:table-cell">
                   Somerset/<span>{t("tour.table.uk")}</span>
                 </td>
                 <td>
@@ -112,7 +111,7 @@ const Tour = () => {
                     Tomorrowland
                   </a>
                 </td>
-                <td>
+                <td className="hidden lg:table-cell">
                   <span>{t("tour.table.belgium")}</span>
                 </td>
                 <td>
@@ -128,7 +127,7 @@ const Tour = () => {
                     Wacken Open Air
                   </a>
                 </td>
-                <td>
+                <td className="hidden lg:table-cell">
                   Wacken/<span>{t("tour.table.germany")}</span>
                 </td>
                 <td>
@@ -144,7 +143,7 @@ const Tour = () => {
                     Sziget Festival
                   </a>
                 </td>
-                <td>
+                <td className="hidden lg:table-cell">
                   Budapest/<span>{t("tour.table.hungary")}</span>
                 </td>
                 <td>
@@ -157,7 +156,7 @@ const Tour = () => {
           </table>
           <div className="flex justify-center my-8">
             <a href="#" className="table__btn uppercase">
-              Up-Coming Events
+              {t("tour.table.coming")}
             </a>
           </div>
         </div>

@@ -45,7 +45,9 @@ const resources = {
         benja: "Drumms",
       },
       tour: {
-        title: "Tour",
+        title1: "T",
+        titleSpan: "ou",
+        title2: "r Dates",
         description:
           "Take advantage of the opportunity to meet N3 in their world tour! We look forward to the following events",
         table: {
@@ -62,6 +64,7 @@ const resources = {
           france: "France",
           soldOut: "Sold-Out",
           available: "Available",
+          coming: "Up-coming Events",
         },
       },
       // ... más traducciones
@@ -109,7 +112,9 @@ const resources = {
         benja: "Batería",
       },
       tour: {
-        title: "Gira",
+        title1: "Cal",
+        titleSpan: "en",
+        title2: "dario",
         description:
           "¡Aprovecha la oportunidad de conocer a N3 en su tour mundial! Te esperamos en los siguientes eventos",
         table: {
@@ -126,6 +131,7 @@ const resources = {
           france: "Francia",
           soldOut: "Agotadas",
           available: "Disponibles",
+          coming: "Próximos Eventos",
         },
       },
       // ... más traducciones

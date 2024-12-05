@@ -335,7 +335,7 @@ img {
 
   td {
     font-weight: 500;
-    padding: 1.5rem 0.75rem;
+    padding: 1.2rem 0.75rem;
     text-align: left;
     letter-spacing: 0.8px;
 
@@ -353,11 +353,12 @@ img {
   }
 
   tr:nth-child(odd) {
-    background-color: $background-color-black;
+    background-color: $primary-color-dark;
   }
 
   .table__header {
     background-color: $primary-color !important;
+    font-size: 1.15em;
   }
 
   tr:not(:last-child) {
@@ -386,11 +387,19 @@ img {
   font-weight: 500;
   background-color: $accent-color;
   padding: 0.75rem 1.5rem;
+  display: inline-block;
+  text-align: center;
+  width: 10rem;
   transition: background-color 0.3s ease;
-  max-width: 100px;
 
   &:hover {
-    background-color: $primary-color;
+    background-color: $background-color-black;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .table__btn-ticket {
+    max-width: 8rem;
   }
 }
 
@@ -403,7 +412,7 @@ img {
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: $primary-color;
+    background-color: $background-color-black;
   }
 }
 // --- Fin: Tour --- //
