@@ -12,7 +12,7 @@ const VideoCard = ({ video, title, views }) => {
         allowfullscreen
       ></iframe>
       <div className="flex flex-col gap-3">
-        <a href="#" className="uppercase font-bold text-lg">
+        <a href="#" className="uppercase font-bold text-lg tracking-wider">
           {title}
         </a>
         <p>
