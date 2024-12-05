@@ -67,6 +67,13 @@ const resources = {
           coming: "Up-coming Events",
         },
       },
+      albums: {
+        title: "Albu",
+        titleSpan: "ms",
+        description:
+          "Discover the collection of albums that capture our evolution and musical essence as a band. Don't miss it!",
+        itunes: "View On Itunes",
+      },
       // ... más traducciones
     },
   },
@@ -133,6 +140,13 @@ const resources = {
           available: "Disponibles",
           coming: "Próximos Eventos",
         },
+      },
+      albums: {
+        title: "Álbum",
+        titleSpan: "es",
+        description:
+          "Descubre la colección de discos que capturan nuestra evolución y esencia musical como banda. ¡No te lo pierdas!",
+        itunes: "Ver en Itunes",
       },
       // ... más traducciones
     },

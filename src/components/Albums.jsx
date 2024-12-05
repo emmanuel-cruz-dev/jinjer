@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import AlbumCover01 from "../assets/images/album-cover-01.jpg";
 import AlbumCover02 from "../assets/images/album-cover-02.jpg";
 import AlbumCover03 from "../assets/images/album-cover-03.jpg";
@@ -20,6 +21,8 @@ const Album = ({ cover, title, year }) => {
 };
 
 const Albums = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       className="scroll-top-margin albums py-16 mx-auto bg-slate-300 text-black"
@@ -28,12 +31,10 @@ const Albums = () => {
       <article className="flex flex-col justify-center items-center gap-12 w-11/12 mx-auto">
         <div className="text-center flex flex-col gap-4">
           <h2 className="logo text-5xl">
-            Albu<span>ms</span>
+            {t("albums.title")}
+            <span>{t("albums.titleSpan")}</span>
           </h2>
-          <p className="text-lg">
-            Our latest videos, audios on our official Youtube channel! Don't
-            forget subscribe us!
-          </p>
+          <p className="text-lg">{t("albums.description")}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-40 gap-y-12 w-full md:w-5/6">
           <Album cover={AlbumCover01} title="Royal Blood" year="2024" />
@@ -44,7 +45,7 @@ const Albums = () => {
           <Album cover={AlbumCover06} title="The Jam" year="2011" />
         </div>
         <a href="#" className="red__btn">
-          View On Itunes
+          {t("albums.itunes")}
         </a>
       </article>
     </section>
