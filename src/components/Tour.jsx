@@ -155,7 +155,7 @@ const Tour = () => {
             </tbody>
           </table>
           <div className="flex justify-center my-8">
-            <a href="#" className="table__btn uppercase">
+            <a href="#" className="red__btn">
               {t("tour.table.coming")}
             </a>
           </div>

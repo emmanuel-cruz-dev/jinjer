@@ -35,7 +35,7 @@ const Albums = () => {
             forget subscribe us!
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 justify-items-center gap-x-32 gap-y-12 w-full xl:w-5/6">
+        <div className="grid grid-cols-2 md:grid-cols-3 justify-items-center gap-x-40 gap-y-12 w-full xl:w-5/6">
           <Album cover={AlbumCover01} title="Royal Blood" year="2024" />
           <Album cover={AlbumCover02} title="Bird of Hermes" year="2021" />
           <Album cover={AlbumCover03} title="Vertical" year="2019" />
@@ -43,6 +43,9 @@ const Albums = () => {
           <Album cover={AlbumCover05} title="Afterlife" year="2014" />
           <Album cover={AlbumCover06} title="The Jam" year="2011" />
         </div>
+        <a href="#" className="red__btn">
+          View On Itunes
+        </a>
       </article>
     </section>
   );
