@@ -8,6 +8,8 @@ const Album = () => {
         <img className="album__cover" src={AlbumCover01} alt="" />
         <img className="album__disc" src={VinylDisc01} alt="" />
       </div>
+      <h3 className="album__title">Royal Blood</h3>
+      <span className="album__year">2023</span>
     </article>
   );
 };
@@ -27,7 +29,9 @@ const Albums = () => {
             forget subscribe us!
           </p>
         </div>
-        <div className="w-full xl:w-5/6">
+        <div className="flex flex-col justify-center items-center gap-24 md:flex-row w-full xl:w-5/6">
+          <Album />
+          <Album />
           <Album />
         </div>
       </article>
