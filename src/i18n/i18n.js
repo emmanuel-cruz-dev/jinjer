@@ -44,6 +44,26 @@ const resources = {
         july: "Guitar",
         benja: "Drumms",
       },
+      tour: {
+        title: "Tour",
+        description:
+          "Take advantage of the opportunity to meet N3 in their world tour! We look forward to the following events",
+        table: {
+          th1: "Date",
+          th2: "Venue",
+          th3: "Location",
+          th4: "Tickets",
+          germany: "Germany",
+          spain: "Spain",
+          usa: "United States",
+          uk: "England",
+          belgium: "Belgium",
+          hungary: "Hungary",
+          france: "France",
+          soldOut: "Sold-Out",
+          available: "Available",
+        },
+      },
       // ... más traducciones
     },
   },
@@ -64,7 +84,7 @@ const resources = {
           "Furia metálica que emerge de las sombras, transformando el sufrimiento en un himno de resistencia y redención absoluta",
       },
       news: {
-        title1: "Últimas No",
+        title1: "No",
         titleSpan: "ve",
         title2: "dades",
         description:
@@ -87,6 +107,26 @@ const resources = {
         naomi: "Vocalista/Bajo",
         july: "Guitarra",
         benja: "Batería",
+      },
+      tour: {
+        title: "Gira",
+        description:
+          "¡Aprovecha la oportunidad de conocer a N3 en su tour mundial! Te esperamos en los siguientes eventos",
+        table: {
+          th1: "Fecha",
+          th2: "Lugar",
+          th3: "Ubicación",
+          th4: "Entradas",
+          germany: "Alemania",
+          spain: "España",
+          usa: "Estados Unidos",
+          uk: "Inglaterra",
+          belgium: "Bélgica",
+          hungary: "Hungría",
+          france: "Francia",
+          soldOut: "Agotadas",
+          available: "Disponibles",
+        },
       },
       // ... más traducciones
     },

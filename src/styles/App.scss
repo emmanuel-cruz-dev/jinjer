@@ -304,16 +304,16 @@ img {
   }
 
   .about__members__logo {
-    width: 9rem;
-    height: 9rem;
+    width: 7.5rem;
+    height: 7.5rem;
     padding: 1.5rem;
   }
 
   .about__members__image {
     position: absolute;
-    width: 4.5rem;
-    right: -28px;
-    top: -28px;
+    width: 5.2rem;
+    right: -40px;
+    top: -40px;
     border-radius: 50%;
     border: 5px solid $background-color-white;
   }
@@ -326,6 +326,87 @@ img {
 }
 
 // --- Fin: About --- //
+
+// --- Inicio: Tour --- //
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td {
+    font-weight: 500;
+    padding: 1.5rem 0.75rem;
+    text-align: left;
+    letter-spacing: 0.8px;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  th {
+    padding: 1.5rem 0.75rem;
+    text-align: left;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: $accent-color;
+  }
+
+  tr:nth-child(odd) {
+    background-color: $background-color-black;
+  }
+
+  .table__header {
+    background-color: $primary-color !important;
+  }
+
+  tr:not(:last-child) {
+    border-bottom: 1px solid #4b5563;
+  }
+
+  .table__date {
+    font-size: 0.9em;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .table__venue {
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.table__btn-ticket {
+  font-weight: 500;
+  background-color: $accent-color;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.3s ease;
+  max-width: 100px;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+.table__btn {
+  font-weight: 500;
+  padding: 0.75rem 2.5rem;
+  font-size: 1.1em;
+  background-color: $accent-color;
+  color: white;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+// --- Fin: Tour --- //
 
 // --- Inicio: Footer --- //
 
