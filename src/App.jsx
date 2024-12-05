@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import News from "./components/News";
 import About from "./components/About";
 import Tour from "./components/Tour";
+import Albums from "./components/Albums";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <News />
       <About />
       <Tour />
+      <Albums />
       <Footer />
     </I18nextProvider>
   );

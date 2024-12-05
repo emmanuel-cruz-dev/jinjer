@@ -13,7 +13,7 @@ const Tour = () => {
           </h2>
           <p className="text-lg">{t("tour.description")}.</p>
         </div>
-        <div className="w-full overflow-x-auto">
+        <div className="w-full overflow-x-auto xl:w-5/6">
           <table className="table table-auto w-full border-collapse">
             <thead className="border-b border-gray-600">
               <tr className="table__header">
