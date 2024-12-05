@@ -1,3 +1,16 @@
+import AlbumCover01 from "../assets/images/album-cover-01.jpg";
+import VinylDisc01 from "../assets/images/vinyl-disc-01.png";
+
+const Album = () => {
+  return (
+    <article className="album__container">
+      <div className="album__images__container">
+        <img className="album__cover" src={AlbumCover01} alt="" />
+        <img className="album__disc" src={VinylDisc01} alt="" />
+      </div>
+    </article>
+  );
+};
 const Albums = () => {
   return (
     <section
@@ -14,7 +27,9 @@ const Albums = () => {
             forget subscribe us!
           </p>
         </div>
-        <div className="w-full xl:w-5/6"></div>
+        <div className="w-full xl:w-5/6">
+          <Album />
+        </div>
       </article>
     </section>
   );
