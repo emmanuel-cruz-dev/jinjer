@@ -11,6 +11,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const TShirtCard = ({ title, price, img }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="relative mx-6">
       <figure className="">
@@ -22,17 +24,15 @@ const TShirtCard = ({ title, price, img }) => {
       </div>
       <a
         href="#"
-        className="absolute top-1/2 right-0 bg-red-600 px-2 py-1 text-sm text-white font-semibold hover:text-white hover:bg-red-700 transition-colors duration-300"
+        className="absolute top-2/3 right-0 bg-red-600 px-2 py-1 text-sm text-white font-semibold hover:text-white hover:bg-red-700 transition-colors duration-300"
       >
-        Add to cart
+        {t("store.addToCart")}
       </a>
     </div>
   );
 };
 
 const Carousel = () => {
-  const { t } = useTranslation();
-
   const settings = {
     dots: false, // Mostrar puntos de navegación
     infinite: true, // Desplazamiento infinito
@@ -46,12 +46,14 @@ const Carousel = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
@@ -122,7 +124,6 @@ const Store = () => {
         <div className="w-screen">
           <Carousel />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-x-10 gap-y-12 w-full xl:w-11/12"></div>
         <a href="#" className="red__btn">
           {t("store.amazonButton")}
         </a>

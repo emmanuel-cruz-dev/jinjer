@@ -12,6 +12,7 @@ import Tour from "./components/Tour";
 import Albums from "./components/Albums";
 import Media from "./components/Media";
 import Store from "./components/Store";
+import Follow from "./components/Follow";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Albums />
       <Media />
       <Store />
+      <Follow />
       <Footer />
     </I18nextProvider>
   );

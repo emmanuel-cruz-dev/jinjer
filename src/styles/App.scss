@@ -490,6 +490,33 @@ img {
   }
 }
 
+// --- Fin: Store --- //
+
+// --- Inicio: Follow --- //
+
+.follow__social__number {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.follow__social__text {
+  font-size: 1.1em;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.follow__anchor__icon__line::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 44px;
+  background-color: $primary-color;
+}
+
+// --- Fin: Follow --- //
+
 // --- Inicio: Footer --- //
 
 .footer {

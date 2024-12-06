@@ -97,6 +97,7 @@ const resources = {
         titleSpan: "Our",
         description:
           "Check out our awesome store items below! We design custom t-shirts for our amazing fans!",
+        addToCart: "Add To Cart",
         amazonButton: "View On Amazon Store",
       },
       // ... más traducciones
@@ -196,6 +197,7 @@ const resources = {
         title: "Tienda",
         description:
           "¡Echa un vistazo a éstos increíbles artículos! ¡Diseñamos remeras personalizadas para nuestros increíbles fans!",
+        addToCart: "Agregar al carrito",
         amazonButton: "Ver en la tienda de Amazon",
       },
       // ... más traducciones
