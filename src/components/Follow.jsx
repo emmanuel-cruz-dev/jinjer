@@ -10,6 +10,7 @@ const colors = {
 };
 
 const Anchor = ({ icon, color }) => {
+  const { t } = useTranslation();
   const colorClasses = colors[color] || "bg-gray-500 hover:bg-gray-600";
 
   return (
@@ -21,7 +22,7 @@ const Anchor = ({ icon, color }) => {
         <span className="follow__anchor__icon__line"></span>
         {icon}
       </span>
-      Follow N3
+      {t("follow.followButton")} N3
     </a>
   );
 };
@@ -46,12 +47,11 @@ const Follow = () => {
       <article className="flex flex-col justify-center items-center gap-12 w-11/12 mx-auto">
         <div className="text-center flex flex-col gap-4">
           <h2 className="logo text-5xl">
-            Follow N<span>3</span>
+            {t("follow.title1")}
+            <span>{t("follow.titleSpan")}</span>
+            {t("follow.title2")}
           </h2>
-          <p className="text-lg">
-            Our latest videos, audios on our official Youtube channel! Don't
-            forget subscribe us!
-          </p>
+          <p className="text-lg">{t("follow.description")}.</p>
         </div>
         <div className="flex flex-col lg:flex-row justify-between gap-12">
           <div className="flex-1 border border-slate-700 p-4">
@@ -59,11 +59,15 @@ const Follow = () => {
               <div className="flex text-center gap-8">
                 <p className="flex flex-col">
                   <span className="follow__social__number">410</span>
-                  <span className="follow__social__text">Posts</span>
+                  <span className="follow__social__text">
+                    {t("follow.posts")}
+                  </span>
                 </p>
                 <p className="flex flex-col">
                   <span className="follow__social__number">230K</span>
-                  <span className="follow__social__text">Followers</span>
+                  <span className="follow__social__text">
+                    {t("follow.followers")}
+                  </span>
                 </p>
               </div>
 
@@ -92,11 +96,15 @@ const Follow = () => {
                 </p>
                 <p className="flex-col hidden lg:flex">
                   <span className="follow__social__number">332</span>
-                  <span className="follow__social__text">Following</span>
+                  <span className="follow__social__text">
+                    {t("follow.following")}
+                  </span>
                 </p>
                 <p className="flex flex-col">
                   <span className="follow__social__number">400K</span>
-                  <span className="follow__social__text">Followers</span>
+                  <span className="follow__social__text">
+                    {t("follow.followers")}
+                  </span>
                 </p>
               </div>
 

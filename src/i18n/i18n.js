@@ -100,6 +100,17 @@ const resources = {
         addToCart: "Add To Cart",
         amazonButton: "View On Amazon Store",
       },
+      follow: {
+        title1: "Stay Con",
+        titleSpan: "nec",
+        title2: "ted",
+        description:
+          "Explore our social media highlights, from trending tweets to photo memories and fan love",
+        posts: "Posts",
+        followButton: "Follow",
+        following: "Following",
+        followers: "Followers",
+      },
       // ... más traducciones
     },
   },
@@ -199,6 +210,17 @@ const resources = {
           "¡Echa un vistazo a éstos increíbles artículos! ¡Diseñamos remeras personalizadas para nuestros increíbles fans!",
         addToCart: "Agregar al carrito",
         amazonButton: "Ver en la tienda de Amazon",
+      },
+      follow: {
+        title1: "Mantente Co",
+        titleSpan: "nec",
+        title2: "tado",
+        description:
+          "Explora aspectos destacados de nuestras redes, desde los tweets más populares hasta los recuerdos fotográficos y el cariño de los fans",
+        posts: "Posteos",
+        followButton: "Seguir a",
+        following: "Siguiendo",
+        followers: "Seguidores",
       },
       // ... más traducciones
     },
