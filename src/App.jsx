@@ -11,6 +11,7 @@ import About from "./components/About";
 import Tour from "./components/Tour";
 import Albums from "./components/Albums";
 import Media from "./components/Media";
+import Store from "./components/Store";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Tour />
       <Albums />
       <Media />
+      <Store />
       <Footer />
     </I18nextProvider>
   );
