@@ -27,13 +27,12 @@ const Anchor = ({ icon, color }) => {
   );
 };
 
-const PostCards = () => {
+const PostCards = ({ user, message }) => {
   return (
     <div className="flex items-center gap-4">
       <img className="w-16" src={TwitterImg1} alt="" />
-      <p className="xl:text-[17px] leading-8 opacity-70">
-        <span>@rockandcoke</span> The N3phews group in Rock'n'Coke 2023
-        Festival! #N3phews #N3phewsGroup
+      <p className="leading-relaxed">
+        <span className="font-bold">@{user}</span> {message}
       </p>
     </div>
   );
@@ -53,7 +52,7 @@ const Follow = () => {
           </h2>
           <p className="text-lg">{t("follow.description")}.</p>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between gap-12">
+        <div className="flex flex-col lg:flex-row justify-between gap-10">
           <div className="flex-1 border border-slate-700 p-4">
             <div className="flex justify-between items-center p-4">
               <div className="flex text-center gap-8">
@@ -113,10 +112,27 @@ const Follow = () => {
               </span>
             </div>
             <div className="grid grid-rows-3 gap-10">
-              <PostCards />
-              <PostCards />
-              <PostCards />
-              <PostCards />
+              <PostCards
+                user="rockamring"
+                message="📢 Just announced: N3phews headlines the Friday lineup at Festival Vibes! 🎤🔥 Are you ready for this? #RAR2025 #FestivalSeason"
+              />
+              <PostCards
+                user="carlastonecold"
+                message="OMG! Just found out N3phews is playing in my city next week! Can’t wait to see them live! 🤩🎶 #Excited"
+              />
+              <PostCards
+                user="indierockfest"
+                message="🎸 The countdown begins! Don’t miss N3phews live at Indie Rock Fest this Saturday. 🔥 Get your tickets now! #LiveMusic #N3phews"
+              />
+
+              <PostCards
+                user="musicloverzack"
+                message="Just listened to N3phews latest track. Pure magic! ✨🎶 If you haven’t heard them yet, you’re missing out! #N3phews #NewMusic"
+              />
+              <PostCards
+                user="sophiajones"
+                message="Still can’t believe I met N3phews after their show last night! The sweetest band ever. 💕🎸 #FanMoment #BestNight"
+              />
             </div>
           </div>
         </div>
