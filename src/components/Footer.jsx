@@ -101,7 +101,7 @@ const Footer = () => {
                 </a>
               </li>
 
-              <li>Emmanuel Cruz Productions</li>
+              <li>ERA⚡ Productions</li>
             </ul>
           </div>
         </div>
