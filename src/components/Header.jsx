@@ -230,8 +230,8 @@ const Header = () => {
           </a>
         </li>
         <li>
-          <a href="#contact" onClick={() => toggleMenu()}>
-            {t("navbar.contact")}
+          <a href="#follow" onClick={() => toggleMenu()}>
+            {t("navbar.follow")}
           </a>
         </li>
       </ul>
