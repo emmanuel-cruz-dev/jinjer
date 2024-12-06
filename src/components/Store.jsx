@@ -13,7 +13,7 @@ const TShirtCard = ({ title, price }) => {
       </div>
       <a
         href="#"
-        className="absolute top-1/2 right-0 bg-red-700 px-2 py-1 text-sm text-white font-semibold hover:text-white hover:bg-red-800 transition-colors duration-300"
+        className="absolute top-1/2 right-0 bg-red-600 px-2 py-1 text-sm text-white font-semibold hover:text-white hover:bg-red-700 transition-colors duration-300"
       >
         Add to cart
       </a>
