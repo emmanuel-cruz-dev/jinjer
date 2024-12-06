@@ -92,6 +92,13 @@ const resources = {
         undisclosedDesires:
           "Undisclosed Desires is a song by English rock band Muse. It was released as the second single from their fifth studio album, The Resistance, on 16 November 2009.",
       },
+      store: {
+        title: "Store",
+        titleSpan: "Our",
+        description:
+          "Check out our awesome store items below! We design custom hoodies, jackets, and t-shirts for our amazing fans!",
+        amazonButton: "View On Amazon Store",
+      },
       // ... más traducciones
     },
   },
@@ -183,6 +190,13 @@ const resources = {
           "Video oficial de Starman de David Bowie, que incluye imágenes de la gira Ziggy Stardust filmadas en el Reino Unido durante 1972 y 1973. Filmado por el fallecido colaborador de Bowie, el fotógrafo Mick Rock, el metraje presenta la versión del álbum de Starman como banda sonora.",
         undisclosedDesires:
           "Undisclosed Desires es una canción de la banda británica Muse. La canción fue lanzada como el segundo sencillo de su quinto álbum de estudio The Resistance, el 16 de noviembre de 2009.",
+      },
+      store: {
+        titleSpan: "Nuestra",
+        title: "Tienda",
+        description:
+          "¡Echa un vistazo a éstos increíbles artículos! ¡Diseñamos buzos, camperas y remeras personalizadas para nuestros increíbles fanáticos!",
+        amazonButton: "Ver en la tienda de Amazon",
       },
       // ... más traducciones
     },
