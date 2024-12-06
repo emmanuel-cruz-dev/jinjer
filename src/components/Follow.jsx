@@ -31,7 +31,7 @@ const PostCards = ({ user, message }) => {
   return (
     <div className="flex items-center gap-4">
       <img className="w-14 md:w-16" src={TwitterImg1} alt="" />
-      <p className="leading-relaxed text-sm md:text-lg">
+      <p className="leading-relaxed text-sm md:text-base">
         <span className="font-bold">@{user}</span> {message}
       </p>
     </div>
@@ -87,7 +87,7 @@ const Follow = () => {
             </div>
           </div>
           <div className="flex-1 flex flex-col gap-8">
-            <div className="flex justify-between items-center p-4 border-b border-slate-700">
+            <div className="flex justify-between items-center py-4 lg:p-4 border-b border-slate-700">
               <div className="flex text-center gap-8">
                 <p className="flex flex-col">
                   <span className="follow__social__number">759</span>

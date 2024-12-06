@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
 
 import CardImg from "../assets/images/blog03.jpg";
-import CardImg1 from "../assets/images/blog-card-01.jpg";
+import CardImg1 from "../assets/images/blog-card-04.jpg";
 import CardImg2 from "../assets/images/blog-card-02.jpg";
 import CardImg3 from "../assets/images/blog-card-03.jpg";
 
@@ -66,7 +66,7 @@ const Carousel = () => {
               Read more
             </a>
             <time className="text-sm uppercase" dateTime="2018-01-16">
-              9 Nov 2019
+              9 Nov 2020
             </time>
           </div>
         </div>

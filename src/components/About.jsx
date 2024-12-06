@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import microfono from "../assets/icons/microfono.png";
 import guitarra from "../assets/icons/guitarra.png";
 import bateria from "../assets/icons/bateria.png";
-import Naomi from "../assets/images/naomi-aldanna.jpg";
+import Naomi from "../assets/images/naomi-aldana.jpg";
 import July from "../assets/images/julian-andre.jpg";
 import Benja from "../assets/images/benjamin-sebastian.jpg";
 
