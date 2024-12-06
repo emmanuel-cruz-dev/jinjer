@@ -114,6 +114,12 @@ const resources = {
           "📢 Just announced: N3phews headlines the Friday lineup at Festival Vibes! 🎤🔥 Are you ready for this? #RAR2025 #FestivalSeason",
         carlaStoneCold:
           "OMG! Just found out N3phews is playing in my city next week! Can’t wait to see them live! 🤩🎶 #Excited",
+        indieRockFest:
+          "🎸 The countdown begins! Don’t miss N3phews live at Indie Rock Fest this Saturday. 🔥 Get your tickets now! #LiveMusic #N3phews",
+        musicLoverZack:
+          "Just listened to N3phews latest track. Pure magic! ✨🎶 If you haven't heard them yet, you're missing out! #N3phews #NewMusic",
+        sophiaJones:
+          "Still can't believe I met N3phews after their show last night! The sweetest band ever. 💕🎸 #FanMoment #BestNight",
       },
       // ... más traducciones
     },
@@ -229,6 +235,12 @@ const resources = {
           "📢 Último momento: N3phews encabeza el lineup del viernes en el Festival Vibes. 🎤🔥 ¿Estás listo para esto? #RAR2025 #TemporadaDeFestivales",
         carlaStoneCold:
           "¡DIOOS! Acabo de enterarme que N3phews toca en mi ciudad la semana que viene. ¡No puedo esperar para verlos en vivo! 🤩🎶 #Emocionada",
+        indieRockFest:
+          "🎸 ¡Empieza la cuenta regresiva! No te pierdas a N3phews en vivo este sábado en el Indie Rock Fest. 🔥 ¡Conseguí tus entradas ahora! #MúsicaEnVivo #N3phews",
+        musicLoverZack:
+          "Acabo de escuchar el último tema de N3phews. ¡Magia pura! ✨🎶 Si todavía no los escuchaste, te lo estás perdiendo. #N3phews #MúsicaNueva",
+        sophiaJones:
+          "Todavía no puedo creer que conocí a N3phews después del show de anoche. ¡La banda más copada! 💕🎸 #MomentoFan #MejorNoche",
       },
       // ... más traducciones
     },

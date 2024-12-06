@@ -119,17 +119,14 @@ const Follow = () => {
               />
               <PostCards
                 user="indierockfest"
-                message="🎸 The countdown begins! Don't miss N3phews live at Indie Rock Fest this Saturday. 🔥 Get your tickets now! #LiveMusic #N3phews"
+                message={t("follow.indieRockFest")}
               />
 
               <PostCards
                 user="musicloverzack"
-                message="Just listened to N3phews latest track. Pure magic! ✨🎶 If you haven't heard them yet, you're missing out! #N3phews #NewMusic"
+                message={t("follow.musicLoverZack")}
               />
-              <PostCards
-                user="sophiajones"
-                message="Still can’t believe I met N3phews after their show last night! The sweetest band ever. 💕🎸 #FanMoment #BestNight"
-              />
+              <PostCards user="sophiajones" message={t("follow.sophiaJones")} />
             </div>
           </div>
         </div>
