@@ -515,6 +515,14 @@ img {
   background-color: $primary-color;
 }
 
+.follow__img__grid-container img {
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: blur(2px) grayscale(80%);
+  }
+}
+
 // --- Fin: Follow --- //
 
 // --- Inicio: Footer --- //

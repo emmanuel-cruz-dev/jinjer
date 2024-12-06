@@ -71,7 +71,7 @@ const Follow = () => {
                 <Anchor color="slate" icon={<FaInstagram />} />
               </span>
             </div>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="follow__img__grid-container grid grid-cols-3 gap-4">
               <img src={InstaImg1} alt="" />
               <img src={InstaImg1} alt="" />
               <img src={InstaImg1} alt="" />
