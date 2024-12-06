@@ -1,4 +1,22 @@
 import { useTranslation } from "react-i18next";
+import TShirt1 from "../assets/images/shop-01.png";
+
+const TShirtCard = () => {
+  return (
+    <div className="relative">
+      <figure className="">
+        <img className="" src={TShirt1} alt="" />
+      </figure>
+      <div className="flex justify-between">
+        <h3 className="">T-Shirt Guitar</h3>
+        <span className="">$21.99</span>
+      </div>
+      <span className="absolute top-1/2 right-0 bg-red-700 px-2 py-1 text-sm">
+        Add to cart
+      </span>
+    </div>
+  );
+};
 
 const Store = () => {
   const { t } = useTranslation();
@@ -15,7 +33,9 @@ const Store = () => {
           </h2>
           <p className="text-lg">{t("store.description")}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-40 gap-y-12 w-full md:w-5/6"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-40 gap-y-12 w-full md:w-5/6">
+          <TShirtCard />
+        </div>
         <a href="#" className="red__btn">
           {t("store.amazonButton")}
         </a>
