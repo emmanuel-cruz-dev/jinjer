@@ -112,22 +112,19 @@ const Follow = () => {
               </span>
             </div>
             <div className="grid grid-rows-3 gap-10">
-              <PostCards
-                user="rockamring"
-                message="📢 Just announced: N3phews headlines the Friday lineup at Festival Vibes! 🎤🔥 Are you ready for this? #RAR2025 #FestivalSeason"
-              />
+              <PostCards user="rockamring" message={t("follow.rockAmRing")} />
               <PostCards
                 user="carlastonecold"
-                message="OMG! Just found out N3phews is playing in my city next week! Can’t wait to see them live! 🤩🎶 #Excited"
+                message={t("follow.carlaStoneCold")}
               />
               <PostCards
                 user="indierockfest"
-                message="🎸 The countdown begins! Don’t miss N3phews live at Indie Rock Fest this Saturday. 🔥 Get your tickets now! #LiveMusic #N3phews"
+                message="🎸 The countdown begins! Don't miss N3phews live at Indie Rock Fest this Saturday. 🔥 Get your tickets now! #LiveMusic #N3phews"
               />
 
               <PostCards
                 user="musicloverzack"
-                message="Just listened to N3phews latest track. Pure magic! ✨🎶 If you haven’t heard them yet, you’re missing out! #N3phews #NewMusic"
+                message="Just listened to N3phews latest track. Pure magic! ✨🎶 If you haven't heard them yet, you're missing out! #N3phews #NewMusic"
               />
               <PostCards
                 user="sophiajones"

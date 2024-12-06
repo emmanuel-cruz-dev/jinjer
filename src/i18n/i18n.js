@@ -110,6 +110,10 @@ const resources = {
         followButton: "Follow",
         following: "Following",
         followers: "Followers",
+        rockAmRing:
+          "📢 Just announced: N3phews headlines the Friday lineup at Festival Vibes! 🎤🔥 Are you ready for this? #RAR2025 #FestivalSeason",
+        carlaStoneCold:
+          "OMG! Just found out N3phews is playing in my city next week! Can’t wait to see them live! 🤩🎶 #Excited",
       },
       // ... más traducciones
     },
@@ -221,6 +225,10 @@ const resources = {
         followButton: "Seguir a",
         following: "Siguiendo",
         followers: "Seguidores",
+        rockAmRing:
+          "📢 Último momento: N3phews encabeza el lineup del viernes en el Festival Vibes. 🎤🔥 ¿Estás listo para esto? #RAR2025 #TemporadaDeFestivales",
+        carlaStoneCold:
+          "¡DIOOS! Acabo de enterarme que N3phews toca en mi ciudad la semana que viene. ¡No puedo esperar para verlos en vivo! 🤩🎶 #Emocionada",
       },
       // ... más traducciones
     },
