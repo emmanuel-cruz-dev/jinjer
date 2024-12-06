@@ -5,11 +5,17 @@ import InstaImg1 from "../assets/images/insta-01.jpg";
 
 import TwitterImg1 from "../assets/images/twitter-01.jpeg";
 
+const colors = {
+  cyan: "bg-cyan-500 hover:bg-cyan-600",
+};
+
 const Anchor = ({ icon, color }) => {
+  const colorClasses = colors[color] || "bg-gray-500 hover:bg-gray-600";
+
   return (
     <a
       href="#"
-      className={`relative flex gap-5 px-3 py-2 text-gray-200 hover:text-white bg-${color}-500 hover:bg-${color}-600 transition-colors duration-300`}
+      className={`relative flex gap-5 px-3 py-2 text-gray-200 hover:text-white ${colorClasses} transition-colors duration-300`}
     >
       <span className="text-2xl">
         <span className="follow__anchor__icon__line"></span>
