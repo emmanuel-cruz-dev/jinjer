@@ -480,6 +480,16 @@ img {
 }
 // --- Fin: Albums --- //
 
+// --- Inicio: Store --- //
+
+.store__custom-slider {
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
 // --- Inicio: Footer --- //
 
 .footer {

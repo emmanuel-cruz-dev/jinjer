@@ -4,10 +4,15 @@ import TShirt2 from "../assets/images/shop-bird-black.png";
 import TShirt3 from "../assets/images/shop-bird-white.png";
 import TShirt4 from "../assets/images/shop-official-logo-black.png";
 import TShirt5 from "../assets/images/shop-official-logo-white.png";
+import TShirt6 from "../assets/images/shop-zombie-girl.png";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const TShirtCard = ({ title, price, img }) => {
   return (
-    <div className="relative">
+    <div className="relative mx-6">
       <figure className="">
         <img className="" src={img} alt="" />
       </figure>
@@ -21,6 +26,80 @@ const TShirtCard = ({ title, price, img }) => {
       >
         Add to cart
       </a>
+    </div>
+  );
+};
+
+const Carousel = () => {
+  const { t } = useTranslation();
+
+  const settings = {
+    dots: false, // Mostrar puntos de navegación
+    infinite: true, // Desplazamiento infinito
+    speed: 500, // Velocidad de transición en milisegundos
+    slidesToShow: 4, // Cantidad de elementos visibles
+    slidesToScroll: 2, // Cantidad de elementos que se mueven por transición
+    autoplay: false, // Activar desplazamiento automático
+    arrows: false, // Mostrar flechas
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  return (
+    <div style={{ padding: "12px" }}>
+      <Slider
+        {...settings}
+        className="store__custom-slider"
+        lazyLoad="ondemand"
+      >
+        <div>
+          {/* Card 1 */}
+          <TShirtCard title="Afterlife Album" price="21.99" img={TShirt1} />
+        </div>
+
+        <div>
+          {/* Card 2 */}
+          <TShirtCard
+            title="Bird of Hermes/Black"
+            price="18.69"
+            img={TShirt2}
+          />
+        </div>
+
+        <div>
+          {/* Card 3 */}
+          <TShirtCard
+            title="Bird of Hermes/White"
+            price="24.79"
+            img={TShirt3}
+          />
+        </div>
+
+        <div>
+          {/* Card 4 */}
+          <TShirtCard title="Official Logo/Black" price="23.95" img={TShirt4} />
+        </div>
+        <div>
+          {/* Card 5 */}
+          <TShirtCard title="Official Logo/White" price="23.95" img={TShirt5} />
+        </div>
+        <div>
+          {/* Card 6 */}
+          <TShirtCard title="Zombie Girl" price="19.99" img={TShirt6} />
+        </div>
+      </Slider>
     </div>
   );
 };
@@ -40,29 +119,10 @@ const Store = () => {
           </h2>
           <p className="text-lg">{t("store.description")}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-x-10 gap-y-12 w-full xl:w-11/12">
-          <TShirtCard title="T-Shirt Afterlife" price="21.99" img={TShirt1} />
-          <TShirtCard
-            title="T-Shirt Bird of Hermes"
-            price="18.69"
-            img={TShirt2}
-          />
-          <TShirtCard
-            title="T-Shirt Bird of Hermes/W"
-            price="24.79"
-            img={TShirt3}
-          />
-          <TShirtCard
-            title="T-Shirt Official Logo"
-            price="23.95"
-            img={TShirt4}
-          />
-          <TShirtCard
-            title="T-Shirt Official Logo/W"
-            price="23.95"
-            img={TShirt5}
-          />
+        <div className="w-screen">
+          <Carousel />
         </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-x-10 gap-y-12 w-full xl:w-11/12"></div>
         <a href="#" className="red__btn">
           {t("store.amazonButton")}
         </a>

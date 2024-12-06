@@ -96,7 +96,7 @@ const resources = {
         title: "Store",
         titleSpan: "Our",
         description:
-          "Check out our awesome store items below! We design custom hoodies, jackets, and t-shirts for our amazing fans!",
+          "Check out our awesome store items below! We design custom t-shirts for our amazing fans!",
         amazonButton: "View On Amazon Store",
       },
       // ... más traducciones
@@ -195,7 +195,7 @@ const resources = {
         titleSpan: "Nuestra",
         title: "Tienda",
         description:
-          "¡Echa un vistazo a éstos increíbles artículos! ¡Diseñamos buzos, camperas y remeras personalizadas para nuestros increíbles fanáticos!",
+          "¡Echa un vistazo a éstos increíbles artículos! ¡Diseñamos remeras personalizadas para nuestros increíbles fans!",
         amazonButton: "Ver en la tienda de Amazon",
       },
       // ... más traducciones
