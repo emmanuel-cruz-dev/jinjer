@@ -30,8 +30,8 @@ const Anchor = ({ icon, color }) => {
 const PostCards = ({ user, message }) => {
   return (
     <div className="flex items-center gap-4">
-      <img className="w-16" src={TwitterImg1} alt="" />
-      <p className="leading-relaxed">
+      <img className="w-14 md:w-16" src={TwitterImg1} alt="" />
+      <p className="leading-relaxed text-sm md:text-lg">
         <span className="font-bold">@{user}</span> {message}
       </p>
     </div>
@@ -54,7 +54,7 @@ const Follow = () => {
         </div>
         <div className="flex flex-col lg:flex-row justify-between gap-10">
           <div className="flex-1 border border-slate-700 p-4">
-            <div className="flex justify-between items-center p-4">
+            <div className="flex justify-between items-center py-4 lg:p-4">
               <div className="flex text-center gap-8">
                 <p className="flex flex-col">
                   <span className="follow__social__number">410</span>
