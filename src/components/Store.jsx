@@ -99,7 +99,7 @@ const Carousel = () => {
         </div>
         <div>
           {/* Card 6 */}
-          <TShirtCard title="Zombie Girl" price="19.99" img={TShirt6} />
+          <TShirtCard title="Damned Album" price="19.99" img={TShirt6} />
         </div>
       </Slider>
     </div>
