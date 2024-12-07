@@ -39,7 +39,11 @@ const Albums = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-40 gap-y-12 w-full md:w-5/6">
           <Album cover={AlbumCover01} title="Royal Blood" year="2024" />
           <Album cover={AlbumCover02} title="Bird of Hermes" year="2021" />
-          <Album cover={AlbumCover03} title="Vertical" year="2019" />
+          <Album
+            cover={AlbumCover03}
+            title="Shadows of Childhood"
+            year="2019"
+          />
           <Album cover={AlbumCover04} title="Hollow Thrones" year="2017" />
           <Album cover={AlbumCover05} title="Afterlife" year="2014" />
           <Album
