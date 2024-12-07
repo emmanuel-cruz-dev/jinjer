@@ -71,6 +71,9 @@ const Footer = () => {
                 <a href="#"> Why Music Matters</a>
               </li>
               <li>
+                <a href="#">Fourth Member Fan Club</a>
+              </li>
+              <li>
                 <a
                   href="https://www.metallica.com/"
                   target="_blank"
@@ -126,7 +129,6 @@ const Footer = () => {
           <li>
             <a href="#">Privacy Policy</a>
           </li>
-          <li>© 2024 N3phews</li>
           <li>© The Uncles Recordings</li>
           <li>The N3phews club®</li>
         </ul>
