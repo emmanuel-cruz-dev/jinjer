@@ -2,6 +2,9 @@ import { useTranslation } from "react-i18next";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 import InstaImg1 from "../assets/images/insta-01.jpg";
+import InstaImg3 from "../assets/images/insta-03.jpg";
+import InstaImg5 from "../assets/images/insta-05.jpg";
+import InstaImg7 from "../assets/images/insta-07.jpg";
 
 import TwitterImg1 from "../assets/images/twitter-01.jpeg";
 
@@ -77,11 +80,11 @@ const Follow = () => {
             <div className="follow__img__grid-container grid grid-cols-3 gap-4">
               <img src={InstaImg1} alt="" />
               <img src={InstaImg1} alt="" />
+              <img src={InstaImg3} alt="" />
               <img src={InstaImg1} alt="" />
+              <img src={InstaImg5} alt="" />
               <img src={InstaImg1} alt="" />
-              <img src={InstaImg1} alt="" />
-              <img src={InstaImg1} alt="" />
-              <img src={InstaImg1} alt="" />
+              <img src={InstaImg7} alt="" />
               <img src={InstaImg1} alt="" />
               <img src={InstaImg1} alt="" />
             </div>
