@@ -2,9 +2,14 @@ import { useTranslation } from "react-i18next";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 import InstaImg1 from "../assets/images/insta-01.jpg";
+import InstaImg2 from "../assets/images/insta-02.jpg";
 import InstaImg3 from "../assets/images/insta-03.jpg";
+import InstaImg4 from "../assets/images/insta-04.jpg";
 import InstaImg5 from "../assets/images/insta-05.jpg";
+import InstaImg6 from "../assets/images/insta-06.jpg";
 import InstaImg7 from "../assets/images/insta-07.jpg";
+import InstaImg8 from "../assets/images/insta-08.jpg";
+import InstaImg9 from "../assets/images/insta-09.jpg";
 
 import TwitterImg1 from "../assets/images/twitter-01.jpg";
 import TwitterImg2 from "../assets/images/twitter-02.jpg";
@@ -83,14 +88,14 @@ const Follow = () => {
             </div>
             <div className="follow__img__grid-container grid grid-cols-3 gap-4">
               <img src={InstaImg1} alt="" />
-              <img src={InstaImg1} alt="" />
+              <img src={InstaImg2} alt="" />
+              <img src={InstaImg4} alt="" />
               <img src={InstaImg3} alt="" />
-              <img src={InstaImg1} alt="" />
+              <img src={InstaImg8} alt="" />
               <img src={InstaImg5} alt="" />
-              <img src={InstaImg1} alt="" />
               <img src={InstaImg7} alt="" />
-              <img src={InstaImg1} alt="" />
-              <img src={InstaImg1} alt="" />
+              <img src={InstaImg9} alt="" />
+              <img src={InstaImg6} alt="" />
             </div>
           </div>
           <div className="flex-1 flex flex-col gap-8">
