@@ -9,7 +9,9 @@ const Footer = () => {
       <article className="flex flex-col lg:flex-row gap-10 justify-between items-center px-20 py-16 border-b border-gray-600">
         <div className="flex flex-col items-center gap-7">
           <div className="flex flex-col items-center gap-2 w-44">
-            <img className="footer__nephews-logo" src={NephewsLogo} alt="" />
+            <figure className="w-36">
+              <img className="footer__nephews-logo" src={NephewsLogo} alt="" />
+            </figure>
             <div className="text-2xl">
               <Name />
             </div>
@@ -107,7 +109,7 @@ const Footer = () => {
         </div>
       </article>
 
-      <article className="flex flex-col gap-6 items-center p-8 uppercase text-xs">
+      <article className="flex flex-col gap-4 items-center p-8 xl:py-6 uppercase text-xs">
         <ul className="footer__list flex flex-col md:flex-row gap-6 text-center">
           <li>
             <a href="#">Credits</a>

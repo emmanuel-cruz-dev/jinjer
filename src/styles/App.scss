@@ -544,19 +544,6 @@ img {
   letter-spacing: 1px;
 }
 
-.footer__nephews-logo {
-  animation: rotate 20s linear infinite 10s;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .posts {
   h4 {
     font-size: 18px;

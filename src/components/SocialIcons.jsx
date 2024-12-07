@@ -49,7 +49,7 @@ const SocialIcons = () => {
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className={`social-icons transition-colors duration-300 ${item.color}`}
+          className={`social-icons hover:drop-shadow-[0_2px_6px_rgba(255,255,255,0.6)] transition-colors duration-300 ${item.color}`}
           aria-label={item.name}
         >
           {item.icon}
