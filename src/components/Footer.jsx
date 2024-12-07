@@ -58,7 +58,7 @@ const Footer = () => {
               <li>Atlanta, GA 30342</li>
               <li>T:+920364426</li>
               <li>
-                <a href="#">www.qodeinteractive.com</a>
+                <a href="#">www.funstuff.com</a>
               </li>
             </ul>
           </div>
@@ -66,23 +66,31 @@ const Footer = () => {
           <div className="record-labels flex flex-col gap-4">
             <h3 className="footer__title">Record Labels</h3>
             <ul>
+              <li>ERA⚡ Productions</li>
+              <li>
+                <a href="#"> Why Music Matters</a>
+              </li>
               <li>
                 <a
                   href="https://www.metallica.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Metallica
+                  www.epicrecords.com
                 </a>
               </li>
               <li>
-                <a
-                  href="https://www.megadeth.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Megadeth
-                </a>
+                <span>
+                  © 2024{" "}
+                  <a
+                    href="https://www.megadeth.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Sony Music Entertainment
+                  </a>
+                  .
+                </span>
               </li>
               <li>
                 <a
@@ -102,8 +110,6 @@ const Footer = () => {
                   Plantilla Secundaria
                 </a>
               </li>
-
-              <li>ERA⚡ Productions</li>
             </ul>
           </div>
         </div>
