@@ -90,10 +90,10 @@ const Follow = () => {
               <img src={InstaImg1} alt="" />
               <img src={InstaImg2} alt="" />
               <img src={InstaImg4} alt="" />
-              <img src={InstaImg3} alt="" />
-              <img src={InstaImg8} alt="" />
-              <img src={InstaImg5} alt="" />
               <img src={InstaImg7} alt="" />
+              <img src={InstaImg8} alt="" />
+              <img src={InstaImg3} alt="" />
+              <img src={InstaImg5} alt="" />
               <img src={InstaImg9} alt="" />
               <img src={InstaImg6} alt="" />
             </div>
