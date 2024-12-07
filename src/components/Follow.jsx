@@ -6,7 +6,11 @@ import InstaImg3 from "../assets/images/insta-03.jpg";
 import InstaImg5 from "../assets/images/insta-05.jpg";
 import InstaImg7 from "../assets/images/insta-07.jpg";
 
-import TwitterImg1 from "../assets/images/twitter-01.jpeg";
+import TwitterImg1 from "../assets/images/twitter-01.jpg";
+import TwitterImg2 from "../assets/images/twitter-02.jpg";
+import TwitterImg3 from "../assets/images/twitter-03.jpg";
+import TwitterImg4 from "../assets/images/twitter-04.jpg";
+import TwitterImg5 from "../assets/images/twitter-05.jpg";
 
 const colors = {
   cyan: "bg-cyan-500 hover:bg-cyan-600",
@@ -30,10 +34,10 @@ const Anchor = ({ icon, color }) => {
   );
 };
 
-const PostCards = ({ user, message }) => {
+const PostCards = ({ img, user, message }) => {
   return (
     <div className="flex items-center gap-4">
-      <img className="w-14 md:w-16" src={TwitterImg1} alt="" />
+      <img className="w-14 md:w-16" src={img} alt="" />
       <p className="leading-relaxed text-sm md:text-base text-gray-400">
         <span className="font-bold text-gray-300">@{user}</span> {message}
       </p>
@@ -115,21 +119,32 @@ const Follow = () => {
               </span>
             </div>
             <div className="grid grid-rows-3 gap-10">
-              <PostCards user="rockamring" message={t("follow.rockAmRing")} />
               <PostCards
+                img={TwitterImg1}
+                user="rockamring"
+                message={t("follow.rockAmRing")}
+              />
+              <PostCards
+                img={TwitterImg2}
                 user="carlastonecold"
                 message={t("follow.carlaStoneCold")}
               />
               <PostCards
+                img={TwitterImg3}
                 user="indierockfest"
                 message={t("follow.indieRockFest")}
               />
 
               <PostCards
+                img={TwitterImg4}
                 user="musicloverzack"
                 message={t("follow.musicLoverZack")}
               />
-              <PostCards user="sophiajones" message={t("follow.sophiaJones")} />
+              <PostCards
+                img={TwitterImg5}
+                user="sophiajones"
+                message={t("follow.sophiaJones")}
+              />
             </div>
           </div>
         </div>
