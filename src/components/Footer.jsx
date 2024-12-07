@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import Name from "./Name";
 import SocialIcons from "./SocialIcons";
 import NephewsLogo from "../assets/icons/nephews-logo.png";
-import CDCover from "../assets/images/blog-masonry-image-5.jpg";
+import CDCover from "../assets/images/latest-post-02.jpg";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer bg-footer">
       <article className="flex flex-col lg:flex-row gap-10 justify-between items-center px-20 py-16 border-b border-gray-600">
@@ -43,7 +46,7 @@ const Footer = () => {
               </figure>
               <div className="flex flex-col justify-around h-full">
                 <h4>
-                  <a href="#">Crows Perch Review</a>
+                  <a href="#">Hollow Thrones Review</a>
                 </h4>
                 <time>November 11, 2022</time>
               </div>

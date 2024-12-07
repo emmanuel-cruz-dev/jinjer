@@ -40,9 +40,13 @@ const Albums = () => {
           <Album cover={AlbumCover01} title="Royal Blood" year="2024" />
           <Album cover={AlbumCover02} title="Bird of Hermes" year="2021" />
           <Album cover={AlbumCover03} title="Vertical" year="2019" />
-          <Album cover={AlbumCover04} title="Ramones" year="2017" />
+          <Album cover={AlbumCover04} title="Hollow Thrones" year="2017" />
           <Album cover={AlbumCover05} title="Afterlife" year="2014" />
-          <Album cover={AlbumCover06} title="The Jam" year="2011" />
+          <Album
+            cover={AlbumCover06}
+            title="Portrait of the Damned"
+            year="2011"
+          />
         </div>
         <a href="#" className="red__btn">
           {t("albums.itunes")}
