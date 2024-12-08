@@ -1,12 +1,14 @@
 import { useTranslation } from "react-i18next";
 import ReactCountryFlag from "react-country-flag";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const LanguageSwitch = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === "en" ? "es" : "en";
+    setCurrentLanguage(newLang);
     i18n.changeLanguage(newLang);
     localStorage.setItem("preferredLanguage", newLang);
   };
@@ -16,7 +18,9 @@ const LanguageSwitch = () => {
     if (savedLanguage) {
       i18n.changeLanguage(savedLanguage);
     }
-  }, []);
+
+    setCurrentLanguage(i18n.language);
+  }, [i18n.language]);
 
   return (
     <button

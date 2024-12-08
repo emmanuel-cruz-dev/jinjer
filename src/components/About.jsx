@@ -10,7 +10,7 @@ const MemberArticle = ({ image, icon, name, instrument }) => {
   const { t } = useTranslation();
 
   return (
-    <article className="about__members__article">
+    <a href="#" className="about__members__article">
       <div className="about__members__image-container">
         <figure className="about__members__logo-container">
           <img className="about__members__logo-image" src={icon} alt="" />
@@ -21,7 +21,7 @@ const MemberArticle = ({ image, icon, name, instrument }) => {
         <h4>{instrument}</h4>
         <h5>{name}</h5>
       </div>
-    </article>
+    </a>
   );
 };
 
