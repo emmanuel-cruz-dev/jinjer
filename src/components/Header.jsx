@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Name from "./Name";
 import SocialLinks from "./SocialLinks";
 
-import SideAreaImg from "../assets/images/sidearea-img.jpg";
+import SideAreaImg from "../assets/images/sidearea-album.jpg";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,9 +39,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroHeight = document.getElementById("hero").offsetHeight;
-
-      if (window.scrollY > heroHeight) setIsScrolled(true);
+      if (window.scrollY > 500) setIsScrolled(true);
       else setIsScrolled(false);
     };
 
@@ -108,51 +106,6 @@ const Header = () => {
           >
             queue_music
           </span>
-
-          {/* <ul
-            className={`header__menu-list ${isMenuOpen ? "active" : "hidden"}`}
-          >
-            <li>
-              <a href="#" onClick={() => toggleMenu()}>
-                {t("navbar.home")}
-              </a>
-            </li>
-            <li>
-              <a href="#latest-news" onClick={() => toggleMenu()}>
-                {t("navbar.news")}
-              </a>
-            </li>
-            <li>
-              <a href="#" onClick={() => toggleMenu()}>
-                {t("navbar.about")}
-              </a>
-            </li>
-            <li>
-              <a href="#" onClick={() => toggleMenu()}>
-                {t("navbar.tour")}
-              </a>
-            </li>
-            <li>
-              <a href="#" onClick={() => toggleMenu()}>
-                {t("navbar.albums")}
-              </a>
-            </li>
-            <li>
-              <a href="#" onClick={() => toggleMenu()}>
-                {t("navbar.media")}
-              </a>
-            </li>
-            <li>
-              <a href="#" onClick={() => toggleMenu()}>
-                {t("navbar.store")}
-              </a>
-            </li>
-            <li>
-              <a href="#" onClick={() => toggleMenu()}>
-                {t("navbar.contact")}
-              </a>
-            </li>
-          </ul> */}
 
           <ul className="gap-6 hidden lg:flex">
             <li>
