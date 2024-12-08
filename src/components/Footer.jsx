@@ -28,7 +28,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between gap-8 lg:gap-16">
           <div className="posts flex flex-col gap-4">
-            <h3 className="footer__title">Latest Posts</h3>
+            <h3 className="footer__title">{t("footer.latestPosts")}</h3>
             <a
               href="#"
               className="flex gap-4 items-center border-b border-gray-600 pb-4"
@@ -38,9 +38,9 @@ const Footer = () => {
               </figure>
               <div className="flex flex-col justify-around h-full">
                 <h4>
-                  <a href="#">Band on Tour</a>
+                  <a href="#">{t("footer.bandOnTour")}</a>
                 </h4>
-                <time>Starts on February 23, 2025</time>
+                <time>{t("footer.starts")}</time>
               </div>
             </a>
 
@@ -50,15 +50,15 @@ const Footer = () => {
               </figure>
               <div className="flex flex-col justify-around h-full">
                 <h4>
-                  <a href="#">Hollow Thrones Review</a>
+                  <a href="#">{t("footer.review")}</a>
                 </h4>
-                <time>November 11, 2024</time>
+                <time>{t("footer.reviewDate")}</time>
               </div>
             </a>
           </div>
 
           <div className="bookings flex flex-col gap-4">
-            <h3 className="footer__title">Bookings</h3>
+            <h3 className="footer__title">{t("footer.bookings")}</h3>
             <ul>
               <li>Max Weatherall. Productions</li>
               <li>562 Sycamore Circle</li>
@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
 
           <div className="record-labels flex flex-col gap-4">
-            <h3 className="footer__title">Record Labels</h3>
+            <h3 className="footer__title">{t("footer.recordLabels")}</h3>
             <ul>
               <li>ERA⚡ Productions</li>
               <li>
@@ -140,17 +140,17 @@ const Footer = () => {
         <ul className="footer__list flex flex-col md:flex-row gap-6 text-center">
           <li>
             <a className="footer__legal-links" href="#">
-              Credits
+              {t("footer.credits")}
             </a>
           </li>
           <li>
             <a className="footer__legal-links" href="#">
-              Terms & Conditions
+              {t("footer.terms")}
             </a>
           </li>
           <li>
             <a className="footer__legal-links" href="#">
-              Privacy Policy
+              {t("footer.privacy")}
             </a>
           </li>
           <li>
@@ -165,7 +165,7 @@ const Footer = () => {
           </li>
         </ul>
         <p>
-          © 2024 N3phews. Powered by{" "}
+          © 2024 N3phews. {t("footer.powered")}{" "}
           <a
             className="footer__legal-links"
             target="_blank"

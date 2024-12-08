@@ -121,6 +121,19 @@ const resources = {
         sophiaJones:
           "Still can't believe I met N3phews after their show last night! The sweetest band ever. 💕🎸 #FanMoment #BestNight",
       },
+      footer: {
+        latestPosts: "Latest Posts",
+        bandOnTour: "Band On Tour",
+        starts: "Starts on 23rd February 2025",
+        review: "Hollow Thrones Review",
+        reviewDate: "11th November 2024",
+        bookings: "Bookings",
+        recordLabels: "Record Labels",
+        credits: "Credits",
+        terms: "Terms & Conditions",
+        privacy: "Privacy Policy",
+        powered: "Powered by",
+      },
       // ... más traducciones
     },
   },
@@ -241,6 +254,19 @@ const resources = {
           "Acabo de escuchar el último tema de N3phews. ¡Magia pura! ✨🎶 Si todavía no los escuchaste, te lo estás perdiendo. #N3phews #MúsicaNueva",
         sophiaJones:
           "Todavía no puedo creer que conocí a N3phews después del show de anoche. ¡La banda más copada! 💕🎸 #MomentoFan #MejorNoche",
+      },
+      footer: {
+        latestPosts: "Últimas Publicaciones",
+        bandOnTour: "Banda de Gira",
+        starts: "Inicio 23 de Febrero de 2025",
+        review: "Reseña de Hollow Thrones",
+        reviewDate: "11 de Noviembre de 2024",
+        bookings: "Reservas",
+        recordLabels: "Discográficas",
+        credits: "Créditos",
+        terms: "Términos y Condiciones",
+        privacy: "Política de Privacidad",
+        powered: "Diseñado por",
       },
       // ... más traducciones
     },
