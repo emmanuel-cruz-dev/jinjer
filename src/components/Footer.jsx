@@ -3,6 +3,7 @@ import Name from "./Name";
 import SocialIcons from "./SocialIcons";
 import NephewsLogo from "../assets/icons/nephews-logo.png";
 import CDCover from "../assets/images/latest-post-02.jpg";
+import TourPoster from "../assets/images/world-tour.jpg";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -33,13 +34,13 @@ const Footer = () => {
               className="flex gap-4 items-center border-b border-gray-600 pb-4"
             >
               <figure>
-                <img src={CDCover} alt="" width={72} />
+                <img src={TourPoster} alt="" width={72} />
               </figure>
               <div className="flex flex-col justify-around h-full">
                 <h4>
                   <a href="#">Band on Tour</a>
                 </h4>
-                <time>February 23, 2025</time>
+                <time>Starts on February 23, 2025</time>
               </div>
             </a>
 
