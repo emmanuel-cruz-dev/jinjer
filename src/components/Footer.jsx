@@ -28,7 +28,10 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between gap-8 lg:gap-16">
           <div className="posts flex flex-col gap-4">
             <h3 className="footer__title">Latest Posts</h3>
-            <div className="flex gap-4 items-center border-b border-gray-600 pb-4">
+            <a
+              href="#"
+              className="flex gap-4 items-center border-b border-gray-600 pb-4"
+            >
               <figure>
                 <img src={CDCover} alt="" width={72} />
               </figure>
@@ -38,9 +41,9 @@ const Footer = () => {
                 </h4>
                 <time>September 25, 2022</time>
               </div>
-            </div>
+            </a>
 
-            <div className="flex gap-4 items-center">
+            <a href="#" className="flex gap-4 items-center">
               <figure>
                 <img src={CDCover} alt="" width={72} />
               </figure>
@@ -50,7 +53,7 @@ const Footer = () => {
                 </h4>
                 <time>November 11, 2022</time>
               </div>
-            </div>
+            </a>
           </div>
 
           <div className="bookings flex flex-col gap-4">
