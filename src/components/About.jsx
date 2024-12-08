@@ -40,7 +40,7 @@ const About = () => {
               className="w-full"
               width="680"
               height="440"
-              src="https://www.youtube.com/embed/0_PUjfgfjmk?si=2E6stU4haVF7VbG4"
+              src="https://www.youtube.com/embed/lDrkMNw6Wr0?si=DjFKM1ycU-a4c-QU"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
