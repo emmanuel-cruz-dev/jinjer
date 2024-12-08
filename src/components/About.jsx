@@ -30,7 +30,7 @@ const About = () => {
 
   return (
     <section
-      className="scroll-top-margin about bg-white py-16 mx-auto"
+      className="scroll-top-margin about bg-slate-200 py-16 mx-auto"
       id="about"
     >
       <article className="flex flex-col justify-center items-center gap-12 w-11/12 text-black mx-auto">
