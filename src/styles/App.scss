@@ -297,15 +297,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: $background-color-black;
-    }
-  }
-
-  &:hover .about__members__logo-container {
-    background-color: $background-color-black;
   }
 
   .about__members__logo-container {
@@ -318,7 +309,11 @@ img {
     border: 5px solid $background-color-white;
     background-color: $accent-color;
     padding: 1rem;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &:hover .about__members__logo-container {
+    background-color: $background-color-black;
   }
 
   .about__members__image {
