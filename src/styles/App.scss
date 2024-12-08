@@ -237,22 +237,6 @@ img {
 
 // --- Fin: Hero --- //
 
-// Inicio: Botones //
-
-// .btn-primary {
-//   background-color: $primary-color;
-//   color: white;
-//   padding: 0.5rem 1rem;
-//   border-radius: 4px;
-//   @include flex-center;
-
-//   &:hover {
-//     background-color: darken($primary-color, 10%);
-//   }
-// }
-
-// Fin: Botones //
-
 // --- Inicio: Latest News --- //
 
 .latest-news__card {
@@ -320,19 +304,25 @@ img {
     }
   }
 
-  .about__members__logo {
-    width: 7.5rem;
-    height: 7.5rem;
-    padding: 1.5rem;
+  &:hover .about__members__logo-container {
+    background-color: $background-color-black;
+  }
+
+  .about__members__logo-container {
+    position: absolute;
+    right: -44px;
+    top: -44px;
+    border-radius: 50%;
+    width: 88px;
+    height: 88px;
+    border: 5px solid $background-color-white;
+    background-color: $accent-color;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
   }
 
   .about__members__image {
-    position: absolute;
-    width: 5.2rem;
-    right: -40px;
-    top: -40px;
     border-radius: 50%;
-    border: 5px solid $background-color-white;
   }
 
   h4 {

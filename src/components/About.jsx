@@ -6,6 +6,25 @@ import Naomi from "../assets/images/naomi-aldana.jpg";
 import July from "../assets/images/julian-andre.jpg";
 import Benja from "../assets/images/benjamin-sebastian.jpg";
 
+const MemberArticle = ({ image, icon, name, instrument }) => {
+  const { t } = useTranslation();
+
+  return (
+    <article className="about__members__article">
+      <div className="about__members__image-container">
+        <figure className="about__members__logo-container">
+          <img className="about__members__logo-image" src={icon} alt="" />
+        </figure>
+        <img className="about__members__image" src={image} alt="" />
+      </div>
+      <div className="flex flex-col items-center">
+        <h4>{instrument}</h4>
+        <h5>{name}</h5>
+      </div>
+    </article>
+  );
+};
+
 const About = () => {
   const { t } = useTranslation();
 
@@ -51,40 +70,28 @@ const About = () => {
         </div>
         <div className="about__members flex flex-col lg:flex-row justify-around items-center gap-12 w-full py-14">
           {/* Vocalista y Bajista */}
-          <article className="about__members__article">
-            <div className="about__members__image-container">
-              <img className="about__members__logo" src={microfono} alt="" />
-              <img className="about__members__image" src={Naomi} alt="" />
-            </div>
-            <div className="flex flex-col items-center">
-              <h4>{t("about.naomi")}</h4>
-              <h5>Naomi Aldanna</h5>
-            </div>
-          </article>
+          <MemberArticle
+            image={Naomi}
+            icon={microfono}
+            name="Naomi Aldana"
+            instrument={t("about.naomi")}
+          />
 
           {/* Guitarrista */}
-          <article className="about__members__article">
-            <div className="about__members__image-container">
-              <img className="about__members__logo" src={guitarra} alt="" />
-              <img className="about__members__image" src={July} alt="" />
-            </div>
-            <div className="flex flex-col items-center">
-              <h4>{t("about.july")}</h4>
-              <h5>Julián André</h5>
-            </div>
-          </article>
+          <MemberArticle
+            image={July}
+            icon={guitarra}
+            name="Julián André"
+            instrument={t("about.july")}
+          />
 
           {/* Baterista */}
-          <article className="about__members__article">
-            <div className="about__members__image-container">
-              <img className="about__members__logo" src={bateria} alt="" />
-              <img className="about__members__image" src={Benja} alt="" />
-            </div>
-            <div className="flex flex-col items-center">
-              <h4>{t("about.benja")}</h4>
-              <h5>Benjamín Sebastían</h5>
-            </div>
-          </article>
+          <MemberArticle
+            image={Benja}
+            icon={bateria}
+            name="Benjamín Sebastían"
+            instrument={t("about.benja")}
+          />
         </div>
       </article>
     </section>
