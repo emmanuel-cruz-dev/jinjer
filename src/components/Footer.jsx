@@ -60,28 +60,28 @@ const Footer = () => {
           <div className="bookings flex flex-col gap-4">
             <h3 className="footer__title">{t("footer.bookings")}</h3>
             <ul>
-              <li>Max Weatherall. Productions</li>
-              <li>562 Sycamore Circle</li>
               <li>Atlanta, GA 30342</li>
+              <li>562 Sycamore Circle</li>
               <li>T:+920364426</li>
               <li>
                 <a className="footer__legal-links" href="#">
                   www.funstuff.com
                 </a>
               </li>
+              <li>Max Dogg Productions</li>
             </ul>
           </div>
 
           <div className="record-labels flex flex-col gap-4">
             <h3 className="footer__title">{t("footer.recordLabels")}</h3>
             <ul>
-              <li>ERA⚡ Productions</li>
               <li>
                 <a className="footer__legal-links" href="#">
                   {" "}
                   Why Music Matters
                 </a>
               </li>
+              <li>ERA⚡ Productions</li>
               <li>
                 <a className="footer__legal-links" href="#">
                   Fourth Member Fan Club
@@ -99,7 +99,6 @@ const Footer = () => {
               </li>
               <li>
                 <span>
-                  © 2024{" "}
                   <a
                     className="footer__legal-links"
                     href="https://www.megadeth.com/"
