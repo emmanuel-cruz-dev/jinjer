@@ -39,7 +39,7 @@ const Footer = () => {
                 <h4>
                   <a href="#">Band on Tour</a>
                 </h4>
-                <time>September 25, 2022</time>
+                <time>February 23, 2025</time>
               </div>
             </a>
 
@@ -51,7 +51,7 @@ const Footer = () => {
                 <h4>
                   <a href="#">Hollow Thrones Review</a>
                 </h4>
-                <time>November 11, 2022</time>
+                <time>November 11, 2024</time>
               </div>
             </a>
           </div>
@@ -64,7 +64,9 @@ const Footer = () => {
               <li>Atlanta, GA 30342</li>
               <li>T:+920364426</li>
               <li>
-                <a href="#">www.funstuff.com</a>
+                <a className="footer__legal-links" href="#">
+                  www.funstuff.com
+                </a>
               </li>
             </ul>
           </div>
@@ -74,13 +76,19 @@ const Footer = () => {
             <ul>
               <li>ERA⚡ Productions</li>
               <li>
-                <a href="#"> Why Music Matters</a>
+                <a className="footer__legal-links" href="#">
+                  {" "}
+                  Why Music Matters
+                </a>
               </li>
               <li>
-                <a href="#">Fourth Member Fan Club</a>
+                <a className="footer__legal-links" href="#">
+                  Fourth Member Fan Club
+                </a>
               </li>
               <li>
                 <a
+                  className="footer__legal-links"
                   href="https://www.metallica.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -92,6 +100,7 @@ const Footer = () => {
                 <span>
                   © 2024{" "}
                   <a
+                    className="footer__legal-links"
                     href="https://www.megadeth.com/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -103,6 +112,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  className="footer__legal-links"
                   href="https://demo.farost.net/backtorock/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -112,6 +122,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  className="footer__legal-links"
                   href="https://rebellion.qodeinteractive.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -155,6 +166,7 @@ const Footer = () => {
         <p>
           © 2024 N3phews. Powered by{" "}
           <a
+            className="footer__legal-links"
             target="_blank"
             rel="noopener noreferrer"
             title="Emmanuel Cruz's Portfolio"
