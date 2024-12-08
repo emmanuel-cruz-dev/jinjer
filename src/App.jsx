@@ -13,6 +13,7 @@ import Albums from "./components/Albums";
 import Media from "./components/Media";
 import Store from "./components/Store";
 import Follow from "./components/Follow";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       {/* <Loader /> */}
       <Header />
       <Hero />
+      <ScrollToTopButton />
       <News />
       <About />
       <Tour />
