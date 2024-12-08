@@ -74,7 +74,7 @@ const Header = () => {
             <h2 className="text-2xl uppercase font-bold">
               {t("navbar.albumTitle")}
             </h2>
-            <p>{t("navbar.albumDescription")}.</p>
+            <p className="text-sm">{t("navbar.albumDescription")}.</p>
             <span className="text-2xl">
               <SocialLinks />
             </span>
@@ -82,8 +82,8 @@ const Header = () => {
               <img
                 src={SideAreaImg}
                 alt="Portada del álbum Alucard"
-                width="220"
-                height="220"
+                width="200"
+                height="200"
               />
             </a>
             <span className="uppercase font-bold">© 2024 Nephews</span>
