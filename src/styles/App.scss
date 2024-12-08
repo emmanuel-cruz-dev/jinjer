@@ -528,10 +528,10 @@ img {
 // --- Inicio: Footer --- //
 
 .footer {
-  a {
+  .footer__legal-links {
     transition: color 0.3s ease;
 
-    &:not(.social-icons):hover {
+    &:hover {
       color: $secondary-color;
     }
   }
@@ -551,10 +551,12 @@ img {
     a {
       font-weight: 900;
       transition: color 0.3s ease;
-
-      &:hover {
-        color: $secondary-color;
-      }
+    }
+  }
+  a {
+    transition: color 0.3s ease;
+    &:hover h4 a {
+      color: $secondary-color;
     }
   }
 }

@@ -127,16 +127,30 @@ const Footer = () => {
       <article className="flex flex-col gap-4 items-center p-8 xl:py-6 uppercase text-xs">
         <ul className="footer__list flex flex-col md:flex-row gap-6 text-center">
           <li>
-            <a href="#">Credits</a>
+            <a className="footer__legal-links" href="#">
+              Credits
+            </a>
           </li>
           <li>
-            <a href="#">Terms & Conditions</a>
+            <a className="footer__legal-links" href="#">
+              Terms & Conditions
+            </a>
           </li>
           <li>
-            <a href="#">Privacy Policy</a>
+            <a className="footer__legal-links" href="#">
+              Privacy Policy
+            </a>
           </li>
-          <li>© The Uncles Recordings</li>
-          <li>The N3phews club®</li>
+          <li>
+            <a className="footer__legal-links" href="#">
+              © The Uncles Recordings
+            </a>
+          </li>
+          <li>
+            <a className="footer__legal-links" href="#">
+              The N3phews club®
+            </a>
+          </li>
         </ul>
         <p>
           © 2024 N3phews. Powered by{" "}
