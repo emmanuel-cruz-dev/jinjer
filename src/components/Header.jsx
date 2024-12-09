@@ -189,10 +189,6 @@ const Header = () => {
           </a>
         </li>
       </ul>
-
-      <div className={`${isScrolled ? "block" : "hidden"}`}>
-        <MusicPlayer />
-      </div>
     </>
   );
 };

@@ -106,14 +106,14 @@ const MusicPlayer = () => {
 
   return (
     <div
-      className={`fixed bottom-4 left-2 hidden lg:flex items-center w-[22rem] rounded-md bg-gray-800 text-white p-3 z-50`}
+      className={`fixed bottom-4 left-2 hidden lg:flex items-center w-[22rem] rounded-md bg-gray-800 text-white p-3 z-[100]`}
     >
       {/* Imagen de portada */}
       <div className="mr-3">
         <img
           src={CoverAlbum}
           alt="Album Cover"
-          className="w-14 h-14 object-cover rounded-sm"
+          className="w-12 h-12 object-cover rounded-sm"
         />
       </div>
 
@@ -124,7 +124,7 @@ const MusicPlayer = () => {
       </div>
 
       {/* Controles de reproducción */}
-      <div className="flex items-center space-x-0.5">
+      <div className="flex items-center space-x-1">
         <button
           onClick={handlePrevious}
           className="hover:bg-gray-700 p-2 rounded"

@@ -162,19 +162,6 @@ img {
   transform: translateX(0);
 }
 
-.music-player {
-  position: fixed;
-  bottom: 12px;
-  left: 12px;
-  z-index: 10;
-  transform: translateX(-120%);
-  transition: transform 0.3s ease-in-out;
-}
-
-.music-player.active {
-  transform: translateX(0);
-}
-
 .social-links {
   a {
     transition: transform 0.3s ease, color 0.3s ease;

@@ -135,7 +135,7 @@ const Footer = () => {
         </div>
       </article>
 
-      <article className="flex flex-col gap-4 items-center p-8 xl:py-8 uppercase text-xs">
+      <article className="flex flex-col gap-4 items-center p-8 xl:py-7 uppercase text-xs">
         <ul className="footer__list flex flex-col md:flex-row gap-6 text-center">
           <li>
             <a className="footer__legal-links" href="#">
