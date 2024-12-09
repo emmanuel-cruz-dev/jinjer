@@ -7,8 +7,6 @@ import July from "../assets/images/julian-andre.jpg";
 import Benja from "../assets/images/benjamin-sebastian.jpg";
 
 const MemberArticle = ({ image, icon, name, instrument }) => {
-  const { t } = useTranslation();
-
   return (
     <a href="#" className="about__members__article">
       <div className="about__members__image-container">
