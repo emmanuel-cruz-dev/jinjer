@@ -133,6 +133,12 @@ const resources = {
         privacy: "Privacy Policy",
         powered: "Powered by",
       },
+      musicPlayer: {
+        prev: "Previous",
+        play: "Play",
+        pause: "Pause",
+        next: "Next",
+      },
       // ... más traducciones
     },
   },
@@ -265,6 +271,12 @@ const resources = {
         terms: "Términos y Condiciones",
         privacy: "Política de Privacidad",
         powered: "Diseñado por",
+      },
+      musicPlayer: {
+        prev: "Anterior",
+        play: "Reproducir",
+        pause: "Pausa",
+        next: "Siguiente",
       },
       // ... más traducciones
     },
