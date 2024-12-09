@@ -7,14 +7,14 @@ import CardImg1 from "../assets/images/blog-card-04.jpg";
 import CardImg2 from "../assets/images/blog-card-02.jpg";
 import CardImg3 from "../assets/images/blog-card-03.jpg";
 
-const ArticleCard = () => {
+const ArticleCard = ({ image, date }) => {
   return (
     <div className="latest-news__card flex flex-col w-[22rem] gap-3">
       <a href="#">
         <figure className="overflow-hidden">
           <img
             className="scale-105 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
-            src={CardImg1}
+            src={image}
             alt=""
           />
         </figure>
@@ -35,7 +35,7 @@ const ArticleCard = () => {
         Read more
       </a>
       <time className="text-sm uppercase" dateTime="2018-01-16">
-        9 Nov 2020
+        {date}
       </time>
     </div>
   );
@@ -71,170 +71,30 @@ const Carousel = () => {
       <Slider {...settings}>
         <div>
           {/* Card 1 */}
-          <ArticleCard />
+          <ArticleCard image={CardImg1} date="9 Nov 2020" />
         </div>
 
         <div>
           {/* Card 2 */}
-          <div className="latest-news__card flex flex-col w-[22rem] gap-3">
-            <a href="#">
-              <figure className="overflow-hidden">
-                <img
-                  className="scale-105 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
-                  src={CardImg2}
-                  alt=""
-                />
-              </figure>
-              <h3 className="uppercase font-bold tracking-wide text-lg">
-                Neue zwohandbreit EP in arbeit
-              </h3>
-            </a>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-              quaerat tempora. Expedita voluptatem maxime a!
-            </p>
-            <a
-              className="uppercase hover:underline transition-all duration-300 ease-in-out"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read more
-            </a>
-            <time className="text-sm uppercase" dateTime="2018-01-16">
-              11 Feb 2013
-            </time>
-          </div>
+          <ArticleCard image={CardImg2} date="11 Feb 2013" />
         </div>
 
         <div>
           {/* Card 3 */}
-          <div className="latest-news__card flex flex-col w-[22rem] gap-3">
-            <a href="#">
-              <figure className="overflow-hidden">
-                <img
-                  className="scale-105 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
-                  src={CardImg3}
-                  alt=""
-                />
-              </figure>
-              <h3 className="uppercase font-bold tracking-wide text-lg">
-                Neue zwohandbreit EP in arbeit
-              </h3>
-            </a>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-              quaerat tempora. Expedita voluptatem maxime a!
-            </p>
-            <a
-              className="uppercase hover:underline transition-all duration-300 ease-in-out"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read more
-            </a>
-            <time className="text-sm uppercase" dateTime="2018-01-16">
-              3 Feb 2008
-            </time>
-          </div>
+          <ArticleCard image={CardImg3} date="3 Feb 2008" />
         </div>
 
         <div>
           {/* Card 4 */}
-          <div className="latest-news__card flex flex-col w-[22rem] gap-3">
-            <a href="#">
-              <figure className="overflow-hidden">
-                <img
-                  className="scale-105 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
-                  src={CardImg}
-                  alt=""
-                />
-              </figure>
-              <h3 className="uppercase font-bold tracking-wide text-lg">
-                Neue zwohandbreit EP in arbeit
-              </h3>
-            </a>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-              quaerat tempora. Expedita voluptatem maxime a!
-            </p>
-            <a
-              className="uppercase hover:underline transition-all duration-300 ease-in-out"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read more
-            </a>
-            <time className="text-sm uppercase" dateTime="2018-01-16">
-              16 Jan 2018
-            </time>
-          </div>
+          <ArticleCard image={CardImg} date="16 Jan 2018" />
         </div>
         <div>
           {/* Card 5 */}
-          <div className="latest-news__card flex flex-col w-[22rem] gap-3">
-            <a href="#">
-              <figure className="overflow-hidden">
-                <img
-                  className="scale-105 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
-                  src={CardImg}
-                  alt=""
-                />
-              </figure>
-              <h3 className="uppercase font-bold tracking-wide text-lg">
-                Neue zwohandbreit EP in arbeit
-              </h3>
-            </a>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-              quaerat tempora. Expedita voluptatem maxime a!
-            </p>
-            <a
-              className="uppercase hover:underline transition-all duration-300 ease-in-out"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read more
-            </a>
-            <time className="text-sm uppercase" dateTime="2018-01-16">
-              16 Jan 2018
-            </time>
-          </div>
+          <ArticleCard image={CardImg} date="16 Jan 2018" />
         </div>
         <div>
           {/* Card 6 */}
-          <div className="latest-news__card flex flex-col w-[22rem] gap-3">
-            <a href="#">
-              <figure className="overflow-hidden">
-                <img
-                  className="scale-105 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
-                  src={CardImg}
-                  alt=""
-                />
-              </figure>
-              <h3 className="uppercase font-bold tracking-wide text-lg">
-                Neue zwohandbreit EP in arbeit
-              </h3>
-            </a>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-              quaerat tempora. Expedita voluptatem maxime a!
-            </p>
-            <a
-              className="uppercase hover:underline transition-all duration-300 ease-in-out"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read more
-            </a>
-            <time className="text-sm uppercase" dateTime="2018-01-16">
-              16 Jan 2018
-            </time>
-          </div>
+          <ArticleCard image={CardImg} date="16 Jan 2018" />
         </div>
       </Slider>
     </div>
