@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitch from "./LanguageSwitch";
 import SocialLinks from "./SocialLinks";
-import MusicPlayer from "./MusicPlayer";
 import Name from "./Name";
 
 import SideAreaImg from "../assets/images/sidearea-album.jpg";
@@ -87,7 +86,11 @@ const Header = () => {
                 height="200"
               />
             </a>
-            <div className="mt-14">{/* <MusicPlayer /> */}</div>
+            <div className="mt-3">
+              <span className="uppercase font-extrabold text-lg">
+                © N3phews 2024
+              </span>
+            </div>
           </div>
         </article>
         <nav

@@ -127,19 +127,22 @@ const MusicPlayer = () => {
       <div className="flex items-center space-x-1">
         <button
           onClick={handlePrevious}
-          className="hover:bg-gray-700 p-2 rounded"
+          className="hover:bg-gray-700 p-2 rounded border-none"
         >
           <FaBackwardStep size={18} />
         </button>
 
         <button
           onClick={handlePlayPause}
-          className="bg-accent hover:bg-secondary p-3 rounded-full transition-colors duration-300"
+          className="bg-accent hover:bg-black p-3 rounded-full transition-colors duration-300 border-none"
         >
           {isPlaying ? <FaPause size={18} /> : <FaPlay size={18} />}
         </button>
 
-        <button onClick={handleNext} className="hover:bg-gray-700 p-2 rounded">
+        <button
+          onClick={handleNext}
+          className="hover:bg-gray-700 p-2 rounded border-none"
+        >
           <FaForwardStep size={18} />
         </button>
       </div>
