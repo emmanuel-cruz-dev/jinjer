@@ -105,7 +105,9 @@ const MusicPlayer = () => {
   const currentSong = musicList[currentTrack];
 
   return (
-    <div className="fixed bottom-4 left-2 w-[22rem] rounded-md bg-gray-800 text-white p-3 flex  items-center z-50">
+    <div
+      className={`fixed bottom-4 left-2 hidden lg:flex items-center w-[22rem] rounded-md bg-gray-800 text-white p-3 z-50`}
+    >
       {/* Imagen de portada */}
       <div className="mr-3">
         <img

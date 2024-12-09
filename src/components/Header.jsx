@@ -1,11 +1,11 @@
+import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitch from "./LanguageSwitch";
-import { useState, useRef, useEffect } from "react";
-import Name from "./Name";
 import SocialLinks from "./SocialLinks";
+import MusicPlayer from "./MusicPlayer";
+import Name from "./Name";
 
 import SideAreaImg from "../assets/images/sidearea-album.jpg";
-import MusicPlayer from "./MusicPlayer";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +40,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 500) setIsScrolled(true);
+      if (window.scrollY > 300) setIsScrolled(true);
       else setIsScrolled(false);
     };
 
@@ -87,9 +87,7 @@ const Header = () => {
                 height="200"
               />
             </a>
-            <div className="mt-14">
-              <MusicPlayer />
-            </div>
+            <div className="mt-14">{/* <MusicPlayer /> */}</div>
           </div>
         </article>
         <nav
@@ -191,6 +189,10 @@ const Header = () => {
           </a>
         </li>
       </ul>
+
+      <div className={`${isScrolled ? "block" : "hidden"}`}>
+        <MusicPlayer />
+      </div>
     </>
   );
 };
