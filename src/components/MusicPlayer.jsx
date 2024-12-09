@@ -31,11 +31,11 @@ const musicList = [
     src: `${Song2}`,
   },
   {
-    title: "03 The Smash Song",
+    title: "03 Smash Song",
     src: `${Song3}`,
   },
   {
-    title: "04 Vodka, Tribe & Dynamite",
+    title: "04 Tribe & Dynamite",
     src: `${Song4}`,
   },
   {
@@ -105,7 +105,7 @@ const MusicPlayer = () => {
   const currentSong = musicList[currentTrack];
 
   return (
-    <div className="fixed bottom-2 left-1 w-[22rem] rounded-md bg-gray-800 text-white p-3 flex  items-center z-50">
+    <div className="fixed bottom-4 left-2 w-[22rem] rounded-md bg-gray-800 text-white p-3 flex  items-center z-50">
       {/* Imagen de portada */}
       <div className="mr-3">
         <img
@@ -132,7 +132,7 @@ const MusicPlayer = () => {
 
         <button
           onClick={handlePlayPause}
-          className="bg-blue-500 hover:bg-blue-600 p-3 rounded-full"
+          className="bg-accent hover:bg-secondary p-3 rounded-full transition-colors duration-300"
         >
           {isPlaying ? <FaPause size={18} /> : <FaPlay size={18} />}
         </button>

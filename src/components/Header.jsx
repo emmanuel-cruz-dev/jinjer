@@ -5,6 +5,7 @@ import Name from "./Name";
 import SocialLinks from "./SocialLinks";
 
 import SideAreaImg from "../assets/images/sidearea-album.jpg";
+import MusicPlayer from "./MusicPlayer";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -70,7 +71,7 @@ const Header = () => {
             </span>
           </div>
 
-          <div className="flex flex-col justify-around items-center px-4 text-center h-full">
+          <div className="flex flex-col justify-evenly items-center px-4 text-center h-full">
             <h2 className="text-2xl uppercase font-bold">
               {t("navbar.albumTitle")}
             </h2>
@@ -86,7 +87,9 @@ const Header = () => {
                 height="200"
               />
             </a>
-            <span className="uppercase font-bold">© 2024 Nephews</span>
+            <div className="mt-14">
+              <MusicPlayer />
+            </div>
           </div>
         </article>
         <nav

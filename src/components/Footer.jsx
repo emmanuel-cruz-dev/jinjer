@@ -81,7 +81,7 @@ const Footer = () => {
                   Why Music Matters
                 </a>
               </li>
-              <li>ERA⚡ Productions</li>
+
               <li>
                 <a className="footer__legal-links" href="#">
                   Fourth Member Fan Club
@@ -135,13 +135,14 @@ const Footer = () => {
         </div>
       </article>
 
-      <article className="flex flex-col gap-4 items-center p-8 xl:py-6 uppercase text-xs">
+      <article className="flex flex-col gap-4 items-center p-8 xl:py-8 uppercase text-xs">
         <ul className="footer__list flex flex-col md:flex-row gap-6 text-center">
           <li>
             <a className="footer__legal-links" href="#">
-              {t("footer.credits")}
+              {t("footer.privacy")}
             </a>
           </li>
+
           <li>
             <a className="footer__legal-links" href="#">
               {t("footer.terms")}
@@ -149,17 +150,7 @@ const Footer = () => {
           </li>
           <li>
             <a className="footer__legal-links" href="#">
-              {t("footer.privacy")}
-            </a>
-          </li>
-          {/* <li>
-            <a className="footer__legal-links" href="#">
-              © The Uncles Recordings
-            </a>
-          </li> */}
-          <li>
-            <a className="footer__legal-links" href="#">
-              The N3phews club®
+              The N3phews Club®
             </a>
           </li>
         </ul>

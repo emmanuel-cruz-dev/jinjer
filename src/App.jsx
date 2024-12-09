@@ -23,7 +23,6 @@ function App() {
       <Header />
       <Hero />
       <ScrollToTopButton />
-      <MusicPlayer />
       <News />
       <About />
       <Tour />
