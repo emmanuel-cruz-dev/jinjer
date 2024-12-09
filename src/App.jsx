@@ -14,6 +14,7 @@ import Media from "./components/Media";
 import Store from "./components/Store";
 import Follow from "./components/Follow";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import MusicPlayer from "./components/MusicPlayer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Header />
       <Hero />
       <ScrollToTopButton />
+      <MusicPlayer />
       <News />
       <About />
       <Tour />

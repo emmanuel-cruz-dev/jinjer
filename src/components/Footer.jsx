@@ -152,11 +152,11 @@ const Footer = () => {
               {t("footer.privacy")}
             </a>
           </li>
-          <li>
+          {/* <li>
             <a className="footer__legal-links" href="#">
               © The Uncles Recordings
             </a>
-          </li>
+          </li> */}
           <li>
             <a className="footer__legal-links" href="#">
               The N3phews club®
