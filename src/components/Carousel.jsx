@@ -50,6 +50,9 @@ const Carousel = () => {
     slidesToScroll: 1, // Cantidad de elementos que se mueven por transición
     autoplay: false, // Activar desplazamiento automático
     arrows: true, // Mostrar flechas
+    draggable: true,
+    swipeToSlide: true,
+    touchThreshold: 100,
     responsive: [
       {
         breakpoint: 1024,
