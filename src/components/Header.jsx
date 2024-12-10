@@ -1,3 +1,4 @@
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitch from "./LanguageSwitch";
@@ -7,6 +8,7 @@ import Name from "./Name";
 import SideAreaImg from "../assets/images/sidearea-album.jpg";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLatestAlbumOpen, setIsLatestAlbumOpen] = useState(false);
@@ -49,6 +51,10 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const goToHome = () => {
+    navigate("/");
+  };
 
   return (
     <>
@@ -120,16 +126,24 @@ const Header = () => {
 
           <ul className="gap-6 hidden lg:flex">
             <li>
-              <a href="#">{t("navbar.home")}</a>
+              <a onClick={goToHome} href="#">
+                {t("navbar.home")}
+              </a>
             </li>
             <li>
-              <a href="#news">{t("navbar.news")}</a>
+              <a onClick={() => navigate("/#news")} href="#news">
+                {t("navbar.news")}
+              </a>
             </li>
             <li>
-              <a href="#about">{t("navbar.about")}</a>
+              <a onClick={() => navigate("/#about")} href="#about">
+                {t("navbar.about")}
+              </a>
             </li>
             <li>
-              <a href="#tour">{t("navbar.tour")}</a>
+              <a onClick={() => navigate("/#tour")} href="#tour">
+                {t("navbar.tour")}
+              </a>
             </li>
           </ul>
           <a
@@ -140,16 +154,16 @@ const Header = () => {
           </a>
           <ul className="gap-6 hidden lg:flex">
             <li>
-              <a href="#albums">{t("navbar.albums")}</a>
+              <Link to="/#albums">{t("navbar.albums")}</Link>
             </li>
             <li>
-              <a href="#media">{t("navbar.media")}</a>
+              <Link to="/#media">{t("navbar.media")}</Link>
             </li>
             <li>
-              <a href="#store">{t("navbar.store")}</a>
+              <Link to="/#store">{t("navbar.store")}</Link>
             </li>
             <li>
-              <a href="#follow">{t("navbar.follow")}</a>
+              <Link to="/#follow">{t("navbar.follow")}</Link>
             </li>
           </ul>
           <div>

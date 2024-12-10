@@ -4,7 +4,7 @@ const NewsBlog = () => {
   return (
     <section className="newsblog" id="newsblog">
       <article className="py-10">
-        <article className="m-20 mb-12 p-20 bg-black/90 flex flex-col justify-center items-center gap-12">
+        <article className="m-2 mt-20 lg:m-20 mb-12 p-12 lg:p-20 bg-black/90 flex flex-col justify-center items-center gap-12">
           <div className="flex flex-col justify-center items-center w-full border-b border-slate-700 pb-4">
             <h2 className="logo text-4xl"> Blog and News</h2>
           </div>
@@ -36,7 +36,7 @@ const NewsBlog = () => {
                 Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc
                 dignissim nunc eros, eget luctus lorem ultricies nec.
               </p>
-              <div className="flex justify-between border-b border-slate-700 pb-4">
+              <div className="flex flex-col lg:flex-row gap-4 lg:justify-between border-b border-slate-700 pb-4">
                 <a href="#">Neuer Song: Ein Funken Hoffnung</a>
                 <a href="#">Slipknot - Rock Am Ring Official Video</a>
               </div>
