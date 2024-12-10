@@ -117,21 +117,23 @@ const MusicPlayer = () => {
       <div
         className={`music-player__container ${
           isOpen ? "active" : ""
-        } hidden lg:flex items-center rounded-md bg-gray-800 text-white p-3`}
+        } hidden lg:flex justify-between items-center rounded-md bg-gray-800 text-white p-3`}
       >
         {/* Imagen de portada */}
-        <div className="">
-          <img
-            src={CoverAlbum}
-            alt="Album Cover"
-            className="cover rounded-sm"
-          />
-        </div>
+        <div className="flex-shrink-0 flex items-center gap-2">
+          <div>
+            <img
+              src={CoverAlbum}
+              alt="Album Cover"
+              className="cover rounded-sm"
+            />
+          </div>
 
-        {/* Información de la canción */}
-        <div className="music-player__text flex-grow">
-          <h3 className="text-sm font-semibold">{currentSong.title}</h3>
-          <p className="text-[12px] text-gray-400">N3phews</p>
+          {/* Información de la canción */}
+          <div className="music-player__text flex-grow">
+            <h3 className="text-sm font-semibold">{currentSong.title}</h3>
+            <p className="text-[12px] text-gray-400">N3phews</p>
+          </div>
         </div>
 
         {/* Controles de reproducción */}
