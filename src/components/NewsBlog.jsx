@@ -13,9 +13,12 @@ const NewsBlog = () => {
               <img className="w-full" src={ImgBlog} alt="" />
             </figure>
             <div className="flex flex-col gap-4 w-5/6">
-              <p className="text-gray-400">
+              <p className="text-gray-400 uppercase">
                 February 3, 2018 -{" "}
-                <a className="uppercase" href="#">
+                <a
+                  className="uppercase hover:text-slate-100 transition-colors duration-300"
+                  href="#"
+                >
                   Admin
                 </a>
               </p>
@@ -36,9 +39,19 @@ const NewsBlog = () => {
                 Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc
                 dignissim nunc eros, eget luctus lorem ultricies nec.
               </p>
-              <div className="flex flex-col lg:flex-row gap-4 lg:justify-between border-b border-slate-700 pb-4">
-                <a href="#">Neuer Song: Ein Funken Hoffnung</a>
-                <a href="#">Slipknot - Rock Am Ring Official Video</a>
+              <div className="flex flex-col lg:flex-row gap-4 lg:justify-between text-gray-300 border-b border-slate-700 pb-4">
+                <a
+                  className="hover:text-slate-100 transition-colors duration-300"
+                  href="#"
+                >
+                  Neuer Song: Ein Funken Hoffnung
+                </a>
+                <a
+                  className="hover:text-slate-100 transition-colors duration-300"
+                  href="#"
+                >
+                  Slipknot - Rock Am Ring Official Video
+                </a>
               </div>
               <div>
                 <ContactForm />

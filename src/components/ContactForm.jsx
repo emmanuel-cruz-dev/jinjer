@@ -5,12 +5,12 @@ const ContactForm = () => {
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-2 my-2">
         <h2 className="text-2xl font-semibold">Leave a Reply</h2>
-        <p>
+        <p className="text-gray-400 text-[15px]">
           Your email address will not be published. Required fields are marked *
         </p>
       </div>
 
-      <form method="post" className="flex flex-col gap-4">
+      <form method="post" className="form flex flex-col gap-4">
         <textarea
           className="p-2 px-4"
           placeholder="Comment *"
@@ -26,7 +26,7 @@ const ContactForm = () => {
         <div className="flex flex-col gap-6 mt-4">
           <label htmlFor="save" className="flex gap-2">
             <input type="checkbox" name="save" value="save" id="save" />
-            <span>
+            <span className="text-gray-400 text-[15px]">
               Save my name, email, and website in this browser for the next time
               I comment.
             </span>
