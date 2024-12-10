@@ -120,16 +120,6 @@ const Footer = () => {
                   Plantilla Principal
                 </a>
               </li>
-              <li>
-                <a
-                  className="footer__legal-links"
-                  href="https://rebellion.qodeinteractive.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Plantilla Secundaria
-                </a>
-              </li>
             </ul>
           </div>
         </div>

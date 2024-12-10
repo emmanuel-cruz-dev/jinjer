@@ -503,6 +503,7 @@ img {
 }
 
 .red__btn {
+  white-space: nowrap;
   color: $background-color-white !important;
   text-transform: uppercase;
   font-weight: 500;
