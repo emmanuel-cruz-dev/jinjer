@@ -113,7 +113,7 @@ const MusicPlayer = () => {
   const currentSong = musicList[currentTrack];
 
   return (
-    <article className="music-player__article fixed bottom-4 left-2 flex gap-[6px] z-[100]">
+    <article className="music-player__article fixed bottom-4 left-2 flex gap-[6px] z-[100] select-none">
       <div
         className={`music-player__container ${
           isOpen ? "active" : ""

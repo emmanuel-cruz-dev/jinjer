@@ -174,7 +174,7 @@ img {
 }
 
 .navbar__overlay {
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease 0.2s;
 }
 
 .navbar__overlay.active {
@@ -237,12 +237,12 @@ img {
 
   .music-player__text {
     display: block;
-    animation: musicPlayerItem 0.3s ease-in-out forwards 0.3s;
+    animation: musicPlayerItem 0.3s ease-in-out forwards 0.2s;
   }
 
   .music-player__controls {
     display: flex;
-    animation: musicPlayerItem 0.3s ease-in-out forwards 0.3s;
+    animation: musicPlayerItem 0.3s ease-in-out forwards 0.2s;
   }
 }
 
