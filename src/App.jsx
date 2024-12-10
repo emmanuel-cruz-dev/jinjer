@@ -38,12 +38,12 @@ function App() {
       {/* <Loader /> */}
       <Header />
 
+      <ScrollToTopButton />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/newsblog" element={<NewsBlog />} />
       </Routes>
 
-      <ScrollToTopButton />
       <Footer />
     </I18nextProvider>
   );

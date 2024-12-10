@@ -1,18 +1,30 @@
 import ImgBlog from "../assets/images/blognews.jpg";
 import ContactForm from "./ContactForm";
+
+const TitleArticle = () => {
+  return (
+    <article className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+      <div className="hero__title bg-accent/90 flex justify-center items-center mx-auto border-4 rounded-sm border-footer -rotate-6">
+        <span className="uppercase font-semibold text-4xl px-16 py-2 lg:text-3xl lg:px-28 lg:py-4">
+          Blog and News
+        </span>
+      </div>
+    </article>
+  );
+};
 const NewsBlog = () => {
   return (
     <section className="newsblog" id="newsblog">
       <article className="py-10">
-        <article className="m-2 mt-20 lg:m-20 mb-12 p-12 lg:p-20 bg-black/90 flex flex-col justify-center items-center gap-12">
-          <div className="flex flex-col justify-center items-center w-full border-b border-slate-700 pb-4">
-            <h2 className="logo text-4xl"> Blog and News</h2>
+        <article className="w-11/12 mt-20 lg:w-5/6 mb-12 py-12 lg:py-20 bg-black/90 flex flex-col justify-center items-center gap-12 mx-auto">
+          <div className="relative w-full border-b border-slate-700 pb-4">
+            <TitleArticle />
           </div>
           <div className="flex flex-col justify-center items-center gap-4">
-            <figure className="w-5/6">
+            <figure className="w-9/12">
               <img className="w-full" src={ImgBlog} alt="" />
             </figure>
-            <div className="flex flex-col gap-4 w-5/6">
+            <div className="flex flex-col gap-4 w-9/12">
               <p className="text-gray-400 uppercase">
                 February 3, 2018 -{" "}
                 <a

@@ -122,6 +122,7 @@ const Header = () => {
           >
             {isMenuOpen ? "close" : "menu"}
           </span>
+
           <div className="hidden lg:block">
             <span
               onClick={() => toggleLatestAlbum()}
@@ -135,7 +136,7 @@ const Header = () => {
             ></div>
           </div>
 
-          <ul className="gap-6 hidden lg:flex">
+          <ul className="gap-6 hidden lg:flex flex-1 justify-center">
             <li>
               <a href="#" onClick={() => goToSection("/", "home")}>
                 {t("navbar.home")}
@@ -163,7 +164,7 @@ const Header = () => {
           >
             <Name />
           </a>
-          <ul className="gap-6 hidden lg:flex">
+          <ul className="gap-6 hidden lg:flex flex-1 justify-center">
             <li>
               <a href="#albums" onClick={() => goToSection("/", "albums")}>
                 {t("navbar.albums")}
@@ -185,6 +186,7 @@ const Header = () => {
               </a>
             </li>
           </ul>
+
           <div>
             <LanguageSwitch />
           </div>
