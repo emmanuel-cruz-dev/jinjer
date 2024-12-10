@@ -11,11 +11,11 @@ import InstaImg7 from "../assets/images/insta-07.jpg";
 import InstaImg8 from "../assets/images/insta-08.jpg";
 import InstaImg9 from "../assets/images/insta-09.jpg";
 
-import TwitterImg1 from "../assets/images/twitter-01.jpg";
-import TwitterImg2 from "../assets/images/twitter-02.jpg";
-import TwitterImg3 from "../assets/images/twitter-03.jpg";
-import TwitterImg4 from "../assets/images/twitter-04.jpg";
-import TwitterImg5 from "../assets/images/twitter-05.jpg";
+import TwitterImg1 from "../assets/images/twitter-01.webp";
+import TwitterImg2 from "../assets/images/twitter-02.webp";
+import TwitterImg3 from "../assets/images/twitter-03.webp";
+import TwitterImg4 from "../assets/images/twitter-04.webp";
+import TwitterImg5 from "../assets/images/twitter-05.webp";
 
 const colors = {
   cyan: "bg-cyan-500 hover:bg-cyan-600",
