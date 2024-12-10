@@ -111,7 +111,7 @@ const Header = () => {
           >
             {isMenuOpen ? "close" : "menu"}
           </span>
-          <div>
+          <div className="hidden lg:block">
             <span
               onClick={() => toggleLatestAlbum()}
               title={t("navbar.albumTitle")}
