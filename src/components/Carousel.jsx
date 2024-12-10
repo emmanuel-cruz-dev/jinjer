@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -18,11 +19,11 @@ const ArticleCard = ({ image, date }) => {
           alt=""
         />
       </figure>
-      <Link to="/newsblog">
+      <a onClick={() => navigate("/newsblog")} href="/newsblog">
         <h3 className="uppercase font-bold tracking-wide text-lg opacity-80 hover:opacity-100 transition-opacity duration-300">
           Neue zwohandbreit EP in arbeit
         </h3>
-      </Link>
+      </a>
       <p className="text-gray-400">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, quaerat
         tempora. Expedita voluptatem maxime a!

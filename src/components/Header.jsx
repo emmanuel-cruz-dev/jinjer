@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitch from "./LanguageSwitch";
@@ -52,8 +52,14 @@ const Header = () => {
     };
   }, []);
 
-  const goToHome = () => {
-    navigate("/");
+  const goToSection = (path, sectionId) => {
+    navigate(path);
+
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (!section) return;
+      else section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
   };
 
   return (
@@ -126,22 +132,22 @@ const Header = () => {
 
           <ul className="gap-6 hidden lg:flex">
             <li>
-              <a onClick={goToHome} href="#">
+              <a href="#" onClick={() => goToSection("/", "home")}>
                 {t("navbar.home")}
               </a>
             </li>
             <li>
-              <a onClick={() => navigate("/#news")} href="#news">
+              <a href="#news" onClick={() => goToSection("/", "news")}>
                 {t("navbar.news")}
               </a>
             </li>
             <li>
-              <a onClick={() => navigate("/#about")} href="#about">
+              <a href="#about" onClick={() => goToSection("/", "about")}>
                 {t("navbar.about")}
               </a>
             </li>
             <li>
-              <a onClick={() => navigate("/#tour")} href="#tour">
+              <a href="#tour" onClick={() => goToSection("/", "tour")}>
                 {t("navbar.tour")}
               </a>
             </li>
@@ -154,16 +160,24 @@ const Header = () => {
           </a>
           <ul className="gap-6 hidden lg:flex">
             <li>
-              <Link to="/#albums">{t("navbar.albums")}</Link>
+              <a href="#albums" onClick={() => goToSection("/", "albums")}>
+                {t("navbar.albums")}
+              </a>
             </li>
             <li>
-              <Link to="/#media">{t("navbar.media")}</Link>
+              <a href="#media" onClick={() => goToSection("/", "media")}>
+                {t("navbar.media")}
+              </a>
             </li>
             <li>
-              <Link to="/#store">{t("navbar.store")}</Link>
+              <a href="#store" onClick={() => goToSection("/", "store")}>
+                {t("navbar.store")}
+              </a>
             </li>
             <li>
-              <Link to="/#follow">{t("navbar.follow")}</Link>
+              <a href="#follow" onClick={() => goToSection("/", "follow")}>
+                {t("navbar.follow")}
+              </a>
             </li>
           </ul>
           <div>
