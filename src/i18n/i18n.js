@@ -134,10 +134,13 @@ const resources = {
         powered: "Powered by",
       },
       musicPlayer: {
+        albumCover: "Album Cover",
         prev: "Previous",
         play: "Play",
         pause: "Pause",
         next: "Next",
+        expand: "Expand",
+        collapse: "Collapse",
       },
       // ... más traducciones
     },
@@ -273,10 +276,13 @@ const resources = {
         powered: "Diseñado por",
       },
       musicPlayer: {
+        albumCover: "Portada del Álbum",
         prev: "Anterior",
         play: "Reproducir",
         pause: "Pausa",
         next: "Siguiente",
+        expand: "Expandir",
+        collapse: "Contraer",
       },
       // ... más traducciones
     },

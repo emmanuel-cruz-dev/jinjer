@@ -113,7 +113,7 @@ const MusicPlayer = () => {
   const currentSong = musicList[currentTrack];
 
   return (
-    <article className="music-player__article fixed bottom-4 left-2 flex gap-1 z-[100]">
+    <article className="music-player__article fixed bottom-4 left-2 flex gap-[6px] z-[100]">
       <div
         className={`music-player__container ${
           isOpen ? "active" : ""
@@ -124,7 +124,8 @@ const MusicPlayer = () => {
           <div>
             <img
               src={CoverAlbum}
-              alt="Album Cover"
+              alt="Portada del álbum"
+              title={t("musicPlayer.albumCover")}
               className="cover rounded-sm"
             />
           </div>
@@ -168,6 +169,7 @@ const MusicPlayer = () => {
       </div>
 
       <span
+        title={isOpen ? t("musicPlayer.collapse") : t("musicPlayer.expand")}
         className="music-player__close-open material-symbols-outlined"
         onClick={handleOpenMusicPlayer}
       >
