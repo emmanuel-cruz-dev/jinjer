@@ -62,6 +62,11 @@ const Header = () => {
     }, 100);
   };
 
+  const handleMenuAndNavigate = (sectionId) => {
+    goToSection("/", sectionId);
+    toggleMenu();
+  };
+
   return (
     <>
       <header
@@ -187,42 +192,42 @@ const Header = () => {
       </header>
       <ul className={`header__menu-list ${isMenuOpen ? "active" : "hidden"}`}>
         <li>
-          <a href="#" onClick={() => toggleMenu()}>
+          <a href="#" onClick={() => handleMenuAndNavigate("home")}>
             {t("navbar.home")}
           </a>
         </li>
         <li>
-          <a href="#news" onClick={() => toggleMenu()}>
+          <a href="#news" onClick={() => handleMenuAndNavigate("news")}>
             {t("navbar.news")}
           </a>
         </li>
         <li>
-          <a href="#about" onClick={() => toggleMenu()}>
+          <a href="#about" onClick={() => handleMenuAndNavigate("about")}>
             {t("navbar.about")}
           </a>
         </li>
         <li>
-          <a href="#tour" onClick={() => toggleMenu()}>
+          <a href="#tour" onClick={() => handleMenuAndNavigate("tour")}>
             {t("navbar.tour")}
           </a>
         </li>
         <li>
-          <a href="#albums" onClick={() => toggleMenu()}>
+          <a href="#albums" onClick={() => handleMenuAndNavigate("albums")}>
             {t("navbar.albums")}
           </a>
         </li>
         <li>
-          <a href="#media" onClick={() => toggleMenu()}>
+          <a href="#media" onClick={() => handleMenuAndNavigate("media")}>
             {t("navbar.media")}
           </a>
         </li>
         <li>
-          <a href="#store" onClick={() => toggleMenu()}>
+          <a href="#store" onClick={() => handleMenuAndNavigate("store")}>
             {t("navbar.store")}
           </a>
         </li>
         <li>
-          <a href="#follow" onClick={() => toggleMenu()}>
+          <a href="#follow" onClick={() => handleMenuAndNavigate("follow")}>
             {t("navbar.follow")}
           </a>
         </li>
