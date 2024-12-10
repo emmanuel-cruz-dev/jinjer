@@ -31,15 +31,15 @@ const About = () => {
       className="scroll-top-margin about bg-slate-200 py-16 mx-auto"
       id="about"
     >
-      <article className="flex flex-col justify-center items-center gap-12 w-11/12 text-black mx-auto">
+      <article className="flex flex-col justify-center items-center gap-12 w-11/12 xl:w-[86%] text-black mx-auto">
         <div className="text-center flex flex-col gap-4">
           <h2 className="logo text-5xl">
             <span>{t("about.title1")}</span> {t("about.title2")}
           </h2>
           <p className="text-lg">{t("about.description")}.</p>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
-          <div className="about__text flex flex-col gap-6 w-full xl:w-4/6">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 xl:gap-6">
+          <div className="about__text flex flex-col gap-4 w-full xl:w-4/6">
             <h3 className="text-4xl uppercase logo">
               {t("about.paragraphTitle")} N<span>3</span>phews
             </h3>
