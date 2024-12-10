@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import "./styles/App.scss";
 import Loader from "./components/Loader";
 import Header from "./components/Header";
@@ -14,15 +15,12 @@ import Media from "./components/Media";
 import Store from "./components/Store";
 import Follow from "./components/Follow";
 import ScrollToTopButton from "./components/ScrollToTopButton";
-import MusicPlayer from "./components/MusicPlayer";
+import NewsBlog from "./components/NewsBlog";
 
-function App() {
+const Home = () => {
   return (
-    <I18nextProvider i18n={i18n}>
-      {/* <Loader /> */}
-      <Header />
+    <>
       <Hero />
-      <ScrollToTopButton />
       <News />
       <About />
       <Tour />
@@ -30,6 +28,22 @@ function App() {
       <Media />
       <Store />
       <Follow />
+    </>
+  );
+};
+
+function App() {
+  return (
+    <I18nextProvider i18n={i18n}>
+      {/* <Loader /> */}
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/newsblog" element={<NewsBlog />} />
+      </Routes>
+
+      <ScrollToTopButton />
       <Footer />
     </I18nextProvider>
   );

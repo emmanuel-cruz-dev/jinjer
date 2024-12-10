@@ -627,6 +627,8 @@ img {
 // --- Inicio: Footer --- //
 
 .footer {
+  width: 100vw;
+
   .footer__legal-links {
     transition: color 0.3s ease;
 
@@ -682,3 +684,16 @@ img {
 }
 
 // --- Fin: Footer --- //
+
+// --- Inicio: NewsBlog --- //
+
+.newsblog {
+  background: url("../assets/images/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+}
+
+// --- Fin: NewsBlog --- //
