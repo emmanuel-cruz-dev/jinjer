@@ -10,19 +10,19 @@ import CardImg3 from "../assets/images/blog-card-03.jpg";
 const ArticleCard = ({ image, date }) => {
   return (
     <div className="latest-news__card flex flex-col w-[22rem] gap-3">
+      <figure className="overflow-hidden">
+        <img
+          className="scale-105 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
+          src={image}
+          alt=""
+        />
+      </figure>
       <a href="#">
-        <figure className="overflow-hidden">
-          <img
-            className="scale-105 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
-            src={image}
-            alt=""
-          />
-        </figure>
-        <h3 className="uppercase font-bold tracking-wide text-lg">
+        <h3 className="uppercase font-bold tracking-wide text-lg opacity-80 hover:opacity-100 transition-opacity duration-300">
           Neue zwohandbreit EP in arbeit
         </h3>
       </a>
-      <p>
+      <p className="text-gray-400">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, quaerat
         tempora. Expedita voluptatem maxime a!
       </p>
@@ -68,7 +68,7 @@ const Carousel = () => {
 
   return (
     <div style={{ padding: "12px" }}>
-      <Slider {...settings}>
+      <Slider {...settings} className="latest-news__carousel-slider">
         <div>
           {/* Card 1 */}
           <ArticleCard image={CardImg1} date="9 Nov 2020" />

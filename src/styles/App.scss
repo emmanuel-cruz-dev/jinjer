@@ -412,6 +412,14 @@ img {
   }
 }
 
+.latest-news__carousel-slider {
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
 // --- Fin: About --- //
 
 // --- Inicio: Tour --- //
