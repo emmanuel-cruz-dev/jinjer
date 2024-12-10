@@ -25,7 +25,7 @@ const NewsBlog = () => {
               <img className="w-full" src={ImgBlog} alt="" />
             </figure>
             <div className="flex flex-col gap-4 w-11/12 lg:w-9/12">
-              <p className="text-gray-400 uppercase">
+              <p className="text-sm text-gray-400 uppercase">
                 February 3, 2018 -{" "}
                 <a
                   className="uppercase hover:text-slate-100 transition-colors duration-300"

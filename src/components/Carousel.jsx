@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -19,7 +18,7 @@ const ArticleCard = ({ image, date }) => {
           alt=""
         />
       </figure>
-      <a onClick={() => navigate("/newsblog")} href="/newsblog">
+      <a onClick={() => navigate(`/newsblog`)} href="/newsblog">
         <h3 className="uppercase font-bold tracking-wide text-lg opacity-80 hover:opacity-100 transition-opacity duration-300">
           Neue zwohandbreit EP in arbeit
         </h3>
