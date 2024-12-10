@@ -18,6 +18,7 @@ const resources = {
         albumTitle: "Latest Album",
         albumDescription:
           "Metallic fury emerges from the shadows, transforming suffering into a hymn of resistance and absolute redemption",
+        closeButton: "Close",
       },
       news: {
         title1: "Latest N",
@@ -160,6 +161,7 @@ const resources = {
         albumTitle: "Último Lanzamiento",
         albumDescription:
           "Furia metálica que emerge de las sombras, transformando el sufrimiento en un himno de resistencia y redención absoluta",
+        closeButton: "Cerrar",
       },
       news: {
         title1: "No",

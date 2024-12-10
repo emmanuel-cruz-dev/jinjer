@@ -63,6 +63,7 @@ const Header = () => {
         >
           <div className="flex items-center">
             <span
+              title={t("navbar.closeButton")}
               onClick={() => toggleLatestAlbum()}
               className="material-symbols-outlined text-3xl cursor-pointer transition-transform duration-300 hover:rotate-90"
             >
@@ -106,7 +107,8 @@ const Header = () => {
           </span>
           <span
             onClick={() => toggleLatestAlbum()}
-            className="material-symbols-outlined hidden text-3xl lg:block cursor-pointer"
+            title={t("navbar.albumTitle")}
+            className="material-symbols-outlined hidden text-3xl lg:block cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
           >
             queue_music
           </span>
