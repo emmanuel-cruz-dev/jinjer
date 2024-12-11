@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex w-11/12 lg:w-full flex-col gap-4 mx-auto">
       <div className="flex flex-col gap-2 my-2">
         <h2 className="text-2xl font-semibold">Leave a Reply</h2>
         <p className="text-gray-400 text-[15px]">
