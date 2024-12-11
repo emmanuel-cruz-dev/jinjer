@@ -20,7 +20,7 @@ const NewsBlog = () => {
           <div className="relative w-full border-b border-slate-700 pb-4">
             <TitleArticle />
           </div>
-          <div className="flex flex-col justify-center items-center gap-4">
+          <div className="flex flex-col justify-center items-center">
             <figure className="w-11/12 lg:w-9/12">
               <img className="w-full" src={ImgBlog} alt="" />
             </figure>
