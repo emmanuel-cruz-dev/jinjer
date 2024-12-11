@@ -10,6 +10,17 @@ import CardImg3 from "../assets/images/blog-card-03.jpg";
 
 const ArticleCard = ({ image, date }) => {
   const navigate = useNavigate();
+
+  const goToSection = (path, sectionId) => {
+    navigate(path);
+
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (!section) return;
+      else section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
+
   return (
     <div className="latest-news__card flex flex-col w-[22rem] gap-3">
       <figure className="overflow-hidden">
@@ -19,7 +30,7 @@ const ArticleCard = ({ image, date }) => {
           alt=""
         />
       </figure>
-      <a onClick={() => navigate(`/newsblog`)} href="/newsblog">
+      <a onClick={() => goToSection("/", "newsblog")} href="/newsblog">
         <h3 className="uppercase font-bold tracking-wide text-lg opacity-80 hover:opacity-100 transition-opacity duration-300">
           Neue zwohandbreit EP in arbeit
         </h3>

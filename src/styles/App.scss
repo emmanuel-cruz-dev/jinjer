@@ -114,7 +114,7 @@ img {
 }
 
 .header__navbar.translate-x {
-  transform: translateX(29.5%);
+  transform: translateX(28.5%);
 }
 
 .header__navbar li a {
@@ -149,7 +149,7 @@ img {
 .latest-album {
   display: flex;
   flex-direction: column;
-  width: 29.5%;
+  width: 28.5%;
   height: 100vh;
   padding: 1rem;
   padding-block: 0.85rem;
@@ -323,6 +323,8 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: fit-content;
+  height: fit-content;
 }
 
 // --- Fin: Hero --- //

@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 const TitleArticle = () => {
   return (
     <article className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-      <div className="hero__title bg-accent/90 flex justify-center items-center mx-auto border-4 rounded-sm border-footer -rotate-6">
+      <div className="hero__title bg-accent/90 flex justify-center items-center mx-auto border-4 rounded-[1px] border-footer -rotate-6">
         <span className="uppercase font-semibold text-2xl whitespace-nowrap px-16 py-2 lg:text-4xl lg:px-28 lg:py-4">
           Blog and News
         </span>
@@ -20,11 +20,11 @@ const NewsBlog = () => {
           <div className="relative w-full border-b border-slate-700 pb-4">
             <TitleArticle />
           </div>
-          <div className="flex flex-col justify-center items-center">
-            <figure className="w-11/12 lg:w-9/12">
+          <div className="flex flex-col justify-center items-center gap-4">
+            <figure className="w-11/12 lg:w-4/6">
               <img className="w-full" src={ImgBlog} alt="" />
             </figure>
-            <div className="flex flex-col gap-4 w-11/12 lg:w-9/12">
+            <div className="flex flex-col gap-4 w-11/12 lg:w-4/6">
               <p className="text-sm text-gray-400 uppercase">
                 February 3, 2018 -{" "}
                 <a
