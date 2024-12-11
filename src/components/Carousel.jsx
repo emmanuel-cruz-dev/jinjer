@@ -59,9 +59,6 @@ const articles = [
   },
 ];
 
-const ArticleCard = () => {};
-
-const div = () => {};
 const Carousel = () => {
   const settings = {
     dots: false, // Mostrar puntos de navegación
@@ -97,11 +94,11 @@ const Carousel = () => {
           return (
             <div
               key={article.id}
-              className="latest-news__card flex flex-col w-[22rem] gap-3"
+              className="latest-news__card flex flex-col gap-3"
             >
               <figure className="overflow-hidden">
                 <img
-                  className="scale-105 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
+                  className="object-cover scale-110 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
                   src={article.image}
                   alt=""
                 />
