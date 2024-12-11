@@ -9,6 +9,7 @@ import CardImg2 from "../assets/images/blog-card-02.jpg";
 import CardImg3 from "../assets/images/blog-card-03.jpg";
 
 const ArticleCard = ({ image, date }) => {
+  const navigate = useNavigate();
   return (
     <div className="latest-news__card flex flex-col w-[22rem] gap-3">
       <figure className="overflow-hidden">
