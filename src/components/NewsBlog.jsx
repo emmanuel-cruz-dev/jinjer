@@ -21,10 +21,10 @@ const NewsBlog = () => {
             <TitleArticle />
           </div>
           <div className="flex flex-col justify-center items-center gap-4">
-            <figure className="w-10/12 lg:w-9/12">
+            <figure className="w-11/12 lg:w-9/12">
               <img className="w-full" src={ImgBlog} alt="" />
             </figure>
-            <div className="flex flex-col gap-4 w-10/12 lg:w-9/12">
+            <div className="flex flex-col gap-4 w-11/12 lg:w-9/12">
               <p className="text-sm text-gray-400 uppercase">
                 February 3, 2018 -{" "}
                 <a

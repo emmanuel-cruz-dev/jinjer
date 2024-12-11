@@ -189,6 +189,12 @@ img {
   z-index: 2;
 }
 
+@media screen and (max-width: 1024px) {
+  .latest-album {
+    display: none;
+  }
+}
+
 // --- Fin: Header --- //
 
 // --- Inicio: Botón ir arriba --- //
