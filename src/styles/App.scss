@@ -212,13 +212,13 @@ img {
 
 .music-player__container {
   width: 4.5rem;
-  height: 4.5rem;
+  height: 4.6rem;
   overflow: hidden;
   transition: width 0.3s ease-in-out;
 
   img {
-    width: 3rem;
-    height: 3rem;
+    width: 3.4rem;
+    height: 3.4rem;
   }
 
   .music-player__text {
@@ -233,7 +233,7 @@ img {
 }
 
 .music-player__container.active {
-  width: 22rem;
+  width: 21.2rem;
 
   .music-player__text {
     display: block;
