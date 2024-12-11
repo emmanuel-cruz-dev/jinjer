@@ -92,11 +92,8 @@ const Carousel = () => {
       <Slider {...settings} className="latest-news__carousel-slider">
         {articles.map((article) => {
           return (
-            <div
-              key={article.id}
-              className="latest-news__card flex flex-col gap-3"
-            >
-              <figure className="overflow-hidden">
+            <div key={article.id} className="latest-news__card">
+              <figure className="overflow-hidden mb-3">
                 <img
                   className="object-cover scale-110 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
                   src={article.image}
@@ -104,14 +101,14 @@ const Carousel = () => {
                 />
               </figure>
               <Link to="/newsblog">
-                <h3 className="uppercase font-bold tracking-wide text-lg opacity-80 hover:opacity-100 transition-opacity duration-300">
+                <h3 className="uppercase font-bold tracking-wide text-lg opacity-80 hover:opacity-100 transition-opacity duration-300 mb-1">
                   {article.title}
                 </h3>
               </Link>
-              <p className="text-gray-400">{article.description}</p>
+              <p className="text-gray-400 mb-3">{article.description}</p>
               <div className="flex flex-col gap-2">
                 <a
-                  className="uppercase hover:underline transition-all duration-300 ease-in-out"
+                  className="uppercase text-sm font-semibold text-gray-400 hover:underline transition-all duration-300 ease-in-out"
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"

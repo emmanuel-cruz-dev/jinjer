@@ -332,6 +332,8 @@ img {
 // --- Inicio: Latest News --- //
 
 .latest-news__card {
+  display: flex;
+  flex-direction: column;
   width: 21rem !important;
 }
 
