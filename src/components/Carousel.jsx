@@ -1,26 +1,34 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import CardImg from "../assets/images/blog03.jpg";
-import CardImg1 from "../assets/images/blog-card-04.jpg";
+import CardImg1 from "../assets/images/blog-card-01.jpg";
 import CardImg2 from "../assets/images/blog-card-02.jpg";
 import CardImg3 from "../assets/images/blog-card-03.jpg";
 
-const ArticleCard = ({ image, date }) => {
-  const navigate = useNavigate();
+const articles = [
+  {
+    id: 1,
+    title: "Artículo 1",
+    content: "Contenido completo del artículo 1...",
+  },
+  {
+    id: 2,
+    title: "Artículo 2",
+    content: "Contenido completo del artículo 2...",
+  },
+  {
+    id: 3,
+    title: "Artículo 3",
+    content: "Contenido completo del artículo 3...",
+  },
+];
 
-  const goToSection = (path, sectionId) => {
-    navigate(path);
-
-    setTimeout(() => {
-      const section = document.getElementById(sectionId);
-      if (!section) return;
-      else section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
-  };
-
+const ArticleCard = ({ image, title, date }) => {
+  const { id } = useParams();
+  const article = articles.find((article) => article.id === id);
   return (
     <div className="latest-news__card flex flex-col w-[22rem] gap-3">
       <figure className="overflow-hidden">
@@ -30,11 +38,11 @@ const ArticleCard = ({ image, date }) => {
           alt=""
         />
       </figure>
-      <a onClick={() => goToSection("/", "newsblog")} href="/newsblog">
+      <Link to="/newsblog">
         <h3 className="uppercase font-bold tracking-wide text-lg opacity-80 hover:opacity-100 transition-opacity duration-300">
-          Neue zwohandbreit EP in arbeit
+          {title}
         </h3>
-      </a>
+      </Link>
       <p className="text-gray-400">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, quaerat
         tempora. Expedita voluptatem maxime a!
@@ -87,17 +95,29 @@ const Carousel = () => {
       <Slider {...settings} className="latest-news__carousel-slider">
         <div>
           {/* Card 1 */}
-          <ArticleCard image={CardImg1} date="9 Nov 2020" />
+          <ArticleCard
+            image={CardImg1}
+            title="Neuer Song: Ein Naomi Hoffnung"
+            date="9 Nov 2020"
+          />
         </div>
 
         <div>
           {/* Card 2 */}
-          <ArticleCard image={CardImg2} date="11 Feb 2013" />
+          <ArticleCard
+            image={CardImg2}
+            title="Neue Benjamin Ep in arbeit"
+            date="11 Feb 2013"
+          />
         </div>
 
         <div>
           {/* Card 3 */}
-          <ArticleCard image={CardImg3} date="3 Feb 2008" />
+          <ArticleCard
+            image={CardImg3}
+            title="Zeitreise - Evolution von 96 July"
+            date="3 Feb 2008"
+          />
         </div>
 
         <div>
