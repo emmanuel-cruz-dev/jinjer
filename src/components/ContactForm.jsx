@@ -31,7 +31,11 @@ const ContactForm = () => {
               I comment.
             </span>
           </label>
-          <button type="submit" className="red__btn lg:w-1/3 rounded-none">
+          <button
+            type="submit"
+            onClick={(e) => e.preventDefault()}
+            className="red__btn lg:w-1/3 rounded-none"
+          >
             Post Comment
           </button>
         </div>

@@ -50,7 +50,10 @@ const NewsBlog = () => {
             <div className="flex flex-col gap-4 w-11/12 lg:w-4/6">
               <p className="text-sm text-gray-400 uppercase">
                 {article.date} -{" "}
-                <a className="uppercase hover:text-slate-100 transition-colors duration-300">
+                <a
+                  href="#"
+                  className="uppercase hover:text-slate-100 transition-colors duration-300"
+                >
                   Admin
                 </a>
               </p>
