@@ -11,14 +11,6 @@ import Song1 from "../assets/songs/song1.m4a";
 import Song2 from "../assets/songs/song2.m4a";
 import Song3 from "../assets/songs/song3.m4a";
 import Song4 from "../assets/songs/song4.m4a";
-import Song5 from "../assets/songs/song5.mp3";
-import Song6 from "../assets/songs/song6.mp3";
-import Song7 from "../assets/songs/song7.mp3";
-import Song8 from "../assets/songs/song8.mp3";
-import Song9 from "../assets/songs/song9.mp3";
-import Song10 from "../assets/songs/song10.mp3";
-import Song11 from "../assets/songs/song11.mp3";
-import Song12 from "../assets/songs/song12.mp3";
 
 import CoverAlbum from "../assets/images/duelep.jpg";
 
@@ -39,38 +31,6 @@ const musicList = [
   {
     title: "04 Daughter",
     src: `${Song4}`,
-  },
-  {
-    title: "05 A tu Control",
-    src: `${Song5}`,
-  },
-  {
-    title: "06 Coming Home",
-    src: `${Song6}`,
-  },
-  {
-    title: "07 Niemandmensch",
-    src: `${Song7}`,
-  },
-  {
-    title: "08 Zawsze",
-    src: `${Song8}`,
-  },
-  {
-    title: "09 On the Run",
-    src: `${Song9}`,
-  },
-  {
-    title: "10 Boomerang",
-    src: `${Song10}`,
-  },
-  {
-    title: "11 Chameleon",
-    src: `${Song11}`,
-  },
-  {
-    title: "12 Phono Sapiens",
-    src: `${Song12}`,
   },
 ];
 
