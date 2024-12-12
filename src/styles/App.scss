@@ -296,7 +296,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 90vh;
+  height: 80vh;
   margin-top: 3.3rem;
 }
 
@@ -713,12 +713,11 @@ img {
 // --- Inicio: NewsBlog --- //
 
 .newsblog {
-  background: url("../assets/images/bg1.jpg");
+  background: url("../assets/images/jinjer-bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100%;
 }
 
 // --- Fin: NewsBlog --- //

@@ -10,31 +10,31 @@ import {
 const SocialIcons = () => {
   const icons = [
     {
-      icon: <FaFacebook size={24} />,
+      icon: <FaFacebook size={26} />,
       name: "Facebook",
       link: "https://facebook.com",
       color: "hover:text-blue-600",
     },
     {
-      icon: <FaXTwitter size={24} />,
+      icon: <FaXTwitter size={26} />,
       name: "X",
       link: "https://x.com",
       color: "hover:text-gray-900",
     },
     {
-      icon: <FaInstagram size={24} />,
+      icon: <FaInstagram size={26} />,
       name: "Instagram",
       link: "https://instagram.com",
       color: "hover:text-pink-600",
     },
     {
-      icon: <FaYoutube size={24} />,
+      icon: <FaYoutube size={26} />,
       name: "Youtube",
       link: "https://youtube.com",
       color: "hover:text-red-600",
     },
     {
-      icon: <FaTiktok size={24} />,
+      icon: <FaTiktok size={26} />,
       name: "TikTok",
       link: "https://tiktok.com",
       color: "hover:text-black",

@@ -10,18 +10,18 @@ const Footer = () => {
 
   return (
     <footer className="footer bg-footer">
-      <article className="flex flex-col lg:flex-row gap-10 justify-between xl:justify-around items-center px-20 py-16 border-b border-gray-600">
+      <article className="flex flex-col lg:flex-row gap-10 justify-between xl:justify-around items-center lg:px-20 py-16 border-b border-gray-600">
         <div className="flex flex-col items-center gap-6">
-          <div className="flex flex-col items-center gap-4 w-44">
-            <figure className="w-32">
+          <div className="flex flex-col items-center gap-4 w-full lg:w-44">
+            <figure className="w-48 lg:w-32">
               <img className="footer__nephews-logo" src={JinjerLogo} alt="" />
             </figure>
-            <div className="text-2xl">
+            <div className="text-4xl lg:text-2xl">
               <Name />
             </div>
           </div>
 
-          <div className="footer__social">
+          <div>
             <SocialIcons />
           </div>
         </div>
