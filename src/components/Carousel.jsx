@@ -1,61 +1,57 @@
 import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import CardImg1 from "../assets/images/blog-card-01.jpg";
-import CardImg2 from "../assets/images/blog-card-02.jpg";
-import CardImg3 from "../assets/images/blog-card-03.jpg";
+import CardImg1 from "../assets/images/thumb-gs.jpg";
+import CardImg2 from "../assets/images/thumb-kafka.jpg";
+import CardImg3 from "../assets/images/thumb-rogue.jpg";
+import CardImg4 from "../assets/images/thumb-sd.jpg";
+import CardImg5 from "../assets/images/thumb-fn.jpg";
+import CardImg6 from "../assets/images/thumb-drum.jpg";
 
 const articles = [
   {
     id: 1,
-    title: "Neuer Song: Ein Naomi Hoffnung",
+    title: "Green Serpent",
     image: CardImg1,
-    date: "February 23,2023",
-    description:
-      "Naomi, ipsum dolor sit amet consectetur adipisicing elit. Omnis, quaerat tempora. Expedita voluptatem maxime a!",
+    date: "26.11.2024",
+    description: "New Single Out NOW!",
   },
   {
     id: 2,
-    title: "Neue Benjamin Ep in arbeit",
+    title: "Kafka",
     image: CardImg2,
-    date: "February 11,2013",
-    description:
-      "Benjita, ipsum dolor sit amet consectetur adipisicing elit. Omnis, quaerat tempora. Expedita voluptatem maxime a!",
+    date: "10.09.2024",
+    description: "Also DUEL PRE-ORDERS!",
   },
   {
     id: 3,
-    title: "Zeitreise - Evolution von 96 July",
+    title: "Rogue",
     image: CardImg3,
-    date: "February 3,2008",
-    description:
-      "July, ipsum dolor sit amet consectetur adipisicing elit. Omnis, quaerat tempora. Expedita voluptatem maxime a!",
+    date: "10.09.2024",
+    description: "New video OUT NOW!",
   },
   {
     id: 4,
-    title: "Song 4: Ein Naomi Hoffnung",
-    image: CardImg1,
-    date: "February 23,2023",
-    description:
-      "Naomi, ipsum dolor sit amet consectetur adipisicing elit. Omnis, quaerat tempora. Expedita voluptatem maxime a!",
+    title: "Someone's Daughter",
+    image: CardImg4,
+    date: "01.08.2024",
+    description: "New video OUT NOW!",
   },
   {
     id: 5,
-    title: "Neue 5 Benjamin Ep in arbeit",
-    image: CardImg2,
-    date: "February 11,2013",
-    description:
-      "Benjita, ipsum dolor sit amet consectetur adipisicing elit. Omnis, quaerat tempora. Expedita voluptatem maxime a!",
+    title: "Jinjer - From Nothing",
+    image: CardImg5,
+    date: "25.06.2024",
+    description: "Exclusive live tracks included!",
   },
   {
     id: 6,
-    title: "Zeitreise #06 - Evolution von July",
-    image: CardImg3,
-    date: "February 3,2008",
-    description:
-      "July, ipsum dolor sit amet consectetur adipisicing elit. Omnis, quaerat tempora. Expedita voluptatem maxime a!",
+    title: "Jinjer - Drum Playthrough",
+    image: CardImg6,
+    date: "23.07.2024",
+    description: "Call me a Symbol drum playthrough!",
   },
 ];
 
@@ -111,6 +107,9 @@ const Carousel = () => {
                   alt=""
                 />
               </figure>
+              <time className="text-sm uppercase" dateTime={article.date}>
+                {article.date}
+              </time>
               <a
                 href={`/newsblog/${article.id}`}
                 onClick={() => goToSection(`/newsblog/`, `${article.id}`)}
@@ -120,19 +119,14 @@ const Carousel = () => {
                 </h3>
               </a>
               <p className="text-gray-400 mb-3">{article.description}</p>
-              <div className="flex flex-col gap-2">
-                <a
-                  className="w-fit uppercase text-sm font-semibold text-gray-400 hover:underline transition-all duration-300 ease-in-out"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Read more
-                </a>
-                <time className="text-sm uppercase" dateTime="2018-01-16">
-                  {article.date}
-                </time>
-              </div>
+
+              <a
+                className="w-fit uppercase text-sm font-semibold text-gray-400 hover:underline transition-all duration-300 ease-in-out"
+                href={`/newsblog/${article.id}`}
+                onClick={() => goToSection(`/newsblog/`, `${article.id}`)}
+              >
+                Read more
+              </a>
             </div>
           );
         })}
