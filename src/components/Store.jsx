@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
-import TShirt1 from "../assets/images/shop-afterlife-black.png";
-import TShirt2 from "../assets/images/shop-bird-black.png";
-import TShirt3 from "../assets/images/shop-bird-white.png";
-import TShirt4 from "../assets/images/shop-official-logo-black.png";
-import TShirt5 from "../assets/images/shop-official-logo-white.png";
-import TShirt6 from "../assets/images/shop-zombie-girl.png";
+import TShirt1 from "../assets/images/shop-skull.png";
+import TShirt2 from "../assets/images/shop-gorilla.png";
+import TShirt3 from "../assets/images/shop-sharks.png";
+import TShirt4 from "../assets/images/shop-fire.png";
+import TShirt5 from "../assets/images/shop-death.png";
+import TShirt6 from "../assets/images/shop-tour.png";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -68,38 +68,30 @@ const Carousel = () => {
       >
         <div>
           {/* Card 1 */}
-          <TShirtCard title="Afterlife Album" price="21.99" img={TShirt1} />
+          <TShirtCard title="Skull" price="21.99" img={TShirt1} />
         </div>
 
         <div>
           {/* Card 2 */}
-          <TShirtCard
-            title="Bird of Hermes/Black"
-            price="18.69"
-            img={TShirt2}
-          />
+          <TShirtCard title="Gorilla" price="18.69" img={TShirt2} />
         </div>
 
         <div>
           {/* Card 3 */}
-          <TShirtCard
-            title="Bird of Hermes/White"
-            price="24.79"
-            img={TShirt3}
-          />
+          <TShirtCard title="Pisces" price="24.79" img={TShirt3} />
         </div>
 
         <div>
           {/* Card 4 */}
-          <TShirtCard title="Official Logo/Black" price="23.95" img={TShirt4} />
+          <TShirtCard title="Noha" price="23.95" img={TShirt4} />
         </div>
         <div>
           {/* Card 5 */}
-          <TShirtCard title="Official Logo/White" price="23.95" img={TShirt5} />
+          <TShirtCard title="True Believer" price="23.95" img={TShirt5} />
         </div>
         <div>
           {/* Card 6 */}
-          <TShirtCard title="Damned Album" price="19.99" img={TShirt6} />
+          <TShirtCard title="Tour '18" price="19.99" img={TShirt6} />
         </div>
       </Slider>
     </div>

@@ -1,5 +1,5 @@
 import Name from "./Name";
-import NephewsLogo from "../assets/icons/nephews-logo.png";
+import NephewsLogo from "../assets/icons/jinjer-logo.png";
 
 const Loader = () => {
   return (

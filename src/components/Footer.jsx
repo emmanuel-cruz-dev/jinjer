@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Name from "./Name";
 import SocialIcons from "./SocialIcons";
-import JinjerLogo from "../assets/icons/jinjer-logo-blanco.png";
+import JinjerLogo from "../assets/icons/jinjer-logo.png";
 import CDCover from "../assets/images/latest-post-02.jpg";
 import TourPoster from "../assets/images/world-tour.jpg";
 
@@ -145,7 +145,7 @@ const Footer = () => {
           </li>
         </ul>
         <p>
-          © 2024 N3phews. {t("footer.powered")}{" "}
+          © 2024 Jinjer. {t("footer.powered")}{" "}
           <a
             className="footer__legal-links"
             target="_blank"
