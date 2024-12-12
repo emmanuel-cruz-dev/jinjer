@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import microfono from "../assets/icons/microfono.png";
 import guitarra from "../assets/icons/guitarra.png";
+import bajo from "../assets/icons/bajo-electrico.png";
 import bateria from "../assets/icons/bateria.png";
 import Naomi from "../assets/images/naomi-aldana.jpg";
 import July from "../assets/images/julian-andre.jpg";
@@ -49,7 +50,6 @@ const About = () => {
               </span>
               <p>{t("about.paragraph2")}.</p>
               <p>{t("about.paragraph3")}.</p>
-              <p>{t("about.paragraph4")}.</p>
             </div>
           </div>
           <div className="about__video w-full">
@@ -57,7 +57,7 @@ const About = () => {
               className="w-full"
               width="680"
               height="440"
-              src="https://www.youtube.com/embed/lDrkMNw6Wr0?si=DjFKM1ycU-a4c-QU"
+              src="https://www.youtube.com/embed/B48xIcvgzYM?si=2H2C59TYlcnHn1l4"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -79,6 +79,14 @@ const About = () => {
           <MemberArticle
             image={July}
             icon={guitarra}
+            name="Julián André"
+            instrument={t("about.july")}
+          />
+
+          {/* Bajista */}
+          <MemberArticle
+            image={July}
+            icon={bajo}
             name="Julián André"
             instrument={t("about.july")}
           />
