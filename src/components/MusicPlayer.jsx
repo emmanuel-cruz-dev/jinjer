@@ -7,10 +7,10 @@ import {
 } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 
-import Song1 from "../assets/songs/song1.mp3";
-import Song2 from "../assets/songs/song2.mp3";
-import Song3 from "../assets/songs/song3.mp3";
-import Song4 from "../assets/songs/song4.mp3";
+import Song1 from "../assets/songs/song1.m4a";
+import Song2 from "../assets/songs/song2.m4a";
+import Song3 from "../assets/songs/song3.m4a";
+import Song4 from "../assets/songs/song4.m4a";
 import Song5 from "../assets/songs/song5.mp3";
 import Song6 from "../assets/songs/song6.mp3";
 import Song7 from "../assets/songs/song7.mp3";
@@ -37,7 +37,7 @@ const musicList = [
     src: `${Song3}`,
   },
   {
-    title: "04 Someone's",
+    title: "04 Daughter",
     src: `${Song4}`,
   },
   {
