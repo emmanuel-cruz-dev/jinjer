@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
-import AlbumCover01 from "../assets/images/album-cover-01.jpg";
-import AlbumCover02 from "../assets/images/album-cover-02.jpg";
-import AlbumCover03 from "../assets/images/album-cover-03.jpg";
-import AlbumCover04 from "../assets/images/album-cover-04.jpg";
-import AlbumCover05 from "../assets/images/album-cover-05.jpg";
-import AlbumCover06 from "../assets/images/album-cover-06.jpg";
-import VinylDisc01 from "../assets/images/vinyl-disc-01.png";
+import AlbumCover01 from "../assets/images/wallflowers.jpg";
+import AlbumCover02 from "../assets/images/melb.jpg";
+import AlbumCover03 from "../assets/images/macro.jpg";
+import AlbumCover04 from "../assets/images/cf.jpg";
+import AlbumCover05 from "../assets/images/koe.jpg";
+import AlbumCover06 from "../assets/images/idb.jpg";
+import VinylDisc01 from "../assets/images/vinyl-disc.png";
 
 const Album = ({ cover, title, year }) => {
   return (
@@ -37,20 +37,16 @@ const Albums = () => {
           <p className="text-lg">{t("albums.description")}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-40 gap-y-12 w-full md:w-5/6">
-          <Album cover={AlbumCover04} title="Hollow Thrones" year="2024" />
-          <Album cover={AlbumCover01} title="Royal Blood" year="2021" />
-          <Album
-            cover={AlbumCover03}
-            title="Shadows of Childhood"
-            year="2019"
-          />
+          <Album cover={AlbumCover01} title="Wallflowers" year="2021" />
+          <Album cover={AlbumCover02} title="Alive in Melbourne" year="2020" />
+          <Album cover={AlbumCover03} title="Macro" year="2019" />
+          <Album cover={AlbumCover04} title="Cloud Factory" year="2018" />
+          <Album cover={AlbumCover05} title="King of Everything" year="2016" />
           <Album
             cover={AlbumCover06}
-            title="Portrait of the Damned"
-            year="2017"
+            title="Inhale, Do not Breathe"
+            year="2012"
           />
-          <Album cover={AlbumCover05} title="Afterlife" year="2014" />
-          <Album cover={AlbumCover02} title="Bird of Hermes" year="2011" />
         </div>
         <a href="#" className="red__btn">
           {t("albums.itunes")}
