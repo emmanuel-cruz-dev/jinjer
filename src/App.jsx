@@ -41,7 +41,7 @@ function App() {
       <ScrollToTopButton />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/newsblog" element={<NewsBlog />} />
+        <Route path="/newsblog/:id" element={<NewsBlog />} />
       </Routes>
 
       <Footer />

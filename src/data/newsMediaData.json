@@ -1,29 +1,29 @@
 [
   {
     "id": 1,
-    "image": "../assets/images/blog-card-01.jpg",
+    "image": "/assets/images/blog-card-01.jpg",
     "date": "February 23,2023",
     "title": "Nueva canción 'Naomi'",
-    "description": "Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec.",
-    "link1": "Neuer Song: Ein Funken Hoffnung",
-    "link2": "Slipknot - Rock Am Ring Official Video"
+    "description": "Nao eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec.",
+    "link1": "Neuer Naomi: Ein Funken Hoffnung",
+    "link2": "Naomi - Rock Am Ring Official Video"
   },
   {
     "id": 2,
-    "image": "../assets/images/blog-card-02.jpg",
+    "image": "/assets/images/blog-card-02.jpg",
     "date": "February 11,2013",
     "title": "Nuevo 'Benjamin' EP en progreso",
-    "description": "Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec.",
-    "link1": "Neuer Song: Ein Funken Hoffnung",
-    "link2": "Slipknot - Rock Am Ring Official Video"
+    "description": "Ben eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec.",
+    "link1": "Neuer Song: Ein Funken Benjit",
+    "link2": "Jam - Rock Am Ring Official Video"
   },
   {
     "id": 3,
-    "image": "../assets/images/blog-card-03.jpg",
+    "image": "/assets/images/blog-card-03.jpg",
     "date": "February 3,2008",
     "title": "Viaje en el tiempo - La evolución de July 96",
-    "description": "Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec.",
-    "link1": "Neuer Song: Ein Funken Hoffnung",
-    "link2": "Slipknot - Rock Am Ring Official Video"
+    "description": "Juls eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec.",
+    "link1": "Neuer Song: Ein July Hoffnung",
+    "link2": "July - Rock Am Ring Official Video"
   }
 ]

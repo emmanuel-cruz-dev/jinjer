@@ -1,4 +1,5 @@
-import ImgBlog from "../assets/images/blognews.jpg";
+import { useParams } from "react-router-dom";
+import newsMediaData from "../data/newsMediaData.json";
 import ContactForm from "./ContactForm";
 
 const TitleArticle = () => {
@@ -13,20 +14,31 @@ const TitleArticle = () => {
   );
 };
 const NewsBlog = () => {
+  const { id } = useParams();
+
+  const article = newsMediaData.find((a) => a.id === parseInt(id));
+
+  if (!article) {
+    return <h2 className="text-3xl h-screen w-full">Artículo no encontrado</h2>;
+  }
+
   return (
     <section className="newsblog" id="newsblog">
       <article className="py-10">
-        <article className="w-full mt-20 lg:w-5/6 mb-12 py-12 lg:py-20 bg-black/90 flex flex-col justify-center items-center gap-12 mx-auto">
+        <article
+          key={article.id}
+          className="w-full mt-20 lg:w-5/6 mb-12 py-12 lg:py-20 bg-black/90 flex flex-col justify-center items-center gap-12 mx-auto"
+        >
           <div className="relative w-full border-b border-slate-700 pb-4">
             <TitleArticle />
           </div>
           <div className="flex flex-col justify-center items-center gap-4">
             <figure className="w-11/12 lg:w-4/6">
-              <img className="w-full" src={ImgBlog} alt="" />
+              <img className="w-full" src={article.image} alt="" />
             </figure>
             <div className="flex flex-col gap-4 w-11/12 lg:w-4/6">
               <p className="text-sm text-gray-400 uppercase">
-                February 3, 2018 -{" "}
+                {article.date} -{" "}
                 <a
                   className="uppercase hover:text-slate-100 transition-colors duration-300"
                   href="#"
@@ -34,35 +46,22 @@ const NewsBlog = () => {
                   Admin
                 </a>
               </p>
-              <h3 className="text-3xl font-semibold">
-                Neue ZwoHandBreit EP in Arbeit
-              </h3>
+              <h3 className="text-3xl font-semibold">{article.title}</h3>
               <p className="text-gray-400 border-b border-slate-700 pb-4">
-                Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc
-                dignissim nunc eros, eget luctus lorem ultricies nec.
-                Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc
-                dignissim nunc eros, eget luctus lorem ultricies nec.
-                Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc
-                dignissim nunc eros, eget luctus lorem ultricies nec.
-                Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc
-                dignissim nunc eros, eget luctus lorem ultricies nec.
-                Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc
-                dignissim nunc eros, eget luctus lorem ultricies nec.
-                Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc
-                dignissim nunc eros, eget luctus lorem ultricies nec.
+                {article.description}
               </p>
               <div className="flex flex-row gap-4 justify-between text-gray-300 border-b border-slate-700 pb-4">
                 <a
                   className="hover:text-slate-100 transition-colors duration-300"
                   href="#"
                 >
-                  Neuer Song: Ein Funken Hoffnung
+                  {article.link1}
                 </a>
                 <a
                   className="text-right hover:text-slate-100 transition-colors duration-300"
                   href="#"
                 >
-                  Slipknot - Rock Am Ring Official Video
+                  {article.link2}
                 </a>
               </div>
               <div>

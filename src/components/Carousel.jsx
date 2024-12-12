@@ -1,9 +1,9 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import CardImg from "../assets/images/blog03.jpg";
 import CardImg1 from "../assets/images/blog-card-01.jpg";
 import CardImg2 from "../assets/images/blog-card-02.jpg";
 import CardImg3 from "../assets/images/blog-card-03.jpg";
@@ -60,6 +60,7 @@ const articles = [
 ];
 
 const Carousel = () => {
+  const { id } = useParams();
   const settings = {
     dots: false, // Mostrar puntos de navegación
     infinite: true, // Desplazamiento infinito
@@ -100,7 +101,7 @@ const Carousel = () => {
                   alt=""
                 />
               </figure>
-              <Link to="/newsblog">
+              <Link to={`/newsblog/${article.id}`}>
                 <h3 className="uppercase font-bold tracking-wide text-lg opacity-80 hover:opacity-100 transition-opacity duration-300 mb-1">
                   {article.title}
                 </h3>
@@ -108,7 +109,7 @@ const Carousel = () => {
               <p className="text-gray-400 mb-3">{article.description}</p>
               <div className="flex flex-col gap-2">
                 <a
-                  className="uppercase text-sm font-semibold text-gray-400 hover:underline transition-all duration-300 ease-in-out"
+                  className="w-fit uppercase text-sm font-semibold text-gray-400 hover:underline transition-all duration-300 ease-in-out"
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
