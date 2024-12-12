@@ -7,7 +7,7 @@ const VideoCard = ({ video, title, paragraph, views }) => {
     <div className="flex justify-center flex-col gap-4">
       <iframe
         loading="lazy"
-        className="grow w-full md:w-72 xl:w-80"
+        className="grow w-full md:w-72 xl:w-[22rem]"
         width="320"
         height="220"
         src={video}
@@ -58,40 +58,40 @@ const Media = () => {
             }
             title="Green Serpent (Official Video)"
             paragraph={t("media.greenSerpent")}
-            views="339M"
+            views="1.5M"
           />
           <VideoCard
             video={
-              "https://www.youtube.com/embed/JU5LMG3WFBw?si=fVPXj-FKsBl3RFpx"
+              "https://www.youtube.com/embed/SQNtGoM3FVU?si=E4vzKQxLpqDFZzrk"
             }
-            title="Queen - Hammer to Fall"
-            paragraph={t("media.hammerToFall")}
-            views="28M"
+            title="Pisces (Live Session)"
+            paragraph={t("media.pisces")}
+            views="89M"
           />
 
           <VideoCard
             video={
-              "https://www.youtube.com/embed/8SbUC-UaAxE?si=LVhwuo2AmHmZVavC"
+              "https://www.youtube.com/embed/KJoPIgg17U4?si=hF3pOee2fA6haLkd"
             }
-            title="Guns N' Roses - November Rain"
-            paragraph={t("media.novemberRain")}
-            views="225M"
+            title="I Speak Astronomy (Official Video)"
+            paragraph={t("media.iSpeakAstronomy")}
+            views="13M"
           />
           <VideoCard
             video={
-              "https://www.youtube.com/embed/a9eNQZbjpJk?si=KG1QnQPcEovxztWN"
+              "https://www.youtube.com/embed/AiaOSGZTwtY?si=4MRl3gl0LEOMdhWg"
             }
-            title="Red Hot Chili Peppers - Around The World"
-            paragraph={t("media.aroundTheWorld")}
-            views="104M"
+            title="Vortex (Official Video)"
+            paragraph={t("media.vortex")}
+            views="5.9M"
           />
           <VideoCard
             video={
-              "https://www.youtube.com/embed/t365MuktYQs?si=APy6Jc1vy6qr8-jR"
+              "https://www.youtube.com/embed/U6rv5qi8-8s?si=-b2VVP9febdjlYgI"
             }
-            title="David Bowie - Starman"
-            paragraph={t("media.starman")}
-            views="48M"
+            title="Who Is Gonna Be The One (Live)"
+            paragraph={t("media.whoIsGonnaBeTheOne")}
+            views="14M"
           />
           <VideoCard
             video={
@@ -99,7 +99,7 @@ const Media = () => {
             }
             title="Scissors (OFFICIAL MUSIC VIDEO)"
             paragraph={t("media.scissors")}
-            views="121M"
+            views="4M"
           />
         </div>
       </article>
