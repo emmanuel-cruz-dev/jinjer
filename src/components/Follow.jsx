@@ -87,15 +87,15 @@ const Follow = () => {
               </span>
             </div>
             <div className="follow__img__grid-container grid grid-cols-3 gap-4">
-              <img src={InstaImg1} alt="" />
-              <img src={InstaImg2} alt="" />
-              <img src={InstaImg4} alt="" />
-              <img src={InstaImg7} alt="" />
-              <img src={InstaImg8} alt="" />
-              <img src={InstaImg3} alt="" />
-              <img src={InstaImg5} alt="" />
-              <img src={InstaImg9} alt="" />
-              <img src={InstaImg6} alt="" />
+              <img src={InstaImg1} alt="" width="300" height="300" />
+              <img src={InstaImg2} alt="" width="300" height="300" />
+              <img src={InstaImg4} alt="" width="300" height="300" />
+              <img src={InstaImg7} alt="" width="300" height="300" />
+              <img src={InstaImg8} alt="" width="300" height="300" />
+              <img src={InstaImg3} alt="" width="300" height="300" />
+              <img src={InstaImg6} alt="" width="300" height="300" />
+              <img src={InstaImg5} alt="" width="300" height="300" />
+              <img src={InstaImg9} alt="" width="300" height="300" />
             </div>
           </div>
           <div className="flex-1 flex flex-col gap-8">

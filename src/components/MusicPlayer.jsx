@@ -20,24 +20,24 @@ import Song10 from "../assets/songs/song10.mp3";
 import Song11 from "../assets/songs/song11.mp3";
 import Song12 from "../assets/songs/song12.mp3";
 
-import CoverAlbum from "../assets/images/hollow-thrones.jpg";
+import CoverAlbum from "../assets/images/duelep.jpg";
 
 // Lista de canciones (puedes expandir esto)
 const musicList = [
   {
-    title: "01 Dancer in the Sun",
+    title: "01 Green Serpent",
     src: `${Song1}`,
   },
   {
-    title: "02 Play with Fire",
+    title: "02 Kafka",
     src: `${Song2}`,
   },
   {
-    title: "03 Smash Song",
+    title: "03 Rogue",
     src: `${Song3}`,
   },
   {
-    title: "04 Tribe & Dynamite",
+    title: "04 Someone's",
     src: `${Song4}`,
   },
   {
@@ -53,7 +53,7 @@ const musicList = [
     src: `${Song7}`,
   },
   {
-    title: "08 Everytime(Zawsze)",
+    title: "08 Zawsze",
     src: `${Song8}`,
   },
   {
@@ -133,7 +133,7 @@ const MusicPlayer = () => {
           {/* Información de la canción */}
           <div className="music-player__text flex-grow">
             <h3 className="text-sm font-semibold">{currentSong.title}</h3>
-            <p className="text-[12px] text-gray-400">N3phews</p>
+            <p className="text-[12px] text-gray-400">Jinjer</p>
           </div>
         </div>
 

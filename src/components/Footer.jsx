@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <footer className="footer bg-footer">
-      <article className="flex flex-col lg:flex-row gap-10 justify-between items-center px-20 py-16 border-b border-gray-600">
+      <article className="flex flex-col lg:flex-row gap-10 justify-between xl:justify-around items-center px-20 py-16 border-b border-gray-600">
         <div className="flex flex-col items-center gap-6">
           <div className="flex flex-col items-center gap-4 w-44">
             <figure className="w-32">
@@ -140,7 +140,7 @@ const Footer = () => {
           </li>
           <li>
             <a className="footer__legal-links" href="#">
-              The N3phews Club®
+              Jinjer Fans Club®
             </a>
           </li>
         </ul>
