@@ -91,6 +91,8 @@ const resources = {
           "The song addresses the idea of ​​responsibility and courage. It asks who will have the courage to acknowledge their loved ones without the protective masks we all wear, both literally and figuratively",
         scissors:
           "The song explores the emotional pain and anguish a person can feel when they see someone they love suffer",
+        seeMore: "See more",
+        seeLess: "See less",
       },
       store: {
         title: "Store",
@@ -233,6 +235,8 @@ const resources = {
           "Esta canción aborda la idea de coraje y responsabilidad. Pregunta quién tendrá la valentía de reconocer a sus seres queridos sin las máscaras protectoras que todos llevamos, tanto literal como figurativamente",
         scissors:
           "La canción explora el dolor emocional y la angustia que una persona puede sentir al ver a alguien querido sufrir",
+        seeMore: "Ver más",
+        seeLess: "Ver menos",
       },
       store: {
         titleSpan: "Nuestra",

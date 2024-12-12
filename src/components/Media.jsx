@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 const VideoCard = ({ video, title, paragraph, views }) => {
   const { t } = useTranslation();
@@ -42,6 +43,8 @@ const VideoCard = ({ video, title, paragraph, views }) => {
 const Media = () => {
   const { t } = useTranslation();
 
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
     <section className="scroll-top-margin media py-16 mx-auto" id="media">
       <article className="flex flex-col justify-center items-center gap-12 w-11/12 mx-auto">
@@ -77,31 +80,42 @@ const Media = () => {
             paragraph={t("media.iSpeakAstronomy")}
             views="13M"
           />
-          <VideoCard
-            video={
-              "https://www.youtube.com/embed/AiaOSGZTwtY?si=4MRl3gl0LEOMdhWg"
-            }
-            title="Vortex (Official Video)"
-            paragraph={t("media.vortex")}
-            views="5.9M"
-          />
-          <VideoCard
-            video={
-              "https://www.youtube.com/embed/U6rv5qi8-8s?si=-b2VVP9febdjlYgI"
-            }
-            title="Who Is Gonna Be The One (Live)"
-            paragraph={t("media.whoIsGonnaBeTheOne")}
-            views="14M"
-          />
-          <VideoCard
-            video={
-              "https://www.youtube.com/embed/DZ_WDLA9i7c?si=DiANW26qAS0gv6UZ"
-            }
-            title="Scissors (OFFICIAL MUSIC VIDEO)"
-            paragraph={t("media.scissors")}
-            views="4M"
-          />
+
+          {isVisible && (
+            <>
+              <VideoCard
+                video={
+                  "https://www.youtube.com/embed/AiaOSGZTwtY?si=4MRl3gl0LEOMdhWg"
+                }
+                title="Vortex (Official Video)"
+                paragraph={t("media.vortex")}
+                views="5.9M"
+              />
+              <VideoCard
+                video={
+                  "https://www.youtube.com/embed/U6rv5qi8-8s?si=-b2VVP9febdjlYgI"
+                }
+                title="Who Is Gonna Be The One (Live)"
+                paragraph={t("media.whoIsGonnaBeTheOne")}
+                views="14M"
+              />
+              <VideoCard
+                video={
+                  "https://www.youtube.com/embed/DZ_WDLA9i7c?si=DiANW26qAS0gv6UZ"
+                }
+                title="Scissors (OFFICIAL MUSIC VIDEO)"
+                paragraph={t("media.scissors")}
+                views="4M"
+              />
+            </>
+          )}
         </div>
+        <button
+          onClick={() => setIsVisible(!isVisible)}
+          className="red__btn rounded-none"
+        >
+          {isVisible ? t("media.seeLess") : t("media.seeMore")}
+        </button>
       </article>
     </section>
   );
