@@ -6,15 +6,16 @@ const VideoCard = ({ video, title, paragraph, views }) => {
   return (
     <div className="flex justify-center flex-col gap-4 border border-slate-500 p-5">
       <iframe
+        loading="lazy"
         className="grow w-full md:w-72 xl:w-80"
         width="320"
         height="220"
         src={video}
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen="true"
+        referrerPolicy="stric-origin-when-cross-origin"
+        allowFullScreen={true}
       ></iframe>
       <div className="flex flex-col gap-3 tracking-wide">
         <a
