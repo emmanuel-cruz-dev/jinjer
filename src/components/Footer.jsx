@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Name from "./Name";
 import SocialIcons from "./SocialIcons";
-import NephewsLogo from "../assets/icons/nephews-logo.png";
+import JinjerLogo from "../assets/icons/jinjer-logo-blanco.png";
 import CDCover from "../assets/images/latest-post-02.jpg";
 import TourPoster from "../assets/images/world-tour.jpg";
 
@@ -11,10 +11,10 @@ const Footer = () => {
   return (
     <footer className="footer bg-footer">
       <article className="flex flex-col lg:flex-row gap-10 justify-between items-center px-20 py-16 border-b border-gray-600">
-        <div className="flex flex-col items-center gap-7">
-          <div className="flex flex-col items-center gap-2 w-44">
-            <figure className="w-36">
-              <img className="footer__nephews-logo" src={NephewsLogo} alt="" />
+        <div className="flex flex-col items-center gap-6">
+          <div className="flex flex-col items-center gap-4 w-44">
+            <figure className="w-32">
+              <img className="footer__nephews-logo" src={JinjerLogo} alt="" />
             </figure>
             <div className="text-2xl">
               <Name />
@@ -84,7 +84,7 @@ const Footer = () => {
 
               <li>
                 <a className="footer__legal-links" href="#">
-                  Fourth Member Fan Club
+                  Fifth Member Fan Club
                 </a>
               </li>
               <li>

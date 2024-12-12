@@ -291,29 +291,37 @@ img {
       rgba(0, 0, 0, 1) 100%
     ),
     radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%),
-    url("../assets/images/bg1.jpg");
+    url("../assets/images/jinjer-bg1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 62vh;
+  height: 90vh;
+  margin-top: 3.3rem;
 }
 
 @media (min-width: 640px) {
   .hero__container {
-    height: 90vh;
+    background-image: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0.4) 40%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%),
+      url("../assets/images/jinjer-bg.jpg");
   }
 }
 
 @media (min-width: 768px) {
   .hero__container {
+    margin-top: 0;
     height: 100vh;
   }
 }
 
 @media (min-width: 1200px) {
   .hero__container {
-    height: 130vh;
+    height: 168vh;
   }
 }
 

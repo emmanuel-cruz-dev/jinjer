@@ -106,7 +106,7 @@ const Header = () => {
             </a>
             <div className="mt-3">
               <span className="uppercase font-extrabold text-lg">
-                © N3phews 2024
+                © Jinjer 2024
               </span>
             </div>
           </div>

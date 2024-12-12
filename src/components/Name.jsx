@@ -1,7 +1,7 @@
 const Name = () => {
   return (
     <span className="logo">
-      N<span>3</span>phews
+      Ji<span>nj</span>er
     </span>
   );
 };

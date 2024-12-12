@@ -34,7 +34,7 @@ const Anchor = ({ icon, color }) => {
         <span className="follow__anchor__icon__line"></span>
         {icon}
       </span>
-      {t("follow.followButton")} N3
+      {t("follow.followButton")}
     </a>
   );
 };

@@ -25,16 +25,16 @@ const resources = {
         titleSpan: "ew",
         title2: "s",
         description:
-          "Stay updated with the latest events from our concerts and more. Welcome to the N3 World!",
+          "Stay updated with the latest events from our concerts and more. Welcome to the Jinjer World!",
       },
       about: {
         title1: "The",
         title2: "History",
         description:
-          "Who were N3 and what was their purpose? There's no room for such silly questions! We're here for the music",
+          "Who were Jinjer and what was their purpose? There's no room for such silly questions! We're here for the music",
         paragraphTitle: "About",
         paragraph1:
-          "Who are we? We are three cousins ​​united by a musical passion that challenges the limits of genres",
+          "Who are we? We are four musicians ​​united by a musical passion that challenges the limits of genres",
         paragraph2:
           "Our proposal combines the intensity of metal and the narrative of rap, creating a unique sound that fuses aggressive riffs with innovative melodies",
         paragraph3:
@@ -50,7 +50,7 @@ const resources = {
         titleSpan: "ou",
         title2: "r Dates",
         description:
-          "Take advantage of the opportunity to meet N3 in their world tour! We look forward to the following events",
+          "Take advantage of the opportunity to meet Jinjer in their world tour! We look forward to the following events",
         table: {
           th1: "Date",
           th2: "Venue",
@@ -112,15 +112,15 @@ const resources = {
         following: "Following",
         followers: "Followers",
         rockAmRing:
-          "📢 Just announced: N3phews headlines the Friday lineup at Festival Vibes! 🎤🔥 Are you ready for this? #RAR2025 #FestivalSeason",
+          "📢 Just announced: Jinjer headlines the Friday lineup at Festival Vibes! 🎤🔥 Are you ready for this? #RAR2025 #FestivalSeason",
         carlaStoneCold:
-          "OMG! Just found out N3phews is playing in my city next week! Can’t wait to see them live! 🤩🎶 #Excited",
+          "OMG! Just found out Jinjer is playing in my city next week! Can't wait to see them live! 🤩🎶 #Excited",
         indieRockFest:
-          "🎸 The countdown begins! Don’t miss N3phews live at Indie Rock Fest this Saturday. 🔥 Get your tickets now! #LiveMusic #N3phews",
+          "🎸 The countdown begins! Don't miss Jinjer live at Indie Rock Fest this Saturday. 🔥 Get your tickets now! #LiveMusic #Jinjer",
         musicLoverZack:
-          "Just listened to N3phews latest track. Pure magic! ✨🎶 If you haven't heard them yet, you're missing out! #N3phews #NewMusic",
+          "Just listened to Jinjer latest track. Pure magic! ✨🎶 If you haven't heard them yet, you're missing out! #Jinjer #NewMusic",
         sophiaJones:
-          "Still can't believe I met N3phews after their show last night! The sweetest band ever. 💕🎸 #FanMoment #BestNight",
+          "Still can't believe I met Jinjer after their show last night! The sweetest band ever. 💕🎸 #FanMoment #BestNight",
       },
       footer: {
         latestPosts: "Latest Posts",
@@ -168,16 +168,16 @@ const resources = {
         titleSpan: "ve",
         title2: "dades",
         description:
-          "Mantente al día con los últimos eventos de nuestros conciertos y mucho más. ¡Bienvenido al mundo de N3!",
+          "Mantente al día con los últimos eventos de nuestros conciertos y mucho más. ¡Bienvenido al mundo de Jinjer!",
       },
       about: {
         title1: "La",
         title2: "Historia",
         description:
-          "¿Quiénes eran N3 y cuál era su propósito? No hay tiempo para preguntas tan tontas. Estamos acá por la música",
+          "¿Quiénes son Jinjer y cuál era su propósito? No hay tiempo para preguntas tan tontas. Estamos aquí por la música",
         paragraphTitle: "Sobre",
         paragraph1:
-          "¿Quiénes somos? Somos tres primos unidos por una pasión musical que desafía los límites de los géneros",
+          "¿Quiénes somos? Somos cuatro músicos unidos por una pasión musical que desafía los límites de los géneros",
         paragraph2:
           "Nuestra propuesta combina la intensidad del metal y la narrativa del rap, creando un sonido único que fusiona riffs agresivos con melodías innovadoras",
         paragraph3:
@@ -193,7 +193,7 @@ const resources = {
         titleSpan: "en",
         title2: "dario",
         description:
-          "¡Aprovecha la oportunidad de conocer a N3 en su tour mundial! Te esperamos en los siguientes eventos",
+          "¡Aprovecha la oportunidad de conocer a Jinjer en su tour mundial! Te esperamos en los siguientes eventos",
         table: {
           th1: "Fecha",
           th2: "Lugar",
@@ -251,19 +251,19 @@ const resources = {
         description:
           "Explora aspectos destacados de nuestras redes, desde los tweets más populares hasta los recuerdos fotográficos y el cariño de los fans",
         posts: "Posteos",
-        followButton: "Seguir a",
+        followButton: "Seguir",
         following: "Siguiendo",
         followers: "Seguidores",
         rockAmRing:
-          "📢 Último momento: N3phews encabeza el lineup del viernes en el Festival Vibes. 🎤🔥 ¿Estás listo para esto? #RAR2025 #TemporadaDeFestivales",
+          "📢 Último momento: Jinjer encabeza el lineup del viernes en el Festival Vibes. 🎤🔥 ¿Estás listo para esto? #RAR2025 #TemporadaDeFestivales",
         carlaStoneCold:
-          "¡DIOOS! Acabo de enterarme que N3phews toca en mi ciudad la semana que viene. ¡No puedo esperar para verlos en vivo! 🤩🎶 #Emocionada",
+          "¡DIOOS! Acabo de enterarme que Jinjer toca en mi ciudad la semana que viene. ¡No puedo esperar para verlos en vivo! 🤩🎶 #Emocionada",
         indieRockFest:
-          "🎸 ¡Empieza la cuenta regresiva! No te pierdas a N3phews en vivo este sábado en el Indie Rock Fest. 🔥 ¡Conseguí tus entradas ahora! #MúsicaEnVivo #N3phews",
+          "🎸 ¡Empieza la cuenta regresiva! No te pierdas a Jinjer en vivo este sábado en el Indie Rock Fest. 🔥 ¡Conseguí tus entradas ahora! #MúsicaEnVivo #Jinjer",
         musicLoverZack:
-          "Acabo de escuchar el último tema de N3phews. ¡Magia pura! ✨🎶 Si todavía no los escuchaste, te lo estás perdiendo. #N3phews #MúsicaNueva",
+          "Acabo de escuchar el último tema de Jinjer. ¡Magia pura! ✨🎶 Si todavía no los escuchaste, te lo estás perdiendo. #Jinjer #MúsicaNueva",
         sophiaJones:
-          "Todavía no puedo creer que conocí a N3phews después del show de anoche. ¡La banda más copada! 💕🎸 #MomentoFan #MejorNoche",
+          "Todavía no puedo creer que conocí a Jinjer después del show de anoche. ¡La banda más copada! 💕🎸 #MomentoFan #MejorNoche",
       },
       footer: {
         latestPosts: "Últimos Posteos",
