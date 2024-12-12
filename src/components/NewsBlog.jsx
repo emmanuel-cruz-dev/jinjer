@@ -59,20 +59,28 @@ const NewsBlog = () => {
                 {article.description}
               </p>
               <div className="flex flex-row gap-4 justify-between text-gray-300 border-b border-slate-700 pb-4">
-                <a
-                  className="hover:text-slate-100 transition-colors duration-300"
-                  onClick={() => goToSection(`/newsblog/`, `${article.id}`)}
-                  href={`/newsblog/${article.id - 1}`}
-                >
-                  {article.link1}
-                </a>
-                <a
-                  className="text-right hover:text-slate-100 transition-colors duration-300"
-                  onClick={() => goToSection(`/newsblog/`, `${article.id}`)}
-                  href={`/newsblog/${article.id + 1}`}
-                >
-                  {article.link2}
-                </a>
+                {article.id > 1 ? (
+                  <a
+                    className="hover:text-slate-100 transition-colors duration-300"
+                    onClick={() => goToSection(`/newsblog/`, `${article.id}`)}
+                    href={`/newsblog/${article.id - 1}`}
+                  >
+                    {article.link1}
+                  </a>
+                ) : (
+                  <span></span>
+                )}
+                {article.id < 6 ? (
+                  <a
+                    className="text-right hover:text-slate-100 transition-colors duration-300"
+                    onClick={() => goToSection(`/newsblog/`, `${article.id}`)}
+                    href={`/newsblog/${article.id + 1}`}
+                  >
+                    {article.link2}
+                  </a>
+                ) : (
+                  <span></span>
+                )}
               </div>
               <div>
                 <ContactForm />
