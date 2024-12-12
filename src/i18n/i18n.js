@@ -36,14 +36,13 @@ const resources = {
         paragraph1:
           "Who are we? We are four musicians ​​united by a musical passion that challenges the limits of genres",
         paragraph2:
-          "Our proposal combines the intensity of metal and the narrative of rap, creating a unique sound that fuses aggressive riffs with innovative melodies",
-        paragraph3:
           "Each song is a reflection of our journey, where aggressive riffs converse with moments of deep introspection. For us, music is more than an art: it is a personal language, a way of life that is born from our connection and shared experiences",
-        paragraph4:
+        paragraph3:
           "Our compositions are testimonies of a career marked by creativity and commitment, where each note tells a story that goes beyond the stage",
-        naomi: "Vocalist/Bass",
-        july: "Guitar",
-        benja: "Drumms",
+        tatiana: "Vocals",
+        roman: "Guitar",
+        eugene: "Bass",
+        vlad: "Drumms",
       },
       tour: {
         title1: "T",
@@ -179,14 +178,13 @@ const resources = {
         paragraph1:
           "¿Quiénes somos? Somos cuatro músicos unidos por una pasión musical que desafía los límites de los géneros",
         paragraph2:
-          "Nuestra propuesta combina la intensidad del metal y la narrativa del rap, creando un sonido único que fusiona riffs agresivos con melodías innovadoras",
-        paragraph3:
           "Cada canción es un reflejo de nuestro viaje, donde los riffs agresivos conversan con momentos de profunda reflexión. Para nosotros, la música es más que un arte: es un lenguaje personal, una forma de vida que nace de nuestra conexión y experiencias compartidas",
-        paragraph4:
+        paragraph3:
           "Nuestras composiciones son testimonios de una trayectoria marcada por la creatividad y el compromiso, donde cada nota cuenta una historia que va más allá de los escenarios",
-        naomi: "Vocalista/Bajo",
-        july: "Guitarra",
-        benja: "Batería",
+        tatiana: "Voz",
+        roman: "Guitarra",
+        eugene: "Bajo",
+        vlad: "Batería",
       },
       tour: {
         title1: "Cal",

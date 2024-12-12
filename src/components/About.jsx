@@ -3,9 +3,10 @@ import microfono from "../assets/icons/microfono.png";
 import guitarra from "../assets/icons/guitarra.png";
 import bajo from "../assets/icons/bajo-electrico.png";
 import bateria from "../assets/icons/bateria.png";
-import Naomi from "../assets/images/naomi-aldana.jpg";
-import July from "../assets/images/julian-andre.jpg";
-import Benja from "../assets/images/benjamin-sebastian.jpg";
+import Tatiana from "../assets/images/tatiana.jpg";
+import Roman from "../assets/images/roman.jpg";
+import Eugene from "../assets/images/eugene.jpg";
+import Vlad from "../assets/images/vlad.jpg";
 
 const MemberArticle = ({ image, icon, name, instrument }) => {
   return (
@@ -69,34 +70,34 @@ const About = () => {
         <div className="about__members flex flex-col lg:flex-row justify-around items-center gap-12 w-full py-14">
           {/* Vocalista y Bajista */}
           <MemberArticle
-            image={Naomi}
+            image={Tatiana}
             icon={microfono}
-            name="Naomi Aldana"
-            instrument={t("about.naomi")}
+            name="Tatiana Shmaylyuk"
+            instrument={t("about.tatiana")}
           />
 
           {/* Guitarrista */}
           <MemberArticle
-            image={July}
+            image={Roman}
             icon={guitarra}
-            name="Julián André"
-            instrument={t("about.july")}
+            name="Roman Ibramkhalilov"
+            instrument={t("about.roman")}
           />
 
           {/* Bajista */}
           <MemberArticle
-            image={July}
+            image={Eugene}
             icon={bajo}
-            name="Julián André"
-            instrument={t("about.july")}
+            name="Eugene Abdiukhanov"
+            instrument={t("about.eugene")}
           />
 
           {/* Baterista */}
           <MemberArticle
-            image={Benja}
+            image={Vlad}
             icon={bateria}
-            name="Benjamín Sebastían"
-            instrument={t("about.benja")}
+            name="Vlad Ulasevich"
+            instrument={t("about.vlad")}
           />
         </div>
       </article>
