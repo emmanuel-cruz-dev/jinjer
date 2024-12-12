@@ -76,7 +76,7 @@ const resources = {
       },
       media: {
         description:
-          "We share relevant content from other bands while we continue working on our own productions",
+          "Explore our visual universe of music and memorable moments, each video tells a unique and powerful story",
         views: "Views",
         watch: "Watch Now",
         greenSerpent:
@@ -220,7 +220,7 @@ const resources = {
       },
       media: {
         description:
-          "Compartimos contenido relevante de otras bandas mientras seguimos trabajando en nuestras propias producciones",
+          "Explora nuestro universo visual de música y los momentos más memorables, cada video cuenta una historia única y poderosa",
         views: "Vistas",
         watch: "Ver Ahora",
         greenSerpent:
