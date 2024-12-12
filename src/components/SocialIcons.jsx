@@ -10,31 +10,31 @@ import {
 const SocialIcons = () => {
   const icons = [
     {
-      icon: <FaFacebook size={26} />,
+      icon: <FaFacebook size={30} />,
       name: "Facebook",
       link: "https://facebook.com",
       color: "hover:text-blue-600",
     },
     {
-      icon: <FaXTwitter size={26} />,
+      icon: <FaXTwitter size={30} />,
       name: "X",
       link: "https://x.com",
       color: "hover:text-gray-900",
     },
     {
-      icon: <FaInstagram size={26} />,
+      icon: <FaInstagram size={30} />,
       name: "Instagram",
       link: "https://instagram.com",
       color: "hover:text-pink-600",
     },
     {
-      icon: <FaYoutube size={26} />,
+      icon: <FaYoutube size={30} />,
       name: "Youtube",
       link: "https://youtube.com",
       color: "hover:text-red-600",
     },
     {
-      icon: <FaTiktok size={26} />,
+      icon: <FaTiktok size={30} />,
       name: "TikTok",
       link: "https://tiktok.com",
       color: "hover:text-black",
@@ -42,7 +42,7 @@ const SocialIcons = () => {
   ];
 
   return (
-    <div className="flex gap-4 items-center">
+    <div className="flex gap-5 items-center">
       {icons.map((item) => (
         <a
           key={item.name}
