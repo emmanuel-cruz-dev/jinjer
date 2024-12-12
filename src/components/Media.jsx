@@ -4,7 +4,7 @@ const VideoCard = ({ video, title, paragraph, views }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex justify-center flex-col gap-4 border border-slate-500 p-5">
+    <div className="flex justify-center flex-col gap-4">
       <iframe
         loading="lazy"
         className="grow w-full md:w-72 xl:w-80"
@@ -24,7 +24,7 @@ const VideoCard = ({ video, title, paragraph, views }) => {
         >
           {title}
         </a>
-        <p className="text-slate-400 line-clamp-3">{paragraph}</p>
+        <p className="text-slate-400 line-clamp-3">{paragraph}.</p>
         <a
           href="#"
           className="flex justify-between py-2 px-4 bg-slate-500 hover:bg-slate-600 transition-colors duration-300"
@@ -51,13 +51,13 @@ const Media = () => {
           </h2>
           <p className="text-lg">{t("media.description")}.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-52 gap-y-12 w-full md:w-5/6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-44 gap-y-12 w-full md:w-5/6">
           <VideoCard
             video={
-              "https://www.youtube.com/embed/n_GFN3a0yj0?si=ZQ-1ic0dnGjxqqPQ"
+              "https://www.youtube.com/embed/637ER6dlGDg?si=aEpuXwqMSITyNBYl"
             }
-            title="AC/DC - Thunderstruck"
-            paragraph={t("media.thunderstruck")}
+            title="Green Serpent (Official Video)"
+            paragraph={t("media.greenSerpent")}
             views="339M"
           />
           <VideoCard
@@ -95,10 +95,10 @@ const Media = () => {
           />
           <VideoCard
             video={
-              "https://www.youtube.com/embed/R8OOWcsFj0U?si=O7WO0kqj7AiiDgzS"
+              "https://www.youtube.com/embed/DZ_WDLA9i7c?si=DiANW26qAS0gv6UZ"
             }
-            title="Muse - Undisclosed Desires"
-            paragraph={t("media.undisclosedDesires")}
+            title="Scissors (OFFICIAL MUSIC VIDEO)"
+            paragraph={t("media.scissors")}
             views="121M"
           />
         </div>
