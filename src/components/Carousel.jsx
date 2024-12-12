@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -60,6 +60,7 @@ const articles = [
 ];
 
 const Carousel = () => {
+  const navigate = useNavigate();
   const goToSection = (path, sectionId) => {
     navigate(path);
 

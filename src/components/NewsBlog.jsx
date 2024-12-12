@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import newsMediaData from "../data/newsMediaData.json";
 import ContactForm from "./ContactForm";
 
@@ -14,6 +14,7 @@ const TitleArticle = () => {
   );
 };
 const NewsBlog = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
 
   const article = newsMediaData.find((a) => a.id === parseInt(id));
@@ -21,6 +22,16 @@ const NewsBlog = () => {
   if (!article) {
     return <h2 className="text-3xl h-screen w-full">Artículo no encontrado</h2>;
   }
+
+  const goToSection = (path, sectionId) => {
+    navigate(path);
+
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (!section) return;
+      else section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
 
   return (
     <section className="newsblog" id="newsblog">
@@ -39,10 +50,7 @@ const NewsBlog = () => {
             <div className="flex flex-col gap-4 w-11/12 lg:w-4/6">
               <p className="text-sm text-gray-400 uppercase">
                 {article.date} -{" "}
-                <a
-                  className="uppercase hover:text-slate-100 transition-colors duration-300"
-                  href="#"
-                >
+                <a className="uppercase hover:text-slate-100 transition-colors duration-300">
                   Admin
                 </a>
               </p>
@@ -53,13 +61,15 @@ const NewsBlog = () => {
               <div className="flex flex-row gap-4 justify-between text-gray-300 border-b border-slate-700 pb-4">
                 <a
                   className="hover:text-slate-100 transition-colors duration-300"
-                  href="#"
+                  onClick={() => goToSection(`/newsblog/`, `${article.id}`)}
+                  href={`/newsblog/${article.id - 1}`}
                 >
                   {article.link1}
                 </a>
                 <a
                   className="text-right hover:text-slate-100 transition-colors duration-300"
-                  href="#"
+                  onClick={() => goToSection(`/newsblog/`, `${article.id}`)}
+                  href={`/newsblog/${article.id + 1}`}
                 >
                   {article.link2}
                 </a>
