@@ -101,7 +101,7 @@ const Footer = () => {
                 <span>
                   <a
                     className="footer__legal-links"
-                    href="https://www.megadeth.com/"
+                    href="https://jinjer-metal.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
