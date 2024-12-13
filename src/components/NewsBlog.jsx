@@ -43,13 +43,13 @@ const NewsBlog = () => {
           <div className="relative w-full border-b border-slate-700 pb-4">
             <TitleArticle />
           </div>
-          <div className="flex flex-col justify-center items-center gap-4">
-            <div className="w-11/12 lg:w-4/6">
+          <div className="flex flex-col justify-center items-center gap-4 w-full mx-auto">
+            <div className="w-11/12 lg:w-4/6 mx-auto">
               <iframe
                 loading="lazy"
-                className="w-full h-full md:w-72 md:h-48 xl:w-[46rem] xl:h-[28rem]"
+                className="w-full h-56 md:w-72 md:h-48 xl:w-[46rem] xl:h-[28rem]"
                 width="320"
-                height="220"
+                height="240"
                 src={article.video}
                 title="YouTube video player"
                 frameBorder="0"
@@ -83,7 +83,7 @@ const NewsBlog = () => {
                     onClick={() => goToSection(`/newsblog/`, `${article.id}`)}
                     href={`/newsblog/${article.id - 1}`}
                   >
-                    {article.link1}
+                    Previous - {article.link1}
                   </a>
                 ) : (
                   <span></span>
@@ -94,7 +94,7 @@ const NewsBlog = () => {
                     onClick={() => goToSection(`/newsblog/`, `${article.id}`)}
                     href={`/newsblog/${article.id + 1}`}
                   >
-                    {article.link2}
+                    Next - {article.link2}
                   </a>
                 ) : (
                   <span></span>
