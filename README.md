@@ -1,4 +1,4 @@
-![](https://github.com/EmmaLCruz/nephews/blob/main/public/nephews-banner.jpg)
+![](https://github.com/EmmaLCruz/nephews/blob/main/public/jinjer-banner.jpg)
 # Jinjer | Website
 
 Sitio de artista.
