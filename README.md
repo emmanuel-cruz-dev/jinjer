@@ -4,7 +4,7 @@
 Sitio de artista.
 
 ## Demo en vivo
-[Visita la página aquí](https://n3phews.vercel.app/)
+[Visita la página aquí](https://jinjer.vercel.app/)
 
 ## Tecnologías utilizadas
 - React
