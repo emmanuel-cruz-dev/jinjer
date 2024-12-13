@@ -67,7 +67,7 @@ const About = () => {
             ></iframe>
           </div>
         </div>
-        <div className="about__members flex flex-col lg:flex-row justify-around items-center gap-12 w-full py-14">
+        <div className="about__members flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap justify-around items-center gap-12 w-full py-14">
           {/* Vocalista y Bajista */}
           <MemberArticle
             image={Tatiana}
