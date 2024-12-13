@@ -1,5 +1,5 @@
-![](https://github.com/EmmaLCruz/nephews/blob/main/public/nephews-banner.jpg)
-# N3phews | Website
+![](https://github.com/EmmaLCruz/nephews/blob/main/public/jinjer-banner.jpg)
+# Jinjer | Website
 
 Sitio de artista.
 
