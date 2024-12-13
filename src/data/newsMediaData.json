@@ -19,7 +19,7 @@
     "text1": "We are very excited to present our brand new single: KAFKA! The music and the message is something we wanted to convey for a very long time and we're stoked it's final out! Give it a like-view-comment-share and read the lyrics!",
     "text2": "Kafka is the 3rd single taken from the new JINJER album titled DUÉL, which will be released on February 7th 2025. Music & Merch Pre-orders are live now!",
     "text3": "Of all the releases we’ve made so far, finally having Duél in our hands and ready to be shared with the world, makes us very proud that our band still hasn't run out of creativity and inspiration.",
-    "text4": "The fact that we still challenge ourselves to release the best music we have ever made with each new release, is what keeps JINJER moving forward… and we‘re happy you’re on this journey with us 💪",
+    "text4": "The fact that we still challenge ourselves to release the best music we have ever made with each new release, is what keeps JINJER moving forward… and we're happy you're on this journey with us 💪",
     "link1": "Green Serpent",
     "link2": "Rogue"
   },
@@ -29,37 +29,46 @@
     "date": "10 September, 2008",
     "title": "Rogue",
     "text1": "Rogue is the 2nd single taken from the new JINJER album titled DUÉL, which will be released on February 7th 2025. Music & Merch Pre-orders are live now!",
-    "text2": "Our new single Rogue is a reaction to many things … it’s brutally honest, it’s in-your-face and one of the most intense tracks JINJER has ever released.",
+    "text2": "Our new single Rogue is a reaction to many things … it's brutally honest, it's in-your-face and one of the most intense tracks JINJER has ever released.",
     "text3": "Give it a like-view-comment-share and read the lyrics!",
-    "text4": "We are so excited about this new track, about the new album and everything that‘s on the way … we hope you really like too",
+    "text4": "We are so excited about this new track, about the new album and everything that's on the way… we hope you really like too",
     "link1": "Kafka",
     "link2": "Someone's Daughter"
   },
   {
     "id": 4,
-    "image": "/assets/images/blog-card-01.jpg",
-    "date": "February 23, 2023",
-    "title": "Articulo 4 'Naomi'",
-    "description": "Nao eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec.",
-    "link1": "Articulo 3 Viaje en el tiempo -Revolución July 96",
-    "link2": "Articulo 5 'Benjamin' EP en progreso"
+    "video": "https://www.youtube.com/embed/djsH7ngox_s?si=PW5KzXJSVgYTgRE2",
+    "date": "1 August, 2024",
+    "title": "Someone's Daughter",
+    "text1": "We made a promise to ourselves to always strive to evolve and progress musically and lyrically with each new release.",
+    "text2": "This new single is the outcome of that belief.. that hard work, focus and determination to be better than before, to always keep on growing is the only way we can exist as a band.",
+    "text3": "We really hope you like this new JINJER chapter because we feel like this is the best work we’ve ever done!",
+    "text4": "Don’t forget to WATCH-STREAM-SHARE Someone’s Daughter as much as you can!",
+    "link1": "Rogue",
+    "link2": "From Nothing"
   },
   {
     "id": 5,
-    "image": "/assets/images/blog-card-02.jpg",
-    "date": "February 11, 2013",
-    "title": "Articulo 5 'Benjamin' EP en progreso",
-    "description": "Ben eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec.",
-    "link1": "Articulo 4 'Naomi'",
-    "link2": "Articulo 6 - La evolución de July 96"
+    "video": "https://www.youtube.com/embed/vBiQyM3I40o?si=YUPZxbjhZMLmFkgm",
+    "date": "25 June, 2024",
+    "title": "SURPRISE!!!💥",
+    "text1": "JINJER - From Nothing drops today!",
+    "text2": "We teamed up with Audiotree for an in-depth talk about not only our 15 year history, our creativity and our relationships with each other…but we also recorded three exclusive tracks live in their studio in Chicago!",
+    "text3": "It doesn't get more personal than this and it's a must see for all JINJER fans!",
+    "text4": "Check out the full episode",
+    "link1": "Someone's Daughter",
+    "link2": "Drum Playthrough"
   },
   {
     "id": 6,
-    "image": "/assets/images/blog-card-03.jpg",
+    "video": "https://www.youtube.com/embed/92pDl74Tb-Y?si=mFy5aC3ctXYLkDrF",
     "date": "February 3, 2008",
-    "title": "Articulo 6 - La evolución de July 96",
-    "description": "Juls eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec.",
-    "link1": "Articulo 5 'Benjamin' EP en progreso",
-    "link2": "July - Rock Am Ring Official Video"
+    "title": "Call me a Symbol",
+    "text1": "Drum Playthrough",
+    "text2": "Check out the brand new drum playthrough for “CALL ME A SYMBOL” by JINJER drummer Vlad Ulasevich, taken from the latest album Wallflowers.",
+    "text3": "It‘s a must see for all drummers and fans alike 🤘🥁🤘",
+    "text4": "We hope you like it!",
+    "link1": "From Nothing",
+    "link2": ""
   }
 ]
