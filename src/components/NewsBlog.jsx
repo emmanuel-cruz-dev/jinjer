@@ -44,9 +44,20 @@ const NewsBlog = () => {
             <TitleArticle />
           </div>
           <div className="flex flex-col justify-center items-center gap-4">
-            <figure className="w-11/12 lg:w-4/6">
-              <img className="w-full" src={article.image} alt="" />
-            </figure>
+            <div className="w-11/12 lg:w-4/6">
+              <iframe
+                loading="lazy"
+                className="w-full h-full md:w-72 md:h-48 xl:w-[46rem] xl:h-[28rem]"
+                width="320"
+                height="220"
+                src={article.video}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="stric-origin-when-cross-origin"
+                allowFullScreen={true}
+              ></iframe>
+            </div>
             <div className="flex flex-col gap-4 w-11/12 lg:w-4/6">
               <p className="text-sm text-gray-400 uppercase">
                 {article.date} -{" "}
@@ -58,9 +69,13 @@ const NewsBlog = () => {
                 </a>
               </p>
               <h3 className="text-3xl font-semibold">{article.title}</h3>
-              <p className="text-gray-400 border-b border-slate-700 pb-4">
-                {article.description}
-              </p>
+              <div className="flex flex-col gap-4 border-b border-slate-700 pb-4">
+                <p className="text-gray-400">{article.text1}</p>
+                <p className="text-gray-400">{article.text2}</p>
+                <p className="text-gray-400">{article.text3}</p>
+                <p className="text-gray-400">{article.text4}</p>
+              </div>
+
               <div className="flex flex-row gap-4 justify-between text-gray-300 border-b border-slate-700 pb-4">
                 {article.id > 1 ? (
                   <a

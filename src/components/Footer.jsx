@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <footer className="footer bg-footer">
-      <article className="flex flex-col lg:flex-row gap-10 justify-between xl:justify-around items-center lg:px-20 py-16 border-b border-gray-600">
+      <article className="flex flex-col lg:flex-row gap-10 justify-between xl:justify-around lg:items-center lg:px-20 py-16 border-b border-gray-600">
         <div className="flex flex-col items-center gap-6">
           <div className="flex flex-col items-center gap-4 w-full lg:w-44">
             <figure className="w-48 lg:w-32">
@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between gap-8 lg:gap-16">
+        <div className="flex flex-col px-6 md:px-0 md:flex-row justify-between gap-8 lg:gap-16">
           <div className="posts flex flex-col gap-4">
             <h3 className="footer__title">{t("footer.latestPosts")}</h3>
             <a

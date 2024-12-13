@@ -1,12 +1,15 @@
 [
   {
     "id": 1,
-    "image": "/assets/images/blog-card-01.jpg",
-    "date": "February 23, 2023",
-    "title": "Articulo 1 Nueva canción 'Naomi'",
-    "description": "Nao eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec. Suspendisse eget ornare eros. Cras sit amet pulvinar mi. Nunc dignissim nunc eros, eget luctus lorem ultricies nec.",
+    "video": "https://www.youtube.com/embed/637ER6dlGDg?si=TVLz5uklEssO0hWd",
+    "date": "26 November, 2024",
+    "title": "NEW SINGLE OUT NOW!",
+    "text1": "GREEN SERPENT is here! Watch the music video now on YouTube and listen on all streaming platforms!",
+    "text2": "This track has quickly become one of our favorites from the upcoming album. It sonically captures everything we've been, where we are now, and where we're headed. It's the quintessence of all our musical endeavors!",
+    "text3": "Give it a like, share it, and drop a comment to let us know what you think!",
+    "text4": "🔥PRE-ORDER🔥 Our brand new album: DUÉL, will be out on February 7th, 2025! Get ready for it!",
     "link1": "",
-    "link2": "Articulo 2 Nuevo 'Benjamin' EP en progreso"
+    "link2": "Kafka"
   },
   {
     "id": 2,
