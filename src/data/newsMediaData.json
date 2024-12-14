@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "video": "https://www.youtube.com/embed/637ER6dlGDg?si=TVLz5uklEssO0hWd",
+    "content": "https://www.youtube.com/embed/637ER6dlGDg?si=TVLz5uklEssO0hWd",
     "date": "26 November, 2024",
     "title": "NEW SINGLE OUT NOW!",
     "text1": "GREEN SERPENT is here! Watch the music video now on YouTube and listen on all streaming platforms!",
@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "video": "https://www.youtube.com/embed/tRbpT5dGOmQ?si=PuIAKLPQWjCwYxQH",
+    "content": "https://www.youtube.com/embed/tRbpT5dGOmQ?si=PuIAKLPQWjCwYxQH",
     "date": "10 September, 2024",
     "title": "NEW SINGLE OUT NOW!",
     "text1": "We are very excited to present our brand new single: KAFKA! The music and the message is something we wanted to convey for a very long time and we're stoked it's final out! Give it a like-view-comment-share and read the lyrics!",
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "video": "https://www.youtube.com/embed/9Uaecbh8ta0?si=1md1Y5AjPNibVFqE",
+    "content": "https://www.youtube.com/embed/9Uaecbh8ta0?si=1md1Y5AjPNibVFqE",
     "date": "10 September, 2008",
     "title": "Rogue",
     "text1": "Rogue is the 2nd single taken from the new JINJER album titled DUÉL, which will be released on February 7th 2025. Music & Merch Pre-orders are live now!",
@@ -37,7 +37,7 @@
   },
   {
     "id": 4,
-    "video": "https://www.youtube.com/embed/djsH7ngox_s?si=PW5KzXJSVgYTgRE2",
+    "content": "https://www.youtube.com/embed/djsH7ngox_s?si=PW5KzXJSVgYTgRE2",
     "date": "1 August, 2024",
     "title": "Someone's Daughter",
     "text1": "We made a promise to ourselves to always strive to evolve and progress musically and lyrically with each new release.",
@@ -49,7 +49,7 @@
   },
   {
     "id": 5,
-    "video": "https://www.youtube.com/embed/vBiQyM3I40o?si=YUPZxbjhZMLmFkgm",
+    "content": "https://www.youtube.com/embed/vBiQyM3I40o?si=YUPZxbjhZMLmFkgm",
     "date": "25 June, 2024",
     "title": "SURPRISE!!!💥",
     "text1": "JINJER - From Nothing drops today!",
@@ -61,7 +61,7 @@
   },
   {
     "id": 6,
-    "video": "https://www.youtube.com/embed/92pDl74Tb-Y?si=mFy5aC3ctXYLkDrF",
+    "content": "https://www.youtube.com/embed/92pDl74Tb-Y?si=mFy5aC3ctXYLkDrF",
     "date": "February 3, 2008",
     "title": "Call me a Symbol",
     "text1": "Drum Playthrough",

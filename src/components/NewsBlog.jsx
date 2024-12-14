@@ -51,7 +51,7 @@ const NewsBlog = () => {
                 className="w-full h-56 md:w-72 md:h-48 xl:w-[46rem] xl:h-[28rem]"
                 width="320"
                 height="240"
-                src={article.video}
+                src={article.content}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

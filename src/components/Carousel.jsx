@@ -111,6 +111,7 @@ const Carousel = () => {
                 {article.date}
               </time>
               <a
+                className="flex w-fit"
                 href={`/newsblog/${article.id}`}
                 onClick={() => goToSection(`/newsblog/`, `${article.id}`)}
               >
