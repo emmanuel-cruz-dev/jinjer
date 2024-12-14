@@ -45,7 +45,7 @@ const ItemsRender = ({ title, obj, route, formVideo }) => {
               {formVideo && (
                 <iframe
                   loading="lazy"
-                  className="w-full aspect-video md:w-72 md:h-48 xl:w-[46rem] xl:h-[28rem]"
+                  className="w-full aspect-video"
                   src={article.content}
                   title="YouTube video player"
                   frameBorder="0"
