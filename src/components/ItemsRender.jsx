@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import ContactForm from "./ContactForm";
 
-const ItemsRender = ({ title, obj, route }) => {
+const ItemsRender = ({ title, obj, route, form }) => {
   const navigate = useNavigate();
   const { id } = useParams();
   const article = obj.find((a) => a.id === parseInt(id));
@@ -97,7 +97,7 @@ const ItemsRender = ({ title, obj, route }) => {
                   <span></span>
                 )}
               </div>
-              <div>{article.id <= 6 && <ContactForm />}</div>
+              <div>{form && <ContactForm />}</div>
             </div>
           </div>
         </article>
