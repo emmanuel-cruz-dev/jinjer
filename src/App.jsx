@@ -42,6 +42,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/newsblog/:id" element={<NewsBlog />} />
+        <Route path="/tour/:id" element={<NewsBlog />} />
       </Routes>
 
       <Footer />

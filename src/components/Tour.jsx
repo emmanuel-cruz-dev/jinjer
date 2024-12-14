@@ -1,6 +1,23 @@
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+
 const Tour = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const article = {
+    id: 1,
+  };
+
+  const goToSection = (path, sectionId) => {
+    navigate(path);
+
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (!section) return;
+      else section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 500);
+  };
 
   return (
     <section className="scroll-top-margin tour py-16 mx-auto" id="tour">
@@ -27,7 +44,11 @@ const Tour = () => {
               <tr>
                 <td className="table__date">23-02-2025</td>
                 <td>
-                  <a className="table__venue" href="#">
+                  <a
+                    className="table__venue"
+                    href={`/tour/${article.id}`}
+                    onClick={() => goToSection(`/tour/`, `${article.id}`)}
+                  >
                     Rock Am Ring Festival
                   </a>
                 </td>

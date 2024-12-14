@@ -2,12 +2,12 @@ import { useParams, useNavigate } from "react-router-dom";
 import newsMediaData from "../data/newsMediaData.json";
 import ContactForm from "./ContactForm";
 
-const TitleArticle = () => {
+const TitleArticle = ({ title }) => {
   return (
     <article className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
       <div className="hero__title bg-accent/90 flex justify-center items-center mx-auto border-4 rounded-[1px] border-footer -rotate-6">
         <span className="uppercase font-semibold text-2xl whitespace-nowrap px-16 py-2 lg:text-4xl lg:px-28 lg:py-4">
-          Blog and News
+          {title}
         </span>
       </div>
     </article>
@@ -42,7 +42,7 @@ const NewsBlog = () => {
           className="w-full mt-20 lg:w-5/6 mb-12 py-12 lg:py-20 bg-black/90 flex flex-col justify-center items-center gap-12 mx-auto"
         >
           <div className="relative w-full border-b border-slate-700 pb-4">
-            <TitleArticle />
+            <TitleArticle title={"Blog and News"} />
           </div>
           <div className="flex flex-col justify-center items-center gap-4 w-full mx-auto">
             <div className="w-11/12 lg:w-4/6 mx-auto">
@@ -101,9 +101,7 @@ const NewsBlog = () => {
                   <span></span>
                 )}
               </div>
-              <div>
-                <ContactForm />
-              </div>
+              <div>{article.id <= 6 && <ContactForm />}</div>
             </div>
           </div>
         </article>
