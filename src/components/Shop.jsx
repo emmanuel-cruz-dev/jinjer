@@ -22,9 +22,10 @@ const Shop = () => {
   return (
     <section className="newsblog" id="newsblog">
       <article className="py-10">
-        <article className="w-full mt-20 lg:w-11/12 mb-12 py-12 lg:py-20 bg-black/90 flex flex-col justify-center items-center gap-12 mx-auto">
-          <div className="relative w-full border-b border-slate-700 pb-4">
-            <h2>Archives: Shop</h2>
+        <article className="w-full mt-20 lg:w-11/12 mb-12 bg-black/90 flex flex-col justify-center items-center mx-auto">
+          <div className="relative w-full p-8">
+            <h2 className="text-4xl font-bold text-white">Archives: Shop</h2>
+            <img src="" alt="" />
           </div>
           <div className="flex gap-8 w-full px-12">
             <div className="flex flex-col justify-center items-center gap-4 w-full mx-auto lg:w-5/6">
