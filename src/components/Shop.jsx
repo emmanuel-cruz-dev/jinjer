@@ -1,4 +1,5 @@
 import TShirt1 from "../assets/images/shop-skull.png";
+import { FaStar, FaRegStar } from "react-icons/fa6";
 import Background from "../assets/images/gradient.png";
 
 const Shop = () => {
@@ -9,6 +10,13 @@ const Shop = () => {
           <img src={TShirt1} alt="" />
         </figure>
         <h3 className="font-bold">T-shirt 1</h3>
+        <div className="flex gap-2">
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaRegStar />
+          <FaRegStar />
+        </div>
         <div className="flex gap-4">
           <span className="text-gray-200">$20.99</span>
           <span className="text-gray-500 line-through">$25.99</span>
