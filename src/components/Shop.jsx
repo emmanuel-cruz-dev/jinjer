@@ -1,4 +1,5 @@
 import TShirt1 from "../assets/images/shop-skull.png";
+import Background from "../assets/images/gradient.png";
 
 const Shop = () => {
   const TShirtCard = () => {
@@ -22,18 +23,26 @@ const Shop = () => {
   return (
     <section className="newsblog" id="newsblog">
       <article className="py-10">
-        <article className="w-full mt-20 lg:w-11/12 mb-12 bg-black/90 flex flex-col justify-center items-center mx-auto">
-          <div className="relative w-full p-8">
-            <h2 className="text-4xl font-bold text-white">Archives: Shop</h2>
-            <img src="" alt="" />
+        <article className="relative w-full mt-20 lg:w-11/12 mb-12 bg-black/90 flex flex-col justify-center items-center mx-auto">
+          <img
+            className="absolute top-0 left-0 w-full h-24 object-cover bg-accent/60"
+            src={Background}
+            alt=""
+          />
+          <div className="w-full px-12 p-8 z-10">
+            <h2 className="text-3xl font-bold text-white">Archives: Shop</h2>
           </div>
-          <div className="flex gap-8 w-full px-12">
+          <div className="flex gap-8 w-full px-12 mt-8">
             <div className="flex flex-col justify-center items-center gap-4 w-full mx-auto lg:w-5/6">
               <div className="flex justify-between gap-4 w-full">
                 <p className="text-sm text-gray-400">
                   Showing 1 - 12 of 20 results
                 </p>
-                <select name="Dropdown" id="" className="text-sm text-gray-400">
+                <select
+                  name="Dropdown"
+                  id=""
+                  className="text-sm text-gray-400 cursor-pointer"
+                >
                   <option value="Default Sorting">Default Sorting</option>
                   <option value="2">Sort by Popularity</option>
                   <option value="3">Sort by Average Rating</option>
@@ -43,7 +52,7 @@ const Shop = () => {
                 </select>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-12 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-12 pt-8 pb-20 w-full">
                 <TShirtCard />
                 <TShirtCard />
                 <TShirtCard />
