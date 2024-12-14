@@ -5,8 +5,16 @@ const Tour = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const article = {
-    id: 1,
+  const Anchor = ({ title, id }) => {
+    return (
+      <a
+        className="table__venue"
+        href={`/tour/${id}`}
+        onClick={() => goToSection(`/tour/`, `${id}`)}
+      >
+        {title}
+      </a>
+    );
   };
 
   const goToSection = (path, sectionId) => {
@@ -44,13 +52,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">23-02-2025</td>
                 <td>
-                  <a
-                    className="table__venue"
-                    href={`/tour/${article.id}`}
-                    onClick={() => goToSection(`/tour/`, `${article.id}`)}
-                  >
-                    Rock Am Ring Festival
-                  </a>
+                  <Anchor title="Rock Am Ring Festival" id="1" />
                 </td>
                 <td className="hidden lg:table-cell">
                   Paris/<span>{t("tour.table.france")}</span>
@@ -64,9 +66,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">05-03-2025</td>
                 <td>
-                  <a className="table__venue" href="#">
-                    Resurrection Fest
-                  </a>
+                  <Anchor title="Resurrection Fest" id="2" />
                 </td>
                 <td className="hidden lg:table-cell">
                   Galicia/<span>{t("tour.table.spain")}</span>
@@ -80,9 +80,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">18-03-2025</td>
                 <td>
-                  <a className="table__venue" href="#">
-                    Rock'n'Roll Camping
-                  </a>
+                  <Anchor title="Rock'n'Roll Camping" id="3" />
                 </td>
                 <td className="hidden lg:table-cell">
                   <span>Austria</span>
@@ -96,9 +94,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">16-05-2025</td>
                 <td>
-                  <a className="table__venue" href="#">
-                    Electric Daisy Carnival
-                  </a>
+                  <Anchor title="Electric Daisy Carnival" id="4" />
                 </td>
                 <td className="hidden lg:table-cell">
                   Las Vegas/<span>{t("tour.table.usa")}</span>
@@ -112,9 +108,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">25-05-2025</td>
                 <td>
-                  <a className="table__venue" href="#">
-                    Glastonbury Festival
-                  </a>
+                  <Anchor title="Glastonbury Festival" id="5" />
                 </td>
                 <td className="hidden lg:table-cell">
                   Somerset/<span>{t("tour.table.uk")}</span>
@@ -128,9 +122,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">19-06-2025</td>
                 <td>
-                  <a className="table__venue" href="#">
-                    Tomorrowland
-                  </a>
+                  <Anchor title="Tomorrowland" id="6" />
                 </td>
                 <td className="hidden lg:table-cell">
                   <span>{t("tour.table.belgium")}</span>
@@ -144,9 +136,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">30-07-2025</td>
                 <td>
-                  <a className="table__venue" href="#">
-                    Wacken Open Air
-                  </a>
+                  <Anchor title="Wacken Open Air" id="7" />
                 </td>
                 <td className="hidden lg:table-cell">
                   Wacken/<span>{t("tour.table.germany")}</span>
@@ -160,9 +150,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">06-08-2025</td>
                 <td>
-                  <a className="table__venue" href="#">
-                    Sziget Festival
-                  </a>
+                  <Anchor title="Sziget Festival" id="8" />
                 </td>
                 <td className="hidden lg:table-cell">
                   Budapest/<span>{t("tour.table.hungary")}</span>
