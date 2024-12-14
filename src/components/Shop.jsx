@@ -75,9 +75,59 @@ const Shop = () => {
                 <TShirtCard />
               </div>
             </div>
-            <div className="w-80">
-              <h2>Cart</h2>
-              <p>No products in the cart.</p>
+            <div className="flex flex-col gap-8 w-80">
+              <div>
+                <h2>Cart</h2>
+                <p>No products in the cart.</p>
+              </div>
+
+              <div className="flex flex-col gap-4">
+                <h2>Filter by price</h2>
+                <div className="flex items-center px-2">
+                  <input
+                    type="range"
+                    min="0"
+                    max="1000"
+                    step="10"
+                    value="200"
+                    className="w-full h-2 appearance-none bg-gray-200 outline-none cursor-pointer"
+                  />
+                </div>
+                <div className="flex justify-between items-center">
+                  <button className="w-1/3 bg-accent py-2 text-white font-semibold hover:bg-accent/90 transition-colors duration-300">
+                    Filter
+                  </button>
+                  <span>Price: $20 - $1000</span>
+                </div>
+              </div>
+
+              <div>
+                <h2>Filter by</h2>
+                <div className="flex flex-col gap-4">
+                  <ul>
+                    <li>
+                      <a href="#">Blue</a>
+                      <span>(2)</span>
+                    </li>
+                    <li>
+                      <a href="#">Gray</a>
+                      <span>(3)</span>
+                    </li>
+                    <li>
+                      <a href="#">Green</a>
+                      <span>(4)</span>
+                    </li>
+                    <li>
+                      <a href="#">Red</a>
+                      <span>(5)</span>
+                    </li>
+                    <li>
+                      <a href="#">Yellow</a>
+                      <span>(6)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </article>
