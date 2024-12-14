@@ -45,9 +45,9 @@ const ItemsRender = ({ title, obj, route, formVideo }) => {
               {formVideo && (
                 <iframe
                   loading="lazy"
-                  className="w-full h-56 md:w-72 md:h-48 xl:w-[46rem] xl:h-[28rem]"
-                  width="320"
-                  height="240"
+                  className="w-full h-full md:w-72 md:h-48 xl:w-[46rem] xl:h-[28rem]"
+                  width="300"
+                  height="280"
                   src={article.content}
                   title="YouTube video player"
                   frameBorder="0"
