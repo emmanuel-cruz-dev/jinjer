@@ -3,26 +3,31 @@ import { FaStar, FaRegStar } from "react-icons/fa6";
 import Background from "../assets/images/gradient.png";
 
 const Shop = () => {
-  const TShirtCard = () => {
+  const TShirtCard = ({ sale }) => {
     return (
-      <div className="relative mx-6 w-40">
+      <div className="relative flex flex-col justify-center gap-1 mx-6 w-40">
+        {sale && (
+          <span className="absolute top-0 right-0 bg-red-600 px-2 py-1 text-sm text-white font-semibold">
+            Sale!
+          </span>
+        )}
         <figure>
           <img src={TShirt1} alt="" />
         </figure>
         <h3 className="font-bold">T-shirt 1</h3>
-        <div className="flex gap-2">
+        <div className="flex gap-1">
           <FaStar />
           <FaStar />
           <FaStar />
           <FaRegStar />
           <FaRegStar />
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-3">
           <span className="text-gray-200">$20.99</span>
           <span className="text-gray-500 line-through">$25.99</span>
         </div>
 
-        <button className="w-full bg-accent py-1 mt-4 text-white font-semibold hover:bg-accent/90 transition-colors duration-300">
+        <button className="w-full bg-accent py-1 mt-4 text-white font-semibold hover:bg-accent/80 transition-colors duration-300">
           Add to cart
         </button>
       </div>
@@ -62,17 +67,17 @@ const Shop = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-20 w-full">
+                <TShirtCard sale />
                 <TShirtCard />
+                <TShirtCard sale />
+                <TShirtCard sale />
                 <TShirtCard />
+                <TShirtCard sale />
                 <TShirtCard />
+                <TShirtCard sale />
+                <TShirtCard sale />
                 <TShirtCard />
-                <TShirtCard />
-                <TShirtCard />
-                <TShirtCard />
-                <TShirtCard />
-                <TShirtCard />
-                <TShirtCard />
-                <TShirtCard />
+                <TShirtCard sale />
                 <TShirtCard />
               </div>
             </div>
@@ -95,7 +100,7 @@ const Shop = () => {
                   />
                 </div>
                 <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
-                  <button className="w-full md:w-1/3 bg-accent py-1 text-white font-semibold hover:bg-accent/90 transition-colors duration-300">
+                  <button className="w-full md:w-1/3 bg-accent py-1 text-white font-semibold hover:bg-accent/80 transition-colors duration-300">
                     Filter
                   </button>
                   <div>
