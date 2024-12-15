@@ -76,7 +76,7 @@ const Shop = () => {
                 <TShirtCard />
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-6 md:gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:h-fit w-full lg:w-80">
+            <div className="grid grid-cols-3 gap-6 md:gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:gap-8 lg:h-fit w-full lg:w-80">
               <div>
                 <h2>Cart</h2>
                 <p>No products in the cart.</p>

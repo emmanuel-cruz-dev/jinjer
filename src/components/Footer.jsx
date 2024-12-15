@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col px-6 md:px-0 md:flex-row justify-between gap-8 lg:gap-16">
+        <div className="flex flex-col px-6 lg:px-0 md:flex-row justify-between gap-8 lg:gap-16">
           <div className="posts flex flex-col gap-4">
             <h3 className="footer__title">{t("footer.latestPosts")}</h3>
             <a
