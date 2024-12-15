@@ -41,7 +41,7 @@ const Shop = () => {
           <div className="w-full px-12 p-8 z-10">
             <h2 className="text-3xl font-bold text-white">Archives: Shop</h2>
           </div>
-          <div className="flex gap-8 w-full px-12 mt-8">
+          <div className="flex flex-col lg:flex-row gap-8 w-full px-12 mt-8">
             <div className="flex flex-col justify-center items-center gap-4 w-full mx-auto lg:w-5/6">
               <div className="flex justify-between gap-4 w-full">
                 <p className="text-sm text-gray-400">
@@ -76,7 +76,7 @@ const Shop = () => {
                 <TShirtCard />
               </div>
             </div>
-            <div className="flex flex-col gap-8 w-80">
+            <div className="grid grid-cols-3 gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:h-fit w-full lg:w-80">
               <div>
                 <h2>Cart</h2>
                 <p>No products in the cart.</p>
