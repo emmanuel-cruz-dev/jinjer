@@ -47,7 +47,7 @@ const Shop = () => {
             <h2 className="text-3xl font-bold text-white">Archives: Shop</h2>
           </div>
           <div className="flex flex-col lg:flex-row gap-8 w-full px-4 md:px-12 mt-8">
-            <div className="flex flex-col justify-center items-center gap-4 w-full mx-auto lg:w-5/6">
+            <div className="flex flex-col justify-center items-center gap-2 w-full mx-auto lg:w-5/6">
               <div className="flex justify-between gap-4 w-full">
                 <p className="text-sm text-gray-400">
                   Showing 1 - 12 of 20 results
@@ -66,7 +66,7 @@ const Shop = () => {
                 </select>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-20 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-8 w-full">
                 <TShirtCard sale />
                 <TShirtCard />
                 <TShirtCard sale />
@@ -80,12 +80,25 @@ const Shop = () => {
                 <TShirtCard sale />
                 <TShirtCard />
               </div>
-              <div className="flex justify-between items-center gap-2 border border-gray-600 mb-8">
-                <span className="flex-1">1</span>
-                <span className="flex-1">2</span>
-                <span className="material-symbols-outlined cursor-pointer flex-1">
+              <div className="flex justify-between items-center border border-gray-600 mb-8">
+                <a
+                  href="#"
+                  className="w-10 h-10 flex justify-center items-center bg-gray-400"
+                >
+                  1
+                </a>
+                <a
+                  href="#"
+                  className="w-10 h-10 flex justify-center items-center hover:bg-gray-400"
+                >
+                  2
+                </a>
+                <a
+                  href="#"
+                  className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400"
+                >
                   chevron_right
-                </span>
+                </a>
               </div>
             </div>
             <div className="grid grid-cols-3 gap-6 md:gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:gap-8 lg:h-fit w-full lg:w-80">
