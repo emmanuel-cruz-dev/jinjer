@@ -10,10 +10,10 @@ const ContactForm = () => {
 
       <form method="post" className="form flex flex-col gap-4">
         <textarea
-          className="p-2 px-4"
+          className="w-full max-w-lg min-h-[160px] p-2 px-4 sm:max-w-md md:min-h-[220px] lg:max-w-full"
           placeholder="Comment *"
-          rows="8"
-          cols="50"
+          // rows="8"
+          // cols="50"
           name="comment"
         />
         <div className="flex flex-col gap-4 lg:w-1/2">
