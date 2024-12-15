@@ -38,10 +38,10 @@ const Shop = () => {
             src={Background}
             alt=""
           />
-          <div className="w-full px-12 p-8 z-10">
+          <div className="w-full px-12 p-8 z-[1]">
             <h2 className="text-3xl font-bold text-white">Archives: Shop</h2>
           </div>
-          <div className="flex flex-col lg:flex-row gap-8 w-full px-12 mt-8">
+          <div className="flex flex-col lg:flex-row gap-8 w-full px-4 md:px-12 mt-8">
             <div className="flex flex-col justify-center items-center gap-4 w-full mx-auto lg:w-5/6">
               <div className="flex justify-between gap-4 w-full">
                 <p className="text-sm text-gray-400">
@@ -50,7 +50,7 @@ const Shop = () => {
                 <select
                   name="Dropdown"
                   id=""
-                  className="text-sm text-gray-400 cursor-pointer"
+                  className="text-sm text-gray-300 cursor-pointer"
                 >
                   <option value="Default Sorting">Default Sorting</option>
                   <option value="2">Sort by Popularity</option>
@@ -76,7 +76,7 @@ const Shop = () => {
                 <TShirtCard />
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:h-fit w-full lg:w-80">
+            <div className="grid grid-cols-3 gap-6 md:gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:h-fit w-full lg:w-80">
               <div>
                 <h2>Cart</h2>
                 <p>No products in the cart.</p>
@@ -84,7 +84,7 @@ const Shop = () => {
 
               <div className="flex flex-col gap-4">
                 <h2>Filter by price</h2>
-                <div className="flex items-center px-2">
+                <div className="flex items-center">
                   <input
                     type="range"
                     min="0"
@@ -94,11 +94,14 @@ const Shop = () => {
                     className="w-full h-2 appearance-none bg-gray-200 outline-none cursor-pointer"
                   />
                 </div>
-                <div className="flex justify-between items-center">
-                  <button className="w-1/3 bg-accent py-2 text-white font-semibold hover:bg-accent/90 transition-colors duration-300">
+                <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
+                  <button className="w-full md:w-1/3 bg-accent py-1 text-white font-semibold hover:bg-accent/90 transition-colors duration-300">
                     Filter
                   </button>
-                  <span>Price: $20 - $1000</span>
+                  <div>
+                    <span>Price: </span>
+                    <span>$20 - $1000</span>
+                  </div>
                 </div>
               </div>
 
