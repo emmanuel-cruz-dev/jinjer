@@ -117,7 +117,7 @@ const Store = () => {
           <Carousel />
         </div>
         <a href="#" className="red__btn">
-          {t("store.amazonButton")}
+          {t("store.storeButton")}
         </a>
       </article>
     </section>

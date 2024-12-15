@@ -100,7 +100,7 @@ const resources = {
         description:
           "Check out our awesome store items below! We design custom t-shirts for our amazing fans!",
         addToCart: "Add To Cart",
-        amazonButton: "View On Amazon Store",
+        storeButton: "View Store",
       },
       follow: {
         title1: "Stay Con",
@@ -244,7 +244,7 @@ const resources = {
         description:
           "¡Echa un vistazo a éstos increíbles artículos! ¡Diseñamos remeras personalizadas para nuestros increíbles fans!",
         addToCart: "Agregar al carrito",
-        amazonButton: "Ver en la tienda de Amazon",
+        storeButton: "Ver Tienda",
       },
       follow: {
         title1: "Mantente Co",
