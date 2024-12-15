@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import TShirt1 from "../assets/images/shop-skull.png";
 import TShirt2 from "../assets/images/shop-gorilla.png";
 import TShirt3 from "../assets/images/shop-sharks.png";
@@ -100,6 +101,17 @@ const Carousel = () => {
 
 const Store = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const goToSection = () => {
+    navigate("/shop/");
+
+    setTimeout(() => {
+      const section = document.getElementById("store");
+      if (!section) return;
+      else section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 500);
+  };
 
   return (
     <section
@@ -116,7 +128,7 @@ const Store = () => {
         <div className="w-screen">
           <Carousel />
         </div>
-        <a href="#" className="red__btn">
+        <a onClick={() => goToSection()} href="/shop/" className="red__btn">
           {t("store.storeButton")}
         </a>
       </article>
