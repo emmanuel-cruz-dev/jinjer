@@ -107,7 +107,7 @@ const Store = () => {
     navigate("/shop/");
 
     setTimeout(() => {
-      const section = document.getElementById("store");
+      const section = document.getElementById("shop");
       if (!section) return;
       else section.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 500);

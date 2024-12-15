@@ -21,7 +21,8 @@ const Shop = () => {
           <span className="text-gray-200">$20.99</span>
           <span className="text-gray-500 line-through">$25.99</span>
         </div>
-        <button className="w-full bg-accent py-2 mt-4 text-white font-semibold hover:bg-accent/90 transition-colors duration-300">
+
+        <button className="w-full bg-accent py-1 mt-4 text-white font-semibold hover:bg-accent/90 transition-colors duration-300">
           Add to cart
         </button>
       </div>
@@ -60,7 +61,7 @@ const Shop = () => {
                 </select>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-12 pt-8 pb-20 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-20 w-full">
                 <TShirtCard />
                 <TShirtCard />
                 <TShirtCard />
