@@ -24,7 +24,7 @@ const Shop = () => {
         </div>
         <div className="flex gap-3">
           <span className="text-gray-200">$20.99</span>
-          <span className="text-gray-500 line-through">$25.99</span>
+          {sale && <span className="text-gray-500 line-through">$25.99</span>}
         </div>
 
         <button className="w-full bg-accent py-1 mt-4 text-white font-semibold hover:bg-accent/80 transition-colors duration-300">
@@ -79,6 +79,13 @@ const Shop = () => {
                 <TShirtCard />
                 <TShirtCard sale />
                 <TShirtCard />
+              </div>
+              <div className="flex justify-between items-center gap-2 border border-gray-600 mb-8">
+                <span className="flex-1">1</span>
+                <span className="flex-1">2</span>
+                <span className="material-symbols-outlined cursor-pointer flex-1">
+                  chevron_right
+                </span>
               </div>
             </div>
             <div className="grid grid-cols-3 gap-6 md:gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:gap-8 lg:h-fit w-full lg:w-80">
