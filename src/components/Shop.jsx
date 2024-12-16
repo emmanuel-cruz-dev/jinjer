@@ -154,6 +154,17 @@ const Shop = () => {
   const [products, setProducts] = useState(products1);
   const productsTotal = products1.length + products2.length;
 
+  const ratingFilter = (e) => {
+    e.preventDefault();
+    const selectedValue = e.target.value;
+
+    if (selectedValue === "menu-order") {
+      setProducts(products1);
+    } else {
+      setProducts(products1.filter((product) => product.rating === 5));
+    }
+  };
+
   const handleProducts = () => {
     const scrollOptions = {
       top: 0,
@@ -233,14 +244,22 @@ const Shop = () => {
                   name="dropdown"
                   id="dropdown"
                   defaultValue="menu-order"
-                  onChange={(e) => console.log(e.target.value)}
+                  onChange={ratingFilter}
                   aria-label="Shop order"
                   className="text-sm text-gray-300 cursor-pointer"
                 >
-                  <option value="menu-order">Default Sorting</option>
-                  <option value="rating">Sort by Rating</option>
-                  <option value="price">Sort by Price: Low to High</option>
-                  <option value="price-desc">Sort by Price: High to Low</option>
+                  <option key="menu-order" value="menu-order">
+                    Default Sorting
+                  </option>
+                  <option key="rating" value="rating">
+                    Sort by Rating
+                  </option>
+                  <option key="price" value="price">
+                    Sort by Price: Low to High
+                  </option>
+                  <option key="price-desc" value="price-desc">
+                    Sort by Price: High to Low
+                  </option>
                 </select>
               </div>
 
