@@ -1,3 +1,5 @@
+import { FaStar, FaRegStar } from "react-icons/fa6";
+import { useState } from "react";
 import TShirt1 from "../assets/images/shop-skull.png";
 import TShirt2 from "../assets/images/shop-gorilla.png";
 import TShirt3 from "../assets/images/shop-sharks.png";
@@ -10,145 +12,154 @@ import TShirt9 from "../assets/images/shop-clock.png";
 import TShirt10 from "../assets/images/shop-microverse.png";
 import TShirt11 from "../assets/images/shop-retrospection.png";
 import TShirt12 from "../assets/images/shop-fire-skull.png";
-import { FaStar, FaRegStar } from "react-icons/fa6";
 import Background from "../assets/images/gradient.png";
 
-const Shop = () => {
-  const products1 = [
-    {
-      id: 1,
-      img: TShirt1,
-      name: "Perennial",
-      rating: 5,
-      price: 20.99,
-      sale: true,
-    },
-    { id: 2, img: TShirt2, name: "Ape", rating: 4, price: 25.99 },
-    {
-      id: 3,
-      img: TShirt3,
-      name: "Pisces",
-      rating: 5,
-      price: 15.99,
-      sale: true,
-    },
-    { id: 4, img: TShirt4, name: "Noha", rating: 3, price: 30.99 },
-    {
-      id: 5,
-      img: TShirt5,
-      name: "True Believer",
-      rating: 5,
-      price: 30.99,
-      sale: true,
-    },
-    {
-      id: 6,
-      img: TShirt6,
-      name: "Cloud Factory",
-      rating: 4,
-      price: 16.99,
-      sale: true,
-    },
-    { id: 7, img: TShirt7, name: "Embryo", rating: 3, price: 18.99 },
-    {
-      id: 8,
-      img: TShirt8,
-      name: "Queen of Everything",
-      rating: 4,
-      price: 15.99,
-    },
-    {
-      id: 9,
-      img: TShirt1,
-      name: "Perennial",
-      rating: 5,
-      price: 20.99,
-    },
-    { id: 10, img: TShirt2, name: "Ape", rating: 4, price: 25.99, sale: true },
-    {
-      id: 11,
-      img: TShirt3,
-      name: "Pisces",
-      rating: 5,
-      price: 15.99,
-      sale: true,
-    },
-    {
-      id: 12,
-      img: TShirt4,
-      name: "Noha",
-      rating: 3,
-      price: 30.99,
-      sale: false,
-    },
-  ];
+const products1 = [
+  {
+    id: 1,
+    img: TShirt1,
+    name: "Perennial",
+    rating: 5,
+    price: 20.99,
+    sale: true,
+  },
+  { id: 2, img: TShirt2, name: "Ape", rating: 4, price: 25.99 },
+  {
+    id: 3,
+    img: TShirt3,
+    name: "Pisces",
+    rating: 5,
+    price: 15.99,
+    sale: true,
+  },
+  { id: 4, img: TShirt4, name: "Noha", rating: 3, price: 30.99 },
+  {
+    id: 5,
+    img: TShirt5,
+    name: "True Believer",
+    rating: 5,
+    price: 30.99,
+    sale: true,
+  },
+  {
+    id: 6,
+    img: TShirt6,
+    name: "Cloud Factory",
+    rating: 4,
+    price: 16.99,
+    sale: true,
+  },
+  { id: 7, img: TShirt7, name: "Embryo", rating: 3, price: 18.99 },
+  {
+    id: 8,
+    img: TShirt8,
+    name: "Queen of Everything",
+    rating: 4,
+    price: 15.99,
+  },
+  {
+    id: 9,
+    img: TShirt1,
+    name: "Perennial",
+    rating: 5,
+    price: 20.99,
+  },
+  { id: 10, img: TShirt2, name: "Ape", rating: 4, price: 25.99, sale: true },
+  {
+    id: 11,
+    img: TShirt3,
+    name: "Pisces",
+    rating: 5,
+    price: 15.99,
+    sale: true,
+  },
+  {
+    id: 12,
+    img: TShirt4,
+    name: "Noha",
+    rating: 3,
+    price: 30.99,
+    sale: false,
+  },
+];
 
-  const products2 = [
-    {
-      id: 9,
-      img: TShirt9,
-      name: "Clockwork",
-      rating: 4,
-      price: 20.99,
-      sale: true,
-    },
-    {
-      id: 10,
-      img: TShirt10,
-      name: "Microverse",
-      rating: 4,
-      price: 25.99,
-      sale: true,
-    },
-    {
-      id: 11,
-      img: TShirt11,
-      name: "Retrospection",
-      rating: 5,
-      price: 15.99,
-      sale: true,
-    },
-    {
-      id: 12,
-      img: TShirt12,
-      name: "Fire Skull",
-      rating: 3,
-      price: 30.99,
-      sale: false,
-    },
-    {
-      id: 13,
-      img: TShirt9,
-      name: "Clockwork",
-      rating: 4,
-      price: 20.99,
-      sale: true,
-    },
-    {
-      id: 14,
-      img: TShirt10,
-      name: "Microverse",
-      rating: 4,
-      price: 25.99,
-      sale: true,
-    },
-    {
-      id: 15,
-      img: TShirt11,
-      name: "Retrospection",
-      rating: 5,
-      price: 15.99,
-      sale: true,
-    },
-    {
-      id: 16,
-      img: TShirt12,
-      name: "Fire Skull",
-      rating: 3,
-      price: 30.99,
-      sale: false,
-    },
-  ];
+const products2 = [
+  {
+    id: 9,
+    img: TShirt9,
+    name: "Clockwork",
+    rating: 4,
+    price: 20.99,
+    sale: true,
+  },
+  {
+    id: 10,
+    img: TShirt10,
+    name: "Microverse",
+    rating: 4,
+    price: 25.99,
+    sale: true,
+  },
+  {
+    id: 11,
+    img: TShirt11,
+    name: "Retrospection",
+    rating: 5,
+    price: 15.99,
+    sale: true,
+  },
+  {
+    id: 12,
+    img: TShirt12,
+    name: "Fire Skull",
+    rating: 3,
+    price: 30.99,
+    sale: false,
+  },
+  {
+    id: 13,
+    img: TShirt9,
+    name: "Clockwork",
+    rating: 4,
+    price: 20.99,
+    sale: true,
+  },
+  {
+    id: 14,
+    img: TShirt10,
+    name: "Microverse",
+    rating: 4,
+    price: 25.99,
+    sale: true,
+  },
+  {
+    id: 15,
+    img: TShirt11,
+    name: "Retrospection",
+    rating: 5,
+    price: 15.99,
+    sale: true,
+  },
+  {
+    id: 16,
+    img: TShirt12,
+    name: "Fire Skull",
+    rating: 3,
+    price: 30.99,
+    sale: false,
+  },
+];
+
+const Shop = () => {
+  const [products, setProducts] = useState(products1);
+
+  const handleProducts = () => {
+    if (products === products1) {
+      setProducts(products2);
+    } else {
+      setProducts(products1);
+    }
+  };
 
   const TShirtCard = ({ name, rating, price, img, sale }) => {
     const discount = (price * 1.5).toFixed(2);
@@ -222,18 +233,20 @@ const Shop = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-8 w-full">
-                {products1.map((product) => (
+                {products.map((product) => (
                   <TShirtCard {...product} />
                 ))}
               </div>
               <div className="flex justify-between items-center border border-gray-600 mb-8">
                 <a
+                  onClick={handleProducts}
                   href="#"
                   className="w-10 h-10 flex justify-center items-center bg-gray-400"
                 >
                   1
                 </a>
                 <a
+                  onClick={handleProducts}
                   href="#"
                   className="w-10 h-10 flex justify-center items-center hover:bg-gray-400"
                 >
