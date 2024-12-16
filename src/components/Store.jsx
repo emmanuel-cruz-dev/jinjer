@@ -69,12 +69,12 @@ const Carousel = () => {
       >
         <div>
           {/* Card 1 */}
-          <TShirtCard title="Skull" price="21.99" img={TShirt1} />
+          <TShirtCard title="Perennial" price="21.99" img={TShirt1} />
         </div>
 
         <div>
           {/* Card 2 */}
-          <TShirtCard title="Gorilla" price="18.69" img={TShirt2} />
+          <TShirtCard title="Ape" price="18.69" img={TShirt2} />
         </div>
 
         <div>
@@ -92,7 +92,7 @@ const Carousel = () => {
         </div>
         <div>
           {/* Card 6 */}
-          <TShirtCard title="Tour '18" price="19.99" img={TShirt6} />
+          <TShirtCard title="Cloud Factory" price="19.99" img={TShirt6} />
         </div>
       </Slider>
     </div>

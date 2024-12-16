@@ -1,4 +1,11 @@
 import TShirt1 from "../assets/images/shop-skull.png";
+import TShirt2 from "../assets/images/shop-gorilla.png";
+import TShirt3 from "../assets/images/shop-sharks.png";
+import TShirt4 from "../assets/images/shop-fire.png";
+import TShirt5 from "../assets/images/shop-death.png";
+import TShirt6 from "../assets/images/shop-tour.png";
+import TShirt7 from "../assets/images/shop-embryo.png";
+import TShirt8 from "../assets/images/shop-queen.png";
 import { FaStar, FaRegStar } from "react-icons/fa6";
 import Background from "../assets/images/gradient.png";
 
@@ -69,11 +76,36 @@ const stars = ({ num }) => {
 
 const Shop = () => {
   const products = [
-    { id: 1, name: "Producto A", rating: 4 },
-    { id: 2, name: "Producto B", rating: 2 },
-    { id: 3, name: "Producto C", rating: 5 },
+    {
+      id: 1,
+      img: TShirt1,
+      name: "Perennial",
+      rating: 4,
+      price: 20.99,
+      sale: true,
+    },
+    { id: 2, img: TShirt2, name: "Ape", rating: 2, price: 25.99, sale: false },
+    {
+      id: 3,
+      img: TShirt3,
+      name: "Pisces",
+      rating: 5,
+      price: 15.99,
+      sale: true,
+    },
+    { id: 4, img: TShirt4, name: "Noha", rating: 3, price: 30.99, sale: false },
+    { id: 5, img: TShirt5, name: "True Believer", rating: 1, price: 40.99 },
+    { id: 6, img: TShirt6, name: "Cloud Factory", rating: 4, price: 10.99 },
+    { id: 7, img: TShirt7, name: "Embryo", rating: 2, price: 50.99 },
+    {
+      id: 8,
+      img: TShirt8,
+      name: "Queen of Everything",
+      rating: 5,
+      price: 5.99,
+    },
   ];
-  const TShirtCard = ({ sale }) => {
+  const TShirtCard = ({ name, rating, price, img, sale }) => {
     return (
       <div className="relative flex flex-col justify-center gap-1 mx-6 w-40">
         {sale && (
@@ -82,12 +114,12 @@ const Shop = () => {
           </span>
         )}
         <figure>
-          <img src={TShirt1} alt="" />
+          <img src={img} alt="" />
         </figure>
-        <h3 className="font-bold">T-shirt 1</h3>
+        <h3 className="font-bold">{name}</h3>
         <div className="flex gap-1">{stars({ num: 5 })}</div>
         <div className="flex gap-3">
-          <span className="text-gray-200">$20.99</span>
+          <span className="text-gray-200">${price}</span>
           {sale && <span className="text-gray-500 line-through">$25.99</span>}
         </div>
 
@@ -131,7 +163,10 @@ const Shop = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-8 w-full">
-                <TShirtCard sale />
+                {products.map((product) => (
+                  <TShirtCard {...product} />
+                ))}
+                {/* <TShirtCard sale />
                 <TShirtCard />
                 <TShirtCard sale />
                 <TShirtCard sale />
@@ -142,7 +177,7 @@ const Shop = () => {
                 <TShirtCard sale />
                 <TShirtCard />
                 <TShirtCard sale />
-                <TShirtCard />
+                <TShirtCard /> */}
               </div>
               <div className="flex justify-between items-center border border-gray-600 mb-8">
                 <a
