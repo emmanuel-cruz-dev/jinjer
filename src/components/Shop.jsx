@@ -6,11 +6,15 @@ import TShirt5 from "../assets/images/shop-death.png";
 import TShirt6 from "../assets/images/shop-tour.png";
 import TShirt7 from "../assets/images/shop-embryo.png";
 import TShirt8 from "../assets/images/shop-queen.png";
+import TShirt9 from "../assets/images/shop-clock.png";
+import TShirt10 from "../assets/images/shop-microverse.png";
+import TShirt11 from "../assets/images/shop-retrospection.png";
+import TShirt12 from "../assets/images/shop-fire-skull.png";
 import { FaStar, FaRegStar } from "react-icons/fa6";
 import Background from "../assets/images/gradient.png";
 
 const Shop = () => {
-  const products = [
+  const products1 = [
     {
       id: 1,
       img: TShirt1,
@@ -73,6 +77,73 @@ const Shop = () => {
       id: 12,
       img: TShirt4,
       name: "Noha",
+      rating: 3,
+      price: 30.99,
+      sale: false,
+    },
+  ];
+
+  const products2 = [
+    {
+      id: 9,
+      img: TShirt9,
+      name: "Clockwork",
+      rating: 4,
+      price: 20.99,
+      sale: true,
+    },
+    {
+      id: 10,
+      img: TShirt10,
+      name: "Microverse",
+      rating: 4,
+      price: 25.99,
+      sale: true,
+    },
+    {
+      id: 11,
+      img: TShirt11,
+      name: "Retrospection",
+      rating: 5,
+      price: 15.99,
+      sale: true,
+    },
+    {
+      id: 12,
+      img: TShirt12,
+      name: "Fire Skull",
+      rating: 3,
+      price: 30.99,
+      sale: false,
+    },
+    {
+      id: 13,
+      img: TShirt9,
+      name: "Clockwork",
+      rating: 4,
+      price: 20.99,
+      sale: true,
+    },
+    {
+      id: 14,
+      img: TShirt10,
+      name: "Microverse",
+      rating: 4,
+      price: 25.99,
+      sale: true,
+    },
+    {
+      id: 15,
+      img: TShirt11,
+      name: "Retrospection",
+      rating: 5,
+      price: 15.99,
+      sale: true,
+    },
+    {
+      id: 16,
+      img: TShirt12,
+      name: "Fire Skull",
       rating: 3,
       price: 30.99,
       sale: false,
@@ -151,7 +222,7 @@ const Shop = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-8 w-full">
-                {products.map((product) => (
+                {products1.map((product) => (
                   <TShirtCard {...product} />
                 ))}
               </div>
