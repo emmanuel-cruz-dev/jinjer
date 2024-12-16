@@ -167,7 +167,7 @@ const Shop = () => {
     }
   };
 
-  const TShirtCard = ({ name, rating, price, img, sale }) => {
+  const TShirtCard = ({ id, name, rating, price, img, sale }) => {
     const discount = (price * 1.5).toFixed(2);
     const totalStars = 5;
 
@@ -181,7 +181,10 @@ const Shop = () => {
     );
 
     return (
-      <div className="relative flex flex-col justify-center gap-1 mx-6 w-40">
+      <div
+        key={id}
+        className="relative flex flex-col justify-center gap-1 mx-6 w-40"
+      >
         {sale && (
           <span className="absolute top-0 right-0 bg-red-600 px-2 py-1 text-sm text-white font-semibold">
             Sale!
@@ -225,16 +228,17 @@ const Shop = () => {
                   Showing 1 - 12 of 20 results
                 </p>
                 <select
-                  name="Dropdown"
-                  id=""
+                  name="dropdown"
+                  id="dropdown"
+                  defaultValue="menu-order"
+                  onChange={(e) => console.log(e.target.value)}
+                  aria-label="Shop order"
                   className="text-sm text-gray-300 cursor-pointer"
                 >
-                  <option value="Default Sorting">Default Sorting</option>
-                  <option value="2">Sort by Popularity</option>
-                  <option value="3">Sort by Average Rating</option>
-                  <option value="4">Sort by Latest</option>
-                  <option value="5">Sort by Price: Low to High</option>
-                  <option value="6">Sort by Price: High to Low</option>
+                  <option value="menu-order">Default Sorting</option>
+                  <option value="rating">Sort by Rating</option>
+                  <option value="price">Sort by Price: Low to High</option>
+                  <option value="price-desc">Sort by Price: High to Low</option>
                 </select>
               </div>
 

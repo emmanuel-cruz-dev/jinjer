@@ -37,9 +37,7 @@ const Footer = () => {
                 <img src={TourPoster} alt="" width={72} />
               </figure>
               <div className="flex flex-col justify-around h-full">
-                <h4>
-                  <a href="#">{t("footer.bandOnTour")}</a>
-                </h4>
+                <h4>{t("footer.bandOnTour")}</h4>
                 <time>{t("footer.starts")}</time>
               </div>
             </a>
@@ -49,9 +47,7 @@ const Footer = () => {
                 <img src={CDCover} alt="" width={72} />
               </figure>
               <div className="flex flex-col justify-around h-full">
-                <h4>
-                  <a href="#">{t("footer.review")}</a>
-                </h4>
+                <h4>{t("footer.review")}</h4>
                 <time>{t("footer.reviewDate")}</time>
               </div>
             </a>
