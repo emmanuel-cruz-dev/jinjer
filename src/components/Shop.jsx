@@ -246,28 +246,32 @@ const Shop = () => {
               <div className="flex justify-between items-center border border-gray-600 mb-8">
                 {products === products2 && (
                   <a
-                    href="#"
-                    className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400"
+                    onClick={handleProducts}
+                    className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400 cursor-pointer"
                   >
                     chevron_left
                   </a>
                 )}
                 <a
                   onClick={handleProducts}
-                  className="w-10 h-10 flex justify-center items-center hover:bg-gray-400 cursor-pointer"
+                  className={`${
+                    products === products1 ? "bg-gray-400" : ""
+                  } w-10 h-10 flex justify-center items-center hover:bg-gray-400 cursor-pointer`}
                 >
                   1
                 </a>
                 <a
                   onClick={handleProducts}
-                  className="w-10 h-10 flex justify-center items-center hover:bg-gray-400 cursor-pointer"
+                  className={`${
+                    products === products2 ? "bg-gray-400" : ""
+                  } w-10 h-10 flex justify-center items-center hover:bg-gray-400 cursor-pointer`}
                 >
                   2
                 </a>
                 {products === products1 && (
                   <a
-                    href="#"
-                    className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400"
+                    onClick={handleProducts}
+                    className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400 cursor-pointer"
                   >
                     chevron_right
                   </a>
