@@ -154,14 +154,27 @@ const Shop = () => {
   const [products, setProducts] = useState(products1);
   const productsTotal = products1.length + products2.length;
 
-  const ratingFilter = (e) => {
-    e.preventDefault();
+  const handleFilter = (e) => {
     const selectedValue = e.target.value;
 
-    if (selectedValue === "menu-order") {
-      setProducts(products1);
-    } else {
-      setProducts(products1.filter((product) => product.rating === 5));
+    switch (selectedValue) {
+      case "menu-order":
+        setProducts(products);
+        break;
+      case "rating":
+        setProducts(products.filter((product) => product.rating === 5));
+        break;
+      case "sale":
+        setProducts(products.filter((product) => product.sale === true));
+        break;
+      case "price":
+        setProducts(products.sort((a, b) => a.price - b.price));
+        break;
+      case "price-desc":
+        setProducts(products.sort((a, b) => b.price - a.price));
+      default:
+        setProducts(products);
+        break;
     }
   };
 
@@ -244,7 +257,7 @@ const Shop = () => {
                   name="dropdown"
                   id="dropdown"
                   defaultValue="menu-order"
-                  onChange={ratingFilter}
+                  onChange={(e) => handleFilter(e)}
                   aria-label="Shop order"
                   className="text-sm text-gray-300 cursor-pointer"
                 >
@@ -253,6 +266,9 @@ const Shop = () => {
                   </option>
                   <option key="rating" value="rating">
                     Sort by Rating
+                  </option>
+                  <option key="sale" value="sale">
+                    Sort by Sale
                   </option>
                   <option key="price" value="price">
                     Sort by Price: Low to High
