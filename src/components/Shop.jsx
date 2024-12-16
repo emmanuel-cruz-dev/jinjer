@@ -152,6 +152,7 @@ const products2 = [
 
 const Shop = () => {
   const [products, setProducts] = useState(products1);
+  const productsTotal = products1.length + products2.length;
 
   const handleProducts = () => {
     const scrollOptions = {
@@ -225,7 +226,8 @@ const Shop = () => {
             <div className="flex flex-col justify-center items-center gap-2 w-full mx-auto lg:w-5/6">
               <div className="flex justify-between gap-4 w-full">
                 <p className="text-sm text-gray-400">
-                  Showing 1 - 12 of 20 results
+                  Showing {products === products1 ? "1 - 12" : "13 - 20"} of{" "}
+                  {productsTotal} results
                 </p>
                 <select
                   name="dropdown"
@@ -288,31 +290,8 @@ const Shop = () => {
                 <p>No products in the cart.</p>
               </div>
 
-              <div className="flex flex-col gap-4">
-                <h2>Filter by price</h2>
-                <div className="flex items-center">
-                  <input
-                    type="range"
-                    min="0"
-                    max="1000"
-                    step="10"
-                    value="200"
-                    className="w-full h-2 appearance-none bg-gray-200 outline-none cursor-pointer"
-                  />
-                </div>
-                <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
-                  <button className="w-full md:w-1/3 bg-accent py-1 text-white font-semibold hover:bg-accent/80 transition-colors duration-300">
-                    Filter
-                  </button>
-                  <div>
-                    <span>Price: </span>
-                    <span>$20 - $1000</span>
-                  </div>
-                </div>
-              </div>
-
               <div>
-                <h2>Filter by</h2>
+                <h2>Filter by Color</h2>
                 <div className="flex flex-col gap-4">
                   <ul>
                     <li>
