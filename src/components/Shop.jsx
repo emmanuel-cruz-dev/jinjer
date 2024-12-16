@@ -189,7 +189,7 @@ const Shop = () => {
     }
   };
 
-  const handleColor = ({ color }) => {
+  const handleColor = (color) => {
     const selectedValue = color;
     const originalProducts = [...products];
 
