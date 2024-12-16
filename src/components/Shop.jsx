@@ -3,19 +3,76 @@ import { FaStar, FaRegStar } from "react-icons/fa6";
 import Background from "../assets/images/gradient.png";
 
 const stars = ({ num }) => {
-  for (let i = 0; i < num; i++) {
-    if (i < num) {
+  switch (num) {
+    case 1:
       return (
         <>
-          <FaStar className="text-yellow-400" />
-          {stars({ num: num - 1 })}
+          <FaStar />
+          <FaRegStar />
+          <FaRegStar />
+          <FaRegStar />
+          <FaRegStar />
         </>
       );
-    }
+    case 2:
+      return (
+        <>
+          <FaStar />
+          <FaStar />
+          <FaRegStar />
+          <FaRegStar />
+          <FaRegStar />
+        </>
+      );
+    case 3:
+      return (
+        <>
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaRegStar />
+          <FaRegStar />
+        </>
+      );
+    case 4:
+      return (
+        <>
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaRegStar />
+        </>
+      );
+    case 5:
+      return (
+        <>
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+        </>
+      );
+    default:
+      return (
+        <>
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+        </>
+      );
   }
 };
 
 const Shop = () => {
+  const products = [
+    { id: 1, name: "Producto A", rating: 4 },
+    { id: 2, name: "Producto B", rating: 2 },
+    { id: 3, name: "Producto C", rating: 5 },
+  ];
   const TShirtCard = ({ sale }) => {
     return (
       <div className="relative flex flex-col justify-center gap-1 mx-6 w-40">
@@ -28,7 +85,7 @@ const Shop = () => {
           <img src={TShirt1} alt="" />
         </figure>
         <h3 className="font-bold">T-shirt 1</h3>
-        <div className="flex gap-1">{stars({ num: 3 })}</div>
+        <div className="flex gap-1">{stars({ num: 5 })}</div>
         <div className="flex gap-3">
           <span className="text-gray-200">$20.99</span>
           {sale && <span className="text-gray-500 line-through">$25.99</span>}
