@@ -18,19 +18,28 @@ const products1 = [
   {
     id: 1,
     img: TShirt1,
-    name: "Perennial",
+    name: "Perennial/Red",
     rating: 5,
     price: 20.99,
     sale: true,
+    color: "red",
   },
-  { id: 2, img: TShirt2, name: "Ape", rating: 4, price: 25.99 },
+  {
+    id: 2,
+    img: TShirt2,
+    name: "Ape/Blue",
+    rating: 4,
+    price: 25.99,
+    color: "blue",
+  },
   {
     id: 3,
     img: TShirt3,
-    name: "Pisces",
+    name: "Pisces/Blue",
     rating: 5,
     price: 15.99,
     sale: true,
+    color: "blue",
   },
   { id: 4, img: TShirt4, name: "Noha", rating: 3, price: 30.99 },
   {
@@ -173,6 +182,40 @@ const Shop = () => {
         break;
       case "price-desc":
         setProducts([...products1].sort((a, b) => b.price - a.price));
+        break;
+      default:
+        setProducts(originalProducts);
+        break;
+    }
+  };
+
+  const handleColor = ({ color }) => {
+    const selectedValue = color;
+    const originalProducts = [...products];
+
+    switch (selectedValue) {
+      case "all":
+        setProducts(originalProducts);
+        break;
+      case "red":
+        setProducts(
+          [...products1].filter((product) => product.color === "red")
+        );
+        break;
+      case "blue":
+        setProducts(
+          [...products1].filter((product) => product.color === "blue")
+        );
+        break;
+      case "green":
+        setProducts(
+          [...products1].filter((product) => product.color === "green")
+        );
+        break;
+      case "yellow":
+        setProducts(
+          [...products1].filter((product) => product.color === "yellow")
+        );
         break;
       default:
         setProducts(originalProducts);
@@ -332,8 +375,10 @@ const Shop = () => {
                 <div className="flex flex-col gap-4">
                   <ul>
                     <li>
-                      <a href="#">Blue</a>
-                      <span>(2)</span>
+                      <a href="#" onClick={() => handleColor("blue")}>
+                        Blue
+                        <span>(2)</span>
+                      </a>
                     </li>
                     <li>
                       <a href="#">Gray</a>
@@ -344,8 +389,10 @@ const Shop = () => {
                       <span>(4)</span>
                     </li>
                     <li>
-                      <a href="#">Red</a>
-                      <span>(5)</span>
+                      <a href="#" onClick={() => handleColor("red")}>
+                        Red
+                        <span>(5)</span>
+                      </a>
                     </li>
                     <li>
                       <a href="#">Yellow</a>
