@@ -2,6 +2,19 @@ import TShirt1 from "../assets/images/shop-skull.png";
 import { FaStar, FaRegStar } from "react-icons/fa6";
 import Background from "../assets/images/gradient.png";
 
+const stars = ({ num }) => {
+  for (let i = 0; i < num; i++) {
+    if (i < num) {
+      return (
+        <>
+          <FaStar className="text-yellow-400" />
+          {stars({ num: num - 1 })}
+        </>
+      );
+    }
+  }
+};
+
 const Shop = () => {
   const TShirtCard = ({ sale }) => {
     return (
@@ -15,13 +28,7 @@ const Shop = () => {
           <img src={TShirt1} alt="" />
         </figure>
         <h3 className="font-bold">T-shirt 1</h3>
-        <div className="flex gap-1">
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaRegStar />
-          <FaRegStar />
-        </div>
+        <div className="flex gap-1">{stars({ num: 3 })}</div>
         <div className="flex gap-3">
           <span className="text-gray-200">$20.99</span>
           {sale && <span className="text-gray-500 line-through">$25.99</span>}
