@@ -156,24 +156,26 @@ const Shop = () => {
 
   const handleFilter = (e) => {
     const selectedValue = e.target.value;
+    const originalProducts = [...products];
 
     switch (selectedValue) {
       case "menu-order":
-        setProducts(products);
+        setProducts(products1);
         break;
       case "rating":
-        setProducts(products.filter((product) => product.rating === 5));
+        setProducts([...products1].filter((product) => product.rating === 5));
         break;
       case "sale":
-        setProducts(products.filter((product) => product.sale === true));
+        setProducts([...products1].filter((product) => product.sale === true));
         break;
       case "price":
-        setProducts(products.sort((a, b) => a.price - b.price));
+        setProducts([...products1].sort((a, b) => a.price - b.price));
         break;
       case "price-desc":
-        setProducts(products.sort((a, b) => b.price - a.price));
+        setProducts([...products1].sort((a, b) => b.price - a.price));
+        break;
       default:
-        setProducts(products);
+        setProducts(originalProducts);
         break;
     }
   };
