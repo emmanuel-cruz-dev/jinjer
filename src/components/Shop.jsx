@@ -8,72 +8,6 @@ import TShirt7 from "../assets/images/shop-embryo.png";
 import TShirt8 from "../assets/images/shop-queen.png";
 import { FaStar, FaRegStar } from "react-icons/fa6";
 import Background from "../assets/images/gradient.png";
-import { t } from "i18next";
-
-const stars = ({ num }) => {
-  switch (num) {
-    case 1:
-      return (
-        <>
-          <FaStar />
-          <FaRegStar />
-          <FaRegStar />
-          <FaRegStar />
-          <FaRegStar />
-        </>
-      );
-    case 2:
-      return (
-        <>
-          <FaStar />
-          <FaStar />
-          <FaRegStar />
-          <FaRegStar />
-          <FaRegStar />
-        </>
-      );
-    case 3:
-      return (
-        <>
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaRegStar />
-          <FaRegStar />
-        </>
-      );
-    case 4:
-      return (
-        <>
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaRegStar />
-        </>
-      );
-    case 5:
-      return (
-        <>
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-        </>
-      );
-    default:
-      return (
-        <>
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-        </>
-      );
-  }
-};
 
 const Shop = () => {
   const products = [
@@ -125,9 +59,8 @@ const Shop = () => {
       name: "Perennial",
       rating: 5,
       price: 20.99,
-      sale: true,
     },
-    { id: 10, img: TShirt2, name: "Ape", rating: 4, price: 25.99, sale: false },
+    { id: 10, img: TShirt2, name: "Ape", rating: 4, price: 25.99, sale: true },
     {
       id: 11,
       img: TShirt3,
@@ -148,6 +81,16 @@ const Shop = () => {
 
   const TShirtCard = ({ name, rating, price, img, sale }) => {
     const discount = (price * 1.5).toFixed(2);
+    const totalStars = 5;
+
+    // Crea un array dinámico para representar las estrellas
+    const stars = Array.from({ length: totalStars }, (_, index) =>
+      index < rating ? (
+        <FaStar key={index} color="#ffc107" />
+      ) : (
+        <FaRegStar key={index} color="#e4e5e9" />
+      )
+    );
 
     return (
       <div className="relative flex flex-col justify-center gap-1 mx-6 w-40">
@@ -160,7 +103,7 @@ const Shop = () => {
           <img src={img} alt="" />
         </figure>
         <h3 className="font-bold">{name}</h3>
-        <div className="flex gap-1">{stars({ num: rating })}</div>
+        <div className="flex gap-1">{stars}</div>
         <div className="flex gap-3">
           <span className="text-gray-200">${price}</span>
           {sale && (
