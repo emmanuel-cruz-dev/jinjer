@@ -8,6 +8,7 @@ import TShirt7 from "../assets/images/shop-embryo.png";
 import TShirt8 from "../assets/images/shop-queen.png";
 import { FaStar, FaRegStar } from "react-icons/fa6";
 import Background from "../assets/images/gradient.png";
+import { t } from "i18next";
 
 const stars = ({ num }) => {
   switch (num) {
@@ -80,11 +81,11 @@ const Shop = () => {
       id: 1,
       img: TShirt1,
       name: "Perennial",
-      rating: 4,
+      rating: 5,
       price: 20.99,
       sale: true,
     },
-    { id: 2, img: TShirt2, name: "Ape", rating: 2, price: 25.99, sale: false },
+    { id: 2, img: TShirt2, name: "Ape", rating: 4, price: 25.99 },
     {
       id: 3,
       img: TShirt3,
@@ -93,19 +94,61 @@ const Shop = () => {
       price: 15.99,
       sale: true,
     },
-    { id: 4, img: TShirt4, name: "Noha", rating: 3, price: 30.99, sale: false },
-    { id: 5, img: TShirt5, name: "True Believer", rating: 1, price: 40.99 },
-    { id: 6, img: TShirt6, name: "Cloud Factory", rating: 4, price: 10.99 },
-    { id: 7, img: TShirt7, name: "Embryo", rating: 2, price: 50.99 },
+    { id: 4, img: TShirt4, name: "Noha", rating: 3, price: 30.99 },
+    {
+      id: 5,
+      img: TShirt5,
+      name: "True Believer",
+      rating: 5,
+      price: 30.99,
+      sale: true,
+    },
+    {
+      id: 6,
+      img: TShirt6,
+      name: "Cloud Factory",
+      rating: 4,
+      price: 16.99,
+      sale: true,
+    },
+    { id: 7, img: TShirt7, name: "Embryo", rating: 3, price: 18.99 },
     {
       id: 8,
       img: TShirt8,
       name: "Queen of Everything",
+      rating: 4,
+      price: 15.99,
+    },
+    {
+      id: 9,
+      img: TShirt1,
+      name: "Perennial",
       rating: 5,
-      price: 5.99,
+      price: 20.99,
+      sale: true,
+    },
+    { id: 10, img: TShirt2, name: "Ape", rating: 4, price: 25.99, sale: false },
+    {
+      id: 11,
+      img: TShirt3,
+      name: "Pisces",
+      rating: 5,
+      price: 15.99,
+      sale: true,
+    },
+    {
+      id: 12,
+      img: TShirt4,
+      name: "Noha",
+      rating: 3,
+      price: 30.99,
+      sale: false,
     },
   ];
+
   const TShirtCard = ({ name, rating, price, img, sale }) => {
+    const discount = (price * 1.5).toFixed(2);
+
     return (
       <div className="relative flex flex-col justify-center gap-1 mx-6 w-40">
         {sale && (
@@ -117,10 +160,12 @@ const Shop = () => {
           <img src={img} alt="" />
         </figure>
         <h3 className="font-bold">{name}</h3>
-        <div className="flex gap-1">{stars({ num: 5 })}</div>
+        <div className="flex gap-1">{stars({ num: rating })}</div>
         <div className="flex gap-3">
           <span className="text-gray-200">${price}</span>
-          {sale && <span className="text-gray-500 line-through">$25.99</span>}
+          {sale && (
+            <span className="text-gray-500 line-through">${discount}</span>
+          )}
         </div>
 
         <button className="w-full bg-accent py-1 mt-4 text-white font-semibold hover:bg-accent/80 transition-colors duration-300">
@@ -166,18 +211,6 @@ const Shop = () => {
                 {products.map((product) => (
                   <TShirtCard {...product} />
                 ))}
-                {/* <TShirtCard sale />
-                <TShirtCard />
-                <TShirtCard sale />
-                <TShirtCard sale />
-                <TShirtCard />
-                <TShirtCard sale />
-                <TShirtCard />
-                <TShirtCard sale />
-                <TShirtCard sale />
-                <TShirtCard />
-                <TShirtCard sale />
-                <TShirtCard /> */}
               </div>
               <div className="flex justify-between items-center border border-gray-600 mb-8">
                 <a
