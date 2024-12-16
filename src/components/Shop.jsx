@@ -119,7 +119,7 @@ const Shop = () => {
   };
 
   return (
-    <section className="newsblog" id="shop">
+    <section className="shop second-page" id="shop">
       <article className="py-10">
         <article className="relative w-full mt-20 lg:w-11/12 mb-12 bg-black/90 flex flex-col justify-center items-center mx-auto">
           <img

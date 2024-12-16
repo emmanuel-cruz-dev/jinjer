@@ -31,7 +31,7 @@ const ItemsRender = ({ title, obj, route, formVideo }) => {
   };
 
   return (
-    <section className="newsblog" id="newsblog">
+    <section className="newsblog second-page" id="newsblog">
       <article className="py-10">
         <article
           key={article.id}
