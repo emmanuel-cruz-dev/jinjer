@@ -154,6 +154,12 @@ const Shop = () => {
   const [products, setProducts] = useState(products1);
 
   const handleProducts = () => {
+    const scrollOptions = {
+      top: 0,
+      behavior: "smooth",
+    };
+
+    window.scrollTo(scrollOptions);
     if (products === products1) {
       setProducts(products2);
     } else {
@@ -238,26 +244,34 @@ const Shop = () => {
                 ))}
               </div>
               <div className="flex justify-between items-center border border-gray-600 mb-8">
+                {products === products2 && (
+                  <a
+                    href="#"
+                    className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400"
+                  >
+                    chevron_left
+                  </a>
+                )}
                 <a
                   onClick={handleProducts}
-                  href="#"
-                  className="w-10 h-10 flex justify-center items-center bg-gray-400"
+                  className="w-10 h-10 flex justify-center items-center hover:bg-gray-400 cursor-pointer"
                 >
                   1
                 </a>
                 <a
                   onClick={handleProducts}
-                  href="#"
-                  className="w-10 h-10 flex justify-center items-center hover:bg-gray-400"
+                  className="w-10 h-10 flex justify-center items-center hover:bg-gray-400 cursor-pointer"
                 >
                   2
                 </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400"
-                >
-                  chevron_right
-                </a>
+                {products === products1 && (
+                  <a
+                    href="#"
+                    className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400"
+                  >
+                    chevron_right
+                  </a>
+                )}
               </div>
             </div>
             <div className="grid grid-cols-3 gap-6 md:gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:gap-8 lg:h-fit w-full lg:w-80">
