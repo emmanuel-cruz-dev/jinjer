@@ -428,12 +428,12 @@ const Shop = () => {
             </div>
             <div className="grid grid-cols-3 gap-6 md:gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:gap-8 lg:h-fit w-full lg:w-80">
               <div>
-                <h2>Cart</h2>
+                <h2 className="font-bold text-lg mb-1">Cart</h2>
                 <p>No products in the cart.</p>
               </div>
 
               <div>
-                <h2>Filter by Color</h2>
+                <h2 className="font-bold text-lg mb-1">Filter by Color</h2>
                 <div className="flex flex-col gap-4">
                   <ul>
                     <li>
@@ -451,8 +451,8 @@ const Shop = () => {
                     <li>
                       <a href="#" onClick={() => handleColor("yellow")}>
                         Yellow
+                        <span>(1)</span>
                       </a>
-                      <span>(1)</span>
                     </li>
                   </ul>
                 </div>
