@@ -168,7 +168,7 @@ const Music = () => {
                     <span>00:00</span>
                     <button
                       onClick={handleMenuVisible}
-                      className="music-player__more flex items-center border-none"
+                      className="music-player__more flex items-center border-none hover:scale-110 transition-all duration-300"
                       title="More"
                     >
                       <span class="material-symbols-outlined">more_horiz</span>
