@@ -760,4 +760,21 @@ img {
   }
 }
 
+.music-player__actions-menu {
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #000;
+    color: #f1f2f3;
+    padding: 0.65rem 1.2rem;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
+
 // Fin: Music Page --- //

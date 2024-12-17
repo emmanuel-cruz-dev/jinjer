@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Background from "../assets/images/gradient.png";
 import Wallflowers from "../assets/images/wallflowers.jpg";
 import {
@@ -99,6 +100,12 @@ const ListItem = () => {
 };
 
 const Music = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleMenuVisible = () => {
+    setIsVisible(!isVisible);
+  };
+
   return (
     <section className="music second-page" id="music">
       <article className="py-10">
@@ -159,6 +166,7 @@ const Music = () => {
                     </div>
                     <span>00:00</span>
                     <button
+                      onClick={handleMenuVisible}
                       className="music-player__more flex items-center border-none"
                       title="More"
                     >
@@ -176,23 +184,30 @@ const Music = () => {
                 <div className="bg-gray-800 p-2 rounded-b-lg overflow-y-scroll">
                   <ListItem />
                 </div>
-                <div className="absolute bg-gray-900 w-full h-full flex flex-col justify-between items-center p-4 text-center">
+                <div
+                  className={`${
+                    isVisible ? "flex" : "hidden"
+                  } absolute bg-gray-900 w-full h-full flex-col justify-between items-center p-4 text-center`}
+                >
                   <div className="flex justify-end w-full">
-                    <span className="material-symbols-outlined text-3xl font-semibold cursor-pointer hover:scale-105 transition-all duration-300">
+                    <span
+                      onClick={handleMenuVisible}
+                      className={`material-symbols-outlined text-3xl font-semibold cursor-pointer hover:scale-105 transition-all duration-300`}
+                    >
                       close
                     </span>
                   </div>
-                  <div className="flex flex-col gap-2">
-                    <a href="#" className="flex items-center gap-2">
+                  <div className="music-player__actions-menu flex flex-col gap-2">
+                    <a href="#">
                       <FaSpotify size={20} /> Reproducir en Spotify
                     </a>
-                    <a href="#" className="flex items-center gap-2">
+                    <a href="#">
                       <span className="material-symbols-outlined text-xl">
                         add_circle
                       </span>
                       Guardar en Spotify
                     </a>
-                    <a href="#" className="flex items-center gap-2">
+                    <a href="#">
                       <span className="material-symbols-outlined text-xl">
                         share
                       </span>
@@ -200,9 +215,13 @@ const Music = () => {
                     </a>
                   </div>
                   <div className="flex text-xs justify-center gap-1">
-                    <a href="#">Política de Privacidad</a>
+                    <a href="#" className="hover:underline">
+                      Política de Privacidad
+                    </a>
                     <span className="font-extrabold">·</span>
-                    <a href="#">Términos y Condiciones</a>
+                    <a href="#" className="hover:underline">
+                      Términos y Condiciones
+                    </a>
                   </div>
                 </div>
               </div>
