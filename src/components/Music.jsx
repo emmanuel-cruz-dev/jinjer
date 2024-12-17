@@ -65,6 +65,27 @@ const musicList = [
   },
 ];
 
+const ListItem = () => {
+  return (
+    <ol>
+      {musicList.map((item) => (
+        <li key={item.id}>
+          <div className="flex justify-between items-center">
+            <div className="flex gap-4 items-center">
+              {item.id}
+              <div className="text-sm">
+                <p className="font-bold text-base">{item.title}</p>
+                <span className="text-gray-400">Jinjer</span>
+              </div>
+            </div>
+            {item.duration}
+          </div>
+        </li>
+      ))}
+    </ol>
+  );
+};
+
 const Music = () => {
   return (
     <section className="music second-page" id="music">
@@ -80,13 +101,13 @@ const Music = () => {
               Music: Wallflowers
             </h2>
           </div>
-          <article className="w-full p-12 gap-4">
+          <article className="w-full p-12 gap-4 flex flex-col items-center">
             <div className="flex justify-center gap-2">
               <figure className="w-96">
                 <img className="w-full" src={Wallflowers} alt="" />
               </figure>
               <div>
-                <div className="flex flex-col gap-2 bg-gray-800 p-4 rounded-t-lg">
+                <div className="flex flex-col gap-2 bg-gray-700 p-4 rounded-t-lg">
                   <div className="flex gap-2">
                     <img className="w-24 rounded-xl" src={Wallflowers} alt="" />
                     <div className="flex flex-col">
@@ -122,13 +143,19 @@ const Music = () => {
                     </button>
                   </div>
                 </div>
-                <div></div>
+                <div className="bg-gray-900 p-4 rounded-b-lg h-56 overflow-y-scroll">
+                  <ListItem />
+                </div>
               </div>
             </div>
-            <div>
-              <h3>WallFlowers (2021)</h3>
-              <span>Download</span>
-              <span>Stream</span>
+            <div className="flex flex-col justify-center items-center">
+              <h3 className="text-2xl font-bold uppercase">
+                WallFlowers (2021)
+              </h3>
+              <div className="flex gap-4">
+                <span>Download</span>
+                <span>Stream</span>
+              </div>
             </div>
           </article>
         </article>
