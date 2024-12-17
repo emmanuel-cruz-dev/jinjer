@@ -13,12 +13,13 @@ import TShirt10 from "../assets/images/shop-microverse.png";
 import TShirt11 from "../assets/images/shop-retrospection.png";
 import TShirt12 from "../assets/images/shop-fire-skull.png";
 import TShirt13 from "../assets/images/shop-butterfly.png";
-import TShirt14 from "../assets/images/shop-butterfly-roja.png";
-import TShirt15 from "../assets/images/shop-clock-amarilla.png";
-import TShirt16 from "../assets/images/shop-clock-azul.png";
-import TShirt17 from "../assets/images/shop-clock-roja.png";
-import TShirt18 from "../assets/images/shop-fire-skull-roja.png";
-import TShirt19 from "../assets/images/shop-logo-azul.png";
+import TShirt14 from "../assets/images/shop-logo.png";
+import TShirt15 from "../assets/images/shop-butterfly-roja.png";
+import TShirt16 from "../assets/images/shop-clock-amarilla.png";
+import TShirt17 from "../assets/images/shop-clock-azul.png";
+import TShirt18 from "../assets/images/shop-clock-roja.png";
+import TShirt19 from "../assets/images/shop-fire-skull-roja.png";
+import TShirt20 from "../assets/images/shop-logo-azul.png";
 
 import Background from "../assets/images/gradient.png";
 
@@ -144,24 +145,32 @@ const products2 = [
   {
     id: 14,
     img: TShirt14,
-    name: "Butterfly Roja",
+    name: "Logo",
     rating: 4,
     price: 25.99,
     sale: true,
-    color: "red",
   },
   {
     id: 15,
     img: TShirt15,
-    name: "Clock Amarilla",
-    rating: 5,
+    name: "Butterfly Roja",
+    rating: 3,
     price: 15.99,
     sale: true,
-    color: "yellow",
+    color: "red",
   },
   {
     id: 16,
     img: TShirt16,
+    name: "Clock Amarilla",
+    rating: 3,
+    price: 30.99,
+    sale: false,
+    color: "yellow",
+  },
+  {
+    id: 17,
+    img: TShirt17,
     name: "Clock Azul",
     rating: 3,
     price: 30.99,
@@ -169,18 +178,9 @@ const products2 = [
     color: "blue",
   },
   {
-    id: 17,
-    img: TShirt17,
-    name: "Clock Roja",
-    rating: 3,
-    price: 30.99,
-    sale: false,
-    color: "red",
-  },
-  {
     id: 18,
     img: TShirt18,
-    name: "Fire Skull Roja",
+    name: "Clock Roja",
     rating: 3,
     price: 30.99,
     sale: false,
@@ -189,6 +189,15 @@ const products2 = [
   {
     id: 19,
     img: TShirt19,
+    name: "Fire Skull Roja",
+    rating: 5,
+    price: 20.99,
+    sale: true,
+    color: "red",
+  },
+  {
+    id: 20,
+    img: TShirt20,
     name: "Logo Azul",
     rating: 5,
     price: 20.99,
@@ -275,6 +284,20 @@ const Shop = () => {
     }
   };
 
+  const handleArr = (num) => {
+    const scrollOptions = {
+      top: 0,
+      behavior: "smooth",
+    };
+
+    window.scrollTo(scrollOptions);
+    if (num === 1) {
+      setProducts(products1);
+    } else {
+      setProducts(products2);
+    }
+  };
+
   const TShirtCard = ({ id, name, rating, price, img, sale }) => {
     const discount = (price * 1.5).toFixed(2);
     const totalStars = 5;
@@ -333,8 +356,9 @@ const Shop = () => {
             <div className="flex flex-col justify-center items-center gap-2 w-full mx-auto lg:w-5/6">
               <div className="flex justify-between gap-4 w-full">
                 <p className="text-sm text-gray-400">
-                  Showing {products === products1 ? "1 - 12" : "13 - 20"} of{" "}
-                  {productsTotal} results
+                  Showing{" "}
+                  {products === products1 ? "1 - 12" : `13 - ${productsTotal}`}{" "}
+                  of {productsTotal} results
                 </p>
                 <select
                   name="dropdown"
@@ -377,7 +401,7 @@ const Shop = () => {
                   </a>
                 )}
                 <a
-                  onClick={handleProducts}
+                  onClick={() => handleArr(1)}
                   className={`${
                     products === products1 ? "bg-gray-400" : ""
                   } w-10 h-10 flex justify-center items-center hover:bg-gray-400 cursor-pointer`}
@@ -385,7 +409,7 @@ const Shop = () => {
                   1
                 </a>
                 <a
-                  onClick={handleProducts}
+                  onClick={() => handleArr(2)}
                   className={`${
                     products === products2 ? "bg-gray-400" : ""
                   } w-10 h-10 flex justify-center items-center hover:bg-gray-400 cursor-pointer`}
