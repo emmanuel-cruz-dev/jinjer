@@ -176,15 +176,15 @@ const Music = () => {
                 <div className="bg-gray-800 p-2 rounded-b-lg overflow-y-scroll">
                   <ListItem />
                 </div>
-                <div className="absolute bg-accent w-full h-full flex flex-col justify-between items-center p-4 text-center">
+                <div className="absolute bg-gray-900 w-full h-full flex flex-col justify-between items-center p-4 text-center">
                   <div className="flex justify-end w-full">
-                    <span className="material-symbols-outlined text-3xl font-bold cursor-pointer">
+                    <span className="material-symbols-outlined text-3xl font-semibold cursor-pointer hover:scale-105 transition-all duration-300">
                       close
                     </span>
                   </div>
                   <div className="flex flex-col gap-2">
                     <a href="#" className="flex items-center gap-2">
-                      <FaSpotify /> Reproducir en Spotify
+                      <FaSpotify size={20} /> Reproducir en Spotify
                     </a>
                     <a href="#" className="flex items-center gap-2">
                       <span className="material-symbols-outlined text-xl">
@@ -199,9 +199,9 @@ const Music = () => {
                       Copiar enlace
                     </a>
                   </div>
-                  <div className="flex text-xs justify-center">
+                  <div className="flex text-xs justify-center gap-1">
                     <a href="#">Política de Privacidad</a>
-                    <span>·</span>
+                    <span className="font-extrabold">·</span>
                     <a href="#">Términos y Condiciones</a>
                   </div>
                 </div>
