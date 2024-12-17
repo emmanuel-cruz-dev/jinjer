@@ -71,7 +71,7 @@ const ListItem = () => {
     <ol>
       {musicList.map((item) => (
         <li
-          className="music__item-list text-sm p-1 px-2 hover:bg-accent/70 rounded-md cursor-pointer"
+          className="music__item-list text-sm p-1 px-4 hover:bg-gray-900 rounded-md cursor-pointer"
           key={item.id}
         >
           <div className="flex justify-between items-center gap-4">
@@ -114,13 +114,13 @@ const Music = () => {
           </div>
           <article className="w-full p-12 gap-8 flex flex-col items-center">
             <div className="flex justify-center gap-2">
-              <figure className="w-96">
+              <figure className="w-96 hidden lg:block">
                 <img className="w-full" src={Wallflowers} alt="" />
               </figure>
               <div className="h-96 flex flex-col">
                 <div className="flex flex-col gap-2 bg-gray-600 p-4 rounded-t-lg">
                   <div className="flex gap-2 items-center relative">
-                    <a href="#" className="text-3xl absolute top-0 right-0">
+                    <a href="#" className="text-2xl absolute top-0 right-0">
                       <FaSpotify />
                     </a>
                     <img className="w-24 rounded-xl" src={Wallflowers} alt="" />
@@ -166,13 +166,13 @@ const Music = () => {
                     </button>
                   </div>
                 </div>
-                <div className="bg-gray-800 p-4 rounded-b-lg overflow-y-scroll">
+                <div className="bg-gray-800 p-2 rounded-b-lg overflow-y-scroll">
                   <ListItem />
                 </div>
               </div>
             </div>
             <div className="flex flex-col justify-center items-center gap-3">
-              <h3 className="text-4xl font-bold uppercase">
+              <h3 className="text-4xl font-bold uppercase text-center">
                 WallFlowers (2021)
               </h3>
               <div className="flex gap-6 uppercase text-xl">
@@ -186,7 +186,7 @@ const Music = () => {
                       arrow_right
                     </span>
                   </a>
-                  <ul className="absolute top-10 w-40 bg-white text-black p-4 px-8 rounded-md normal-case text-center text-base flex-col gap-2 hidden">
+                  <ul className="absolute top-10 w-40 bg-white text-black p-4 px-8 rounded-sm normal-case text-center text-base flex-col gap-2 hidden">
                     <li>
                       <a href="#">Amazon</a>
                     </li>
@@ -208,7 +208,7 @@ const Music = () => {
                       arrow_right
                     </span>
                   </a>
-                  <ul className="absolute top-10 w-40 bg-white text-black p-4 px-8 rounded-md normal-case text-center text-base flex-col gap-2 hidden">
+                  <ul className="absolute top-10 w-40 bg-white text-black p-4 px-8 rounded-sm normal-case text-center text-base flex-col gap-2 hidden">
                     <li>
                       <a href="#">Spotify</a>
                     </li>
