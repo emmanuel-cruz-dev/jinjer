@@ -18,6 +18,7 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import NewsBlog from "./components/NewsBlog";
 import TourBlog from "./components/TourBlog";
 import Shop from "./components/Shop";
+import Music from "./components/Music";
 
 const Home = () => {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path="/newsblog/:id" element={<NewsBlog />} />
         <Route path="/tour/:id" element={<TourBlog />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/music" element={<Music />} />
         <Route path="*" element={<Home />} />
       </Routes>
 
