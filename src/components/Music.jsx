@@ -6,6 +6,7 @@ import {
   FaForwardStep,
   FaBackwardStep,
   FaSpotify,
+  FaCirclePlus,
 } from "react-icons/fa6";
 
 const musicList = [
@@ -117,7 +118,7 @@ const Music = () => {
               <figure className="w-96 hidden lg:block">
                 <img className="w-full" src={Wallflowers} alt="" />
               </figure>
-              <div className="h-96 flex flex-col">
+              <div className="h-96 flex flex-col relative rounded-lg overflow-hidden">
                 <div className="flex flex-col gap-2 bg-gray-600 p-4 rounded-t-lg">
                   <div className="flex gap-2 items-center relative">
                     <a href="#" className="text-2xl absolute top-0 right-0">
@@ -146,21 +147,27 @@ const Music = () => {
                   </div>
                   <div className="music-player__controls flex justify-between items-center">
                     <div className="flex items-center">
-                      <button>
+                      <button className="cursor-not-allowed hover:focus:outline-none border-none opacity-50 text-xl">
                         <FaBackwardStep />
                       </button>
                       <div className="music-player__progress-bar">
-                        --------------
+                        -------------
                       </div>
-                      <button>
+                      <button className="cursor-not-allowed hover:focus:outline-none border-none opacity-50 text-xl">
                         <FaForwardStep />
                       </button>
                     </div>
                     <span>00:00</span>
-                    <button className="music-player__more flex items-center">
+                    <button
+                      className="music-player__more flex items-center border-none"
+                      title="More"
+                    >
                       <span class="material-symbols-outlined">more_horiz</span>
                     </button>
-                    <button className="rounded-full bg-white p-2 text-gray-600 w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300">
+                    <button
+                      className="rounded-full bg-white p-2 text-gray-600 w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300"
+                      title="Play"
+                    >
                       {/* <FaPause /> */}
                       <FaPlay />
                     </button>
@@ -168,6 +175,35 @@ const Music = () => {
                 </div>
                 <div className="bg-gray-800 p-2 rounded-b-lg overflow-y-scroll">
                   <ListItem />
+                </div>
+                <div className="absolute bg-accent w-full h-full flex flex-col justify-between items-center p-4 text-center">
+                  <div className="flex justify-end w-full">
+                    <span className="material-symbols-outlined text-3xl font-bold cursor-pointer">
+                      close
+                    </span>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <a href="#" className="flex items-center gap-2">
+                      <FaSpotify /> Reproducir en Spotify
+                    </a>
+                    <a href="#" className="flex items-center gap-2">
+                      <span className="material-symbols-outlined text-xl">
+                        add_circle
+                      </span>
+                      Guardar en Spotify
+                    </a>
+                    <a href="#" className="flex items-center gap-2">
+                      <span className="material-symbols-outlined text-xl">
+                        share
+                      </span>
+                      Copiar enlace
+                    </a>
+                  </div>
+                  <div className="flex text-xs justify-center">
+                    <a href="#">Política de Privacidad</a>
+                    <span>·</span>
+                    <a href="#">Términos y Condiciones</a>
+                  </div>
                 </div>
               </div>
             </div>
