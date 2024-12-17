@@ -85,11 +85,11 @@ const ListItem = () => {
                 </span>
               </div>
               <div>
-                <p className="font-semibold text-base">{item.title}</p>
-                <span className="text-gray-400 text-[14px]">Jinjer</span>
+                <p className="font-medium text-sm">{item.title}</p>
+                <span className="text-gray-400 text-[13px]">Jinjer</span>
               </div>
             </div>
-            {item.duration}
+            <span className="text-gray-400">{item.duration}</span>
           </div>
         </li>
       ))}
@@ -120,14 +120,23 @@ const Music = () => {
               <div className="h-96 flex flex-col">
                 <div className="flex flex-col gap-2 bg-gray-600 p-4 rounded-t-lg">
                   <div className="flex gap-2 items-center relative">
-                    <span className="text-4xl absolute top-0 right-0">
+                    <a href="#" className="text-3xl absolute top-0 right-0">
                       <FaSpotify />
-                    </span>
+                    </a>
                     <img className="w-24 rounded-xl" src={Wallflowers} alt="" />
                     <div className="flex flex-col gap-1">
-                      <h4>Wallflowers</h4>
-                      <span>Jinjer</span>
-                      <p className="flex items-center gap-1 hover:scale-105 cursor-pointer transition-all duration-300">
+                      <div>
+                        <a href="#" className="hover:underline">
+                          <h4 className="font-bold text-lg">Wallflowers</h4>
+                        </a>
+                        <a
+                          href="#"
+                          className="text-gray-400 text-sm hover:underline"
+                        >
+                          Jinjer
+                        </a>
+                      </div>
+                      <p className="flex items-center text-sm text-gray-300 gap-1 hover:scale-105 cursor-pointer transition-all duration-300">
                         <span className="material-symbols-outlined">
                           add_circle
                         </span>
@@ -151,7 +160,7 @@ const Music = () => {
                     <button className="music-player__more flex items-center">
                       <span class="material-symbols-outlined">more_horiz</span>
                     </button>
-                    <button>
+                    <button className="rounded-full bg-white p-2 text-gray-600 w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300">
                       {/* <FaPause /> */}
                       <FaPlay />
                     </button>
@@ -167,7 +176,20 @@ const Music = () => {
                 WallFlowers (2021)
               </h3>
               <div className="flex gap-6 uppercase text-xl">
-                <a href="#">Download</a>
+                <div className="flex flex-col items-center gap-2 relative">
+                  <a href="#">Download</a>
+                  <ul className="absolute top-10 w-40 bg-white text-black p-4 px-8 rounded-md normal-case text-center text-base flex flex-col gap-2">
+                    <li>
+                      <a href="#">Amazon</a>
+                    </li>
+                    <li>
+                      <a href="#">Bandcamp</a>
+                    </li>
+                    <li>
+                      <a href="#">Google Play</a>
+                    </li>
+                  </ul>
+                </div>
                 <a href="#">Stream</a>
               </div>
             </div>
