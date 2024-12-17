@@ -12,6 +12,14 @@ import TShirt9 from "../assets/images/shop-clock.png";
 import TShirt10 from "../assets/images/shop-microverse.png";
 import TShirt11 from "../assets/images/shop-retrospection.png";
 import TShirt12 from "../assets/images/shop-fire-skull.png";
+import TShirt13 from "../assets/images/shop-butterfly.png";
+import TShirt14 from "../assets/images/shop-butterfly-roja.png";
+import TShirt15 from "../assets/images/shop-clock-amarilla.png";
+import TShirt16 from "../assets/images/shop-clock-azul.png";
+import TShirt17 from "../assets/images/shop-clock-roja.png";
+import TShirt18 from "../assets/images/shop-fire-skull-roja.png";
+import TShirt19 from "../assets/images/shop-logo-azul.png";
+
 import Background from "../assets/images/gradient.png";
 
 const products1 = [
@@ -127,10 +135,10 @@ const products2 = [
   },
   {
     id: 13,
-    img: TShirt9,
-    name: "Clockwork",
+    img: TShirt13,
+    name: "Butterfly",
     rating: 4,
-    price: 20.99,
+    price: 18.99,
     sale: true,
   },
   {
