@@ -5,6 +5,7 @@ import {
   FaPause,
   FaForwardStep,
   FaBackwardStep,
+  FaSpotify,
 } from "react-icons/fa6";
 
 const musicList = [
@@ -69,13 +70,23 @@ const ListItem = () => {
   return (
     <ol>
       {musicList.map((item) => (
-        <li key={item.id}>
-          <div className="flex justify-between items-center">
+        <li
+          className="music__item-list text-sm p-1 px-2 hover:bg-accent/70 rounded-md cursor-pointer"
+          key={item.id}
+        >
+          <div className="flex justify-between items-center gap-4">
             <div className="flex gap-4 items-center">
-              {item.id}
-              <div className="text-sm">
-                <p className="font-bold text-base">{item.title}</p>
-                <span className="text-gray-400">Jinjer</span>
+              <div className="music__number__container w-3 relative text-center">
+                <span className="music__number__song text-gray-400">
+                  {item.id}
+                </span>
+                <span className="music__number__play-icon absolute top-0 -left-1 text-white text-xl opacity-0">
+                  <FaPlay />
+                </span>
+              </div>
+              <div>
+                <p className="font-semibold text-base">{item.title}</p>
+                <span className="text-gray-400 text-[14px]">Jinjer</span>
               </div>
             </div>
             {item.duration}
@@ -101,19 +112,22 @@ const Music = () => {
               Music: Wallflowers
             </h2>
           </div>
-          <article className="w-full p-12 gap-4 flex flex-col items-center">
+          <article className="w-full p-12 gap-8 flex flex-col items-center">
             <div className="flex justify-center gap-2">
               <figure className="w-96">
                 <img className="w-full" src={Wallflowers} alt="" />
               </figure>
-              <div>
-                <div className="flex flex-col gap-2 bg-gray-700 p-4 rounded-t-lg">
-                  <div className="flex gap-2">
+              <div className="h-96 flex flex-col">
+                <div className="flex flex-col gap-2 bg-gray-600 p-4 rounded-t-lg">
+                  <div className="flex gap-2 items-center relative">
+                    <span className="text-4xl absolute top-0 right-0">
+                      <FaSpotify />
+                    </span>
                     <img className="w-24 rounded-xl" src={Wallflowers} alt="" />
-                    <div className="flex flex-col">
+                    <div className="flex flex-col gap-1">
                       <h4>Wallflowers</h4>
                       <span>Jinjer</span>
-                      <p className="flex items-center gap-1">
+                      <p className="flex items-center gap-1 hover:scale-105 cursor-pointer transition-all duration-300">
                         <span className="material-symbols-outlined">
                           add_circle
                         </span>
@@ -143,18 +157,18 @@ const Music = () => {
                     </button>
                   </div>
                 </div>
-                <div className="bg-gray-900 p-4 rounded-b-lg h-56 overflow-y-scroll">
+                <div className="bg-gray-800 p-4 rounded-b-lg overflow-y-scroll">
                   <ListItem />
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center items-center">
-              <h3 className="text-2xl font-bold uppercase">
+            <div className="flex flex-col justify-center items-center gap-3">
+              <h3 className="text-4xl font-bold uppercase">
                 WallFlowers (2021)
               </h3>
-              <div className="flex gap-4">
-                <span>Download</span>
-                <span>Stream</span>
+              <div className="flex gap-6 uppercase text-xl">
+                <a href="#">Download</a>
+                <a href="#">Stream</a>
               </div>
             </div>
           </article>

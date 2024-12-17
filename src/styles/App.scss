@@ -729,3 +729,17 @@ img {
 }
 
 // Fin: ContactForm --- //
+
+// Inicio: Music Page --- //
+
+.music__item-list:hover {
+  .music__number__song {
+    opacity: 0;
+  }
+
+  .music__number__play-icon {
+    opacity: 1;
+  }
+}
+
+// Fin: Music Page --- //
