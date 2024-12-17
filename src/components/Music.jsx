@@ -176,9 +176,17 @@ const Music = () => {
                 WallFlowers (2021)
               </h3>
               <div className="flex gap-6 uppercase text-xl">
-                <div className="flex flex-col items-center gap-2 relative">
-                  <a href="#">Download</a>
-                  <ul className="absolute top-10 w-40 bg-white text-black p-4 px-8 rounded-md normal-case text-center text-base flex flex-col gap-2">
+                <div className="music__links__download-stream flex flex-col items-center gap-2 relative py-2">
+                  <a
+                    href="#"
+                    className="music__links__download-stream__anchor flex items-center"
+                  >
+                    Download
+                    <span className="material-symbols-outlined">
+                      arrow_right
+                    </span>
+                  </a>
+                  <ul className="absolute top-10 w-40 bg-white text-black p-4 px-8 rounded-md normal-case text-center text-base flex-col gap-2 hidden">
                     <li>
                       <a href="#">Amazon</a>
                     </li>
@@ -190,7 +198,28 @@ const Music = () => {
                     </li>
                   </ul>
                 </div>
-                <a href="#">Stream</a>
+                <div className="music__links__download-stream flex flex-col items-center gap-2 relative py-2">
+                  <a
+                    href="#"
+                    className="music__links__download-stream__anchor flex items-center"
+                  >
+                    Stream
+                    <span className="material-symbols-outlined">
+                      arrow_right
+                    </span>
+                  </a>
+                  <ul className="absolute top-10 w-40 bg-white text-black p-4 px-8 rounded-md normal-case text-center text-base flex-col gap-2 hidden">
+                    <li>
+                      <a href="#">Spotify</a>
+                    </li>
+                    <li>
+                      <a href="#">Apple Music</a>
+                    </li>
+                    <li>
+                      <a href="#">Deezer</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </article>

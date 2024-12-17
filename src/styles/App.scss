@@ -742,4 +742,22 @@ img {
   }
 }
 
+.music__links__download-stream__anchor {
+  span {
+    transition: transform 0.3s ease;
+  }
+}
+
+.music__links__download-stream:hover {
+  .music__links__download-stream__anchor {
+    span {
+      transform: rotate(90deg);
+    }
+  }
+
+  ul {
+    display: flex;
+  }
+}
+
 // Fin: Music Page --- //
