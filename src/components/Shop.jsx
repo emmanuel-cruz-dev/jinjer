@@ -237,22 +237,22 @@ const Shop = () => {
         break;
       case "red":
         setProducts(
-          [...products1].filter((product) => product.color === "red")
+          [...products2].filter((product) => product.color === "red")
         );
         break;
       case "blue":
         setProducts(
-          [...products1].filter((product) => product.color === "blue")
+          [...products2].filter((product) => product.color === "blue")
         );
         break;
       case "green":
         setProducts(
-          [...products1].filter((product) => product.color === "green")
+          [...products2].filter((product) => product.color === "green")
         );
         break;
       case "yellow":
         setProducts(
-          [...products1].filter((product) => product.color === "yellow")
+          [...products2].filter((product) => product.color === "yellow")
         );
         break;
       default:
@@ -419,22 +419,16 @@ const Shop = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="#">Gray</a>
-                      <span>(3)</span>
-                    </li>
-                    <li>
-                      <a href="#">Green</a>
-                      <span>(4)</span>
-                    </li>
-                    <li>
                       <a href="#" onClick={() => handleColor("red")}>
                         Red
-                        <span>(5)</span>
+                        <span>(3)</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">Yellow</a>
-                      <span>(6)</span>
+                      <a href="#" onClick={() => handleColor("yellow")}>
+                        Yellow
+                      </a>
+                      <span>(1)</span>
                     </li>
                   </ul>
                 </div>
