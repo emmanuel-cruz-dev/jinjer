@@ -75,6 +75,7 @@ const ListItem = () => {
         <li
           className="music__item-list text-sm p-1 px-4 hover:bg-gray-900 rounded-md cursor-pointer"
           key={item.id}
+          title="Play Song"
         >
           <div className="flex justify-between items-center gap-4">
             <div className="flex gap-4 items-center">
@@ -126,7 +127,7 @@ const Music = () => {
                 <img className="w-full" src={Wallflowers} alt="" />
               </figure>
               <div className="h-96 flex flex-col relative rounded-lg overflow-hidden">
-                <div className="flex flex-col gap-2 bg-gray-600 p-4 rounded-t-lg">
+                <div className="flex flex-col gap-2 bg-gray-600 p-4">
                   <div className="flex gap-2 items-center relative">
                     <a href="#" className="text-2xl absolute top-0 right-0">
                       <FaSpotify />
@@ -181,7 +182,7 @@ const Music = () => {
                     </button>
                   </div>
                 </div>
-                <div className="bg-gray-800 p-2 rounded-b-lg overflow-y-scroll">
+                <div className="bg-gray-800 p-2 overflow-y-scroll">
                   <ListItem />
                 </div>
                 <div
@@ -192,35 +193,36 @@ const Music = () => {
                   <div className="flex justify-end w-full">
                     <span
                       onClick={handleMenuVisible}
+                      title="Close"
                       className={`material-symbols-outlined text-3xl font-semibold cursor-pointer hover:scale-105 transition-all duration-300`}
                     >
                       close
                     </span>
                   </div>
-                  <div className="music-player__actions-menu flex flex-col gap-2">
+                  <div className="music-player__actions-menu flex flex-col gap-2 mb-4">
                     <a href="#">
-                      <FaSpotify size={20} /> Reproducir en Spotify
+                      <FaSpotify size={20} /> Play on Spotify
                     </a>
                     <a href="#">
                       <span className="material-symbols-outlined text-xl">
                         add_circle
                       </span>
-                      Guardar en Spotify
+                      Save on Spotify
                     </a>
                     <a href="#">
                       <span className="material-symbols-outlined text-xl">
                         share
                       </span>
-                      Copiar enlace
+                      Copy link
                     </a>
                   </div>
-                  <div className="flex text-xs justify-center gap-1">
+                  <div className="flex text-sm justify-center gap-1">
                     <a href="#" className="hover:underline">
-                      Política de Privacidad
+                      Privacy Policy
                     </a>
                     <span className="font-extrabold">·</span>
                     <a href="#" className="hover:underline">
-                      Términos y Condiciones
+                      Terms and Conditions
                     </a>
                   </div>
                 </div>
