@@ -31,7 +31,7 @@ const musicList = [
   {
     id: 2,
     title: "Colossus",
-    duration: "03:36",
+    duration: "03:37",
     src: `${Song2}`,
   },
   {
@@ -124,6 +124,36 @@ const ListItem = () => {
 
 const Music = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [currentTrack, setCurrentTrack] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+
+  const handlePlayPause = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleNext = () => {
+    setCurrentTrack((prevTrack) => (prevTrack + 1) % musicList.length);
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrack((prevTrack) =>
+      prevTrack === 0 ? musicList.length - 1 : prevTrack - 1
+    );
+  };
+
+  useEffect(() => {
+    if (isPlaying) {
+      audioRef.current.play();
+    }
+  }, [currentTrack]);
+
+  const currentSong = musicList[currentTrack];
 
   const handleMenuVisible = () => {
     setIsVisible(!isVisible);
@@ -177,13 +207,19 @@ const Music = () => {
                   </div>
                   <div className="music-player__controls flex justify-between items-center">
                     <div className="flex items-center">
-                      <button className="cursor-not-allowed hover:focus:outline-none border-none opacity-50 text-xl">
+                      <button
+                        onClick={handlePrevious}
+                        className="cursor-not-allowed hover:focus:outline-none border-none opacity-50 text-xl"
+                      >
                         <FaBackwardStep />
                       </button>
                       <div className="music-player__progress-bar">
                         -------------
                       </div>
-                      <button className="cursor-not-allowed hover:focus:outline-none border-none opacity-50 text-xl">
+                      <button
+                        onClick={handleNext}
+                        className="cursor-not-allowed hover:focus:outline-none border-none opacity-50 text-xl"
+                      >
                         <FaForwardStep />
                       </button>
                     </div>
@@ -196,12 +232,19 @@ const Music = () => {
                       <span class="material-symbols-outlined">more_horiz</span>
                     </button>
                     <button
+                      onClick={handlePlayPause}
                       className="rounded-full bg-white p-2 text-gray-600 w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300"
                       title="Play"
                     >
                       {/* <FaPause /> */}
                       <FaPlay />
                     </button>
+                    {/* Audio elemento (oculto) */}
+                    <audio
+                      ref={audioRef}
+                      src={currentSong.src}
+                      onEnded={handleNext}
+                    />
                   </div>
                 </div>
                 <div className="bg-gray-800 p-2 overflow-y-scroll">

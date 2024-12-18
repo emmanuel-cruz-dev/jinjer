@@ -53,7 +53,7 @@ function ScrollToTopButton() {
         </span>
       </button>
       <div className={`${isVisible ? "opacity-100" : "opacity-0"}`}>
-        <MusicPlayer />
+        {/* <MusicPlayer /> */}
       </div>
     </>
   );
