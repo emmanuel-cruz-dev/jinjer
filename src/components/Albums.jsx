@@ -11,8 +11,20 @@ const Album = ({ cover, title, year }) => {
   return (
     <a href="#" className="album__container">
       <div className="album__images__container">
-        <img className="album__cover" src={cover} alt="" />
-        <img className="album__disc" src={VinylDisc01} alt="" />
+        <img
+          className="album__cover"
+          width="500"
+          height="500"
+          src={cover}
+          alt={`Portada del álbum ${title}`}
+        />
+        <img
+          className="album__disc"
+          width="500"
+          height="500"
+          src={VinylDisc01}
+          alt="Disco de vinilo"
+        />
       </div>
       <h3 className="album__title">{title}</h3>
       <span className="album__year">{year}</span>

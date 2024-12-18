@@ -7,10 +7,10 @@ import {
 } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 
-import Song1 from "../assets/songs/song1.m4a";
-import Song2 from "../assets/songs/song2.m4a";
-import Song3 from "../assets/songs/song3.m4a";
-import Song4 from "../assets/songs/song4.m4a";
+import Song1 from "../assets/songs/song1.mp3";
+import Song2 from "../assets/songs/song2.mp3";
+import Song3 from "../assets/songs/song3.mp3";
+import Song4 from "../assets/songs/song4.mp3";
 
 import CoverAlbum from "../assets/images/duelep.webp";
 
@@ -87,6 +87,8 @@ const MusicPlayer = () => {
               alt="Portada del álbum"
               title={t("musicPlayer.albumCover")}
               className="cover rounded-sm"
+              width="400"
+              height="400"
             />
           </div>
 

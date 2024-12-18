@@ -104,7 +104,9 @@ const Carousel = () => {
                 <img
                   className="object-cover scale-110 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
                   src={article.image}
-                  alt=""
+                  width="500"
+                  height="325"
+                  alt={`Imagen del video ${article.title}`}
                 />
               </figure>
               <time className="text-sm uppercase" dateTime={article.date}>

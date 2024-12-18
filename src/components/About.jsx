@@ -13,9 +13,22 @@ const MemberArticle = ({ image, icon, name, instrument }) => {
     <a href="#" className="about__members__article">
       <div className="about__members__image-container">
         <figure className="about__members__logo-container">
-          <img className="about__members__logo-image" src={icon} alt="" />
+          <img
+            className="about__members__logo-image"
+            width="300"
+            height="300"
+            src={icon}
+            alt="Instrumento musical"
+          />
         </figure>
-        <img className="about__members__image" src={image} alt="" />
+        <img
+          className="about__members__image"
+          width="300"
+          height="300"
+          src={image}
+          alt={`${name}`}
+          title={`${name}`}
+        />
       </div>
       <div className="flex flex-col items-center">
         <h4>{instrument}</h4>
