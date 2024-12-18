@@ -121,12 +121,12 @@ const Music = () => {
               Music: Wallflowers
             </h2>
           </div>
-          <article className="w-full p-12 gap-8 flex flex-col items-center">
+          <article className="w-full py-8 md:p-12 gap-8 flex flex-col items-center">
             <div className="flex justify-center gap-2">
               <figure className="w-96 hidden lg:block">
                 <img className="w-full" src={Wallflowers} alt="" />
               </figure>
-              <div className="h-96 flex flex-col relative rounded-lg overflow-hidden">
+              <div className="w-[22rem] md:w-auto h-96 flex flex-col relative rounded-lg overflow-hidden">
                 <div className="flex flex-col gap-2 bg-gray-600 p-4">
                   <div className="flex gap-2 items-center relative">
                     <a href="#" className="text-2xl absolute top-0 right-0">
