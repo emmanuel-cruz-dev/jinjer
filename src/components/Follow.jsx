@@ -1,15 +1,15 @@
 import { useTranslation } from "react-i18next";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 
-import InstaImg1 from "../assets/images/insta-01.jpg";
-import InstaImg2 from "../assets/images/insta-02.jpg";
-import InstaImg3 from "../assets/images/insta-03.jpg";
-import InstaImg4 from "../assets/images/insta-04.jpg";
-import InstaImg5 from "../assets/images/insta-05.jpg";
-import InstaImg6 from "../assets/images/insta-06.jpg";
-import InstaImg7 from "../assets/images/insta-07.jpg";
-import InstaImg8 from "../assets/images/insta-08.jpg";
-import InstaImg9 from "../assets/images/insta-09.jpg";
+import InstaImg1 from "../assets/images/insta-01.webp";
+import InstaImg2 from "../assets/images/insta-02.webp";
+import InstaImg3 from "../assets/images/insta-03.webp";
+import InstaImg4 from "../assets/images/insta-04.webp";
+import InstaImg5 from "../assets/images/insta-05.webp";
+import InstaImg6 from "../assets/images/insta-06.webp";
+import InstaImg7 from "../assets/images/insta-07.webp";
+import InstaImg8 from "../assets/images/insta-08.webp";
+import InstaImg9 from "../assets/images/insta-09.webp";
 
 import TwitterImg1 from "../assets/images/twitter-01.webp";
 import TwitterImg2 from "../assets/images/twitter-02.webp";
