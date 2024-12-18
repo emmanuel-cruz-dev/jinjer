@@ -3,12 +3,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import CardImg1 from "../assets/images/thumb-gs.jpg";
-import CardImg2 from "../assets/images/thumb-kafka.jpg";
-import CardImg3 from "../assets/images/thumb-rogue.jpg";
-import CardImg4 from "../assets/images/thumb-sd.jpg";
-import CardImg5 from "../assets/images/thumb-fn.jpg";
-import CardImg6 from "../assets/images/thumb-drum.jpg";
+import CardImg1 from "../assets/images/thumb-gs.webp";
+import CardImg2 from "../assets/images/thumb-kafka.webp";
+import CardImg3 from "../assets/images/thumb-rogue.webp";
+import CardImg4 from "../assets/images/thumb-sd.webp";
+import CardImg5 from "../assets/images/thumb-fn.webp";
+import CardImg6 from "../assets/images/thumb-drum.webp";
 
 const articles = [
   {
