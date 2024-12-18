@@ -132,9 +132,8 @@ const Music = () => {
   };
 
   const handleCurrentSong = (num) => {
-    console.log(num);
     setCurrentTrack(num);
-    audioRef.current.play();
+    handlePlayPause();
   };
 
   useEffect(() => {
@@ -254,7 +253,7 @@ const Music = () => {
                       className="music-player__more flex items-center border-none hover:scale-110 transition-all duration-300"
                       title="More"
                     >
-                      <span className="material-symbols-outlined">
+                      <span className="material-symbols-outlined opacity-80 hover:opacity-100">
                         more_horiz
                       </span>
                     </button>

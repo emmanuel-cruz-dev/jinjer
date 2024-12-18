@@ -780,11 +780,26 @@ img {
 }
 
 .music-player__progress-bar {
-  width: 3.8rem;
-  height: 3px;
+  position: relative;
+  width: 3.9rem;
+  height: 4px;
   margin-inline: 4px;
-  background-color: #ffffffb6;
+  background-color: #6f6f6f;
   border-radius: 16px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 16px;
+    background-color: #fff;
+  }
+}
+
+.active-song {
+  background-color: red;
 }
 
 // Fin: Music Page --- //
