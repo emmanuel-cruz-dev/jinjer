@@ -291,7 +291,7 @@ img {
       rgba(0, 0, 0, 1) 100%
     ),
     radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%),
-    url("../assets/images/jinjer-bg1.jpg");
+    url("../assets/images/jinjer-bg1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -308,7 +308,7 @@ img {
         rgba(0, 0, 0, 1) 100%
       ),
       radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%),
-      url("../assets/images/jinjer-bg.jpg");
+      url("../assets/images/jinjer-bg.webp");
   }
 }
 
@@ -710,7 +710,7 @@ img {
 // --- Inicio: NewsBlog --- //
 
 .second-page {
-  background: url("../assets/images/jinjer-bg.jpg");
+  background: url("../assets/images/jinjer-bg.webp");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
