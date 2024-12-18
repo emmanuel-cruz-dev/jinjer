@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
-import AlbumCover01 from "../assets/images/wallflowers.jpg";
-import AlbumCover02 from "../assets/images/melb.jpg";
-import AlbumCover03 from "../assets/images/macro.jpg";
-import AlbumCover04 from "../assets/images/cf.jpg";
-import AlbumCover05 from "../assets/images/koe.jpg";
-import AlbumCover06 from "../assets/images/idb.jpg";
+import AlbumCover01 from "../assets/images/wallflowers.webp";
+import AlbumCover02 from "../assets/images/melb.webp";
+import AlbumCover03 from "../assets/images/macro.webp";
+import AlbumCover04 from "../assets/images/cf.webp";
+import AlbumCover05 from "../assets/images/koe.webp";
+import AlbumCover06 from "../assets/images/idb.webp";
 import VinylDisc01 from "../assets/images/vinyl-disc.png";
 
 const Album = ({ cover, title, year }) => {

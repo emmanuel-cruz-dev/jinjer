@@ -12,7 +12,7 @@ import Song2 from "../assets/songs/song2.m4a";
 import Song3 from "../assets/songs/song3.m4a";
 import Song4 from "../assets/songs/song4.m4a";
 
-import CoverAlbum from "../assets/images/duelep.jpg";
+import CoverAlbum from "../assets/images/duelep.webp";
 
 // Lista de canciones (puedes expandir esto)
 const musicList = [

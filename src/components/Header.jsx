@@ -5,7 +5,7 @@ import LanguageSwitch from "./LanguageSwitch";
 import SocialLinks from "./SocialLinks";
 import Name from "./Name";
 
-import SideAreaImg from "../assets/images/latest-post-02.jpg";
+import SideAreaImg from "../assets/images/latest-post-02.webp";
 
 const Header = () => {
   const navigate = useNavigate();

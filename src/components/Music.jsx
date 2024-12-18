@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import Background from "../assets/images/gradient.png";
-import Wallflowers from "../assets/images/wallflowers.jpg";
+import Wallflowers from "../assets/images/wallflowers.webp";
 import Song1 from "../assets/album/song1.mp3";
 import Song2 from "../assets/album/song2.mp3";
 import Song3 from "../assets/album/song3.mp3";
