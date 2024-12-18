@@ -8,8 +8,10 @@ import AlbumCover06 from "../assets/images/idb.webp";
 import VinylDisc01 from "../assets/images/vinyl-disc.png";
 
 const Album = ({ cover, title, year }) => {
+  const { t } = useTranslation();
+
   return (
-    <a href="#" className="album__container">
+    <a href="#" className="album__container" title={t("albums.listen")}>
       <div className="album__images__container">
         <img
           className="album__cover"

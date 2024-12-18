@@ -11,6 +11,7 @@ const Tour = () => {
         className="table__venue"
         href={`/tour/${id}`}
         onClick={() => goToSection(`/tour/`, `${id}`)}
+        title={t("news.seeDetails")}
       >
         {title}
       </a>

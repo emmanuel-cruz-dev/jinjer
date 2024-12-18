@@ -74,6 +74,7 @@ const resources = {
         titleSpan: "ms",
         description:
           "Discover the collection of albums that capture our evolution and musical essence as a band. Don't miss it!",
+        listen: "Listen to album",
         itunes: "View On Itunes",
       },
       media: {
@@ -220,6 +221,7 @@ const resources = {
         titleSpan: "es",
         description:
           "Descubre la colección de discos que capturan nuestra evolución y esencia musical como banda. ¡No te lo pierdas!",
+        listen: "Escuchar álbum",
         itunes: "Ver en Itunes",
       },
       media: {
