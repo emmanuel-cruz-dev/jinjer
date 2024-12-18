@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Background from "../assets/images/gradient.png";
 import Wallflowers from "../assets/images/wallflowers.jpg";
 import {
@@ -7,7 +7,6 @@ import {
   FaForwardStep,
   FaBackwardStep,
   FaSpotify,
-  FaCirclePlus,
 } from "react-icons/fa6";
 
 const musicList = [
@@ -121,7 +120,7 @@ const Music = () => {
               Music: Wallflowers
             </h2>
           </div>
-          <article className="w-full py-8 md:p-12 gap-8 flex flex-col items-center">
+          <article className="w-full py-8 md:p-12 xl:pt-28 gap-12 flex flex-col items-center">
             <div className="flex justify-center gap-2">
               <figure className="w-96 hidden lg:block">
                 <img className="w-full" src={Wallflowers} alt="" />
@@ -129,7 +128,7 @@ const Music = () => {
               <div className="w-[22rem] md:w-auto h-96 flex flex-col relative rounded-lg overflow-hidden">
                 <div className="flex flex-col gap-2 bg-gray-600 p-4">
                   <div className="flex gap-2 items-center relative">
-                    <a href="#" className="text-2xl absolute top-0 right-0">
+                    <a href="#" className="text-2xl absolute top-1 right-1">
                       <FaSpotify />
                     </a>
                     <img className="w-24 rounded-xl" src={Wallflowers} alt="" />
