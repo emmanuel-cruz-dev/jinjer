@@ -42,7 +42,13 @@ const Anchor = ({ icon, color }) => {
 const PostCards = ({ img, user, message }) => {
   return (
     <div className="flex items-center gap-4">
-      <img className="w-14 md:w-16" src={img} alt="" />
+      <img
+        className="w-14 md:w-16"
+        width="300"
+        height="300"
+        src={img}
+        alt={`Imagen de twitter/X, usuario: ${user}`}
+      />
       <p className="leading-relaxed text-sm md:text-base text-gray-400">
         <span className="font-bold text-gray-300">@{user}</span> {message}
       </p>
@@ -87,15 +93,60 @@ const Follow = () => {
               </span>
             </div>
             <div className="follow__img__grid-container grid grid-cols-3 gap-4">
-              <img src={InstaImg1} alt="" width="300" height="300" />
-              <img src={InstaImg2} alt="" width="300" height="300" />
-              <img src={InstaImg4} alt="" width="300" height="300" />
-              <img src={InstaImg7} alt="" width="300" height="300" />
-              <img src={InstaImg8} alt="" width="300" height="300" />
-              <img src={InstaImg3} alt="" width="300" height="300" />
-              <img src={InstaImg6} alt="" width="300" height="300" />
-              <img src={InstaImg5} alt="" width="300" height="300" />
-              <img src={InstaImg9} alt="" width="300" height="300" />
+              <img
+                src={InstaImg1}
+                alt="Imagen de instagram de Jinjer"
+                width="300"
+                height="300"
+              />
+              <img
+                src={InstaImg2}
+                alt="Imagen de instagram de Jinjer"
+                width="300"
+                height="300"
+              />
+              <img
+                src={InstaImg4}
+                alt="Imagen de instagram de Jinjer"
+                width="300"
+                height="300"
+              />
+              <img
+                src={InstaImg7}
+                alt="Imagen de instagram de Jinjer"
+                width="300"
+                height="300"
+              />
+              <img
+                src={InstaImg8}
+                alt="Imagen de instagram de Jinjer"
+                width="300"
+                height="300"
+              />
+              <img
+                src={InstaImg3}
+                alt="Imagen de instagram de Jinjer"
+                width="300"
+                height="300"
+              />
+              <img
+                src={InstaImg6}
+                alt="Imagen de instagram de Jinjer"
+                width="300"
+                height="300"
+              />
+              <img
+                src={InstaImg5}
+                alt="Imagen de instagram de Jinjer"
+                width="300"
+                height="300"
+              />
+              <img
+                src={InstaImg9}
+                alt="Imagen de instagram de Jinjer"
+                width="300"
+                height="300"
+              />
             </div>
           </div>
           <div className="flex-1 flex flex-col gap-8">

@@ -14,7 +14,13 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-6">
           <div className="flex flex-col items-center gap-4 w-full lg:w-44">
             <figure className="w-48 lg:w-32">
-              <img className="footer__nephews-logo" src={JinjerLogo} alt="" />
+              <img
+                className="footer__nephews-logo"
+                width="300"
+                height="300"
+                src={JinjerLogo}
+                alt="Logo de Jinjer"
+              />
             </figure>
             <div className="text-4xl lg:text-2xl">
               <Name />
@@ -33,8 +39,14 @@ const Footer = () => {
               href="#"
               className="flex gap-4 items-center border-b border-gray-600 pb-4"
             >
-              <figure>
-                <img src={TourPoster} alt="" width={72} />
+              <figure className="w-[4.4rem]">
+                <img
+                  className="w-full"
+                  src={TourPoster}
+                  alt="Poster del tour mundial de Jinjer"
+                  width="300"
+                  height="300"
+                />
               </figure>
               <div className="flex flex-col justify-around h-full">
                 <h4>{t("footer.bandOnTour")}</h4>
@@ -43,8 +55,14 @@ const Footer = () => {
             </a>
 
             <a href="#" className="flex gap-4 items-center">
-              <figure>
-                <img src={CDCover} alt="" width={72} />
+              <figure className="w-[4.4rem]">
+                <img
+                  className="w-full"
+                  src={CDCover}
+                  alt="Portada del álbum Duel"
+                  width="300"
+                  height="300"
+                />
               </figure>
               <div className="flex flex-col justify-around h-full">
                 <h4>{t("footer.review")}</h4>
