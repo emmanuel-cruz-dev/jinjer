@@ -203,11 +203,15 @@ const Music = () => {
               </figure>
               <div className="w-[22rem] md:w-auto h-96 flex flex-col relative rounded-lg overflow-hidden">
                 <div className="flex flex-col gap-2 bg-gray-600 p-4">
-                  <div className="flex gap-2 items-center relative">
+                  <div className="flex gap-3 items-center relative">
                     <a href="#" className="text-2xl absolute top-1 right-1">
                       <FaSpotify />
                     </a>
-                    <img className="w-24 rounded-xl" src={Wallflowers} alt="" />
+                    <img
+                      className="w-[6.8rem] rounded-xl"
+                      src={Wallflowers}
+                      alt=""
+                    />
                     <div className="flex flex-col gap-1">
                       <div>
                         <a href="#" className="hover:underline">
@@ -232,24 +236,19 @@ const Music = () => {
                     <div className="flex items-center">
                       <button
                         onClick={handlePrevious}
-                        className="opacity-80 hover:opacity-100 border-none text-xl"
+                        className="opacity-80 hover:opacity-100 border-none text-xl focus:outline-none"
                       >
                         <FaBackwardStep />
                       </button>
-                      <div className="music-player__progress-bar">
-                        -------------
-                      </div>
+                      <div className="music-player__progress-bar"></div>
                       <button
                         onClick={handleNext}
-                        className="opacity-80 hover:opacity-100 border-none text-xl"
+                        className="opacity-80 hover:opacity-100 border-none text-xl focus:outline-none"
                       >
                         <FaForwardStep />
                       </button>
                     </div>
                     <span>{formatTime(currentTime)}</span>
-                    {/* <div>
-                      <p>Tiempo transcurrido: {formatTime(currentTime)}</p>
-                    </div> */}
                     <button
                       onClick={handleMenuVisible}
                       className="music-player__more flex items-center border-none hover:scale-110 transition-all duration-300"
@@ -261,7 +260,7 @@ const Music = () => {
                     </button>
                     <button
                       onClick={handlePlayPause}
-                      className="rounded-full bg-white p-2 text-gray-600 w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300"
+                      className="rounded-full bg-white p-2 text-gray-600 w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300 focus:outline-none"
                       title="Play"
                     >
                       {isPlaying ? <FaPause /> : <FaPlay />}
