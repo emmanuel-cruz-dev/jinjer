@@ -26,6 +26,8 @@ const resources = {
         title2: "s",
         description:
           "Stay updated with the latest events from our concerts and more. Welcome to the Jinjer World!",
+        readMore: "Read More",
+        seeDetails: "See Details",
       },
       about: {
         title1: "The",
@@ -170,6 +172,8 @@ const resources = {
         title2: "dades",
         description:
           "Mantente al día con los últimos eventos de nuestros conciertos y mucho más. ¡Bienvenido al mundo de Jinjer!",
+        readMore: "Leer Más",
+        seeDetails: "Ver Detalles",
       },
       about: {
         title1: "La",

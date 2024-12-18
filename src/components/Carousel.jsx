@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -57,6 +58,8 @@ const articles = [
 
 const Carousel = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
   const goToSection = (path, sectionId) => {
     navigate(path);
 
@@ -116,6 +119,7 @@ const Carousel = () => {
                 className="flex w-fit"
                 href={`/newsblog/${article.id}`}
                 onClick={() => goToSection(`/newsblog/`, `${article.id}`)}
+                title={t("news.seeDetails")}
               >
                 <h3 className="uppercase font-bold tracking-wide text-lg opacity-80 hover:opacity-100 transition-opacity duration-300 mb-1">
                   {article.title}
@@ -127,8 +131,9 @@ const Carousel = () => {
                 className="w-fit uppercase text-sm font-semibold text-gray-400 hover:underline transition-all duration-300 ease-in-out"
                 href={`/newsblog/${article.id}`}
                 onClick={() => goToSection(`/newsblog/`, `${article.id}`)}
+                title={t("news.seeDetails")}
               >
-                Read more
+                {t("news.readMore")}
               </a>
             </div>
           );
