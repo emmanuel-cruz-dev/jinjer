@@ -90,43 +90,27 @@ const musicList = [
   },
 ];
 
-const ListItem = () => {
-  return (
-    <ol>
-      {musicList.map((item) => (
-        <li
-          className="music__item-list text-sm p-1 px-4 hover:bg-gray-900 rounded-md cursor-pointer"
-          key={item.id}
-          title="Play Song"
-        >
-          <div className="flex justify-between items-center gap-4">
-            <div className="flex gap-4 items-center">
-              <div className="music__number__container w-3 relative text-center">
-                <span className="music__number__song text-gray-400">
-                  {item.id}
-                </span>
-                <span className="music__number__play-icon absolute top-0 -left-1 text-white text-xl opacity-0">
-                  <FaPlay />
-                </span>
-              </div>
-              <div>
-                <p className="font-medium text-sm">{item.title}</p>
-                <span className="text-gray-400 text-[13px]">Jinjer</span>
-              </div>
-            </div>
-            <span className="text-gray-400">{item.duration}</span>
-          </div>
-        </li>
-      ))}
-    </ol>
-  );
-};
-
 const Music = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
+  const [currentTime, setCurrentTime] = useState(0); // Estado para almacenar el tiempo transcurrido
+
+  const formatTime = (seconds) => {
+    // Función para convertir los segundos en formato mm:ss
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${minutes < 10 ? "0" : ""}${minutes}:${
+      remainingSeconds < 10 ? "0" : ""
+    }${remainingSeconds}`;
+  };
+
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      setCurrentTime(audioRef.current.currentTime); // Actualizar el estado con el tiempo actual
+    }
+  };
 
   const handlePlayPause = () => {
     if (isPlaying) {
@@ -147,6 +131,12 @@ const Music = () => {
     );
   };
 
+  const handleCurrentSong = (num) => {
+    console.log(num);
+    setCurrentTrack(num);
+    audioRef.current.play();
+  };
+
   useEffect(() => {
     if (isPlaying) {
       audioRef.current.play();
@@ -157,6 +147,39 @@ const Music = () => {
 
   const handleMenuVisible = () => {
     setIsVisible(!isVisible);
+  };
+
+  const ListItem = () => {
+    return (
+      <ol>
+        {musicList.map((item) => (
+          <li
+            onClick={() => handleCurrentSong(item.id)}
+            className={`music__item-list text-sm p-1 px-4 hover:bg-gray-900 rounded-md cursor-pointer`}
+            key={item.id}
+            title="Play Song"
+          >
+            <div className="flex justify-between items-center gap-4">
+              <div className="flex gap-4 items-center">
+                <div className="music__number__container w-3 relative text-center">
+                  <span className="music__number__song text-gray-400">
+                    {item.id}
+                  </span>
+                  <span className="music__number__play-icon absolute top-0 -left-1 text-white text-xl opacity-0">
+                    {isPlaying ? <FaPause /> : <FaPlay />}
+                  </span>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">{item.title}</p>
+                  <span className="text-gray-400 text-[13px]">Jinjer</span>
+                </div>
+              </div>
+              <span className="text-gray-400">{item.duration}</span>
+            </div>
+          </li>
+        ))}
+      </ol>
+    );
   };
 
   return (
@@ -209,7 +232,7 @@ const Music = () => {
                     <div className="flex items-center">
                       <button
                         onClick={handlePrevious}
-                        className="cursor-not-allowed hover:focus:outline-none border-none opacity-50 text-xl"
+                        className="opacity-80 hover:opacity-100 border-none text-xl"
                       >
                         <FaBackwardStep />
                       </button>
@@ -218,32 +241,37 @@ const Music = () => {
                       </div>
                       <button
                         onClick={handleNext}
-                        className="cursor-not-allowed hover:focus:outline-none border-none opacity-50 text-xl"
+                        className="opacity-80 hover:opacity-100 border-none text-xl"
                       >
                         <FaForwardStep />
                       </button>
                     </div>
-                    <span>00:00</span>
+                    <span>{formatTime(currentTime)}</span>
+                    {/* <div>
+                      <p>Tiempo transcurrido: {formatTime(currentTime)}</p>
+                    </div> */}
                     <button
                       onClick={handleMenuVisible}
                       className="music-player__more flex items-center border-none hover:scale-110 transition-all duration-300"
                       title="More"
                     >
-                      <span class="material-symbols-outlined">more_horiz</span>
+                      <span className="material-symbols-outlined">
+                        more_horiz
+                      </span>
                     </button>
                     <button
                       onClick={handlePlayPause}
                       className="rounded-full bg-white p-2 text-gray-600 w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300"
                       title="Play"
                     >
-                      {/* <FaPause /> */}
-                      <FaPlay />
+                      {isPlaying ? <FaPause /> : <FaPlay />}
                     </button>
                     {/* Audio elemento (oculto) */}
                     <audio
                       ref={audioRef}
                       src={currentSong.src}
                       onEnded={handleNext}
+                      onTimeUpdate={handleTimeUpdate}
                     />
                   </div>
                 </div>
