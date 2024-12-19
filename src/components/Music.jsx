@@ -97,6 +97,13 @@ const Music = () => {
   const audioRef = useRef(null);
   const [currentTime, setCurrentTime] = useState(0); // Estado para almacenar el tiempo transcurrido
   const [duration, setDuration] = useState(0); // Estado para almacenar la duración de la canción
+  const [currentSongItem, setCurrentSongItem] = useState(null);
+
+  const playSong = (id) => {
+    setCurrentSongItem(id);
+    currentSongItem === id ? handlePlayPause() : setCurrentTrack(id - 1);
+    console.log(`Reproduciendo canción con ID: ${id}`);
+  };
 
   const formatTime = (seconds) => {
     // Función para convertir los segundos en formato mm:ss
@@ -173,8 +180,11 @@ const Music = () => {
       <ol>
         {musicList.map((item) => (
           <li
-            onClick={() => handleCurrentSong(item.id)}
-            className={`music__item-list text-sm p-1 px-4 hover:bg-gray-900 rounded-md cursor-pointer`}
+            // onClick={() => handleCurrentSong(item.id)}
+            onClick={() => playSong(item.id)}
+            className={`${
+              currentSongItem === item.id ? "bg-accent/80" : ""
+            } music__item-list text-sm p-1 px-4 hover:bg-gray-900 rounded-md cursor-pointer`}
             key={item.id}
             title={isPlaying ? "Pause Song" : "Play Song"}
           >
