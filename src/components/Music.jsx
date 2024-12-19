@@ -96,6 +96,7 @@ const Music = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
   const [currentTime, setCurrentTime] = useState(0); // Estado para almacenar el tiempo transcurrido
+  const [duration, setDuration] = useState(0); // Estado para almacenar la duración de la canción
 
   const formatTime = (seconds) => {
     // Función para convertir los segundos en formato mm:ss
@@ -110,6 +111,25 @@ const Music = () => {
     if (audioRef.current) {
       setCurrentTime(audioRef.current.currentTime); // Actualizar el estado con el tiempo actual
     }
+  };
+
+  const handleLoadedMetadata = () => {
+    if (audioRef.current) {
+      setDuration(audioRef.current.duration); // Actualizar el estado con la duración de la canción
+    }
+  };
+
+  const handleProgressBarChange = (e) => {
+    const newTime = (e.target.value / 100) * duration;
+
+    if (audioRef.current) {
+      audioRef.current.currentTime = newTime;
+      setCurrentTime(newTime);
+    }
+  };
+
+  const calculateProgress = () => {
+    return duration > 0 ? (currentTime / duration) * 100 : 0;
   };
 
   const handlePlayPause = () => {
@@ -160,7 +180,7 @@ const Music = () => {
           >
             <div className="flex justify-between items-center gap-4">
               <div className="flex gap-4 items-center">
-                <div className="music__number__container w-3 relative text-center">
+                <div className="music__number__container flex justify-center relative w-3">
                   <span className="music__number__song text-gray-400">
                     {item.id}
                   </span>
@@ -188,7 +208,9 @@ const Music = () => {
           <img
             className="absolute top-0 left-0 w-full h-24 object-cover bg-accent/60"
             src={Background}
-            alt=""
+            alt="Background gradient"
+            width="300"
+            height="300"
           />
           <div className="w-full px-12 p-8 z-[1]">
             <h2 className="text-3xl font-bold text-white">
@@ -252,7 +274,15 @@ const Music = () => {
                       >
                         <FaBackwardStep />
                       </button>
-                      <div className="music-player__progress-bar"></div>
+                      <div className="w-[4.5rem] flex items-center">
+                        <input
+                          className="progress-bar__input-item"
+                          type="range"
+                          value={calculateProgress()} // Calcular el progreso de la canción en porcentaje
+                          onChange={handleProgressBarChange}
+                          style={{ width: "100%" }}
+                        />
+                      </div>
                       <button
                         onClick={handleNext}
                         className="opacity-80 hover:opacity-100 border-none text-xl focus:outline-none"
@@ -284,6 +314,7 @@ const Music = () => {
                       src={currentSong.src}
                       onEnded={handleNext}
                       onTimeUpdate={handleTimeUpdate}
+                      onLoadedMetadata={handleLoadedMetadata}
                     />
                   </div>
                 </div>
