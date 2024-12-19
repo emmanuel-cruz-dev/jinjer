@@ -17,42 +17,42 @@ const articles = [
     title: "Green Serpent",
     image: CardImg1,
     date: "26.11.2024",
-    description: "New Single Out NOW!",
+    description: "1",
   },
   {
     id: 2,
     title: "Kafka",
     image: CardImg2,
     date: "10.09.2024",
-    description: "Also DUEL PRE-ORDERS!",
+    description: "2",
   },
   {
     id: 3,
     title: "Rogue",
     image: CardImg3,
     date: "10.09.2024",
-    description: "New video OUT NOW!",
+    description: "3",
   },
   {
     id: 4,
     title: "Someone's Daughter",
     image: CardImg4,
     date: "01.08.2024",
-    description: "New video OUT NOW!",
+    description: "3",
   },
   {
     id: 5,
     title: "Jinjer - From Nothing",
     image: CardImg5,
     date: "25.06.2024",
-    description: "Exclusive live tracks included!",
+    description: "4",
   },
   {
     id: 6,
     title: "Jinjer - Drum Playthrough",
     image: CardImg6,
     date: "23.07.2024",
-    description: "Call me a Symbol drum playthrough!",
+    description: "5",
   },
 ];
 
@@ -125,8 +125,10 @@ const Carousel = () => {
                   {article.title}
                 </h3>
               </a>
-              <p className="text-gray-400 mb-3">{article.description}</p>
-
+              {/* <p className="text-gray-400 mb-3">{article.description}</p> */}
+              <p className="text-gray-400 mb-3">
+                {t(`news.text${article.description}`)}
+              </p>
               <a
                 className="w-fit uppercase text-sm font-semibold text-gray-400 hover:underline transition-all duration-300 ease-in-out"
                 href={`/newsblog/${article.id}`}

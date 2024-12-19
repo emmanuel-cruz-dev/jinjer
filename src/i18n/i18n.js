@@ -28,6 +28,11 @@ const resources = {
           "Stay updated with the latest events from our concerts and more. Welcome to the Jinjer World!",
         readMore: "Read More",
         seeDetails: "See Details",
+        text1: "New Single Out NOW!",
+        text2: "Also DUEL PRE-ORDERS",
+        text3: "New video OUT NOW!",
+        text4: "Exclusive live tracks included!",
+        text5: "Call me a Symbol drum playthrough!",
       },
       about: {
         title1: "The",
@@ -175,6 +180,11 @@ const resources = {
           "Mantente al día con los últimos eventos de nuestros conciertos y mucho más. ¡Bienvenido al mundo de Jinjer!",
         readMore: "Leer Más",
         seeDetails: "Ver Detalles",
+        text1: "¡Nuevo Sencillo YA DISPONIBLE!",
+        text2: "También PREVENTA de DUEL",
+        text3: "¡Nuevo video YA DISPONIBLE!",
+        text4: "¡Incluye pistas en vivo exclusivas!",
+        text5: "¡Interpretación de batería de Call me a Symbol!",
       },
       about: {
         title1: "La",
