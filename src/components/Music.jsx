@@ -100,8 +100,9 @@ const Music = () => {
   const [currentSongItem, setCurrentSongItem] = useState(null);
 
   const playSong = (id) => {
+    setCurrentTrack(id - 1);
+    handlePlayPause();
     setCurrentSongItem(id);
-    currentSongItem === id ? handlePlayPause() : setCurrentTrack(id - 1);
     console.log(`Reproduciendo canción con ID: ${id}`);
   };
 
@@ -183,7 +184,7 @@ const Music = () => {
             // onClick={() => handleCurrentSong(item.id)}
             onClick={() => playSong(item.id)}
             className={`${
-              currentSongItem === item.id ? "bg-accent/80" : ""
+              currentSongItem === item.id ? "bg-accent/80 hover:bg-accent" : ""
             } music__item-list text-sm p-1 px-4 hover:bg-gray-900 rounded-md cursor-pointer`}
             key={item.id}
             title={isPlaying ? "Pause Song" : "Play Song"}
