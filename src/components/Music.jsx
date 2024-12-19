@@ -156,7 +156,7 @@ const Music = () => {
             onClick={() => handleCurrentSong(item.id)}
             className={`music__item-list text-sm p-1 px-4 hover:bg-gray-900 rounded-md cursor-pointer`}
             key={item.id}
-            title="Play Song"
+            title={isPlaying ? "Pause Song" : "Play Song"}
           >
             <div className="flex justify-between items-center gap-4">
               <div className="flex gap-4 items-center">
@@ -198,18 +198,30 @@ const Music = () => {
           <article className="w-full py-8 md:p-12 xl:pt-28 gap-12 flex flex-col items-center">
             <div className="flex justify-center gap-2">
               <figure className="w-96 hidden lg:block">
-                <img className="w-full" src={Wallflowers} alt="" />
+                <img
+                  className="w-full"
+                  src={Wallflowers}
+                  alt="Portada del álbum Wallflowers"
+                  width="500"
+                  height="500"
+                />
               </figure>
               <div className="w-[22rem] md:w-auto h-96 flex flex-col relative rounded-lg overflow-hidden">
                 <div className="flex flex-col gap-2 bg-gray-600 p-4">
                   <div className="flex gap-3 items-center relative">
-                    <a href="#" className="text-2xl absolute top-1 right-1">
+                    <a
+                      href="#"
+                      className="text-2xl absolute top-1 right-1"
+                      title="Spotify"
+                    >
                       <FaSpotify />
                     </a>
                     <img
                       className="w-[6.8rem] rounded-xl"
                       src={Wallflowers}
-                      alt=""
+                      alt="Portada del álbum Wallflowers"
+                      width="500"
+                      height="500"
                     />
                     <div className="flex flex-col gap-1">
                       <div>
@@ -227,7 +239,7 @@ const Music = () => {
                         <span className="material-symbols-outlined">
                           add_circle
                         </span>
-                        Guardar en Spotify
+                        Save on Spotify
                       </p>
                     </div>
                   </div>
@@ -236,6 +248,7 @@ const Music = () => {
                       <button
                         onClick={handlePrevious}
                         className="opacity-80 hover:opacity-100 border-none text-xl focus:outline-none"
+                        title="Previous"
                       >
                         <FaBackwardStep />
                       </button>
@@ -243,6 +256,7 @@ const Music = () => {
                       <button
                         onClick={handleNext}
                         className="opacity-80 hover:opacity-100 border-none text-xl focus:outline-none"
+                        title="Next"
                       >
                         <FaForwardStep />
                       </button>
@@ -260,7 +274,7 @@ const Music = () => {
                     <button
                       onClick={handlePlayPause}
                       className="rounded-full bg-white p-2 text-gray-600 w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300 focus:outline-none"
-                      title="Play"
+                      title={isPlaying ? "Pause" : "Play"}
                     >
                       {isPlaying ? <FaPause /> : <FaPlay />}
                     </button>
