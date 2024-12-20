@@ -20,7 +20,6 @@ import {
   FaBackwardStep,
   FaSpotify,
 } from "react-icons/fa6";
-import { use } from "react";
 
 const musicList = [
   {
@@ -198,7 +197,16 @@ const Music = () => {
                     {item.id}
                   </span>
                   <span className="music__number__play-icon absolute top-0 -left-1 text-white text-xl opacity-0">
-                    {currentSongItem === item.id ? <FaPause /> : <FaPlay />}
+                    {/* {currentSongItem === item.id ? <FaPause /> : <FaPlay />} */}
+                    {currentSongItem === item.id ? (
+                      isPlaying ? (
+                        <FaPause />
+                      ) : (
+                        <FaPlay />
+                      )
+                    ) : (
+                      <FaPlay />
+                    )}
                   </span>
                 </div>
                 <div>
@@ -222,13 +230,11 @@ const Music = () => {
             className="absolute top-0 left-0 w-full h-24 object-cover bg-accent/60"
             src={Background}
             alt="Background gradient"
-            width="300"
-            height="300"
+            width="644"
+            height="644"
           />
           <div className="w-full px-12 p-8 z-[1]">
-            <h2 className="text-3xl font-bold text-white">
-              Music: Wallflowers
-            </h2>
+            <h2 className="text-3xl font-bold text-white">Wallflowers</h2>
           </div>
           <article className="w-full py-8 md:p-12 xl:pt-28 gap-12 flex flex-col items-center">
             <div className="flex justify-center gap-2">
@@ -241,7 +247,7 @@ const Music = () => {
                   height="500"
                 />
               </figure>
-              <div className="w-[22rem] md:w-auto h-96 flex flex-col relative rounded-lg overflow-hidden">
+              <div className="w-[22rem] md:w-auto h-[30.5rem] lg:h-96 flex flex-col relative rounded-lg overflow-hidden">
                 <div className="flex flex-col gap-2 bg-gray-600 p-4">
                   <div className="flex gap-3 items-center relative">
                     <a
