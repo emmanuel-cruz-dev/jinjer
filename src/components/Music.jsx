@@ -196,8 +196,8 @@ const Music = ({ id, title, year, image }) => {
             onClick={() => playSong(item.id)}
             className={`${
               currentSongItem === item.id
-                ? "bg-accent/80 hover:bg-accent"
-                : "hover:bg-gray-900"
+                ? `${color1} hover:bg-black/40`
+                : "hover:bg-black/20"
             } music__item-list text-sm p-1 px-4 rounded-md cursor-pointer`}
             key={item.id}
             title={isPlaying ? "Pause Song" : "Play Song"}
@@ -273,7 +273,7 @@ const Music = ({ id, title, year, image }) => {
                       <FaSpotify />
                     </a>
                     <img
-                      className="w-[6.8rem] rounded-xl"
+                      className="w-[6.8rem] rounded-xl shadow-lg shadow-black/40"
                       src={image}
                       alt={`Portada del álbum ${title}`}
                       width="500"
