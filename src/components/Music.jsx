@@ -205,7 +205,7 @@ const Music = ({ id, title, year, image }) => {
             <div className="flex justify-between items-center gap-4">
               <div className="flex gap-4 items-center">
                 <div className="music__number__container flex justify-center relative w-3">
-                  <span className="music__number__song text-gray-400">
+                  <span className="music__number__song opacity-50">
                     {item.id}
                   </span>
                   <span className="music__number__play-icon absolute top-0 -left-1 text-white text-xl opacity-0">
@@ -223,10 +223,10 @@ const Music = ({ id, title, year, image }) => {
                 </div>
                 <div>
                   <p className="font-medium text-sm">{item.title}</p>
-                  <span className="text-gray-400 text-[13px]">Jinjer</span>
+                  <span className="opacity-50 text-[13px]">Jinjer</span>
                 </div>
               </div>
-              <span className="text-gray-400">{item.duration}</span>
+              <span className="opacity-50">{item.duration}</span>
             </div>
           </li>
         ))}
@@ -286,13 +286,13 @@ const Music = ({ id, title, year, image }) => {
                         </a>
                         <a
                           href="#"
-                          className="text-gray-400 text-sm hover:underline"
+                          className="opacity-50 text-sm hover:underline"
                         >
                           Jinjer
                         </a>
                       </div>
-                      <p className="flex items-center text-sm text-gray-300 gap-1 hover:scale-105 cursor-pointer transition-all duration-300">
-                        <span className="material-symbols-outlined">
+                      <p className="flex items-center text-sm opacity-90 gap-1 cursor-pointer hover:opacity-100">
+                        <span className="material-symbols-outlined text-[18px]">
                           add_circle
                         </span>
                         Save on Spotify
