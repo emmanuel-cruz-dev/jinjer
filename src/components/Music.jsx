@@ -358,7 +358,7 @@ const Music = ({ id, title, year, image }) => {
                 <div
                   className={`${
                     isVisible ? "flex" : "hidden"
-                  } absolute bg-gray-900 w-full h-full flex-col justify-between items-center p-4 text-center`}
+                  } absolute ${color1} w-full h-full flex-col justify-between items-center p-4 text-center`}
                 >
                   <div className="flex justify-end w-full">
                     <span
@@ -369,7 +369,9 @@ const Music = ({ id, title, year, image }) => {
                       close
                     </span>
                   </div>
-                  <div className="music-player__actions-menu flex flex-col gap-2 mb-4">
+                  <div
+                    className={`music-player__actions-menu flex flex-col gap-2 mb-4`}
+                  >
                     <a href="#">
                       <FaSpotify size={20} /> Play on Spotify
                     </a>
