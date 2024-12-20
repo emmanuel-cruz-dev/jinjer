@@ -39,7 +39,7 @@ const articles = [
   },
   {
     id: 6,
-    title: "Inhale, Do Not Breathe",
+    title: "Inhale, Don't Breathe",
     year: "2012",
     image: Inhale,
   },

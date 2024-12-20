@@ -34,6 +34,45 @@ const Album = ({ cover, title, year }) => {
   );
 };
 
+const articles = [
+  {
+    id: 1,
+    title: "Wallflowers",
+    year: "2021",
+    image: AlbumCover01,
+  },
+  {
+    id: 2,
+    title: "Alive in Melbourne",
+    year: "2020",
+    image: AlbumCover02,
+  },
+  {
+    id: 3,
+    title: "Macro",
+    year: "2019",
+    image: AlbumCover03,
+  },
+  {
+    id: 4,
+    title: "Cloud Factory",
+    year: "2018",
+    image: AlbumCover04,
+  },
+  {
+    id: 5,
+    title: "King of Everything",
+    year: "2016",
+    image: AlbumCover05,
+  },
+  {
+    id: 6,
+    title: "Inhale, Don't Breathe",
+    year: "2012",
+    image: AlbumCover06,
+  },
+];
+
 const Albums = () => {
   const { t } = useTranslation();
 
@@ -51,16 +90,14 @@ const Albums = () => {
           <p className="text-lg">{t("albums.description")}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-40 gap-y-12 w-full md:w-5/6">
-          <Album cover={AlbumCover01} title="Wallflowers" year="2021" />
-          <Album cover={AlbumCover02} title="Alive in Melbourne" year="2020" />
-          <Album cover={AlbumCover03} title="Macro" year="2019" />
-          <Album cover={AlbumCover04} title="Cloud Factory" year="2018" />
-          <Album cover={AlbumCover05} title="King of Everything" year="2016" />
-          <Album
-            cover={AlbumCover06}
-            title="Inhale, Do not Breathe"
-            year="2012"
-          />
+          {articles.map((article) => (
+            <Album
+              key={article.id}
+              cover={article.image}
+              title={article.title}
+              year={article.year}
+            />
+          ))}
         </div>
         <a href="#" className="red__btn">
           {t("albums.itunes")}
