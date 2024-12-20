@@ -141,6 +141,7 @@ const Music = () => {
   };
 
   const handlePlayPause = () => {
+    setCurrentSongItem(currentTrack + 1);
     if (isPlaying) {
       audioRef.current.pause();
     } else {
@@ -197,7 +198,7 @@ const Music = () => {
                     {item.id}
                   </span>
                   <span className="music__number__play-icon absolute top-0 -left-1 text-white text-xl opacity-0">
-                    {isPlaying ? <FaPause /> : <FaPlay />}
+                    {currentSongItem === item.id ? <FaPause /> : <FaPlay />}
                   </span>
                 </div>
                 <div>

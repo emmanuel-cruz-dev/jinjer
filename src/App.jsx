@@ -19,6 +19,7 @@ import NewsBlog from "./components/NewsBlog";
 import TourBlog from "./components/TourBlog";
 import Shop from "./components/Shop";
 import Music from "./components/Music";
+import Members from "./components/Members";
 
 const Home = () => {
   return (
@@ -45,6 +46,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/newsblog/:id" element={<NewsBlog />} />
+        <Route path="/members/:id" element={<Members />} />
         <Route path="/tour/:id" element={<TourBlog />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/music" element={<Music />} />

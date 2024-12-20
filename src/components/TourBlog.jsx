@@ -1,6 +1,4 @@
 import tourData from "../data/tourData.json";
-
-import React from "react";
 import ItemsRender from "./ItemsRender";
 
 const TourBlog = () => {
