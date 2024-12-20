@@ -102,23 +102,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  className="footer__legal-links"
-                  href="https://www.metallica.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a className="footer__legal-links" href="#">
                   www.epicrecords.com
                 </a>
               </li>
               <li>
                 <span>
-                  <a
-                    className="footer__legal-links"
-                    href="https://jinjer-metal.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a className="footer__legal-links" href="#">
                     Sony Music Entertainment
                   </a>
                   .
