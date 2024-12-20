@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import AlbumCover01 from "../assets/images/wallflowers.webp";
 import AlbumCover02 from "../assets/images/melb.webp";
 import AlbumCover03 from "../assets/images/macro.webp";
@@ -7,11 +8,28 @@ import AlbumCover05 from "../assets/images/koe.webp";
 import AlbumCover06 from "../assets/images/idb.webp";
 import VinylDisc01 from "../assets/images/vinyl-disc.png";
 
-const Album = ({ cover, title, year }) => {
+const Album = ({ cover, title, path, year, id }) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const goToSection = (path, sectionId) => {
+    navigate(path);
+
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (!section) return;
+      else section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 500);
+  };
 
   return (
-    <a href="#" className="album__container" title={t("albums.listen")}>
+    <a
+      key={id}
+      onClick={() => goToSection(`/music/`, `${id}`)}
+      href={`/music/${path}`}
+      className="album__container"
+      title={t("albums.listen")}
+    >
       <div className="album__images__container">
         <img
           className="album__cover"
@@ -38,36 +56,42 @@ const articles = [
   {
     id: 1,
     title: "Wallflowers",
+    path: "wallflowers",
     year: "2021",
     image: AlbumCover01,
   },
   {
     id: 2,
     title: "Alive in Melbourne",
+    path: "alive-in-melbourne",
     year: "2020",
     image: AlbumCover02,
   },
   {
     id: 3,
     title: "Macro",
+    path: "macro",
     year: "2019",
     image: AlbumCover03,
   },
   {
     id: 4,
     title: "Cloud Factory",
+    path: "cloud-factory",
     year: "2018",
     image: AlbumCover04,
   },
   {
     id: 5,
     title: "King of Everything",
+    path: "king-of-everything",
     year: "2016",
     image: AlbumCover05,
   },
   {
     id: 6,
     title: "Inhale, Don't Breathe",
+    path: "inhale-dont-breathe",
     year: "2012",
     image: AlbumCover06,
   },
@@ -95,7 +119,9 @@ const Albums = () => {
               key={article.id}
               cover={article.image}
               title={article.title}
+              path={article.path}
               year={article.year}
+              id={article.id}
             />
           ))}
         </div>

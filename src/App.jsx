@@ -18,7 +18,7 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import NewsBlog from "./components/NewsBlog";
 import TourBlog from "./components/TourBlog";
 import Shop from "./components/Shop";
-import MusicRender from "./components/MusicRender";
+import Music from "./components/Music";
 import Members from "./components/Members";
 
 const Home = () => {
@@ -49,7 +49,7 @@ function App() {
         <Route path="/members/:id" element={<Members />} />
         <Route path="/tour/:id" element={<TourBlog />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/music/" element={<MusicRender />} />
+        <Route path="/music/:id" element={<Music />} />
         <Route path="*" element={<Home />} />
       </Routes>
 
