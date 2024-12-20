@@ -8,7 +8,7 @@ const Members = () => {
         title="Members"
         obj={membersData}
         route="members"
-        formVideo={true}
+        image={true}
       />
     </>
   );

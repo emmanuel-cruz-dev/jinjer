@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import ContactForm from "./ContactForm";
 
-const ItemsRender = ({ title, obj, route, formVideo }) => {
+const ItemsRender = ({ title, obj, route, formVideo, image }) => {
   const navigate = useNavigate();
   const { id } = useParams();
   const article = obj.find((a) => a.id === parseInt(id));
@@ -42,6 +42,15 @@ const ItemsRender = ({ title, obj, route, formVideo }) => {
           </div>
           <div className="flex flex-col justify-center items-center gap-4 w-full mx-auto">
             <div className="w-11/12 lg:w-4/6 mx-auto">
+              {image && (
+                <img
+                  className="w-full h-auto"
+                  src={article.content}
+                  alt={article.title}
+                  width="800"
+                  height="533"
+                />
+              )}
               {formVideo && (
                 <iframe
                   loading="lazy"
