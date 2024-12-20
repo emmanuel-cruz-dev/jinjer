@@ -90,7 +90,7 @@ const musicList = [
   },
 ];
 
-const Music = () => {
+const Music = ({ id, title, year, image }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -225,7 +225,10 @@ const Music = () => {
   return (
     <section className="music second-page" id="music">
       <article className="py-10">
-        <article className="relative w-full mt-20 lg:w-11/12 mb-12 bg-black/90 flex flex-col justify-center items-center mx-auto">
+        <article
+          key={id}
+          className="relative w-full mt-20 lg:w-11/12 mb-12 bg-black/90 flex flex-col justify-center items-center mx-auto"
+        >
           <img
             className="absolute top-0 left-0 w-full h-24 object-cover bg-accent/60"
             src={Background}
@@ -234,14 +237,14 @@ const Music = () => {
             height="644"
           />
           <div className="w-full px-12 p-8 z-[1]">
-            <h2 className="text-3xl font-bold text-white">Wallflowers</h2>
+            <h2 className="text-3xl font-bold text-white">{title}</h2>
           </div>
           <article className="w-full py-8 md:p-12 xl:pt-28 gap-12 flex flex-col items-center">
             <div className="flex justify-center gap-2">
               <figure className="w-96 hidden lg:block">
                 <img
                   className="w-full"
-                  src={Wallflowers}
+                  src={image}
                   alt="Portada del álbum Wallflowers"
                   width="500"
                   height="500"
@@ -252,22 +255,22 @@ const Music = () => {
                   <div className="flex gap-3 items-center relative">
                     <a
                       href="#"
-                      className="text-2xl absolute top-1 right-1"
+                      className="text-2xl absolute -top-1 -right-1"
                       title="Spotify"
                     >
                       <FaSpotify />
                     </a>
                     <img
                       className="w-[6.8rem] rounded-xl"
-                      src={Wallflowers}
-                      alt="Portada del álbum Wallflowers"
+                      src={image}
+                      alt={`Portada del álbum ${title}`}
                       width="500"
                       height="500"
                     />
-                    <div className="flex flex-col gap-1">
+                    <div className="flex flex-col">
                       <div>
                         <a href="#" className="hover:underline">
-                          <h4 className="font-bold text-lg">Wallflowers</h4>
+                          <h4 className="font-bold text-lg">{title}</h4>
                         </a>
                         <a
                           href="#"
@@ -385,7 +388,7 @@ const Music = () => {
             </div>
             <div className="flex flex-col justify-center items-center gap-3">
               <h3 className="text-4xl font-bold uppercase text-center">
-                WallFlowers (2021)
+                {title} ({year})
               </h3>
               <div className="flex gap-6 uppercase text-xl">
                 <div className="music__links__download-stream flex flex-col items-center gap-2 relative py-2">
