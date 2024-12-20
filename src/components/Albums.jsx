@@ -26,7 +26,7 @@ const Album = ({ cover, title, path, year, id }) => {
     <a
       key={id}
       onClick={() => goToSection(`/music/`, `${id}`)}
-      href={`/music/${path}`}
+      href={`/music/${id}`}
       className="album__container"
       title={t("albums.listen")}
     >

@@ -5,6 +5,7 @@ import Macro from "../assets/images/macro.webp";
 import CloudFactory from "../assets/images/cf.webp";
 import KingOfEverything from "../assets/images/koe.webp";
 import Inhale from "../assets/images/idb.webp";
+import { useParams } from "react-router-dom";
 
 const articles = [
   {
@@ -46,11 +47,17 @@ const articles = [
 ];
 
 const MusicRender = () => {
+  const { id } = useParams();
+  const articleItem = articles.find((a) => a.id === parseInt(id));
+
   return (
     <>
-      {articles.map((article) => (
-        <Music key={article.id} {...article} />
-      ))}
+      <Music
+        id={articleItem.id}
+        title={articleItem.title}
+        year={articleItem.year}
+        image={articleItem.image}
+      />
     </>
   );
 };
