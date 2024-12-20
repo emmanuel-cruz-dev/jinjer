@@ -20,6 +20,7 @@ import {
   FaBackwardStep,
   FaSpotify,
 } from "react-icons/fa6";
+import { use } from "react";
 
 const musicList = [
   {
@@ -103,7 +104,6 @@ const Music = () => {
     setCurrentTrack(id - 1);
     handlePlayPause();
     setCurrentSongItem(id);
-    console.log(`Reproduciendo canción con ID: ${id}`);
   };
 
   const formatTime = (seconds) => {
@@ -151,17 +151,16 @@ const Music = () => {
 
   const handleNext = () => {
     setCurrentTrack((prevTrack) => (prevTrack + 1) % musicList.length);
+    const id = currentTrack + 1 === musicList.length ? 1 : currentTrack + 2;
+    setCurrentSongItem(id);
   };
 
   const handlePrevious = () => {
     setCurrentTrack((prevTrack) =>
       prevTrack === 0 ? musicList.length - 1 : prevTrack - 1
     );
-  };
-
-  const handleCurrentSong = (num) => {
-    setCurrentTrack(num);
-    handlePlayPause();
+    const id = currentTrack === 0 ? musicList.length : currentTrack;
+    setCurrentSongItem(id);
   };
 
   useEffect(() => {
@@ -184,8 +183,10 @@ const Music = () => {
             // onClick={() => handleCurrentSong(item.id)}
             onClick={() => playSong(item.id)}
             className={`${
-              currentSongItem === item.id ? "bg-accent/80 hover:bg-accent" : ""
-            } music__item-list text-sm p-1 px-4 hover:bg-gray-900 rounded-md cursor-pointer`}
+              currentSongItem === item.id
+                ? "bg-accent/80 hover:bg-accent"
+                : "hover:bg-gray-900"
+            } music__item-list text-sm p-1 px-4 rounded-md cursor-pointer`}
             key={item.id}
             title={isPlaying ? "Pause Song" : "Play Song"}
           >
