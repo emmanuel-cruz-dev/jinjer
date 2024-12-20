@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import microfono from "../assets/icons/microfono.png";
 import guitarra from "../assets/icons/guitarra.png";
 import bajo from "../assets/icons/bajo-electrico.png";
@@ -8,9 +9,27 @@ import Roman from "../assets/images/roman.webp";
 import Eugene from "../assets/images/eugene.webp";
 import Vlad from "../assets/images/vlad.webp";
 
-const MemberArticle = ({ image, icon, name, instrument }) => {
+const MemberArticle = ({ image, icon, name, instrument, id }) => {
+  const navigate = useNavigate();
+  const { t } = useTranslation();
+
+  const goToSection = (path, sectionId) => {
+    navigate(path);
+
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (!section) return;
+      else section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 500);
+  };
+
   return (
-    <a href="#" className="about__members__article">
+    <a
+      href={`/members/${id}`}
+      onClick={() => goToSection(`/members/`, `${id}`)}
+      className="about__members__article"
+      title={t("news.seeDetails")}
+    >
       <div className="about__members__image-container">
         <figure className="about__members__logo-container">
           <img
@@ -87,6 +106,7 @@ const About = () => {
             icon={microfono}
             name="Tatiana Shmaylyuk"
             instrument={t("about.tatiana")}
+            id="1"
           />
 
           {/* Guitarrista */}
@@ -95,6 +115,7 @@ const About = () => {
             icon={guitarra}
             name="Roman Ibramkhalilov"
             instrument={t("about.roman")}
+            id="2"
           />
 
           {/* Bajista */}
@@ -103,6 +124,7 @@ const About = () => {
             icon={bajo}
             name="Eugene Abdiukhanov"
             instrument={t("about.eugene")}
+            id="3"
           />
 
           {/* Baterista */}
@@ -111,6 +133,7 @@ const About = () => {
             icon={bateria}
             name="Vlad Ulasevich"
             instrument={t("about.vlad")}
+            id="4"
           />
         </div>
       </article>
