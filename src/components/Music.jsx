@@ -89,6 +89,15 @@ const musicList = [
   },
 ];
 
+const backgroundColors = {
+  2021: ["bg-[#1f1f1f]", "bg-[#121212]"],
+  2020: ["bg-[#833833]", "bg-[#722723]"],
+  2019: ["bg-[#005c57]", "bg-[#004b45]"],
+  2018: ["bg-[#814100]", "bg-[#6c3000]"],
+  2016: ["bg-[#602018]", "bg-[#743229]"],
+  2012: ["bg-[#535353]", "bg-[#434343]"],
+};
+
 const Music = ({ id, title, year, image }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(0);
@@ -97,6 +106,10 @@ const Music = ({ id, title, year, image }) => {
   const [currentTime, setCurrentTime] = useState(0); // Estado para almacenar el tiempo transcurrido
   const [duration, setDuration] = useState(0); // Estado para almacenar la duración de la canción
   const [currentSongItem, setCurrentSongItem] = useState(null);
+
+  let selectColor = year;
+  let color1 = backgroundColors[selectColor][0];
+  let color2 = backgroundColors[selectColor][1];
 
   const playSong = (id) => {
     setCurrentTrack(id - 1);
@@ -250,7 +263,7 @@ const Music = ({ id, title, year, image }) => {
                 />
               </figure>
               <div className="w-[22rem] md:w-auto h-[30.5rem] lg:h-96 flex flex-col relative rounded-lg overflow-hidden">
-                <div className="flex flex-col gap-2 bg-gray-600 p-4">
+                <div className={`flex flex-col gap-2 ${color1} p-4`}>
                   <div className="flex gap-3 items-center relative">
                     <a
                       href="#"
@@ -324,7 +337,7 @@ const Music = ({ id, title, year, image }) => {
                     </button>
                     <button
                       onClick={handlePlayPause}
-                      className="rounded-full bg-white p-2 text-gray-600 w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300 focus:outline-none"
+                      className={`rounded-full bg-white p-2 text-slate-800 w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300 focus:outline-none`}
                       title={isPlaying ? "Pause" : "Play"}
                     >
                       {isPlaying ? <FaPause /> : <FaPlay />}
@@ -339,7 +352,7 @@ const Music = ({ id, title, year, image }) => {
                     />
                   </div>
                 </div>
-                <div className="bg-gray-800 p-2 overflow-y-scroll">
+                <div className={`${color2} p-2 overflow-y-scroll`}>
                   <ListItem />
                 </div>
                 <div

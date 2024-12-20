@@ -53,7 +53,7 @@ const MusicRender = () => {
   return (
     <>
       <Music
-        id={articleItem.id}
+        articleId={articleItem.id}
         title={articleItem.title}
         year={articleItem.year}
         image={articleItem.image}

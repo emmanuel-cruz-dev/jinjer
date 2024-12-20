@@ -8,7 +8,7 @@ import AlbumCover05 from "../assets/images/koe.webp";
 import AlbumCover06 from "../assets/images/idb.webp";
 import VinylDisc01 from "../assets/images/vinyl-disc.png";
 
-const Album = ({ cover, title, path, year, id }) => {
+const Album = ({ cover, title, year, id }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -119,7 +119,6 @@ const Albums = () => {
               key={article.id}
               cover={article.image}
               title={article.title}
-              path={article.path}
               year={article.year}
               id={article.id}
             />
