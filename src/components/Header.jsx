@@ -60,6 +60,7 @@ const Header = () => {
       if (!section) return;
       else section.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
+    if (isMenuOpen) toggleMenu();
   };
 
   // const handleMenuAndNavigate = (sectionId) => {
