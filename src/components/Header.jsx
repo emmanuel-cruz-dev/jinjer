@@ -62,10 +62,10 @@ const Header = () => {
     }, 100);
   };
 
-  const handleMenuAndNavigate = (sectionId) => {
-    goToSection("/", sectionId);
-    toggleMenu();
-  };
+  // const handleMenuAndNavigate = (sectionId) => {
+  //   goToSection("/", sectionId);
+  //   toggleMenu();
+  // };
 
   return (
     <>
@@ -194,42 +194,42 @@ const Header = () => {
       </header>
       <ul className={`header__menu-list ${isMenuOpen ? "active" : "hidden"}`}>
         <li>
-          <a href="#" onClick={() => handleMenuAndNavigate("home")}>
+          <a href="#" onClick={() => goToSection("/", "home")}>
             {t("navbar.home")}
           </a>
         </li>
         <li>
-          <a href="#news" onClick={() => handleMenuAndNavigate("news")}>
+          <a href="#news" onClick={() => goToSection("/", "news")}>
             {t("navbar.news")}
           </a>
         </li>
         <li>
-          <a href="#about" onClick={() => handleMenuAndNavigate("about")}>
+          <a href="#about" onClick={() => goToSection("/", "about")}>
             {t("navbar.about")}
           </a>
         </li>
         <li>
-          <a href="#tour" onClick={() => handleMenuAndNavigate("tour")}>
+          <a href="#tour" onClick={() => goToSection("/", "tour")}>
             {t("navbar.tour")}
           </a>
         </li>
         <li>
-          <a href="#albums" onClick={() => handleMenuAndNavigate("albums")}>
+          <a href="#albums" onClick={() => goToSection("/", "albums")}>
             {t("navbar.albums")}
           </a>
         </li>
         <li>
-          <a href="#media" onClick={() => handleMenuAndNavigate("media")}>
+          <a href="#media" onClick={() => goToSection("/", "media")}>
             {t("navbar.media")}
           </a>
         </li>
         <li>
-          <a href="#store" onClick={() => handleMenuAndNavigate("store")}>
+          <a href="#store" onClick={() => goToSection("/", "store")}>
             {t("navbar.store")}
           </a>
         </li>
         <li>
-          <a href="#follow" onClick={() => handleMenuAndNavigate("follow")}>
+          <a href="#follow" onClick={() => goToSection("/", "follow")}>
             {t("navbar.follow")}
           </a>
         </li>
