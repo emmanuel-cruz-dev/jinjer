@@ -2,7 +2,7 @@
 
 # Jinjer | Website
 
-Plataforma de artista, dedicada a Jinjer, una banda de metal progresivo originaria de Ucrania. Inspirada en el diseño y la estética de páginas de bandas como Metallica y Megadeth.
+Plataforma de artista dedicada a Jinjer, una banda de metal progresivo originaria de Ucrania. Inspirada en el diseño y la estética de páginas de bandas como Metallica y Megadeth.
 
 ## Demo en vivo
 
