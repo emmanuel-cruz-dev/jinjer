@@ -115,13 +115,8 @@ const Footer = () => {
                 </span>
               </li>
               <li>
-                <a
-                  className="footer__legal-links"
-                  href="https://demo.farost.net/backtorock/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Plantilla Principal
+                <a className="footer__legal-links" href="#">
+                  Napalm Records
                 </a>
               </li>
             </ul>
