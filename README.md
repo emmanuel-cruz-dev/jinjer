@@ -20,7 +20,7 @@ Plataforma de artista dedicada a Jinjer, una banda de metal progresivo originari
 - Selector de idioma: Soporte para inglés y español.
 - Diseño responsive: Adaptado a dispositivos de todos los tamaños.
 - Giras: Fechas y lugares de sus próximos conciertos.
-- Sección de comentarios: Para fans que deseen comunicarse.
+- Sección de álbumes: Incluye reproductor y lista de canciones.
 - Navbar funcional: Navegación fluida entre las secciones.
 
 ## Estado
