@@ -41,6 +41,33 @@ const MusicPlayer = () => {
   const [isOpen, setIsOpen] = useState(true);
   const audioRef = useRef(null);
 
+  // Funciones de scroll
+  const [isVisible, setIsVisible] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const newProgress = scrollTop / scrollHeight;
+      setProgress(newProgress);
+
+      if (newProgress > 0.03) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleOpenMusicPlayer = () => {
     setIsOpen(!isOpen);
   };
@@ -73,71 +100,73 @@ const MusicPlayer = () => {
   const currentSong = musicList[currentTrack];
 
   return (
-    <article className="music-player__article fixed bottom-3 left-2 flex gap-[6px] z-[100] select-none">
-      <div
-        className={`music-player__container ${
-          isOpen ? "active" : ""
-        } hidden lg:flex justify-between items-center rounded-md bg-gray-800 text-white p-3`}
-      >
-        {/* Imagen de portada */}
-        <div className="flex-shrink-0 flex items-center gap-2">
-          <div>
-            <img
-              src={CoverAlbum}
-              alt="Portada del álbum"
-              title={t("musicPlayer.albumCover")}
-              className="cover rounded-sm"
-              width="400"
-              height="400"
-            />
+    <div className={`${isVisible ? "opacity-100" : "opacity-0"}`}>
+      <article className="music-player__article fixed bottom-3 left-2 flex gap-[6px] z-[100] select-none">
+        <div
+          className={`music-player__container ${
+            isOpen ? "active" : ""
+          } hidden lg:flex justify-between items-center rounded-md bg-gray-800 text-white p-3`}
+        >
+          {/* Imagen de portada */}
+          <div className="flex-shrink-0 flex items-center gap-2">
+            <div>
+              <img
+                src={CoverAlbum}
+                alt="Portada del álbum"
+                title={t("musicPlayer.albumCover")}
+                className="cover rounded-sm"
+                width="400"
+                height="400"
+              />
+            </div>
+
+            {/* Información de la canción */}
+            <div className="music-player__text flex-grow">
+              <h3 className="text-sm font-semibold">{currentSong.title}</h3>
+              <p className="text-[12px] text-gray-400">Jinjer</p>
+            </div>
           </div>
 
-          {/* Información de la canción */}
-          <div className="music-player__text flex-grow">
-            <h3 className="text-sm font-semibold">{currentSong.title}</h3>
-            <p className="text-[12px] text-gray-400">Jinjer</p>
+          {/* Controles de reproducción */}
+          <div className="music-player__controls items-center space-x-1">
+            <button
+              title={t("musicPlayer.prev")}
+              onClick={handlePrevious}
+              className="hover:bg-gray-700 p-2 rounded border-none"
+            >
+              <FaBackwardStep size={18} />
+            </button>
+
+            <button
+              title={isPlaying ? t("musicPlayer.pause") : t("musicPlayer.play")}
+              onClick={handlePlayPause}
+              className="bg-accent hover:bg-black p-3 rounded-full transition-colors duration-300 border-none"
+            >
+              {isPlaying ? <FaPause size={18} /> : <FaPlay size={18} />}
+            </button>
+
+            <button
+              onClick={handleNext}
+              title={t("musicPlayer.next")}
+              className="hover:bg-gray-700 p-2 rounded border-none"
+            >
+              <FaForwardStep size={18} />
+            </button>
           </div>
+
+          {/* Audio elemento (oculto) */}
+          <audio ref={audioRef} src={currentSong.src} onEnded={handleNext} />
         </div>
 
-        {/* Controles de reproducción */}
-        <div className="music-player__controls items-center space-x-1">
-          <button
-            title={t("musicPlayer.prev")}
-            onClick={handlePrevious}
-            className="hover:bg-gray-700 p-2 rounded border-none"
-          >
-            <FaBackwardStep size={18} />
-          </button>
-
-          <button
-            title={isPlaying ? t("musicPlayer.pause") : t("musicPlayer.play")}
-            onClick={handlePlayPause}
-            className="bg-accent hover:bg-black p-3 rounded-full transition-colors duration-300 border-none"
-          >
-            {isPlaying ? <FaPause size={18} /> : <FaPlay size={18} />}
-          </button>
-
-          <button
-            onClick={handleNext}
-            title={t("musicPlayer.next")}
-            className="hover:bg-gray-700 p-2 rounded border-none"
-          >
-            <FaForwardStep size={18} />
-          </button>
-        </div>
-
-        {/* Audio elemento (oculto) */}
-        <audio ref={audioRef} src={currentSong.src} onEnded={handleNext} />
-      </div>
-
-      <span
-        title={isOpen ? t("musicPlayer.collapse") : t("musicPlayer.expand")}
-        className="music-player__close-open material-symbols-outlined"
-        onClick={handleOpenMusicPlayer}
-      >
-        {isOpen ? "keyboard_arrow_left" : "keyboard_arrow_right"}
-      </span>
-    </article>
+        <span
+          title={isOpen ? t("musicPlayer.collapse") : t("musicPlayer.expand")}
+          className="music-player__close-open material-symbols-outlined"
+          onClick={handleOpenMusicPlayer}
+        >
+          {isOpen ? "keyboard_arrow_left" : "keyboard_arrow_right"}
+        </span>
+      </article>
+    </div>
   );
 };
 

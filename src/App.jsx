@@ -20,11 +20,13 @@ import TourBlog from "./components/TourBlog";
 import Shop from "./components/Shop";
 import MusicRender from "./components/MusicRender";
 import Members from "./components/Members";
+import MusicPlayer from "./components/MusicPlayer";
 
 const Home = () => {
   return (
     <>
       <Hero />
+      <MusicPlayer />
       <News />
       <About />
       <Tour />
