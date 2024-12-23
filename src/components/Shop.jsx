@@ -314,7 +314,7 @@ const Shop = () => {
     return (
       <div
         key={id}
-        className="relative flex flex-col justify-center gap-1 mx-6 w-40"
+        className="relative flex flex-col justify-center gap-1 mx-6 md:w-40"
       >
         {sale && (
           <span className="absolute top-0 right-0 bg-red-600 px-2 py-1 text-sm text-white font-semibold">
@@ -349,7 +349,7 @@ const Shop = () => {
             src={Background}
             alt=""
           />
-          <div className="w-full px-12 p-8 z-[1]">
+          <div className="w-full py-8 px-4 lg:px-12 lg:p-8 z-[1]">
             <h2 className="text-3xl font-bold text-white">Archives: Shop</h2>
           </div>
           <div className="flex flex-col lg:flex-row gap-8 w-full px-4 md:px-12 mt-8">
