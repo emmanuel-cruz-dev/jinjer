@@ -349,8 +349,8 @@ const Shop = () => {
             src={Background}
             alt=""
           />
-          <div className="w-full py-8 px-4 lg:px-12 lg:p-8 z-[1]">
-            <h2 className="text-3xl font-bold text-white">Archives: Shop</h2>
+          <div className="w-full py-8 px-4 lg:px-8 lg:p-8 z-[1]">
+            <h2 className="text-3xl font-bold text-white">Shop</h2>
           </div>
           <div className="flex flex-col lg:flex-row gap-8 w-full px-4 md:px-12 mt-8">
             <div className="flex flex-col justify-center items-center gap-2 w-full mx-auto lg:w-5/6">
