@@ -19,6 +19,7 @@ import {
   FaBackwardStep,
   FaSpotify,
 } from "react-icons/fa6";
+import { t } from "i18next";
 
 const musicList = [
   {
@@ -116,9 +117,43 @@ const Music = ({ articleId, title, year, image }) => {
     setCurrentSongItem(id);
     if (isPlaying) {
       audioRef.current.pause();
+      audioRef.current.play();
+    } else {
+      audioRef.current.play();
+      setIsPlaying(true);
     }
-    audioRef.current.play();
-    setIsPlaying(!isPlaying);
+  };
+
+  const handlePlayPause = () => {
+    setCurrentSongItem(currentTrack + 1);
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const handleNext = () => {
+    setCurrentTrack((prevTrack) => (prevTrack + 1) % musicList.length);
+    const id = currentTrack + 1 === musicList.length ? 1 : currentTrack + 2;
+    setCurrentSongItem(id);
+    if (isPlaying) {
+      audioRef.current.pause();
+      audioRef.current.play();
+    } else {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrack((prevTrack) =>
+      prevTrack === 0 ? musicList.length - 1 : prevTrack - 1
+    );
+    const id = currentTrack === 0 ? musicList.length : currentTrack;
+    setCurrentSongItem(id);
   };
 
   const formatTime = (seconds) => {
@@ -153,30 +188,6 @@ const Music = ({ articleId, title, year, image }) => {
 
   const calculateProgress = () => {
     return duration > 0 ? (currentTime / duration) * 100 : 0;
-  };
-
-  const handlePlayPause = () => {
-    setCurrentSongItem(currentTrack + 1);
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
-
-  const handleNext = () => {
-    setCurrentTrack((prevTrack) => (prevTrack + 1) % musicList.length);
-    const id = currentTrack + 1 === musicList.length ? 1 : currentTrack + 2;
-    setCurrentSongItem(id);
-  };
-
-  const handlePrevious = () => {
-    setCurrentTrack((prevTrack) =>
-      prevTrack === 0 ? musicList.length - 1 : prevTrack - 1
-    );
-    const id = currentTrack === 0 ? musicList.length : currentTrack;
-    setCurrentSongItem(id);
   };
 
   useEffect(() => {
