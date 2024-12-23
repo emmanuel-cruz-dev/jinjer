@@ -113,12 +113,17 @@ const Music = ({ articleId, title, year, image }) => {
   let color2 = backgroundColors[selectColor][1];
 
   const playSong = (id) => {
-    setCurrentTrack(id - 1);
-    setCurrentSongItem(id);
-    if (isPlaying) {
-      audioRef.current.pause();
-      audioRef.current.play();
+    if (currentSongItem === id) {
+      if (isPlaying) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        audioRef.current.play();
+        setIsPlaying(true);
+      }
     } else {
+      setCurrentTrack(id - 1);
+      setCurrentSongItem(id);
       audioRef.current.play();
       setIsPlaying(true);
     }
