@@ -9,6 +9,7 @@ Plataforma de artista dedicada a Jinjer, una banda de metal progresivo originari
 [Visita la página aquí](https://jinjer.vercel.app/)
 
 ## Capturas de pantalla
+
 <p align="center">
   <img src="https://github.com/EmmaLCruz/jinjer/blob/main/src/assets/images/hero-banner.jpg" alt="Vista principal" width="300px">
   <img src="https://github.com/EmmaLCruz/jinjer/blob/main/src/assets/images/albums-banner.jpg" alt="Albums" width="300px">
@@ -29,11 +30,11 @@ Plataforma de artista dedicada a Jinjer, una banda de metal progresivo originari
 
 ## Funcionalidades
 
-- Selector de idioma: Soporte para inglés y español.
+- Selector de idioma: Soporte para inglés y español(página principal).
 - Diseño responsive: Adaptado a dispositivos de todos los tamaños.
 - Giras: Fechas y lugares de sus próximos conciertos.
 - Sección de álbumes: Incluye reproductor y lista de canciones.
-- Navbar funcional: Navegación fluida entre las secciones.
+- Navbar funcional: Navegación fluida entre secciones y páginas.
 
 ## Estado
 
