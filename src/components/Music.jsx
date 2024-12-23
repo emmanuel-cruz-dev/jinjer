@@ -98,7 +98,7 @@ const backgroundColors = {
   2012: ["bg-[#535353]", "bg-[#434343]"],
 };
 
-const Music = ({ id, title, year, image }) => {
+const Music = ({ articleId, title, year, image }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -113,8 +113,12 @@ const Music = ({ id, title, year, image }) => {
 
   const playSong = (id) => {
     setCurrentTrack(id - 1);
-    handlePlayPause();
     setCurrentSongItem(id);
+    if (isPlaying) {
+      audioRef.current.pause();
+    }
+    audioRef.current.play();
+    setIsPlaying(!isPlaying);
   };
 
   const formatTime = (seconds) => {
@@ -238,7 +242,7 @@ const Music = ({ id, title, year, image }) => {
     <section className="music second-page" id="music">
       <article className="py-10">
         <article
-          key={id}
+          key={articleId}
           className="relative w-full mt-20 lg:w-11/12 mb-12 bg-black/90 flex flex-col justify-center items-center mx-auto"
         >
           <img
