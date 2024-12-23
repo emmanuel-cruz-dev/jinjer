@@ -8,6 +8,16 @@ Plataforma de artista dedicada a Jinjer, una banda de metal progresivo originari
 
 [Visita la página aquí](https://jinjer.vercel.app/)
 
+## Capturas de pantalla
+<p align="center">
+  <img src="https://github.com/EmmaLCruz/los-pollos-hermanos-website/blob/main/img/hero-banner.jpg" alt="Vista principal" width="300px">
+  <img src="https://github.com/EmmaLCruz/los-pollos-hermanos-website/blob/main/img/products-banner.jpg" alt="Productos" width="300px">
+  <img src="https://github.com/EmmaLCruz/los-pollos-hermanos-website/blob/main/img/vegan-banner.jpg" alt="Vegano" width="300px">
+  <img src="https://github.com/EmmaLCruz/los-pollos-hermanos-website/blob/main/img/testimonials-banner.jpg" alt="Testimonios" width="300px">
+  <img src="https://github.com/EmmaLCruz/los-pollos-hermanos-website/blob/main/img/delivery-banner.jpg" alt="Delivery" width="300px">
+  <img src="https://github.com/EmmaLCruz/los-pollos-hermanos-website/blob/main/img/newsletter-banner.jpg" alt="Newsletter" width="300px">
+</p>
+
 ## Tecnologías utilizadas
 
 - React
