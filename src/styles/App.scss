@@ -114,7 +114,8 @@ img {
 }
 
 .header__navbar.translate-x {
-  transform: translateX(28.5%);
+  // transform: translateX(28.5%);
+  transform: translateX(22.5rem);
 }
 
 .header__navbar li a {
@@ -149,7 +150,8 @@ img {
 .latest-album {
   display: flex;
   flex-direction: column;
-  width: 28.5%;
+  // width: 28.5%;
+  width: 22.5rem;
   height: 100vh;
   padding: 1rem;
   padding-block: 0.85rem;
