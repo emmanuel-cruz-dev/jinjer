@@ -266,6 +266,7 @@ const Music = ({ articleId, title, year, image }) => {
             alt="Background gradient"
             width="644"
             height="644"
+            loading="lazy"
           />
           <div className="w-full px-12 p-8 z-[1]">
             <h2 className="text-3xl font-bold text-white">{title}</h2>
@@ -279,6 +280,7 @@ const Music = ({ articleId, title, year, image }) => {
                   alt="Portada del álbum Wallflowers"
                   width="500"
                   height="500"
+                  loading="lazy"
                 />
               </figure>
               <div className="w-[22rem] md:w-auto h-[30.5rem] lg:h-96 flex flex-col relative rounded-lg overflow-hidden">
@@ -297,6 +299,7 @@ const Music = ({ articleId, title, year, image }) => {
                       alt={`Portada del álbum ${title}`}
                       width="500"
                       height="500"
+                      loading="lazy"
                     />
                     <div className="flex flex-col">
                       <div>

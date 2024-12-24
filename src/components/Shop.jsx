@@ -322,7 +322,13 @@ const Shop = () => {
           </span>
         )}
         <figure>
-          <img src={img} alt="" />
+          <img
+            src={img}
+            alt="Remera negra de Jinjer con un logotipo en el centro"
+            width="500"
+            height="566"
+            loading="lazy"
+          />
         </figure>
         <h3 className="font-bold">{name}</h3>
         <div className="flex gap-1">{stars}</div>
@@ -347,7 +353,10 @@ const Shop = () => {
           <img
             className="absolute top-0 left-0 w-full h-24 object-cover bg-accent/60"
             src={Background}
-            alt=""
+            alt="Fondo degradado en tonos claros y oscuros"
+            width="644"
+            height="644"
+            loading="lazy"
           />
           <div className="w-full py-8 px-4 lg:px-8 lg:p-8 z-[1]">
             <h2 className="text-3xl font-bold text-white">Shop</h2>

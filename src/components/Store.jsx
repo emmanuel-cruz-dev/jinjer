@@ -17,7 +17,13 @@ const TShirtCard = ({ title, price, img }) => {
   return (
     <div className="relative mx-6">
       <figure>
-        <img src={img} width="500" height="566" alt={`Remera negra ${title}`} />
+        <img
+          src={img}
+          width="500"
+          height="566"
+          alt={`Remera negra ${title}`}
+          loading="lazy"
+        />
       </figure>
       <div className="flex justify-around">
         <h3 className="font-bold">{title}</h3>

@@ -4,6 +4,7 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa6";
+
 const SocialLinks = () => {
   return (
     <div className="social-links flex gap-4">
