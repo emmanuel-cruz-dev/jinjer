@@ -58,7 +58,7 @@ const Tour = () => {
                 <td className="hidden lg:table-cell">
                   Paris/<span>{t("tour.table.france")}</span>
                 </td>
-                <td>
+                <td className="table__btn__container">
                   <a className="table__btn-ticket" href="#">
                     {t("tour.table.soldOut")}
                   </a>
@@ -72,7 +72,7 @@ const Tour = () => {
                 <td className="hidden lg:table-cell">
                   Galicia/<span>{t("tour.table.spain")}</span>
                 </td>
-                <td>
+                <td className="table__btn__container">
                   <a className="table__btn-ticket" href="#">
                     {t("tour.table.soldOut")}
                   </a>
@@ -86,7 +86,7 @@ const Tour = () => {
                 <td className="hidden lg:table-cell">
                   <span>Austria</span>
                 </td>
-                <td>
+                <td className="table__btn__container">
                   <a className="table__btn-ticket" href="#">
                     {t("tour.table.available")}
                   </a>
@@ -100,7 +100,7 @@ const Tour = () => {
                 <td className="hidden lg:table-cell">
                   Las Vegas/<span>{t("tour.table.usa")}</span>
                 </td>
-                <td>
+                <td className="table__btn__container">
                   <a className="table__btn-ticket" href="#">
                     {t("tour.table.soldOut")}
                   </a>
@@ -114,7 +114,7 @@ const Tour = () => {
                 <td className="hidden lg:table-cell">
                   Somerset/<span>{t("tour.table.uk")}</span>
                 </td>
-                <td>
+                <td className="table__btn__container">
                   <a className="table__btn-ticket" href="#">
                     {t("tour.table.available")}
                   </a>
@@ -128,7 +128,7 @@ const Tour = () => {
                 <td className="hidden lg:table-cell">
                   <span>{t("tour.table.belgium")}</span>
                 </td>
-                <td>
+                <td className="table__btn__container">
                   <a className="table__btn-ticket" href="#">
                     {t("tour.table.soldOut")}
                   </a>
@@ -142,7 +142,7 @@ const Tour = () => {
                 <td className="hidden lg:table-cell">
                   Wacken/<span>{t("tour.table.germany")}</span>
                 </td>
-                <td>
+                <td className="table__btn__container">
                   <a className="table__btn-ticket" href="#">
                     {t("tour.table.soldOut")}
                   </a>
@@ -156,7 +156,7 @@ const Tour = () => {
                 <td className="hidden lg:table-cell">
                   Budapest/<span>{t("tour.table.hungary")}</span>
                 </td>
-                <td>
+                <td className="table__btn__container">
                   <a className="table__btn-ticket" href="#">
                     {t("tour.table.available")}
                   </a>

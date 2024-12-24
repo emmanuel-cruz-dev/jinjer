@@ -502,6 +502,10 @@ img {
   }
 }
 
+.table__btn__container {
+  max-width: 9rem;
+}
+
 .table__btn-ticket {
   font-weight: 500;
   background-color: $accent-color;
@@ -517,6 +521,10 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  .table__btn__container {
+    max-width: 5rem;
+  }
+
   .table__btn-ticket {
     font-size: 0.9em;
     display: flex;
