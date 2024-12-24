@@ -19,7 +19,6 @@ import {
   FaBackwardStep,
   FaSpotify,
 } from "react-icons/fa6";
-import { t } from "i18next";
 
 const musicList = [
   {

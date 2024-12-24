@@ -49,6 +49,7 @@ const ItemsRender = ({ title, obj, route, formVideo, image }) => {
                   alt={article.title}
                   width="800"
                   height="533"
+                  loading="lazy"
                 />
               )}
               {formVideo && (

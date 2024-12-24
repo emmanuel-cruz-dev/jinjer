@@ -6,7 +6,7 @@ const Loader = () => {
     <article className="loader__container">
       <div className="loader w-full h-screen flex flex-col justify-center items-center gap-4">
         <figure className="w-48">
-          <img src={NephewsLogo} alt="Nephews Logo" />
+          <img src={NephewsLogo} alt="Nephews Logo" loading="lazy" />
         </figure>
         <span className="text-3xl">
           <Name />

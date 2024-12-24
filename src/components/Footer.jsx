@@ -20,6 +20,7 @@ const Footer = () => {
                 height="300"
                 src={JinjerLogo}
                 alt="Logo de Jinjer"
+                loading="lazy"
               />
             </figure>
             <div className="text-4xl lg:text-2xl">
@@ -46,6 +47,7 @@ const Footer = () => {
                   alt="Poster del tour mundial de Jinjer"
                   width="300"
                   height="300"
+                  loading="lazy"
                 />
               </figure>
               <div className="flex flex-col justify-around h-full">
@@ -62,6 +64,7 @@ const Footer = () => {
                   alt="Portada del álbum Duel"
                   width="300"
                   height="300"
+                  loading="lazy"
                 />
               </figure>
               <div className="flex flex-col justify-around h-full">
