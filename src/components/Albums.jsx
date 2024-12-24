@@ -37,6 +37,7 @@ const Album = ({ cover, title, year, id }) => {
           height="500"
           src={cover}
           alt={`Portada del álbum ${title}`}
+          loading="lazy"
         />
         <img
           className="album__disc"
@@ -44,6 +45,7 @@ const Album = ({ cover, title, year, id }) => {
           height="500"
           src={VinylDisc01}
           alt="Disco de vinilo"
+          loading="lazy"
         />
       </div>
       <h3 className="album__title">{title}</h3>

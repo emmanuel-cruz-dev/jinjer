@@ -38,6 +38,7 @@ const MemberArticle = ({ image, icon, name, instrument, id }) => {
             height="300"
             src={icon}
             alt="Instrumento musical"
+            loading="lazy"
           />
         </figure>
         <img
@@ -47,6 +48,7 @@ const MemberArticle = ({ image, icon, name, instrument, id }) => {
           src={image}
           alt={`${name}`}
           title={`${name}`}
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col items-center">

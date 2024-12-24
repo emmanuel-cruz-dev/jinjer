@@ -110,6 +110,7 @@ const Carousel = () => {
                   width="500"
                   height="325"
                   alt={`Imagen del video ${article.title}`}
+                  loading="lazy"
                 />
               </figure>
               <time className="text-sm uppercase" dateTime={article.date}>

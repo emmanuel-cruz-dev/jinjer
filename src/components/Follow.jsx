@@ -48,11 +48,63 @@ const PostCards = ({ img, user, message }) => {
         height="300"
         src={img}
         alt={`Imagen de twitter/X, usuario: ${user}`}
+        loading="lazy"
       />
       <p className="leading-relaxed text-sm md:text-base text-gray-400">
         <span className="font-bold text-gray-300">@{user}</span> {message}
       </p>
     </div>
+  );
+};
+
+const images = [
+  {
+    id: 1,
+    image: InstaImg1,
+  },
+  {
+    id: 2,
+    image: InstaImg2,
+  },
+  {
+    id: 3,
+    image: InstaImg3,
+  },
+  {
+    id: 4,
+    image: InstaImg4,
+  },
+  {
+    id: 5,
+    image: InstaImg5,
+  },
+  {
+    id: 6,
+    image: InstaImg6,
+  },
+  {
+    id: 7,
+    image: InstaImg7,
+  },
+  {
+    id: 8,
+    image: InstaImg8,
+  },
+  {
+    id: 9,
+    image: InstaImg9,
+  },
+];
+
+const ImageElement = ({ image }) => {
+  return (
+    <img
+      src={image}
+      alt="Imagen de instagram de Jinjer"
+      width="300"
+      height="300"
+      loading="lazy"
+    />
   );
 };
 
@@ -93,60 +145,9 @@ const Follow = () => {
               </span>
             </div>
             <div className="follow__img__grid-container grid grid-cols-3 gap-4">
-              <img
-                src={InstaImg1}
-                alt="Imagen de instagram de Jinjer"
-                width="300"
-                height="300"
-              />
-              <img
-                src={InstaImg2}
-                alt="Imagen de instagram de Jinjer"
-                width="300"
-                height="300"
-              />
-              <img
-                src={InstaImg4}
-                alt="Imagen de instagram de Jinjer"
-                width="300"
-                height="300"
-              />
-              <img
-                src={InstaImg7}
-                alt="Imagen de instagram de Jinjer"
-                width="300"
-                height="300"
-              />
-              <img
-                src={InstaImg8}
-                alt="Imagen de instagram de Jinjer"
-                width="300"
-                height="300"
-              />
-              <img
-                src={InstaImg3}
-                alt="Imagen de instagram de Jinjer"
-                width="300"
-                height="300"
-              />
-              <img
-                src={InstaImg6}
-                alt="Imagen de instagram de Jinjer"
-                width="300"
-                height="300"
-              />
-              <img
-                src={InstaImg5}
-                alt="Imagen de instagram de Jinjer"
-                width="300"
-                height="300"
-              />
-              <img
-                src={InstaImg9}
-                alt="Imagen de instagram de Jinjer"
-                width="300"
-                height="300"
-              />
+              {images.map((image) => (
+                <ImageElement key={image.id} image={image.image} />
+              ))}
             </div>
           </div>
           <div className="flex-1 flex flex-col gap-8">
