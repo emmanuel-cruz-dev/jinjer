@@ -126,7 +126,6 @@ const Carousel = () => {
                   {article.title}
                 </h3>
               </a>
-              {/* <p className="text-gray-400 mb-3">{article.description}</p> */}
               <p className="text-gray-400 mb-3">
                 {t(`news.text${article.description}`)}
               </p>

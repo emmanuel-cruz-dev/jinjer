@@ -347,7 +347,8 @@ img {
 
 .latest-news__carousel {
   width: 92vw;
-  height: 80vh;
+  // height: 80vh;
+  max-height: 22rem;
 
   & .slick-list {
     padding-left: 2rem;
@@ -356,7 +357,7 @@ img {
 
 @media screen and (max-width: 768px) {
   .latest-news__carousel {
-    height: 60vh;
+    // height: 60vh;
     overflow: hidden;
   }
 }
