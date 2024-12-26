@@ -1,5 +1,5 @@
+import goToSection from "./goToSection";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 import microfono from "../assets/icons/microfono.png";
 import guitarra from "../assets/icons/guitarra.png";
 import bajo from "../assets/icons/bajo-electrico.png";
@@ -10,18 +10,7 @@ import Eugene from "../assets/images/eugene.webp";
 import Vlad from "../assets/images/vlad.webp";
 
 const MemberArticle = ({ image, icon, name, instrument, id }) => {
-  const navigate = useNavigate();
   const { t } = useTranslation();
-
-  const goToSection = (path, sectionId) => {
-    navigate(path);
-
-    setTimeout(() => {
-      const section = document.getElementById(sectionId);
-      if (!section) return;
-      else section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 500);
-  };
 
   return (
     <a
