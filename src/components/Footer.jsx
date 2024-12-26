@@ -114,7 +114,6 @@ const Footer = () => {
                   <a className="footer__legal-links" href="#">
                     Sony Music Entertainment
                   </a>
-                  .
                 </span>
               </li>
               <li>
