@@ -1,5 +1,5 @@
+import goToSection from "./goToSection";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 import AlbumCover01 from "../assets/images/wallflowers.webp";
 import AlbumCover02 from "../assets/images/melb.webp";
 import AlbumCover03 from "../assets/images/macro.webp";
@@ -10,17 +10,6 @@ import VinylDisc01 from "../assets/images/vinyl-disc.png";
 
 const Album = ({ cover, title, year, id }) => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
-
-  const goToSection = (path, sectionId) => {
-    navigate(path);
-
-    setTimeout(() => {
-      const section = document.getElementById(sectionId);
-      if (!section) return;
-      else section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 500);
-  };
 
   return (
     <a
