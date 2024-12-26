@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import goToSection from "./goToSection";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -57,18 +57,7 @@ const articles = [
 ];
 
 const Carousel = () => {
-  const navigate = useNavigate();
   const { t } = useTranslation();
-
-  const goToSection = (path, sectionId) => {
-    navigate(path);
-
-    setTimeout(() => {
-      const section = document.getElementById(sectionId);
-      if (!section) return;
-      else section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 500);
-  };
 
   const settings = {
     dots: false, // Mostrar puntos de navegación
