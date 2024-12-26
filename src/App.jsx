@@ -24,12 +24,6 @@ const TourBlog = lazy(() => import("./components/TourBlog"));
 const Shop = lazy(() => import("./components/Shop"));
 const MusicRender = lazy(() => import("./components/MusicRender"));
 
-// import NewsBlog from "./components/NewsBlog";
-// import Members from "./components/Members";
-// import TourBlog from "./components/TourBlog";
-// import Shop from "./components/Shop";
-// import MusicRender from "./components/MusicRender";
-
 const Home = () => {
   return (
     <>
@@ -49,19 +43,20 @@ const Home = () => {
 function App() {
   return (
     <I18nextProvider i18n={i18n}>
-      {/* <Loader /> */}
       <Header />
 
       <ScrollToTopButton />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/newsblog/:id" element={<NewsBlog />} />
-        <Route path="/members/:id" element={<Members />} />
-        <Route path="/tour/:id" element={<TourBlog />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/music/:id" element={<MusicRender />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/newsblog/:id" element={<NewsBlog />} />
+          <Route path="/members/:id" element={<Members />} />
+          <Route path="/tour/:id" element={<TourBlog />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/music/:id" element={<MusicRender />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </Suspense>
 
       <Footer />
     </I18nextProvider>

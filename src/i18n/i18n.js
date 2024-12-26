@@ -145,6 +145,8 @@ const resources = {
       },
       musicPlayer: {
         albumCover: "Album Cover",
+        songTitle: "Song Title",
+        artist: "Artist",
         prev: "Previous",
         play: "Play",
         pause: "Pause",
@@ -297,6 +299,8 @@ const resources = {
       },
       musicPlayer: {
         albumCover: "Portada del Álbum",
+        songTitle: "Título de la Canción",
+        artist: "Artista",
         prev: "Anterior",
         play: "Reproducir",
         pause: "Pausa",

@@ -123,8 +123,18 @@ const MusicPlayer = () => {
 
             {/* Información de la canción */}
             <div className="music-player__text flex-grow">
-              <h3 className="text-sm font-semibold">{currentSong.title}</h3>
-              <p className="text-[12px] text-gray-400">Jinjer</p>
+              <h3
+                className="text-sm font-semibold"
+                title={t("musicPlayer.songTitle")}
+              >
+                {currentSong.title}
+              </h3>
+              <p
+                className="text-[12px] text-gray-400"
+                title={t("musicPlayer.artist")}
+              >
+                Jinjer
+              </p>
             </div>
           </div>
 
