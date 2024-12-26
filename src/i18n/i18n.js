@@ -154,6 +154,7 @@ const resources = {
         expand: "Expand",
         collapse: "Collapse",
       },
+      goTopButton: "Go to top",
       // ... más traducciones
     },
   },
@@ -308,6 +309,7 @@ const resources = {
         expand: "Expandir",
         collapse: "Contraer",
       },
+      goTopButton: "Ir arriba",
       // ... más traducciones
     },
   },

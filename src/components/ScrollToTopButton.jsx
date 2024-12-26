@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
   const [progress, setProgress] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +39,7 @@ function ScrollToTopButton() {
         isVisible ? "opacity-100" : "opacity-0"
       } focus:outline-none focus:ring-0 focus:ring-offset-0`}
       onClick={handleClick}
+      title={t("goTopButton")}
     >
       <div
         className="absolute top-0 left-0 w-full h-full rounded-full"
