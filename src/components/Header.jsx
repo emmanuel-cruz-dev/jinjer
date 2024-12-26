@@ -103,6 +103,7 @@ const Header = () => {
                 alt="Portada del álbum Alucard"
                 width="200"
                 height="200"
+                loading="lazy"
               />
             </a>
             <div className="mt-3">
