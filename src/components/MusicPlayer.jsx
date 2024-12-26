@@ -17,19 +17,19 @@ import CoverAlbum from "../assets/images/duelep.webp";
 // Lista de canciones (puedes expandir esto)
 const musicList = [
   {
-    title: "01 Green Serpent",
+    title: "Green Serpent",
     src: `${Song1}`,
   },
   {
-    title: "02 Kafka",
+    title: "Kafka",
     src: `${Song2}`,
   },
   {
-    title: "03 Rogue",
+    title: "Rogue",
     src: `${Song3}`,
   },
   {
-    title: "04 Daughter",
+    title: "Someone's Daughter",
     src: `${Song4}`,
   },
 ];
