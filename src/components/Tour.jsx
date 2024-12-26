@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import goToSection from "./goToSection";
 
 const Tour = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const Anchor = ({ title, id }) => {
     return (
@@ -18,15 +19,15 @@ const Tour = () => {
     );
   };
 
-  const goToSection = (path, sectionId) => {
-    navigate(path);
+  // const goToSection = (path, sectionId) => {
+  //   navigate(path);
 
-    setTimeout(() => {
-      const section = document.getElementById(sectionId);
-      if (!section) return;
-      else section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 500);
-  };
+  //   setTimeout(() => {
+  //     const section = document.getElementById(sectionId);
+  //     if (!section) return;
+  //     else section.scrollIntoView({ behavior: "smooth", block: "start" });
+  //   }, 500);
+  // };
 
   return (
     <section className="scroll-top-margin tour py-16 mx-auto" id="tour">
