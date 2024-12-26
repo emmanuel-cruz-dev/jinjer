@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { Suspense, lazy } from "react";
 import "./styles/App.scss";
 import Loader from "./components/Loader";
 import Header from "./components/Header";
@@ -15,12 +16,19 @@ import Media from "./components/Media";
 import Store from "./components/Store";
 import Follow from "./components/Follow";
 import ScrollToTopButton from "./components/ScrollToTopButton";
-import NewsBlog from "./components/NewsBlog";
-import TourBlog from "./components/TourBlog";
-import Shop from "./components/Shop";
-import MusicRender from "./components/MusicRender";
-import Members from "./components/Members";
 import MusicPlayer from "./components/MusicPlayer";
+
+const NewsBlog = lazy(() => import("./components/NewsBlog"));
+const Members = lazy(() => import("./components/Members"));
+const TourBlog = lazy(() => import("./components/TourBlog"));
+const Shop = lazy(() => import("./components/Shop"));
+const MusicRender = lazy(() => import("./components/MusicRender"));
+
+// import NewsBlog from "./components/NewsBlog";
+// import Members from "./components/Members";
+// import TourBlog from "./components/TourBlog";
+// import Shop from "./components/Shop";
+// import MusicRender from "./components/MusicRender";
 
 const Home = () => {
   return (
