@@ -1,8 +1,8 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ContactForm from "./ContactForm";
+import goToSection from "./goToSection";
 
 const ItemsRender = ({ title, obj, route, formVideo, image }) => {
-  const navigate = useNavigate();
   const { id } = useParams();
   const article = obj.find((a) => a.id === parseInt(id));
 
@@ -19,16 +19,6 @@ const ItemsRender = ({ title, obj, route, formVideo, image }) => {
       </div>
     </article>
   );
-
-  const goToSection = (path, sectionId) => {
-    navigate(path);
-
-    setTimeout(() => {
-      const section = document.getElementById(sectionId);
-      if (!section) return;
-      else section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 500);
-  };
 
   return (
     <section className="newsblog second-page" id="newsblog">
