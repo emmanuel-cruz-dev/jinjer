@@ -32,7 +32,7 @@ const Tour = () => {
           <table className="table table-auto w-full border-collapse">
             <thead className="border-b border-gray-600">
               <tr className="table__header">
-                <th>{t("tour.table.th1")}</th>
+                <th className="table__date__title">{t("tour.table.th1")}</th>
                 <th className="table__venue__title">{t("tour.table.th2")}</th>
                 <th className="hidden lg:table-cell">{t("tour.table.th3")}</th>
                 <th>{t("tour.table.th4")}</th>

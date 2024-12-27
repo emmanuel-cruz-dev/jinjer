@@ -529,6 +529,10 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  .table__date__title {
+    width: 6rem !important;
+  }
+
   .table__venue__title {
     width: 0.5rem;
   }
