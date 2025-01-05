@@ -1,22 +1,23 @@
 import { Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import "./styles/App.scss";
-import Loader from "./components/Loader";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import "./i18n/i18n";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n/i18n";
-import Footer from "./components/Footer";
-import News from "./components/News";
-import About from "./components/About";
-import Tour from "./components/Tour";
-import Albums from "./components/Albums";
-import Media from "./components/Media";
-import Store from "./components/Store";
-import Follow from "./components/Follow";
-import ScrollToTopButton from "./components/ScrollToTopButton";
-import MusicPlayer from "./components/MusicPlayer";
+import "./i18n/i18n";
+import Loader from "./components/Loader";
+
+const Header = lazy(() => import("./components/Header"));
+const Hero = lazy(() => import("./components/Hero"));
+const News = lazy(() => import("./components/News"));
+const About = lazy(() => import("./components/About"));
+const Tour = lazy(() => import("./components/Tour"));
+const Albums = lazy(() => import("./components/Albums"));
+const Media = lazy(() => import("./components/Media"));
+const Store = lazy(() => import("./components/Store"));
+const Follow = lazy(() => import("./components/Follow"));
+const ScrollToTopButton = lazy(() => import("./components/ScrollToTopButton"));
+const MusicPlayer = lazy(() => import("./components/MusicPlayer"));
+const Footer = lazy(() => import("./components/Footer"));
 
 const NewsBlog = lazy(() => import("./components/NewsBlog"));
 const Members = lazy(() => import("./components/Members"));
@@ -26,7 +27,7 @@ const MusicRender = lazy(() => import("./components/MusicRender"));
 
 const Home = () => {
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       <Hero />
       <MusicPlayer />
       <News />
@@ -36,7 +37,7 @@ const Home = () => {
       <Media />
       <Store />
       <Follow />
-    </>
+    </Suspense>
   );
 };
 
