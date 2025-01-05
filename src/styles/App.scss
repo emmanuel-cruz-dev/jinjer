@@ -201,6 +201,12 @@ img {
 // --- Fin: Header --- //
 
 // --- Inicio: Botón ir arriba --- //
+
+.up-btn {
+  background-color: $background-color-black;
+  box-shadow: 0 0 0 0.8px #ff0033;
+}
+
 .up-btn::after {
   content: "";
   position: absolute;
