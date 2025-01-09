@@ -127,13 +127,6 @@ const Header = () => {
           </span>
 
           <div className="hidden lg:block">
-            {/* <span
-              onClick={() => toggleLatestAlbum()}
-              title={t("navbar.albumTitle")}
-              className="material-symbols-outlined hidden text-3xl lg:block cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
-            >
-              queue_music
-            </span> */}
             <span
               onClick={() => toggleLatestAlbum()}
               title={t("navbar.albumTitle")}
