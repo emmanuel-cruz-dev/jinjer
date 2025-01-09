@@ -1,3 +1,4 @@
+import { MdQueueMusic } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -126,13 +127,21 @@ const Header = () => {
           </span>
 
           <div className="hidden lg:block">
-            <span
+            {/* <span
               onClick={() => toggleLatestAlbum()}
               title={t("navbar.albumTitle")}
               className="material-symbols-outlined hidden text-3xl lg:block cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
             >
               queue_music
+            </span> */}
+            <span
+              onClick={() => toggleLatestAlbum()}
+              title={t("navbar.albumTitle")}
+              className="hidden text-3xl lg:block cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
+            >
+              <MdQueueMusic />
             </span>
+
             <div
               className={`navbar__overlay ${isLatestAlbumOpen ? "active" : ""}`}
             ></div>
