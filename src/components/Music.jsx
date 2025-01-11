@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import Background from "../assets/images/gradient.png";
+import Background from "../assets/images/gradient.avif";
 import Song1 from "../assets/album/song1.mp3";
 import Song2 from "../assets/album/song2.mp3";
 import Song3 from "../assets/album/song3.mp3";

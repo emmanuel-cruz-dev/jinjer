@@ -6,7 +6,7 @@ import AlbumCover03 from "../assets/images/macro.webp";
 import AlbumCover04 from "../assets/images/cf.webp";
 import AlbumCover05 from "../assets/images/koe.webp";
 import AlbumCover06 from "../assets/images/idb.webp";
-import VinylDisc01 from "../assets/images/vinyl-disc.png";
+import VinylDisc01 from "../assets/images/vinyl-disc.avif";
 
 const Album = ({ cover, title, year, id }) => {
   const { t } = useTranslation();
