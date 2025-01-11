@@ -28,7 +28,7 @@ const VideoCard = ({ video, title, paragraph, views }) => {
         <p className="text-slate-400 line-clamp-3">{paragraph}.</p>
         <a
           href="#"
-          className="flex justify-between py-2 px-4 bg-slate-500 hover:bg-slate-600 transition-colors duration-300"
+          className="flex justify-between py-2 px-4 bg-slate-700 hover:bg-slate-800 transition-colors duration-300"
         >
           <span>
             <span>{views}</span> {t("media.views")}

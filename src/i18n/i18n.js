@@ -26,7 +26,7 @@ const resources = {
         title2: "s",
         description:
           "Stay updated with the latest events from our concerts and more. Welcome to the Jinjer World!",
-        readMore: "Read More",
+        readMore: "Read Full Article",
         seeDetails: "See Details",
         text1: "New Single Out NOW!",
         text2: "Also DUEL PRE-ORDERS",
@@ -181,7 +181,7 @@ const resources = {
         title2: "dades",
         description:
           "Mantente al día con los últimos eventos de nuestros conciertos y mucho más. ¡Bienvenido al mundo de Jinjer!",
-        readMore: "Leer Más",
+        readMore: "Leer Artículo Completo",
         seeDetails: "Ver Detalles",
         text1: "¡Nuevo Sencillo YA DISPONIBLE!",
         text2: "También PREVENTA de DUEL",
