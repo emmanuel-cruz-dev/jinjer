@@ -18,17 +18,17 @@ import TwitterImg4 from "../assets/images/twitter-04.webp";
 import TwitterImg5 from "../assets/images/twitter-05.webp";
 
 const colors = {
-  cyan: "bg-cyan-500 hover:bg-cyan-600",
+  cyan: "bg-cyan-700 hover:bg-cyan-900",
 };
 
 const Anchor = ({ icon, color }) => {
   const { t } = useTranslation();
-  const colorClasses = colors[color] || "bg-gray-500 hover:bg-gray-600";
+  const colorClasses = colors[color] || "bg-slate-800 hover:bg-slate-900";
 
   return (
     <a
       href="#"
-      className={`relative flex gap-5 px-3 py-2 text-gray-200 hover:text-white ${colorClasses} transition-colors duration-300`}
+      className={`relative flex gap-5 px-3 py-2 text-white ${colorClasses} transition-colors duration-300`}
     >
       <span className="text-2xl">
         <span className="follow__anchor__icon__line"></span>

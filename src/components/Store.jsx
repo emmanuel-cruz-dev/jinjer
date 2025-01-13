@@ -27,7 +27,7 @@ const TShirtCard = ({ title, price, img }) => {
       </figure>
       <div className="flex justify-around">
         <h3 className="font-bold">{title}</h3>
-        <span className="text-gray-500">${price}</span>
+        <span className="text-gray-700">${price}</span>
       </div>
       <a
         href="#"

@@ -519,7 +519,7 @@ img {
 .table__btn-ticket {
   font-weight: 500;
   color: $background-color-white;
-  background-color: $accent-color;
+  background-color: $background-color-black;
   padding: 0.75rem 1.5rem;
   display: inline-block;
   text-align: center;
@@ -527,7 +527,7 @@ img {
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: $background-color-black;
+    background-color: $accent-color;
   }
 }
 
@@ -555,17 +555,16 @@ img {
 
 .red__btn {
   white-space: nowrap;
-  color: $background-color-white !important;
   text-transform: uppercase;
   font-weight: 500;
   padding: 0.75rem 2.5rem;
   font-size: 1.1em;
-  background-color: $accent-color;
+  background-color: $background-color-black;
   color: $background-color-white;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: $background-color-black;
+    background-color: $accent-color;
   }
 }
 
