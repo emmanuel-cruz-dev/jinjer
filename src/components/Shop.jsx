@@ -21,7 +21,7 @@ import TShirt18 from "../assets/images/shop-clock-roja.png";
 import TShirt19 from "../assets/images/shop-fire-skull-roja.png";
 import TShirt20 from "../assets/images/shop-logo-azul.png";
 
-import Background from "../assets/images/gradient.png";
+import Background from "../assets/images/gradient.avif";
 
 const products1 = [
   {

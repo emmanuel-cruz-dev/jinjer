@@ -57,7 +57,7 @@ const Media = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-44 gap-y-12 w-full md:w-5/6">
           <VideoCard
             video={
-              "https://www.youtube.com/embed/637ER6dlGDg?si=aEpuXwqMSITyNBYl"
+              "https://www.youtube-nocookie.com/embed/637ER6dlGDg?si=aEpuXwqMSITyNBYl"
             }
             title="Green Serpent (Official Video)"
             paragraph={t("media.greenSerpent")}
@@ -65,7 +65,7 @@ const Media = () => {
           />
           <VideoCard
             video={
-              "https://www.youtube.com/embed/SQNtGoM3FVU?si=E4vzKQxLpqDFZzrk"
+              "https://www.youtube-nocookie.com/embed/SQNtGoM3FVU?si=E4vzKQxLpqDFZzrk"
             }
             title="Pisces (Live Session)"
             paragraph={t("media.pisces")}
@@ -74,7 +74,7 @@ const Media = () => {
 
           <VideoCard
             video={
-              "https://www.youtube.com/embed/KJoPIgg17U4?si=hF3pOee2fA6haLkd"
+              "https://www.youtube-nocookie.com/embed/KJoPIgg17U4?si=hF3pOee2fA6haLkd"
             }
             title="I Speak Astronomy (Official Video)"
             paragraph={t("media.iSpeakAstronomy")}
@@ -85,7 +85,7 @@ const Media = () => {
             <>
               <VideoCard
                 video={
-                  "https://www.youtube.com/embed/AiaOSGZTwtY?si=4MRl3gl0LEOMdhWg"
+                  "https://www.youtube-nocookie.com/embed/AiaOSGZTwtY?si=4MRl3gl0LEOMdhWg"
                 }
                 title="Vortex (Official Video)"
                 paragraph={t("media.vortex")}
@@ -93,7 +93,7 @@ const Media = () => {
               />
               <VideoCard
                 video={
-                  "https://www.youtube.com/embed/U6rv5qi8-8s?si=-b2VVP9febdjlYgI"
+                  "https://www.youtube-nocookie.com/embed/U6rv5qi8-8s?si=-b2VVP9febdjlYgI"
                 }
                 title="Who Is Gonna Be The One (Live)"
                 paragraph={t("media.whoIsGonnaBeTheOne")}
@@ -101,7 +101,7 @@ const Media = () => {
               />
               <VideoCard
                 video={
-                  "https://www.youtube.com/embed/DZ_WDLA9i7c?si=DiANW26qAS0gv6UZ"
+                  "https://www.youtube-nocookie.com/embed/DZ_WDLA9i7c?si=DiANW26qAS0gv6UZ"
                 }
                 title="Scissors (OFFICIAL MUSIC VIDEO)"
                 paragraph={t("media.scissors")}
