@@ -115,7 +115,7 @@ const Albums = () => {
             />
           ))}
         </div>
-        <a href="#" className="red__btn">
+        <a href="#" className="red__btn hover:text-white">
           {t("albums.itunes")}
         </a>
       </article>
