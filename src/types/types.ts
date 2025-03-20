@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import { IconType } from "react-icons";
 
 export interface MemberArticleProps {
   image: string;
@@ -41,4 +42,11 @@ export interface TShirtCardProps {
   title: string;
   price: number;
   img: string;
+}
+
+export interface SocialIcon {
+  icon: IconType;
+  name: string;
+  link: string;
+  color: string;
 }

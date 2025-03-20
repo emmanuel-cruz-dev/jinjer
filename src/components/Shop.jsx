@@ -206,7 +206,7 @@ const products2 = [
   },
 ];
 
-const Shop = () => {
+function Shop() {
   const [products, setProducts] = useState(products1);
   const productsTotal = products1.length + products2.length;
 
@@ -472,6 +472,6 @@ const Shop = () => {
       </article>
     </section>
   );
-};
+}
 
 export default Shop;

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Name from "../../ui/Name";
-import SocialIcons from "../../SocialIcons";
+import SocialIcons from "../../ui/SocialIcons";
 import JinjerLogo from "../../../assets/icons/jinjer-logo.png";
 import CDCover from "../../../assets/images/latest-post-02.webp";
 import TourPoster from "../../../assets/images/world-tour.webp";
