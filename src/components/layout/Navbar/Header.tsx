@@ -7,10 +7,11 @@ import SocialLinks from "../../SocialLinks";
 import Name from "../../Name";
 
 import SideAreaImg from "../../../assets/images/latest-post-02.webp";
+import useScroll from "../../../hooks/useScroll";
 
 function Header() {
   const navigate = useNavigate();
-  const [isScrolled, setIsScrolled] = useState(false);
+  const isScrolled = useScroll(160);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLatestAlbumOpen, setIsLatestAlbumOpen] = useState(false);
   const latestAlbumRef = useRef(null);
@@ -39,19 +40,6 @@ function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 160) setIsScrolled(true);
-      else setIsScrolled(false);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const goToSection = (path, sectionId) => {
     navigate(path);
