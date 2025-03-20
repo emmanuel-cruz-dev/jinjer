@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import goToSection from "./goToSection";
+import goToSection from "../hooks/useGoToSection";
 
 const Tour = () => {
   const { t } = useTranslation();

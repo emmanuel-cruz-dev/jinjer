@@ -1,4 +1,4 @@
-import goToSection from "./goToSection";
+import goToSection from "../hooks/useGoToSection";
 import { useTranslation } from "react-i18next";
 import AlbumCover01 from "../assets/images/wallflowers.webp";
 import AlbumCover02 from "../assets/images/melb.webp";

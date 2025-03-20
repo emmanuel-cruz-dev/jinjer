@@ -1,4 +1,4 @@
-import goToSection from "../goToSection";
+import goToSection from "../../hooks/useGoToSection";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

@@ -1,4 +1,4 @@
-import goToSection from "./goToSection";
+import goToSection from "../../../hooks/useGoToSection";
 import { useTranslation } from "react-i18next";
 import microfono from "../assets/icons/microfono.png";
 import guitarra from "../assets/icons/guitarra.png";
@@ -8,47 +8,9 @@ import Tatiana from "../assets/images/tatiana.webp";
 import Roman from "../assets/images/roman.webp";
 import Eugene from "../assets/images/eugene.webp";
 import Vlad from "../assets/images/vlad.webp";
+import MemberArticle from "./MemberArticle";
 
-const MemberArticle = ({ image, icon, name, instrument, id }) => {
-  const { t } = useTranslation();
-
-  return (
-    <a
-      href={`/members/${id}`}
-      onClick={() => goToSection(`/members/`, `${id}`)}
-      className="about__members__article"
-      title={t("news.seeDetails")}
-    >
-      <div className="about__members__image-container">
-        <figure className="about__members__logo-container">
-          <img
-            className="about__members__logo-image"
-            width="300"
-            height="300"
-            src={icon}
-            alt="Instrumento musical"
-            loading="lazy"
-          />
-        </figure>
-        <img
-          className="about__members__image"
-          width="300"
-          height="300"
-          src={image}
-          alt={`${name}`}
-          title={`${name}`}
-          loading="lazy"
-        />
-      </div>
-      <div className="flex flex-col items-center">
-        <h4>{instrument}</h4>
-        <h5>{name}</h5>
-      </div>
-    </a>
-  );
-};
-
-const About = () => {
+function About() {
   const { t } = useTranslation();
 
   return (
@@ -130,6 +92,6 @@ const About = () => {
       </article>
     </section>
   );
-};
+}
 
 export default About;

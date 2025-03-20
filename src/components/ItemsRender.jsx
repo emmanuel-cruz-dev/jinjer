@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import ContactForm from "./ContactForm";
-import goToSection from "./goToSection";
+import goToSection from "../hooks/useGoToSection";
 
 const ItemsRender = ({ title, obj, route, formVideo, image }) => {
   const { id } = useParams();
