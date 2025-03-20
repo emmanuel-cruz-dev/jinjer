@@ -7,33 +7,9 @@ import {
 } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 
-import Song1 from "../assets/songs/song1.mp3";
-import Song2 from "../assets/songs/song2.mp3";
-import Song3 from "../assets/songs/song3.mp3";
-import Song4 from "../assets/songs/song4.mp3";
-
 import CoverAlbum from "../assets/images/duelep.webp";
-import useScrollDisplay from "../hooks/useScrollDisplay";
-
-// Lista de canciones (puedes expandir esto)
-const musicList = [
-  {
-    title: "Green Serpent",
-    src: `${Song1}`,
-  },
-  {
-    title: "Kafka",
-    src: `${Song2}`,
-  },
-  {
-    title: "Rogue",
-    src: `${Song3}`,
-  },
-  {
-    title: "Someone's Daughter",
-    src: `${Song4}`,
-  },
-];
+import useScrollDisplay from "../../hooks/useScrollDisplay";
+import { songsList } from "../../data/songsList";
 
 const MusicPlayer = () => {
   const { t } = useTranslation();
@@ -57,12 +33,12 @@ const MusicPlayer = () => {
   };
 
   const handleNext = () => {
-    setCurrentTrack((prevTrack) => (prevTrack + 1) % musicList.length);
+    setCurrentTrack((prevTrack) => (prevTrack + 1) % songsList.length);
   };
 
   const handlePrevious = () => {
     setCurrentTrack((prevTrack) =>
-      prevTrack === 0 ? musicList.length - 1 : prevTrack - 1
+      prevTrack === 0 ? songsList.length - 1 : prevTrack - 1
     );
   };
 
@@ -72,7 +48,7 @@ const MusicPlayer = () => {
     }
   }, [currentTrack]);
 
-  const currentSong = musicList[currentTrack];
+  const currentSong = songsList[currentTrack];
 
   return (
     <div className={`${isVisible ? "opacity-100" : "opacity-0"}`}>
