@@ -1,6 +1,6 @@
 import { MdQueueMusic } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import { useState, useRef, useEffect, RefObject } from "react";
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitch from "../../LanguageSwitch";
 import SocialLinks from "../../SocialLinks";
@@ -9,24 +9,19 @@ import Name from "../../Name";
 import SideAreaImg from "../../../assets/images/latest-post-02.webp";
 import useScroll from "../../../hooks/useScroll";
 import useClickOutside from "../../../hooks/useClickOutside";
+import useMenu from "../../../hooks/useMenu";
+import useLatestAlbum from "../../../hooks/useLatestAlbum";
 
 function Header() {
   const navigate = useNavigate();
   const isScrolled = useScroll(160);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLatestAlbumOpen, setIsLatestAlbumOpen] = useState(false);
+  const { isMenuOpen, toggleMenu } = useMenu();
+  const { isLatestAlbumOpen, toggleLatestAlbum, setIsLatestAlbumOpen } =
+    useLatestAlbum();
   const latestAlbumRef = useRef(null);
   const { t } = useTranslation();
 
   useClickOutside(latestAlbumRef, () => setIsLatestAlbumOpen(false));
-
-  const toggleLatestAlbum = () => {
-    setIsLatestAlbumOpen(!isLatestAlbumOpen);
-  };
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   const goToSection = (path, sectionId) => {
     navigate(path);
@@ -39,7 +34,7 @@ function Header() {
     if (isMenuOpen) toggleMenu();
   };
 
-  const handleMenuAndNavigate = (sectionId) => {
+  const handleMenuAndNavigate = (sectionId: string) => {
     goToSection("/", sectionId);
     toggleMenu();
   };
