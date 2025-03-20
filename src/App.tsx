@@ -10,7 +10,7 @@ const Header = lazy(() => import("./components/layout/Navbar/Header"));
 const Hero = lazy(() => import("./pages/Home/Hero/Hero"));
 const News = lazy(() => import("./pages/Home/News/News"));
 const About = lazy(() => import("./pages/Home/About/About"));
-const Tour = lazy(() => import("./components/Tour"));
+const Tour = lazy(() => import("./pages/Home/Tour/Tour"));
 const Albums = lazy(() => import("./components/Albums"));
 const Media = lazy(() => import("./components/Media"));
 const Store = lazy(() => import("./components/Store"));

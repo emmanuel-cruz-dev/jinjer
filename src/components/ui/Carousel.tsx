@@ -1,13 +1,14 @@
-import goToSection from "../../hooks/useGoToSection";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { newsArticles } from "../../data/newsArticles";
 import { carouselSettings } from "../../data/carouselSettings";
+import useGoToSection from "../../hooks/useGoToSection";
 
 function Carousel() {
   const { t } = useTranslation();
+  const goToSection = useGoToSection();
 
   return (
     <div style={{ padding: "12px" }}>

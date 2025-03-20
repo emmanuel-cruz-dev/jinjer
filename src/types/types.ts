@@ -5,3 +5,8 @@ export interface MemberArticleProps {
   instrument: string;
   id: string;
 }
+
+export interface AnchorItemProps {
+  title: string;
+  id: string;
+}

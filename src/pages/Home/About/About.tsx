@@ -1,13 +1,12 @@
-import goToSection from "../../../hooks/useGoToSection";
 import { useTranslation } from "react-i18next";
-import microfono from "../assets/icons/microfono.png";
-import guitarra from "../assets/icons/guitarra.png";
-import bajo from "../assets/icons/bajo-electrico.png";
-import bateria from "../assets/icons/bateria.png";
-import Tatiana from "../assets/images/tatiana.webp";
-import Roman from "../assets/images/roman.webp";
-import Eugene from "../assets/images/eugene.webp";
-import Vlad from "../assets/images/vlad.webp";
+import microfono from "../../../assets/icons/microfono.png";
+import guitarra from "../../../assets/icons/guitarra.png";
+import bajo from "../../../assets/icons/bajo-electrico.png";
+import bateria from "../../../assets/icons/bateria.png";
+import Tatiana from "../../../assets/images/tatiana.webp";
+import Roman from "../../../assets/images/roman.webp";
+import Eugene from "../../../assets/images/eugene.webp";
+import Vlad from "../../../assets/images/vlad.webp";
 import MemberArticle from "./MemberArticle";
 
 function About() {

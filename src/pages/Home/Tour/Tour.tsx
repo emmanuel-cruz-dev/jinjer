@@ -1,21 +1,8 @@
 import { useTranslation } from "react-i18next";
-import goToSection from "../hooks/useGoToSection";
+import AnchorItem from "../../../components/ui/AnchorItem";
 
-const Tour = () => {
+function Tour() {
   const { t } = useTranslation();
-
-  const Anchor = ({ title, id }) => {
-    return (
-      <a
-        className="table__venue"
-        href={`/tour/${id}`}
-        onClick={() => goToSection(`/tour/`, `${id}`)}
-        title={t("news.seeDetails")}
-      >
-        {title}
-      </a>
-    );
-  };
 
   return (
     <section className="scroll-top-margin tour py-16 mx-auto" id="tour">
@@ -42,7 +29,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">23-02-2025</td>
                 <td>
-                  <Anchor title="Rock Am Ring Festival" id="1" />
+                  <AnchorItem title="Rock Am Ring Festival" id="1" />
                 </td>
                 <td className="hidden lg:table-cell">
                   Paris/<span>{t("tour.table.france")}</span>
@@ -56,7 +43,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">05-03-2025</td>
                 <td>
-                  <Anchor title="Resurrection Fest" id="2" />
+                  <AnchorItem title="Resurrection Fest" id="2" />
                 </td>
                 <td className="hidden lg:table-cell">
                   Galicia/<span>{t("tour.table.spain")}</span>
@@ -70,7 +57,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">18-03-2025</td>
                 <td>
-                  <Anchor title="Rock'n'Roll Camping" id="3" />
+                  <AnchorItem title="Rock'n'Roll Camping" id="3" />
                 </td>
                 <td className="hidden lg:table-cell">
                   <span>Austria</span>
@@ -84,7 +71,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">16-05-2025</td>
                 <td>
-                  <Anchor title="Electric Daisy Carnival" id="4" />
+                  <AnchorItem title="Electric Daisy Carnival" id="4" />
                 </td>
                 <td className="hidden lg:table-cell">
                   Las Vegas/<span>{t("tour.table.usa")}</span>
@@ -98,7 +85,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">25-05-2025</td>
                 <td>
-                  <Anchor title="Glastonbury Festival" id="5" />
+                  <AnchorItem title="Glastonbury Festival" id="5" />
                 </td>
                 <td className="hidden lg:table-cell">
                   Somerset/<span>{t("tour.table.uk")}</span>
@@ -112,7 +99,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">19-06-2025</td>
                 <td>
-                  <Anchor title="Tomorrowland" id="6" />
+                  <AnchorItem title="Tomorrowland" id="6" />
                 </td>
                 <td className="hidden lg:table-cell">
                   <span>{t("tour.table.belgium")}</span>
@@ -126,7 +113,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">30-07-2025</td>
                 <td>
-                  <Anchor title="Wacken Open Air" id="7" />
+                  <AnchorItem title="Wacken Open Air" id="7" />
                 </td>
                 <td className="hidden lg:table-cell">
                   Wacken/<span>{t("tour.table.germany")}</span>
@@ -140,7 +127,7 @@ const Tour = () => {
               <tr>
                 <td className="table__date">06-08-2025</td>
                 <td>
-                  <Anchor title="Sziget Festival" id="8" />
+                  <AnchorItem title="Sziget Festival" id="8" />
                 </td>
                 <td className="hidden lg:table-cell">
                   Budapest/<span>{t("tour.table.hungary")}</span>
@@ -162,6 +149,6 @@ const Tour = () => {
       </article>
     </section>
   );
-};
+}
 
 export default Tour;
