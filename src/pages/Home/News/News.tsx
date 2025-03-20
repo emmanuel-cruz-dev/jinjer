@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import Carousel from "./Carousel";
+import Carousel from "../../../components/ui/Carousel";
 
-const News = () => {
+function News() {
   const { t } = useTranslation();
 
   return (
@@ -22,6 +22,6 @@ const News = () => {
       </article>
     </section>
   );
-};
+}
 
 export default News;

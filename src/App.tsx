@@ -8,7 +8,7 @@ import Loader from "./components/Loader";
 
 const Header = lazy(() => import("./components/layout/Navbar/Header"));
 const Hero = lazy(() => import("./pages/Home/Hero/Hero"));
-const News = lazy(() => import("./components/News"));
+const News = lazy(() => import("./pages/Home/News/News"));
 const About = lazy(() => import("./components/About"));
 const Tour = lazy(() => import("./components/Tour"));
 const Albums = lazy(() => import("./components/Albums"));

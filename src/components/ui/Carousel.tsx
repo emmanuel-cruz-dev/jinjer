@@ -1,95 +1,18 @@
-import goToSection from "./goToSection";
+import goToSection from "../goToSection";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { newsArticles } from "../../data/newsArticles";
+import { carouselSettings } from "../../data/carouselSettings";
 
-import CardImg1 from "../assets/images/thumb-gs.webp";
-import CardImg2 from "../assets/images/thumb-kafka.webp";
-import CardImg3 from "../assets/images/thumb-rogue.webp";
-import CardImg4 from "../assets/images/thumb-sd.webp";
-import CardImg5 from "../assets/images/thumb-fn.webp";
-import CardImg6 from "../assets/images/thumb-drum.webp";
-
-const articles = [
-  {
-    id: 1,
-    title: "Green Serpent",
-    image: CardImg1,
-    date: "26.11.2024",
-    description: "1",
-  },
-  {
-    id: 2,
-    title: "Kafka",
-    image: CardImg2,
-    date: "10.09.2024",
-    description: "2",
-  },
-  {
-    id: 3,
-    title: "Rogue",
-    image: CardImg3,
-    date: "10.09.2024",
-    description: "3",
-  },
-  {
-    id: 4,
-    title: "Someone's Daughter",
-    image: CardImg4,
-    date: "01.08.2024",
-    description: "3",
-  },
-  {
-    id: 5,
-    title: "Jinjer - From Nothing",
-    image: CardImg5,
-    date: "25.06.2024",
-    description: "4",
-  },
-  {
-    id: 6,
-    title: "Jinjer - Drum Playthrough",
-    image: CardImg6,
-    date: "23.07.2024",
-    description: "5",
-  },
-];
-
-const Carousel = () => {
+function Carousel() {
   const { t } = useTranslation();
-
-  const settings = {
-    dots: false, // Mostrar puntos de navegación
-    infinite: true, // Desplazamiento infinito
-    speed: 500, // Velocidad de transición en milisegundos
-    slidesToShow: 3, // Cantidad de elementos visibles
-    slidesToScroll: 1, // Cantidad de elementos que se mueven por transición
-    autoplay: false, // Activar desplazamiento automático
-    arrows: true, // Mostrar flechas
-    draggable: true,
-    swipeToSlide: true,
-    touchThreshold: 100,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
 
   return (
     <div style={{ padding: "12px" }}>
-      <Slider {...settings} className="latest-news__carousel-slider">
-        {articles.map((article) => {
+      <Slider {...carouselSettings} className="latest-news__carousel-slider">
+        {newsArticles.map((article) => {
           return (
             <div key={article.id} className="latest-news__card">
               <figure className="overflow-hidden mb-3">
@@ -132,6 +55,6 @@ const Carousel = () => {
       </Slider>
     </div>
   );
-};
+}
 
 export default Carousel;
