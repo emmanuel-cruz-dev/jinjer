@@ -1,49 +1,19 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import VideoCard from "./VideoCard";
 
-const VideoCard = ({ video, title, paragraph, views }) => {
-  const { t } = useTranslation();
+const useVisibility = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
-  return (
-    <div className="flex justify-center flex-col gap-4">
-      <iframe
-        loading="lazy"
-        className="grow w-full md:w-72 xl:w-[22rem]"
-        width="320"
-        height="220"
-        src={video}
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="stric-origin-when-cross-origin"
-        allowFullScreen={true}
-      ></iframe>
-      <div className="flex flex-col gap-3 tracking-wide">
-        <a
-          href="#"
-          className="uppercase font-bold text-lg line-clamp-1 hover:text-slate-400 transition-colors duration-300"
-        >
-          {title}
-        </a>
-        <p className="text-slate-400 line-clamp-3">{paragraph}.</p>
-        <a
-          href="#"
-          className="flex justify-between py-2 px-4 bg-slate-700 hover:bg-slate-800 transition-colors duration-300"
-        >
-          <span>
-            <span>{views}</span> {t("media.views")}
-          </span>
-          <span>{t("media.watch")}</span>
-        </a>
-      </div>
-    </div>
-  );
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+  return { isVisible, toggleVisibility };
 };
 
-const Media = () => {
+function Media() {
   const { t } = useTranslation();
-
-  const [isVisible, setIsVisible] = useState(false);
+  const { isVisible, toggleVisibility } = useVisibility();
 
   return (
     <section className="scroll-top-margin media py-16 mx-auto" id="media">
@@ -110,15 +80,12 @@ const Media = () => {
             </>
           )}
         </div>
-        <button
-          onClick={() => setIsVisible(!isVisible)}
-          className="red__btn rounded-none"
-        >
+        <button onClick={toggleVisibility} className="red__btn rounded-none">
           {isVisible ? t("media.seeLess") : t("media.seeMore")}
         </button>
       </article>
     </section>
   );
-};
+}
 
 export default Media;
