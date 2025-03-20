@@ -50,3 +50,10 @@ export interface SocialIcon {
   link: string;
   color: string;
 }
+
+export interface AlbumItemProps {
+  cover: string;
+  title: string;
+  year: string;
+  id: number;
+}

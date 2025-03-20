@@ -2,13 +2,7 @@ import { useTranslation } from "react-i18next";
 import useGoToSection from "../../../hooks/useGoToSection";
 import VinylDisc01 from "../../../assets/images/vinyl-disc.avif";
 import { FC } from "react";
-
-interface AlbumItemProps {
-  cover: string;
-  title: string;
-  year: string;
-  id: number;
-}
+import { AlbumItemProps } from "../../../types/types";
 
 const AlbumItem: FC<AlbumItemProps> = ({ cover, title, year, id }) => {
   const { t } = useTranslation();

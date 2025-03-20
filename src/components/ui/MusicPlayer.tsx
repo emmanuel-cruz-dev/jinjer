@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 
-import CoverAlbum from "../assets/images/duelep.webp";
+import CoverAlbum from "../../assets/images/duelep.webp";
 import useScrollDisplay from "../../hooks/useScrollDisplay";
 import { songsList } from "../../data/songsList";
 
@@ -51,7 +51,7 @@ const MusicPlayer = () => {
   const currentSong = songsList[currentTrack];
 
   return (
-    <div className={`${isVisible ? "opacity-100" : "opacity-0"}`}>
+    <article className={`${isVisible ? "opacity-100" : "opacity-0"}`}>
       <article className="music-player__article fixed bottom-3 left-2 flex gap-[6px] z-[100] select-none">
         <div
           className={`music-player__container ${
@@ -63,7 +63,7 @@ const MusicPlayer = () => {
             <div>
               <img
                 src={CoverAlbum}
-                alt="Portada del álbum"
+                alt="Portada del álbum Duel"
                 title={t("musicPlayer.albumCover")}
                 className="cover rounded-sm"
                 width="400"
@@ -128,7 +128,7 @@ const MusicPlayer = () => {
           {isOpen ? "keyboard_arrow_left" : "keyboard_arrow_right"}
         </span>
       </article>
-    </div>
+    </article>
   );
 };
 
