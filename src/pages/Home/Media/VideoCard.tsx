@@ -1,12 +1,6 @@
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
-
-interface VideoCardProps {
-  video: string;
-  title: string;
-  paragraph: string;
-  views: string;
-}
+import { VideoCardProps } from "../../../types/types";
 
 const VideoCard: FC<VideoCardProps> = ({ video, title, paragraph, views }) => {
   const { t } = useTranslation();

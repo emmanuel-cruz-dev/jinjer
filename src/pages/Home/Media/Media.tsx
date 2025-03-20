@@ -1,15 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
 import VideoCard from "./VideoCard";
-
-const useVisibility = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toggleVisibility = () => {
-    setIsVisible(!isVisible);
-  };
-  return { isVisible, toggleVisibility };
-};
+import useVisibility from "../../../hooks/useVisibility";
 
 function Media() {
   const { t } = useTranslation();

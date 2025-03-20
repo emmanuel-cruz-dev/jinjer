@@ -29,3 +29,10 @@ export interface PostCardsProps {
   user: string;
   message: string;
 }
+
+export interface VideoCardProps {
+  video: string;
+  title: string;
+  paragraph: string;
+  views: string;
+}
