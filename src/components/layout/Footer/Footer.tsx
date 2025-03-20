@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
-import Name from "./Name";
-import SocialIcons from "./SocialIcons";
-import JinjerLogo from "../assets/icons/jinjer-logo.png";
-import CDCover from "../assets/images/latest-post-02.webp";
-import TourPoster from "../assets/images/world-tour.webp";
+import Name from "../../Name";
+import SocialIcons from "../../SocialIcons";
+import JinjerLogo from "../../../assets/icons/jinjer-logo.png";
+import CDCover from "../../../assets/images/latest-post-02.webp";
+import TourPoster from "../../../assets/images/world-tour.webp";
 
-const Footer = () => {
+function Footer() {
   const { t } = useTranslation();
 
   return (
@@ -160,6 +160,6 @@ const Footer = () => {
       </article>
     </footer>
   );
-};
+}
 
 export default Footer;

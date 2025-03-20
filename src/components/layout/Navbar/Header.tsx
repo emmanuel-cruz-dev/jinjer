@@ -30,7 +30,7 @@ function Header() {
       const section = document.getElementById(sectionId);
       if (!section) return;
       else section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
+    }, 200);
     if (isMenuOpen) toggleMenu();
   };
 
