@@ -1,6 +1,6 @@
-import Name from "./Name";
+import Name from "../../../components/Name";
 
-const Hero = () => {
+function Hero() {
   return (
     <section className="hero relative" id="hero">
       <article className="hero__container"></article>
@@ -13,6 +13,6 @@ const Hero = () => {
       </article>
     </section>
   );
-};
+}
 
 export default Hero;
