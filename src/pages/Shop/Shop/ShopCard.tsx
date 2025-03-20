@@ -1,6 +1,7 @@
 import { FC } from "react";
-import { FaStar, FaRegStar } from "react-icons/fa6";
 import { ShopProductsProps } from "../../../types/types";
+import { calculateDiscount } from "../../../utils/utils";
+import StarRating from "../../../components/ui/StarRating";
 
 const ShopCard: FC<ShopProductsProps> = ({
   id,
@@ -10,17 +11,7 @@ const ShopCard: FC<ShopProductsProps> = ({
   img,
   sale,
 }) => {
-  const discount = (price * 1.5).toFixed(2);
-  const totalStars = 5;
-
-  // Crea un array dinámico para representar las estrellas
-  const stars = Array.from({ length: totalStars }, (_, index) =>
-    index < rating ? (
-      <FaStar key={index} color="#ffc107" />
-    ) : (
-      <FaRegStar key={index} color="#e4e5e9" />
-    )
-  );
+  const discount = calculateDiscount(price);
 
   return (
     <article
@@ -42,7 +33,7 @@ const ShopCard: FC<ShopProductsProps> = ({
         />
       </figure>
       <h3 className="font-bold">{name}</h3>
-      <div className="flex gap-1">{stars}</div>
+      <StarRating rating={rating} />
       <div className="flex gap-3">
         <span className="text-gray-200">${price}</span>
         {sale && (

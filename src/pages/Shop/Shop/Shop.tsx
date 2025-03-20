@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import Background from "../../../assets/images/gradient.avif";
 import ShopCard from "./ShopCard";
 import { shopProducts1, shopProducts2 } from "../../../data/shopProducts";
+import { ShopProductsProps } from "../../../types/types";
 
 function Shop() {
-  const [products, setProducts] = useState(shopProducts1);
+  const [products, setProducts] = useState<ShopProductsProps[]>(shopProducts1);
   const productsTotal = shopProducts1.length + shopProducts2.length;
 
-  const handleFilter = (e) => {
+  const handleFilter = (e: ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = e.target.value;
     const originalProducts = [...products];
 
@@ -72,7 +73,7 @@ function Shop() {
   };
 
   const handleProducts = () => {
-    const scrollOptions = {
+    const scrollOptions: ScrollToOptions = {
       top: 0,
       behavior: "smooth",
     };
@@ -86,7 +87,7 @@ function Shop() {
   };
 
   const handleArr = (num: number) => {
-    const scrollOptions = {
+    const scrollOptions: ScrollToOptions = {
       top: 0,
       behavior: "smooth",
     };

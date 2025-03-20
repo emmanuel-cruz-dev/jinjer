@@ -76,3 +76,8 @@ export interface ShopProductsProps {
   sale?: boolean;
   color?: string;
 }
+
+export interface StarRatingProps {
+  rating: number;
+  totalStars?: number;
+}
