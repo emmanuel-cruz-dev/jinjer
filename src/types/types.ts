@@ -57,3 +57,12 @@ export interface AlbumItemProps {
   year: string;
   id: number;
 }
+
+export interface SongsListProps {
+  title: string;
+  src: string;
+}
+
+export interface UseMusicPlayerProps {
+  songsList: SongsListProps[];
+}

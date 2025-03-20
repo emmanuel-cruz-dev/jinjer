@@ -2,8 +2,9 @@ import Song1 from "../assets/songs/song1.mp3";
 import Song2 from "../assets/songs/song2.mp3";
 import Song3 from "../assets/songs/song3.mp3";
 import Song4 from "../assets/songs/song4.mp3";
+import { SongsListProps } from "../types/types";
 
-export const songsList = [
+export const songsList: SongsListProps[] = [
   {
     title: "Green Serpent",
     src: `${Song1}`,

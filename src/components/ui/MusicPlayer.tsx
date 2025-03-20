@@ -1,4 +1,3 @@
-import { useState, useRef, useEffect } from "react";
 import {
   FaPlay,
   FaPause,
@@ -10,52 +9,28 @@ import { useTranslation } from "react-i18next";
 import CoverAlbum from "../../assets/images/duelep.webp";
 import useScrollDisplay from "../../hooks/useScrollDisplay";
 import { songsList } from "../../data/songsList";
+import useMusicPLayer from "../../hooks/useMusicPlayer";
+import useMenu from "../../hooks/useMenu";
 
-const MusicPlayer = () => {
+function MusicPlayer() {
   const { t } = useTranslation();
-  const [currentTrack, setCurrentTrack] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isOpen, setIsOpen] = useState(true);
-  const audioRef = useRef(null);
+  const { isMenuOpen, toggleMenu } = useMenu();
   const { isVisible } = useScrollDisplay();
-
-  const handleOpenMusicPlayer = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handlePlayPause = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
-
-  const handleNext = () => {
-    setCurrentTrack((prevTrack) => (prevTrack + 1) % songsList.length);
-  };
-
-  const handlePrevious = () => {
-    setCurrentTrack((prevTrack) =>
-      prevTrack === 0 ? songsList.length - 1 : prevTrack - 1
-    );
-  };
-
-  useEffect(() => {
-    if (isPlaying) {
-      audioRef.current.play();
-    }
-  }, [currentTrack]);
-
-  const currentSong = songsList[currentTrack];
+  const {
+    handlePlayPause,
+    handleNext,
+    handlePrevious,
+    isPlaying,
+    audioRef,
+    currentSong,
+  } = useMusicPLayer({ songsList });
 
   return (
     <article className={`${isVisible ? "opacity-100" : "opacity-0"}`}>
       <article className="music-player__article fixed bottom-3 left-2 flex gap-[6px] z-[100] select-none">
         <div
           className={`music-player__container ${
-            isOpen ? "active" : ""
+            isMenuOpen ? "" : "active"
           } hidden lg:flex justify-between items-center rounded-md bg-gray-800 text-white p-3`}
         >
           {/* Imagen de portada */}
@@ -121,15 +96,17 @@ const MusicPlayer = () => {
         </div>
 
         <span
-          title={isOpen ? t("musicPlayer.collapse") : t("musicPlayer.expand")}
+          title={
+            isMenuOpen ? t("musicPlayer.expand") : t("musicPlayer.collapse")
+          }
           className="music-player__close-open material-symbols-outlined"
-          onClick={handleOpenMusicPlayer}
+          onClick={toggleMenu}
         >
-          {isOpen ? "keyboard_arrow_left" : "keyboard_arrow_right"}
+          {isMenuOpen ? "keyboard_arrow_right" : "keyboard_arrow_left"}
         </span>
       </article>
     </article>
   );
-};
+}
 
 export default MusicPlayer;
