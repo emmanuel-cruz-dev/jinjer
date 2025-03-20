@@ -202,3 +202,5 @@ export const shopProducts2: ShopProductsProps[] = [
     color: "blue",
   },
 ];
+
+export const shopProductsList = shopProducts1.concat(shopProducts2);

@@ -1,12 +1,20 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FC, useState } from "react";
 import Background from "../../../assets/images/gradient.avif";
 import ShopCard from "./ShopCard";
-import { shopProducts1, shopProducts2 } from "../../../data/shopProducts";
-import { ShopProductsProps } from "../../../types/types";
+import {
+  shopProducts1,
+  shopProducts2,
+  shopProductsList,
+} from "../../../data/shopProducts";
+import { ShopProductsProps, UseShopReturn } from "../../../types/types";
 
-function Shop() {
-  const [products, setProducts] = useState<ShopProductsProps[]>(shopProducts1);
+const useShop = (productsList: ShopProductsProps[]): UseShopReturn => {
+  const [products, setProducts] = useState<ShopProductsProps[]>(productsList);
   const productsTotal = shopProducts1.length + shopProducts2.length;
+  const scrollOptions: ScrollToOptions = {
+    top: 0,
+    behavior: "smooth",
+  };
 
   const handleFilter = (e: ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = e.target.value;
@@ -73,11 +81,6 @@ function Shop() {
   };
 
   const handleProducts = () => {
-    const scrollOptions: ScrollToOptions = {
-      top: 0,
-      behavior: "smooth",
-    };
-
     window.scrollTo(scrollOptions);
     if (products === shopProducts1) {
       setProducts(shopProducts2);
@@ -87,11 +90,6 @@ function Shop() {
   };
 
   const handleArr = (num: number) => {
-    const scrollOptions: ScrollToOptions = {
-      top: 0,
-      behavior: "smooth",
-    };
-
     window.scrollTo(scrollOptions);
     if (num === 1) {
       setProducts(shopProducts1);
@@ -99,6 +97,26 @@ function Shop() {
       setProducts(shopProducts2);
     }
   };
+
+  return {
+    products,
+    productsTotal,
+    handleFilter,
+    handleColor,
+    handleProducts,
+    handleArr,
+  };
+};
+
+function Shop() {
+  const {
+    products,
+    productsTotal,
+    handleFilter,
+    handleColor,
+    handleProducts,
+    handleArr,
+  } = useShop(shopProductsList);
 
   return (
     <section className="shop second-page" id="shop">

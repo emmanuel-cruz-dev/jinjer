@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ChangeEvent, ReactElement } from "react";
 import { IconType } from "react-icons";
 
 export interface MemberArticleProps {
@@ -80,4 +80,13 @@ export interface ShopProductsProps {
 export interface StarRatingProps {
   rating: number;
   totalStars?: number;
+}
+
+export interface UseShopReturn {
+  products: ShopProductsProps[];
+  productsTotal: number;
+  handleFilter: (e: ChangeEvent<HTMLSelectElement>) => void;
+  handleColor: (color: string) => void;
+  handleProducts: () => void;
+  handleArr: (num: number) => void;
 }
