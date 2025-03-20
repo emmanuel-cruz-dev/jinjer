@@ -100,38 +100,6 @@ export const shopProducts1: ShopProductsProps[] = [
 
 export const shopProducts2: ShopProductsProps[] = [
   {
-    id: 9,
-    img: TShirt9,
-    name: "Clockwork",
-    rating: 4,
-    price: 20.99,
-    sale: true,
-  },
-  {
-    id: 10,
-    img: TShirt10,
-    name: "Microverse",
-    rating: 4,
-    price: 25.99,
-    sale: true,
-  },
-  {
-    id: 11,
-    img: TShirt11,
-    name: "Retrospection",
-    rating: 5,
-    price: 15.99,
-    sale: true,
-  },
-  {
-    id: 12,
-    img: TShirt12,
-    name: "Fire Skull",
-    rating: 3,
-    price: 30.99,
-    sale: false,
-  },
-  {
     id: 13,
     img: TShirt13,
     name: "Butterfly",
@@ -200,6 +168,38 @@ export const shopProducts2: ShopProductsProps[] = [
     price: 20.99,
     sale: true,
     color: "blue",
+  },
+  {
+    id: 21,
+    img: TShirt9,
+    name: "Clockwork",
+    rating: 4,
+    price: 20.99,
+    sale: true,
+  },
+  {
+    id: 22,
+    img: TShirt10,
+    name: "Microverse",
+    rating: 4,
+    price: 25.99,
+    sale: true,
+  },
+  {
+    id: 23,
+    img: TShirt11,
+    name: "Retrospection",
+    rating: 5,
+    price: 15.99,
+    sale: true,
+  },
+  {
+    id: 24,
+    img: TShirt12,
+    name: "Fire Skull",
+    rating: 3,
+    price: 30.99,
+    sale: false,
   },
 ];
 

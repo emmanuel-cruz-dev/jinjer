@@ -1,116 +1,13 @@
-import { ChangeEvent, FC, useState } from "react";
 import Background from "../../../assets/images/gradient.avif";
 import ShopCard from "./ShopCard";
-import {
-  shopProducts1,
-  shopProducts2,
-  shopProductsList,
-} from "../../../data/shopProducts";
-import { ShopProductsProps, UseShopReturn } from "../../../types/types";
-
-const useShop = (productsList: ShopProductsProps[]): UseShopReturn => {
-  const [products, setProducts] = useState<ShopProductsProps[]>(productsList);
-  const productsTotal = shopProducts1.length + shopProducts2.length;
-  const scrollOptions: ScrollToOptions = {
-    top: 0,
-    behavior: "smooth",
-  };
-
-  const handleFilter = (e: ChangeEvent<HTMLSelectElement>) => {
-    const selectedValue = e.target.value;
-    const originalProducts = [...products];
-
-    switch (selectedValue) {
-      case "menu-order":
-        setProducts(shopProducts1);
-        break;
-      case "rating":
-        setProducts(
-          [...shopProducts1].filter((product) => product.rating === 5)
-        );
-        break;
-      case "sale":
-        setProducts(
-          [...shopProducts1].filter((product) => product.sale === true)
-        );
-        break;
-      case "price":
-        setProducts([...shopProducts1].sort((a, b) => a.price - b.price));
-        break;
-      case "price-desc":
-        setProducts([...shopProducts1].sort((a, b) => b.price - a.price));
-        break;
-      default:
-        setProducts(originalProducts);
-        break;
-    }
-  };
-
-  const handleColor = (color: string) => {
-    const selectedValue = color;
-    const originalProducts = [...products];
-
-    switch (selectedValue) {
-      case "all":
-        setProducts(originalProducts);
-        break;
-      case "red":
-        setProducts(
-          [...shopProducts2].filter((product) => product.color === "red")
-        );
-        break;
-      case "blue":
-        setProducts(
-          [...shopProducts2].filter((product) => product.color === "blue")
-        );
-        break;
-      case "green":
-        setProducts(
-          [...shopProducts2].filter((product) => product.color === "green")
-        );
-        break;
-      case "yellow":
-        setProducts(
-          [...shopProducts2].filter((product) => product.color === "yellow")
-        );
-        break;
-      default:
-        setProducts(originalProducts);
-        break;
-    }
-  };
-
-  const handleProducts = () => {
-    window.scrollTo(scrollOptions);
-    if (products === shopProducts1) {
-      setProducts(shopProducts2);
-    } else {
-      setProducts(shopProducts1);
-    }
-  };
-
-  const handleArr = (num: number) => {
-    window.scrollTo(scrollOptions);
-    if (num === 1) {
-      setProducts(shopProducts1);
-    } else {
-      setProducts(shopProducts2);
-    }
-  };
-
-  return {
-    products,
-    productsTotal,
-    handleFilter,
-    handleColor,
-    handleProducts,
-    handleArr,
-  };
-};
+import { shopProductsList } from "../../../data/shopProducts";
+import useShop from "../../../hooks/useShop";
 
 function Shop() {
   const {
     products,
+    shopProducts1,
+    shopProducts2,
     productsTotal,
     handleFilter,
     handleColor,

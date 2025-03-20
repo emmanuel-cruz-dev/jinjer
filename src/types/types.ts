@@ -84,6 +84,8 @@ export interface StarRatingProps {
 
 export interface UseShopReturn {
   products: ShopProductsProps[];
+  shopProducts1: ShopProductsProps[];
+  shopProducts2: ShopProductsProps[];
   productsTotal: number;
   handleFilter: (e: ChangeEvent<HTMLSelectElement>) => void;
   handleColor: (color: string) => void;
