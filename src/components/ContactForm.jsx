@@ -1,4 +1,4 @@
-const ContactForm = () => {
+function ContactForm() {
   return (
     <div className="flex flex-col gap-4 mx-auto">
       <div className="flex flex-col gap-2 my-2">
@@ -39,6 +39,6 @@ const ContactForm = () => {
       </form>
     </div>
   );
-};
+}
 
 export default ContactForm;

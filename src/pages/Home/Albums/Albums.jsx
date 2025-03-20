@@ -1,4 +1,3 @@
-import goToSection from "../hooks/useGoToSection";
 import { useTranslation } from "react-i18next";
 import AlbumCover01 from "../assets/images/wallflowers.webp";
 import AlbumCover02 from "../assets/images/melb.webp";
@@ -6,42 +5,7 @@ import AlbumCover03 from "../assets/images/macro.webp";
 import AlbumCover04 from "../assets/images/cf.webp";
 import AlbumCover05 from "../assets/images/koe.webp";
 import AlbumCover06 from "../assets/images/idb.webp";
-import VinylDisc01 from "../assets/images/vinyl-disc.avif";
-
-const Album = ({ cover, title, year, id }) => {
-  const { t } = useTranslation();
-
-  return (
-    <a
-      key={id}
-      onClick={() => goToSection(`/music/`, `${id}`)}
-      href={`/music/${id}`}
-      className="album__container"
-      title={t("albums.listen")}
-    >
-      <div className="album__images__container">
-        <img
-          className="album__cover"
-          width="500"
-          height="500"
-          src={cover}
-          alt={`Portada del álbum ${title}`}
-          loading="lazy"
-        />
-        <img
-          className="album__disc"
-          width="500"
-          height="500"
-          src={VinylDisc01}
-          alt="Disco de vinilo"
-          loading="lazy"
-        />
-      </div>
-      <h3 className="album__title">{title}</h3>
-      <span className="album__year">{year}</span>
-    </a>
-  );
-};
+import AlbumItem from "./AlbumItem";
 
 const articles = [
   {
@@ -106,7 +70,7 @@ const Albums = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-40 gap-y-12 w-full md:w-5/6">
           {articles.map((article) => (
-            <Album
+            <AlbumItem
               key={article.id}
               cover={article.image}
               title={article.title}

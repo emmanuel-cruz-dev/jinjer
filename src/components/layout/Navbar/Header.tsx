@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitch from "../../LanguageSwitch";
 import SocialLinks from "../../SocialLinks";
-import Name from "../../Name";
+import Name from "../../ui/Name";
 
 import SideAreaImg from "../../../assets/images/latest-post-02.webp";
 import useScroll from "../../../hooks/useScroll";

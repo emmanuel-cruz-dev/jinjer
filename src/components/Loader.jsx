@@ -1,4 +1,4 @@
-import Name from "./Name";
+import Name from "./ui/Name";
 import NephewsLogo from "../assets/icons/jinjer-logo.png";
 
 const Loader = () => {

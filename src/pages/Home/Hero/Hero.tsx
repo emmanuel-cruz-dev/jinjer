@@ -1,4 +1,4 @@
-import Name from "../../../components/Name";
+import Name from "../../../components/ui/Name";
 
 function Hero() {
   return (

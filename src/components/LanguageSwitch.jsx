@@ -3,7 +3,7 @@ import ReactCountryFlag from "react-country-flag";
 import { useState, useEffect } from "react";
 
 const LanguageSwitch = () => {
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
   const toggleLanguage = () => {
