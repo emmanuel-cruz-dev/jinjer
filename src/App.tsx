@@ -4,7 +4,7 @@ import "./styles/App.scss";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n/i18n";
 import "./i18n/i18n";
-import Loader from "./components/Loader";
+import Loader from "./components/ui/Loader";
 
 const Header = lazy(() => import("./components/layout/Navbar/Header"));
 const Hero = lazy(() => import("./pages/Home/Hero/Hero"));
@@ -15,7 +15,9 @@ const Albums = lazy(() => import("./pages/Home/Albums/Albums"));
 const Media = lazy(() => import("./pages/Home/Media/Media"));
 const Store = lazy(() => import("./pages/Home/Store/Store"));
 const Follow = lazy(() => import("./pages/Home/Follow/Follow"));
-const ScrollToTopButton = lazy(() => import("./components/ScrollToTopButton"));
+const ScrollToTopButton = lazy(
+  () => import("./components/ui/ScrollToTopButton")
+);
 const MusicPlayer = lazy(() => import("./components/MusicPlayer"));
 const Footer = lazy(() => import("./components/layout/Footer/Footer"));
 

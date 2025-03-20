@@ -13,6 +13,7 @@ import Song3 from "../assets/songs/song3.mp3";
 import Song4 from "../assets/songs/song4.mp3";
 
 import CoverAlbum from "../assets/images/duelep.webp";
+import useScrollDisplay from "../hooks/useScrollDisplay";
 
 // Lista de canciones (puedes expandir esto)
 const musicList = [
@@ -40,33 +41,7 @@ const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
   const audioRef = useRef(null);
-
-  // Funciones de scroll
-  const [isVisible, setIsVisible] = useState(false);
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const scrollHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const newProgress = scrollTop / scrollHeight;
-      setProgress(newProgress);
-
-      if (newProgress > 0.03) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const { isVisible } = useScrollDisplay();
 
   const handleOpenMusicPlayer = () => {
     setIsOpen(!isOpen);

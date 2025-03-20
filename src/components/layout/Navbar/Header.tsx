@@ -2,7 +2,7 @@ import { MdQueueMusic } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import LanguageSwitch from "../../LanguageSwitch";
+import LanguageSwitch from "../../ui/LanguageSwitch";
 import SocialLinks from "../../ui/SocialLinks";
 import Name from "../../ui/Name";
 
