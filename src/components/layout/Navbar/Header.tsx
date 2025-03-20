@@ -8,7 +8,7 @@ import Name from "../../Name";
 
 import SideAreaImg from "../../../assets/images/latest-post-02.webp";
 
-const Header = () => {
+function Header() {
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -240,6 +240,6 @@ const Header = () => {
       </ul>
     </>
   );
-};
+}
 
 export default Header;
