@@ -6,7 +6,7 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 
-const SocialIcons = () => {
+function SocialIcons() {
   const icons = [
     {
       icon: <FaFacebook size={30} />,
@@ -41,7 +41,7 @@ const SocialIcons = () => {
   ];
 
   return (
-    <div className="flex gap-5 items-center">
+    <article className="flex gap-5 items-center">
       {icons.map((item) => (
         <a
           key={item.name}
@@ -55,8 +55,8 @@ const SocialIcons = () => {
           {item.icon}
         </a>
       ))}
-    </div>
+    </article>
   );
-};
+}
 
 export default SocialIcons;

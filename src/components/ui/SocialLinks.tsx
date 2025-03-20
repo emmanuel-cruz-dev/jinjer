@@ -5,9 +5,9 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 
-const SocialLinks = () => {
+function SocialLinks() {
   return (
-    <div className="social-links flex gap-4">
+    <article className="social-links flex gap-4">
       <a
         href="https://youtube.com"
         target="_blank"
@@ -40,8 +40,8 @@ const SocialLinks = () => {
       >
         <FaInstagram />
       </a>
-    </div>
+    </article>
   );
-};
+}
 
 export default SocialLinks;

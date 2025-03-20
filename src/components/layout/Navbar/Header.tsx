@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitch from "../../LanguageSwitch";
-import SocialLinks from "../../SocialLinks";
+import SocialLinks from "../../ui/SocialLinks";
 import Name from "../../ui/Name";
 
 import SideAreaImg from "../../../assets/images/latest-post-02.webp";

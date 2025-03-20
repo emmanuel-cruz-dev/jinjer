@@ -13,7 +13,7 @@ const About = lazy(() => import("./pages/Home/About/About"));
 const Tour = lazy(() => import("./pages/Home/Tour/Tour"));
 const Albums = lazy(() => import("./pages/Home/Albums/Albums"));
 const Media = lazy(() => import("./pages/Home/Media/Media"));
-const Store = lazy(() => import("./components/Store"));
+const Store = lazy(() => import("./pages/Home/Store/Store"));
 const Follow = lazy(() => import("./pages/Home/Follow/Follow"));
 const ScrollToTopButton = lazy(() => import("./components/ScrollToTopButton"));
 const MusicPlayer = lazy(() => import("./components/MusicPlayer"));

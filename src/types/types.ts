@@ -36,3 +36,9 @@ export interface VideoCardProps {
   paragraph: string;
   views: string;
 }
+
+export interface TShirtCardProps {
+  title: string;
+  price: number;
+  img: string;
+}
