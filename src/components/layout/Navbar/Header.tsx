@@ -2,11 +2,11 @@ import { MdQueueMusic } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import LanguageSwitch from "./LanguageSwitch";
-import SocialLinks from "./SocialLinks";
-import Name from "./Name";
+import LanguageSwitch from "../../LanguageSwitch";
+import SocialLinks from "../../SocialLinks";
+import Name from "../../Name";
 
-import SideAreaImg from "../assets/images/latest-post-02.webp";
+import SideAreaImg from "../../../assets/images/latest-post-02.webp";
 
 const Header = () => {
   const navigate = useNavigate();

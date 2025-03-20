@@ -6,7 +6,7 @@ import i18n from "./i18n/i18n";
 import "./i18n/i18n";
 import Loader from "./components/Loader";
 
-const Header = lazy(() => import("./components/Header"));
+const Header = lazy(() => import("./components/layout/Navbar/Header"));
 const Hero = lazy(() => import("./components/Hero"));
 const News = lazy(() => import("./components/News"));
 const About = lazy(() => import("./components/About"));
