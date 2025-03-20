@@ -14,7 +14,7 @@ const Tour = lazy(() => import("./pages/Home/Tour/Tour"));
 const Albums = lazy(() => import("./pages/Home/Albums/Albums"));
 const Media = lazy(() => import("./components/Media"));
 const Store = lazy(() => import("./components/Store"));
-const Follow = lazy(() => import("./components/Follow"));
+const Follow = lazy(() => import("./pages/Home/Follow/Follow"));
 const ScrollToTopButton = lazy(() => import("./components/ScrollToTopButton"));
 const MusicPlayer = lazy(() => import("./components/MusicPlayer"));
 const Footer = lazy(() => import("./components/layout/Footer/Footer"));

@@ -1,114 +1,16 @@
 import { useTranslation } from "react-i18next";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
+import TwitterImg1 from "../../../assets/images/twitter-01.webp";
+import TwitterImg2 from "../../../assets/images/twitter-02.webp";
+import TwitterImg3 from "../../../assets/images/twitter-03.webp";
+import TwitterImg4 from "../../../assets/images/twitter-04.webp";
+import TwitterImg5 from "../../../assets/images/twitter-05.webp";
+import { instagramImages } from "../../../data/instagramImages";
+import ImageItem from "./ImageItem";
+import AnchorFollow from "./AnchorFollow";
+import PostCards from "./PostCards";
 
-import InstaImg1 from "../assets/images/insta-01.webp";
-import InstaImg2 from "../assets/images/insta-02.webp";
-import InstaImg3 from "../assets/images/insta-03.webp";
-import InstaImg4 from "../assets/images/insta-04.webp";
-import InstaImg5 from "../assets/images/insta-05.webp";
-import InstaImg6 from "../assets/images/insta-06.webp";
-import InstaImg7 from "../assets/images/insta-07.webp";
-import InstaImg8 from "../assets/images/insta-08.webp";
-import InstaImg9 from "../assets/images/insta-09.webp";
-
-import TwitterImg1 from "../assets/images/twitter-01.webp";
-import TwitterImg2 from "../assets/images/twitter-02.webp";
-import TwitterImg3 from "../assets/images/twitter-03.webp";
-import TwitterImg4 from "../assets/images/twitter-04.webp";
-import TwitterImg5 from "../assets/images/twitter-05.webp";
-
-const colors = {
-  cyan: "bg-cyan-700 hover:bg-cyan-900",
-};
-
-const Anchor = ({ icon, color }) => {
-  const { t } = useTranslation();
-  const colorClasses = colors[color] || "bg-slate-800 hover:bg-slate-900";
-
-  return (
-    <a
-      href="#"
-      className={`relative flex gap-5 px-3 py-2 text-white ${colorClasses} transition-colors duration-300`}
-    >
-      <span className="text-2xl">
-        <span className="follow__anchor__icon__line"></span>
-        {icon}
-      </span>
-      {t("follow.followButton")}
-    </a>
-  );
-};
-
-const PostCards = ({ img, user, message }) => {
-  return (
-    <div className="flex items-center gap-4">
-      <img
-        className="w-14 md:w-16"
-        width="300"
-        height="300"
-        src={img}
-        alt={`Imagen de twitter/X, usuario: ${user}`}
-        loading="lazy"
-      />
-      <p className="leading-relaxed text-sm md:text-base text-gray-400">
-        <span className="font-bold text-gray-300">@{user}</span> {message}
-      </p>
-    </div>
-  );
-};
-
-const images = [
-  {
-    id: 1,
-    image: InstaImg1,
-  },
-  {
-    id: 2,
-    image: InstaImg2,
-  },
-  {
-    id: 3,
-    image: InstaImg3,
-  },
-  {
-    id: 4,
-    image: InstaImg4,
-  },
-  {
-    id: 5,
-    image: InstaImg5,
-  },
-  {
-    id: 6,
-    image: InstaImg6,
-  },
-  {
-    id: 7,
-    image: InstaImg7,
-  },
-  {
-    id: 8,
-    image: InstaImg8,
-  },
-  {
-    id: 9,
-    image: InstaImg9,
-  },
-];
-
-const ImageElement = ({ image }) => {
-  return (
-    <img
-      src={image}
-      alt="Imagen de instagram de Jinjer"
-      width="300"
-      height="300"
-      loading="lazy"
-    />
-  );
-};
-
-const Follow = () => {
+function Follow() {
   const { t } = useTranslation();
 
   return (
@@ -141,12 +43,12 @@ const Follow = () => {
               </div>
 
               <span>
-                <Anchor color="slate" icon={<FaInstagram />} />
+                <AnchorFollow color="slate" icon={<FaInstagram />} />
               </span>
             </div>
             <div className="follow__img__grid-container grid grid-cols-3 gap-4">
-              {images.map((image) => (
-                <ImageElement key={image.id} image={image.image} />
+              {instagramImages.map((image) => (
+                <ImageItem key={image.id} img={image.image} />
               ))}
             </div>
           </div>
@@ -172,7 +74,7 @@ const Follow = () => {
               </div>
 
               <span>
-                <Anchor color="cyan" icon={<FaXTwitter />} />
+                <AnchorFollow color="cyan" icon={<FaXTwitter />} />
               </span>
             </div>
             <div className="grid grid-rows-3 gap-10">
@@ -208,6 +110,6 @@ const Follow = () => {
       </article>
     </section>
   );
-};
+}
 
 export default Follow;
