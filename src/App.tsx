@@ -24,7 +24,7 @@ const Footer = lazy(() => import("./components/layout/Footer/Footer"));
 const NewsBlog = lazy(() => import("./components/NewsBlog"));
 const Members = lazy(() => import("./components/Members"));
 const TourBlog = lazy(() => import("./components/TourBlog"));
-const Shop = lazy(() => import("./components/Shop"));
+const Shop = lazy(() => import("./pages/Shop/Shop/Shop"));
 const MusicRender = lazy(() => import("./components/MusicRender"));
 
 const Home = () => {

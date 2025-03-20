@@ -50,7 +50,7 @@ const ItemsRender = ({ title, obj, route, formVideo, image }) => {
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="stric-origin-when-cross-origin"
+                  referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen={true}
                 ></iframe>
               )}

@@ -66,3 +66,13 @@ export interface SongsListProps {
 export interface UseMusicPlayerProps {
   songsList: SongsListProps[];
 }
+
+export interface ShopProductsProps {
+  id: number;
+  img: string;
+  name: string;
+  rating: number;
+  price: number;
+  sale?: boolean;
+  color?: string;
+}
