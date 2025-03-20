@@ -1,6 +1,6 @@
 import { MdQueueMusic } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, RefObject } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitch from "../../LanguageSwitch";
 import SocialLinks from "../../SocialLinks";
@@ -8,6 +8,7 @@ import Name from "../../Name";
 
 import SideAreaImg from "../../../assets/images/latest-post-02.webp";
 import useScroll from "../../../hooks/useScroll";
+import useClickOutside from "../../../hooks/useClickOutside";
 
 function Header() {
   const navigate = useNavigate();
@@ -17,21 +18,7 @@ function Header() {
   const latestAlbumRef = useRef(null);
   const { t } = useTranslation();
 
-  const handleClickOutside = (event) => {
-    if (
-      latestAlbumRef.current &&
-      !latestAlbumRef.current.contains(event.target)
-    ) {
-      setIsLatestAlbumOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  useClickOutside(latestAlbumRef, () => setIsLatestAlbumOpen(false));
 
   const toggleLatestAlbum = () => {
     setIsLatestAlbumOpen(!isLatestAlbumOpen);
