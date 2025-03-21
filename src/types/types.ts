@@ -110,8 +110,8 @@ export interface MediaItemsRenderProps {
   title: string;
   arr: MediaDataProps[];
   route: string;
-  formVideo?: string;
-  image?: string;
+  formVideo?: boolean | string;
+  image?: boolean | string;
 }
 
 export interface TitleArticleProps {

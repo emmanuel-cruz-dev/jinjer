@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import ContactForm from "../../components/ui/ContactForm";
-import goToSection from "../../hooks/useGoToSection";
 import { FC } from "react";
 import TitleArticle from "./TitleArticle";
 import { MediaItemsRenderProps } from "../../types/types";
+import useGoToSection from "../../hooks/useGoToSection";
 
 const MediaItemsRender: FC<MediaItemsRenderProps> = ({
   title,
@@ -14,6 +14,7 @@ const MediaItemsRender: FC<MediaItemsRenderProps> = ({
 }) => {
   const { id } = useParams<{ id: string }>();
   const article = arr.find((a) => a.id === parseInt(id || ""));
+  const goToSection = useGoToSection();
 
   if (!article) {
     return (

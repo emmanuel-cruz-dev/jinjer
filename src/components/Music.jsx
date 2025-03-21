@@ -1,17 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import Background from "../assets/images/gradient.avif";
-import Song1 from "../assets/album/song1.mp3";
-import Song2 from "../assets/album/song2.mp3";
-import Song3 from "../assets/album/song3.mp3";
-import Song4 from "../assets/album/song4.mp3";
-import Song5 from "../assets/album/song5.mp3";
-import Song6 from "../assets/album/song6.mp3";
-import Song7 from "../assets/album/song7.mp3";
-import Song8 from "../assets/album/song8.mp3";
-import Song9 from "../assets/album/song9.mp3";
-import Song10 from "../assets/album/song10.mp3";
-import Song11 from "../assets/album/song11.mp3";
-
 import {
   FaPlay,
   FaPause,
@@ -19,75 +7,7 @@ import {
   FaBackwardStep,
   FaSpotify,
 } from "react-icons/fa6";
-
-const musicList = [
-  {
-    id: 1,
-    title: "Call me a Symbol",
-    duration: "04:20",
-    src: `${Song1}`,
-  },
-  {
-    id: 2,
-    title: "Colossus",
-    duration: "03:37",
-    src: `${Song2}`,
-  },
-  {
-    id: 3,
-    title: "Vortex",
-    duration: "04:02",
-    src: `${Song3}`,
-  },
-  {
-    id: 4,
-    title: "Disclosure!",
-    duration: "03:47",
-    src: `${Song4}`,
-  },
-  {
-    id: 5,
-    title: "Copycat",
-    duration: "04:23",
-    src: `${Song5}`,
-  },
-  {
-    id: 6,
-    title: "Pearls and Swine",
-    duration: "05:20",
-    src: `${Song6}`,
-  },
-  {
-    id: 7,
-    title: "Sleep of the Righteous",
-    duration: "04:32",
-    src: `${Song7}`,
-  },
-  {
-    id: 8,
-    title: "Wallflower",
-    duration: "04:17",
-    src: `${Song8}`,
-  },
-  {
-    id: 9,
-    title: "Dead Hands Feel no Pain",
-    duration: "04:09",
-    src: `${Song9}`,
-  },
-  {
-    id: 10,
-    title: "As I Boil Ice",
-    duration: "04:21",
-    src: `${Song10}`,
-  },
-  {
-    id: 11,
-    title: "Mediator",
-    duration: "04:29",
-    src: `${Song11}`,
-  },
-];
+import { musicPlayerList } from "../data/musicPlayerList";
 
 const backgroundColors = {
   2021: ["bg-[#1f1f1f]", "bg-[#121212]"],
@@ -140,8 +60,9 @@ const Music = ({ articleId, title, year, image }) => {
   };
 
   const handleNext = () => {
-    setCurrentTrack((prevTrack) => (prevTrack + 1) % musicList.length);
-    const id = currentTrack + 1 === musicList.length ? 1 : currentTrack + 2;
+    setCurrentTrack((prevTrack) => (prevTrack + 1) % musicPlayerList.length);
+    const id =
+      currentTrack + 1 === musicPlayerList.length ? 1 : currentTrack + 2;
     setCurrentSongItem(id);
     if (isPlaying) {
       audioRef.current.pause();
@@ -154,9 +75,9 @@ const Music = ({ articleId, title, year, image }) => {
 
   const handlePrevious = () => {
     setCurrentTrack((prevTrack) =>
-      prevTrack === 0 ? musicList.length - 1 : prevTrack - 1
+      prevTrack === 0 ? musicPlayerList.length - 1 : prevTrack - 1
     );
-    const id = currentTrack === 0 ? musicList.length : currentTrack;
+    const id = currentTrack === 0 ? musicPlayerList.length : currentTrack;
     setCurrentSongItem(id);
   };
 
@@ -200,7 +121,7 @@ const Music = ({ articleId, title, year, image }) => {
     }
   }, [currentTrack]);
 
-  const currentSong = musicList[currentTrack];
+  const currentSong = musicPlayerList[currentTrack];
 
   const handleMenuVisible = () => {
     setIsVisible(!isVisible);
@@ -209,7 +130,7 @@ const Music = ({ articleId, title, year, image }) => {
   const ListItem = () => {
     return (
       <ol>
-        {musicList.map((item) => (
+        {musicPlayerList.map((item) => (
           <li
             // onClick={() => handleCurrentSong(item.id)}
             onClick={() => playSong(item.id)}

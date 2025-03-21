@@ -21,9 +21,9 @@ const ScrollToTopButton = lazy(
 const MusicPlayer = lazy(() => import("./components/ui/MusicPlayer"));
 const Footer = lazy(() => import("./components/layout/Footer/Footer"));
 
-const NewsBlog = lazy(() => import("./components/NewsBlog"));
-const Members = lazy(() => import("./components/Members"));
-const TourBlog = lazy(() => import("./components/TourBlog"));
+const NewsBlog = lazy(() => import("./routes/NewsBlog"));
+const Members = lazy(() => import("./routes/Members"));
+const TourBlog = lazy(() => import("./routes/TourBlog"));
 const Shop = lazy(() => import("./pages/Shop/Shop/Shop"));
 const MusicRender = lazy(() => import("./components/MusicRender"));
 

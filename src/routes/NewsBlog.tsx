@@ -1,4 +1,4 @@
-import { newsMediaData } from "../data/newsMediaData.ts";
+import { newsMediaData } from "../data/newsMediaData.js";
 import MediaItemsRender from "../pages/MediaItems/MediaItemsRender";
 
 function NewsBlog() {
@@ -7,7 +7,7 @@ function NewsBlog() {
       title="News and Blog"
       arr={newsMediaData}
       route="newsblog"
-      formVideo
+      formVideo={true}
     />
   );
 }
