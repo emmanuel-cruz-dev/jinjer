@@ -1,10 +1,8 @@
-import { useTranslation } from "react-i18next";
 import ReactCountryFlag from "react-country-flag";
 import useLanguage from "../../hooks/useLanguage";
 
 function LanguageSwitch() {
   const { currentLanguage, toggleLanguage } = useLanguage();
-  const { i18n } = useTranslation();
 
   return (
     <button
