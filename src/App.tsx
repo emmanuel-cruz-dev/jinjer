@@ -25,7 +25,7 @@ const NewsBlog = lazy(() => import("./routes/NewsBlog"));
 const Members = lazy(() => import("./routes/Members"));
 const TourBlog = lazy(() => import("./routes/TourBlog"));
 const Shop = lazy(() => import("./pages/Shop/Shop/Shop"));
-const MusicRender = lazy(() => import("./components/MusicRender"));
+const MusicRender = lazy(() => import("./routes/MusicRender"));
 
 const Home = () => {
   return (

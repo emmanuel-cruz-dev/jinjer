@@ -1,4 +1,4 @@
-import { newsMediaData } from "../data/newsMediaData.js";
+import { newsMediaData } from "../data/newsMediaData";
 import MediaItemsRender from "../pages/MediaItems/MediaItemsRender";
 
 function NewsBlog() {

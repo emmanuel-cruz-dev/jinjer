@@ -1,4 +1,4 @@
-import { tourData } from "../data/tourData.js";
+import { tourData } from "../data/tourData";
 import MediaItemsRender from "../pages/MediaItems/MediaItemsRender";
 
 function TourBlog() {

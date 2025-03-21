@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import AlbumItem from "./AlbumItem";
 import { albumsData } from "../../../data/albumsData";
 
-const Albums = () => {
+function Albums() {
   const { t } = useTranslation();
 
   return (
@@ -35,6 +35,6 @@ const Albums = () => {
       </article>
     </section>
   );
-};
+}
 
 export default Albums;

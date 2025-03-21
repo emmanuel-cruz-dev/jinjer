@@ -24,6 +24,7 @@ Plataforma de artista dedicada a Jinjer, una banda de metal progresivo originari
 ## Tecnologías utilizadas
 
 - React
+- TypeScript
 - Tailwind CSS
 - Sass
 - Git y GitHub

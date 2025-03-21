@@ -52,10 +52,10 @@ export interface SocialIcon {
 }
 
 export interface AlbumItemProps {
+  id: number;
   cover: string;
   title: string;
   year: string;
-  id: number;
 }
 
 export interface SongsListProps {

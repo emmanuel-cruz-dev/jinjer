@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect } from "react";
-import Background from "../assets/images/gradient.avif";
+import { useState, useRef, useEffect, FC } from "react";
+import Background from "../../assets/images/gradient.avif";
 import {
   FaPlay,
   FaPause,
@@ -7,7 +7,8 @@ import {
   FaBackwardStep,
   FaSpotify,
 } from "react-icons/fa6";
-import { musicPlayerList } from "../data/musicPlayerList";
+import { musicPlayerList } from "../../data/musicPlayerList";
+import { AlbumItemProps } from "../../types/types";
 
 const backgroundColors = {
   2021: ["bg-[#1f1f1f]", "bg-[#121212]"],
@@ -18,7 +19,7 @@ const backgroundColors = {
   2012: ["bg-[#535353]", "bg-[#434343]"],
 };
 
-const Music = ({ articleId, title, year, image }) => {
+const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -178,7 +179,7 @@ const Music = ({ articleId, title, year, image }) => {
     <section className="music second-page" id="music">
       <article className="py-10">
         <article
-          key={articleId}
+          key={id}
           className="relative w-full mt-20 lg:w-11/12 mb-12 bg-black/90 flex flex-col justify-center items-center mx-auto"
         >
           <img
@@ -197,7 +198,7 @@ const Music = ({ articleId, title, year, image }) => {
               <figure className="w-96 hidden lg:block">
                 <img
                   className="w-full"
-                  src={image}
+                  src={cover}
                   alt="Portada del álbum Wallflowers"
                   width="500"
                   height="500"
@@ -216,7 +217,7 @@ const Music = ({ articleId, title, year, image }) => {
                     </a>
                     <img
                       className="w-[6.8rem] rounded-xl shadow-lg shadow-black/40"
-                      src={image}
+                      src={cover}
                       alt={`Portada del álbum ${title}`}
                       width="500"
                       height="500"
@@ -401,4 +402,4 @@ const Music = ({ articleId, title, year, image }) => {
   );
 };
 
-export default Music;
+export default MusicPlayer;
