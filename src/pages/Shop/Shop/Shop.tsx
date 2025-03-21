@@ -35,7 +35,7 @@ function Shop() {
               <div className="flex justify-between gap-4 w-full">
                 <p className="text-sm text-gray-400">
                   Showing{" "}
-                  {products === shopProducts1
+                  {shopProducts1.length == 12
                     ? "1 - 12"
                     : `13 - ${productsTotal}`}{" "}
                   of {productsTotal} results

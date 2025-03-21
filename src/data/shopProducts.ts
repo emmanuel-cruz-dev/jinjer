@@ -20,7 +20,7 @@ import TShirt19 from "../assets/images/shop-fire-skull-roja.png";
 import TShirt20 from "../assets/images/shop-logo-azul.png";
 import { ShopProductsProps } from "../types/types";
 
-export const shopProducts1: ShopProductsProps[] = [
+export const shopProductsList: ShopProductsProps[] = [
   {
     id: 1,
     img: TShirt1,
@@ -96,9 +96,6 @@ export const shopProducts1: ShopProductsProps[] = [
     price: 30.99,
     sale: false,
   },
-];
-
-export const shopProducts2: ShopProductsProps[] = [
   {
     id: 13,
     img: TShirt13,
@@ -202,5 +199,3 @@ export const shopProducts2: ShopProductsProps[] = [
     sale: false,
   },
 ];
-
-export const shopProductsList = shopProducts1.concat(shopProducts2);
