@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, FC, ChangeEvent } from "react";
+import { FC } from "react";
 import Background from "../../assets/images/gradient.avif";
 import {
   FaPlay,
@@ -8,126 +8,34 @@ import {
   FaSpotify,
 } from "react-icons/fa6";
 import { musicPlayerList } from "../../data/musicPlayerList";
-import { AlbumItemProps } from "../../types/types";
+import { AlbumItemProps, MusicPlayerListProps } from "../../types/types";
 import ListItem from "./ListItem";
 import { backgroundColors } from "../../data/backgroundColors";
+import useMediaPlayer from "../../hooks/useMediaPlayer";
+import useMenu from "../../hooks/useMenu";
 
 const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentTrack, setCurrentTrack] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [currentTime, setCurrentTime] = useState(0); // Estado para almacenar el tiempo transcurrido
-  const [duration, setDuration] = useState(0); // Estado para almacenar la duración de la canción
-  const [currentSongItem, setCurrentSongItem] = useState(null);
+  const { isMenuOpen, toggleMenu } = useMenu();
+  const {
+    isPlaying,
+    audioRef,
+    currentTime,
+    currentSongItem,
+    playSong,
+    handlePlayPause,
+    handleNext,
+    handlePrevious,
+    formatTime,
+    handleTimeUpdate,
+    handleLoadedMetadata,
+    handleProgressBarChange,
+    calculateProgress,
+    currentSong,
+  } = useMediaPlayer({ musicList: musicPlayerList });
 
   let selectColor = year;
   let color1 = backgroundColors[selectColor][0];
   let color2 = backgroundColors[selectColor][1];
-
-  const playSong = (id: number) => {
-    if (audioRef.current) {
-      if (currentSongItem === id) {
-        if (isPlaying) {
-          audioRef.current.pause();
-          setIsPlaying(false);
-        } else {
-          audioRef.current.play();
-          setIsPlaying(true);
-        }
-      } else {
-        setCurrentTrack(id - 1);
-        setCurrentSongItem(id);
-        audioRef.current.play();
-        setIsPlaying(true);
-      }
-    }
-  };
-
-  const handlePlayPause = () => {
-    if (audioRef.current) {
-      setCurrentSongItem(currentTrack + 1);
-      if (isPlaying) {
-        audioRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        audioRef.current.play();
-        setIsPlaying(true);
-      }
-    }
-  };
-
-  const handleNext = () => {
-    setCurrentTrack((prevTrack) => (prevTrack + 1) % musicPlayerList.length);
-    const id =
-      currentTrack + 1 === musicPlayerList.length ? 1 : currentTrack + 2;
-    setCurrentSongItem(id);
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-        audioRef.current.play();
-      } else {
-        audioRef.current.play();
-        setIsPlaying(true);
-      }
-    }
-  };
-
-  const handlePrevious = () => {
-    setCurrentTrack((prevTrack) =>
-      prevTrack === 0 ? musicPlayerList.length - 1 : prevTrack - 1
-    );
-    const id = currentTrack === 0 ? musicPlayerList.length : currentTrack;
-    setCurrentSongItem(id);
-  };
-
-  const formatTime = (seconds: number) => {
-    // Función para convertir los segundos en formato mm:ss
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = Math.floor(seconds % 60);
-    return `${minutes < 10 ? "0" : ""}${minutes}:${
-      remainingSeconds < 10 ? "0" : ""
-    }${remainingSeconds}`;
-  };
-
-  const handleTimeUpdate = () => {
-    if (audioRef.current) {
-      setCurrentTime(audioRef.current.currentTime); // Actualizar el estado con el tiempo actual
-    }
-  };
-
-  const handleLoadedMetadata = () => {
-    if (audioRef.current) {
-      setDuration(audioRef.current.duration); // Actualizar el estado con la duración de la canción
-    }
-  };
-
-  const handleProgressBarChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newTime = (e.target.valueAsNumber / 100) * duration;
-
-    if (audioRef.current) {
-      audioRef.current.currentTime = newTime;
-      setCurrentTime(newTime);
-    }
-  };
-
-  const calculateProgress = () => {
-    return duration > 0 ? (currentTime / duration) * 100 : 0;
-  };
-
-  useEffect(() => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.play();
-      }
-    }
-  }, [currentTrack]);
-
-  const currentSong = musicPlayerList[currentTrack];
-
-  const handleMenuVisible = () => {
-    setIsVisible(!isVisible);
-  };
 
   return (
     <section className="music second-page" id="music">
@@ -225,7 +133,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                     </div>
                     <span>{formatTime(currentTime)}</span>
                     <button
-                      onClick={handleMenuVisible}
+                      onClick={toggleMenu}
                       className="music-player__more flex items-center border-none hover:scale-110 transition-all duration-300"
                       title="More"
                     >
@@ -261,12 +169,12 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                 </div>
                 <div
                   className={`${
-                    isVisible ? "flex" : "hidden"
+                    isMenuOpen ? "flex" : "hidden"
                   } absolute ${color1} w-full h-full flex-col justify-between items-center p-4 text-center`}
                 >
                   <div className="flex justify-end w-full">
                     <span
-                      onClick={handleMenuVisible}
+                      onClick={toggleMenu}
                       title="Close"
                       className={`material-symbols-outlined text-3xl font-semibold cursor-pointer hover:scale-105 transition-all duration-300`}
                     >
