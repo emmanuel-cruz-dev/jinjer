@@ -2,11 +2,11 @@ import ReactCountryFlag from "react-country-flag";
 import useLanguage from "../../hooks/useLanguage";
 
 function LanguageSwitch() {
-  const { currentLanguage, toggleLanguage } = useLanguage();
+  const { currentLanguage, changeLanguage } = useLanguage();
 
   return (
     <button
-      onClick={toggleLanguage}
+      onClick={changeLanguage}
       className="w-8 h-8 rounded-full overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out"
     >
       <ReactCountryFlag
