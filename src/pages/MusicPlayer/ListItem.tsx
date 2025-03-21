@@ -4,6 +4,7 @@ import { ListItemProps } from "../../types/types";
 
 const ListItem: FC<ListItemProps> = ({
   musicList,
+  playSong,
   isPlaying,
   currentSong,
   color,

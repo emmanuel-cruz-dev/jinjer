@@ -131,6 +131,7 @@ export interface MusicPlayerListProps {
 
 export interface ListItemProps {
   musicList: MusicPlayerListProps[];
+  playSong: (id: number) => void;
   isPlaying: boolean;
   currentSong: number | null;
   color: string;

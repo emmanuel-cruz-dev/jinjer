@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, FC } from "react";
+import { useState, useRef, useEffect, FC, ChangeEvent } from "react";
 import Background from "../../assets/images/gradient.avif";
 import {
   FaPlay,
@@ -16,7 +16,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const [currentTime, setCurrentTime] = useState(0); // Estado para almacenar el tiempo transcurrido
   const [duration, setDuration] = useState(0); // Estado para almacenar la duración de la canción
   const [currentSongItem, setCurrentSongItem] = useState(null);
@@ -25,8 +25,28 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
   let color1 = backgroundColors[selectColor][0];
   let color2 = backgroundColors[selectColor][1];
 
-  const playSong = (id) => {
-    if (currentSongItem === id) {
+  const playSong = (id: number) => {
+    if (audioRef.current) {
+      if (currentSongItem === id) {
+        if (isPlaying) {
+          audioRef.current.pause();
+          setIsPlaying(false);
+        } else {
+          audioRef.current.play();
+          setIsPlaying(true);
+        }
+      } else {
+        setCurrentTrack(id - 1);
+        setCurrentSongItem(id);
+        audioRef.current.play();
+        setIsPlaying(true);
+      }
+    }
+  };
+
+  const handlePlayPause = () => {
+    if (audioRef.current) {
+      setCurrentSongItem(currentTrack + 1);
       if (isPlaying) {
         audioRef.current.pause();
         setIsPlaying(false);
@@ -34,22 +54,6 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
         audioRef.current.play();
         setIsPlaying(true);
       }
-    } else {
-      setCurrentTrack(id - 1);
-      setCurrentSongItem(id);
-      audioRef.current.play();
-      setIsPlaying(true);
-    }
-  };
-
-  const handlePlayPause = () => {
-    setCurrentSongItem(currentTrack + 1);
-    if (isPlaying) {
-      audioRef.current.pause();
-      setIsPlaying(false);
-    } else {
-      audioRef.current.play();
-      setIsPlaying(true);
     }
   };
 
@@ -58,12 +62,14 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
     const id =
       currentTrack + 1 === musicPlayerList.length ? 1 : currentTrack + 2;
     setCurrentSongItem(id);
-    if (isPlaying) {
-      audioRef.current.pause();
-      audioRef.current.play();
-    } else {
-      audioRef.current.play();
-      setIsPlaying(true);
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+        audioRef.current.play();
+      } else {
+        audioRef.current.play();
+        setIsPlaying(true);
+      }
     }
   };
 
@@ -75,7 +81,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
     setCurrentSongItem(id);
   };
 
-  const formatTime = (seconds) => {
+  const formatTime = (seconds: number) => {
     // Función para convertir los segundos en formato mm:ss
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
@@ -96,8 +102,8 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
     }
   };
 
-  const handleProgressBarChange = (e) => {
-    const newTime = (e.target.value / 100) * duration;
+  const handleProgressBarChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newTime = (e.target.valueAsNumber / 100) * duration;
 
     if (audioRef.current) {
       audioRef.current.currentTime = newTime;
@@ -110,8 +116,10 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
   };
 
   useEffect(() => {
-    if (isPlaying) {
-      audioRef.current.play();
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.play();
+      }
     }
   }, [currentTrack]);
 
@@ -245,6 +253,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                 <div className={`${color2} p-2 overflow-y-scroll`}>
                   <ListItem
                     musicList={musicPlayerList}
+                    playSong={playSong}
                     isPlaying={isPlaying}
                     currentSong={currentSongItem}
                     color={color1}
