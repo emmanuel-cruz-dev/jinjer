@@ -117,3 +117,21 @@ export interface MediaItemsRenderProps {
 export interface TitleArticleProps {
   title: string;
 }
+
+export interface BackgroundColorsProps {
+  [key: string]: string[];
+}
+
+export interface MusicPlayerListProps {
+  id: number;
+  title: string;
+  duration: string;
+  src: string;
+}
+
+export interface ListItemProps {
+  musicList: MusicPlayerListProps[];
+  isPlaying: boolean;
+  currentSong: number | null;
+  color: string;
+}

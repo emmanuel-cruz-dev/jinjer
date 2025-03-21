@@ -127,7 +127,7 @@ function Footer() {
       </article>
 
       <article className="flex flex-col gap-4 items-center p-8 xl:py-7 uppercase text-xs">
-        <ul className="footer__list flex flex-col md:flex-row gap-6 text-center">
+        <ul className="footer__list flex flex-col md:flex-row gap-4 text-center">
           <li>
             <a className="footer__legal-links" href="#">
               {t("footer.privacy")}
@@ -141,12 +141,22 @@ function Footer() {
           </li>
           <li>
             <a className="footer__legal-links" href="#">
-              Jinjer Fans Club®
+              Fans Club®
+            </a>
+          </li>
+          <li>
+            <a
+              className="footer__legal-links"
+              href="https://jinjer-metal.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Jinjer Official
             </a>
           </li>
         </ul>
         <p>
-          © 2024 Jinjer. {t("footer.powered")}{" "}
+          © 2024 Jinjer Band Website. {t("footer.powered")}{" "}
           <a
             className="footer__legal-links"
             target="_blank"
