@@ -5,20 +5,13 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n/i18n";
 import "./i18n/i18n";
 import Loader from "./components/ui/Loader";
+import Home from "./routes/Home";
 
 const Header = lazy(() => import("./components/layout/Navbar/Header"));
-const Hero = lazy(() => import("./pages/Home/Hero/Hero"));
-const News = lazy(() => import("./pages/Home/News/News"));
-const About = lazy(() => import("./pages/Home/About/About"));
-const Tour = lazy(() => import("./pages/Home/Tour/Tour"));
-const Albums = lazy(() => import("./pages/Home/Albums/Albums"));
-const Media = lazy(() => import("./pages/Home/Media/Media"));
-const Store = lazy(() => import("./pages/Home/Store/Store"));
-const Follow = lazy(() => import("./pages/Home/Follow/Follow"));
 const ScrollToTopButton = lazy(
   () => import("./components/ui/ScrollToTopButton")
 );
-const MusicPlayer = lazy(() => import("./components/ui/MusicPlayer"));
+
 const Footer = lazy(() => import("./components/layout/Footer/Footer"));
 
 const NewsBlog = lazy(() => import("./routes/NewsBlog"));
@@ -26,22 +19,6 @@ const Members = lazy(() => import("./routes/Members"));
 const TourBlog = lazy(() => import("./routes/TourBlog"));
 const Shop = lazy(() => import("./pages/Shop/Shop/Shop"));
 const MusicRender = lazy(() => import("./routes/MusicRender"));
-
-const Home = () => {
-  return (
-    <Suspense fallback={<Loader />}>
-      <Hero />
-      <MusicPlayer />
-      <News />
-      <About />
-      <Tour />
-      <Albums />
-      <Media />
-      <Store />
-      <Follow />
-    </Suspense>
-  );
-};
 
 function App() {
   return (

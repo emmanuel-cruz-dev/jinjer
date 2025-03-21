@@ -136,3 +136,7 @@ export interface ListItemProps {
   currentSong: number | null;
   color: string;
 }
+
+export interface UseMediaPlayerProps {
+  musicList: MusicPlayerListProps[];
+}

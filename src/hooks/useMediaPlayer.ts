@@ -1,9 +1,5 @@
 import { useState, useRef, useEffect, ChangeEvent } from "react";
-import { MusicPlayerListProps } from "../types/types";
-
-interface UseMediaPlayerProps {
-  musicList: MusicPlayerListProps[];
-}
+import { UseMediaPlayerProps } from "../types/types";
 
 const useMediaPlayer = ({ musicList }: UseMediaPlayerProps) => {
   const [currentTrack, setCurrentTrack] = useState(0);

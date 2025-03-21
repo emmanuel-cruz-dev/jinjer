@@ -7,9 +7,9 @@ import {
   FaBackwardStep,
   FaSpotify,
 } from "react-icons/fa6";
-import { musicPlayerList } from "../../data/musicPlayerList";
-import { AlbumItemProps, MusicPlayerListProps } from "../../types/types";
+import { AlbumItemProps } from "../../types/types";
 import ListItem from "./ListItem";
+import { musicPlayerList } from "../../data/musicPlayerList";
 import { backgroundColors } from "../../data/backgroundColors";
 import useMediaPlayer from "../../hooks/useMediaPlayer";
 import useMenu from "../../hooks/useMenu";
