@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import useScrollDisplay from "../../hooks/useScrollDisplay";
 import { scrollToTop } from "../../utils/utils";
+import { FaChevronUp } from "react-icons/fa6";
 
 function ScrollToTopButton() {
   const { isVisible, progress } = useScrollDisplay();
@@ -22,8 +23,8 @@ function ScrollToTopButton() {
           }deg, transparent 360deg)`,
         }}
       />
-      <span className="text-5xl rounded-full material-symbols-outlined z-10">
-        keyboard_arrow_up
+      <span className="text-3xl rounded-full z-10">
+        <FaChevronUp />
       </span>
     </button>
   );
