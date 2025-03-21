@@ -47,6 +47,7 @@ img {
 // --- Inicio: Loader --- //
 .loader__container {
   position: fixed;
+  top: 0;
   width: 100vw;
   height: 100vh;
   background-color: $primary-color;
@@ -202,21 +203,20 @@ img {
 
 .up-btn {
   background-color: $background-color-black;
-  box-shadow: 0 0 0 0.8px #ff0033;
-}
 
-.up-btn::after {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: #ff0033;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff0033;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
 
-.up-btn:hover::after {
-  background-color: #000;
+  &:hover::after {
+    background-color: $background-color-black;
+  }
 }
 
 // --- Fin: Botón ir arriba --- //

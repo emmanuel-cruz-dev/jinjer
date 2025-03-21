@@ -1,34 +1,32 @@
 import { useParams } from "react-router-dom";
-import ContactForm from "./ui/ContactForm";
-import goToSection from "../hooks/useGoToSection";
+import ContactForm from "../../components/ui/ContactForm";
+import goToSection from "../../hooks/useGoToSection";
+import { FC } from "react";
+import TitleArticle from "./TitleArticle";
+import { MediaItemsRenderProps } from "../../types/types";
 
-const ItemsRender = ({ title, obj, route, formVideo, image }) => {
+const MediaItemsRender: FC<MediaItemsRenderProps> = ({
+  title,
+  arr,
+  route,
+  formVideo,
+  image,
+}) => {
   const { id } = useParams();
-  const article = obj.find((a) => a.id === parseInt(id));
-
-  if (!article) {
-    return <h2 className="text-3xl h-screen w-full">Artículo no encontrado</h2>;
-  }
-
-  const TitleArticle = (
-    <article className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-      <div className="hero__title bg-accent/90 flex justify-center items-center mx-auto border-4 rounded-[1px] border-footer -rotate-6">
-        <span className="uppercase font-semibold whitespace-nowrap text-2xl px-16 py-2 lg:text-4xl lg:px-28 lg:py-4">
-          {title}
-        </span>
-      </div>
-    </article>
-  );
+  const article = arr.find((a) => a.id === parseInt(id));
 
   return (
     <section className="newsblog second-page" id="newsblog">
+      {!article && (
+        <h2 className="text-3xl h-screen w-full">Artículo no encontrado</h2>
+      )}
       <article className="py-10">
         <article
           key={article.id}
           className="w-full mt-20 lg:w-5/6 mb-12 py-12 lg:py-20 bg-black/90 flex flex-col justify-center items-center gap-12 mx-auto"
         >
           <div className="relative w-full border-b border-slate-700 pb-4">
-            {TitleArticle}
+            <TitleArticle title={title} />
           </div>
           <div className="flex flex-col justify-center items-center gap-4 w-full mx-auto">
             <div className="w-11/12 lg:w-4/6 mx-auto">
@@ -85,7 +83,7 @@ const ItemsRender = ({ title, obj, route, formVideo, image }) => {
                 ) : (
                   <span></span>
                 )}
-                {article.id < obj.length ? (
+                {article.id < arr.length ? (
                   <a
                     className="text-right hover:text-slate-100 transition-colors duration-300"
                     onClick={() => goToSection(`/${route}/`, `${article.id}`)}
@@ -106,4 +104,4 @@ const ItemsRender = ({ title, obj, route, formVideo, image }) => {
   );
 };
 
-export default ItemsRender;
+export default MediaItemsRender;

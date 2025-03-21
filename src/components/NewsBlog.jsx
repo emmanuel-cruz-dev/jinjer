@@ -1,17 +1,15 @@
-import newsMediaData from "../data/newsMediaData.json";
-import ItemsRender from "./ItemsRender";
+import { newsMediaData } from "../data/newsMediaData.ts";
+import MediaItemsRender from "../pages/MediaItems/MediaItemsRender";
 
-const NewsBlog = () => {
+function NewsBlog() {
   return (
-    <>
-      <ItemsRender
-        title="News and Blog"
-        obj={newsMediaData}
-        route="newsblog"
-        formVideo
-      />
-    </>
+    <MediaItemsRender
+      title="News and Blog"
+      arr={newsMediaData}
+      route="newsblog"
+      formVideo
+    />
   );
-};
+}
 
 export default NewsBlog;

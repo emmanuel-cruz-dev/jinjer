@@ -1,12 +1,8 @@
-import tourData from "../data/tourData.json";
-import ItemsRender from "./ItemsRender";
+import { tourData } from "../data/tourData.ts";
+import MediaItemsRender from "../pages/MediaItems/MediaItemsRender";
 
-const TourBlog = () => {
-  return (
-    <>
-      <ItemsRender title="Tour" obj={tourData} route="tour" />
-    </>
-  );
-};
+function TourBlog() {
+  return <MediaItemsRender title="Tour" arr={tourData} route="tour" />;
+}
 
 export default TourBlog;

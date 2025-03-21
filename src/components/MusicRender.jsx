@@ -46,20 +46,18 @@ const articles = [
   },
 ];
 
-const MusicRender = () => {
+function MusicRender() {
   const { id } = useParams();
   const articleItem = articles.find((a) => a.id === parseInt(id));
 
   return (
-    <>
-      <Music
-        articleId={articleItem.id}
-        title={articleItem.title}
-        year={articleItem.year}
-        image={articleItem.image}
-      />
-    </>
+    <Music
+      articleId={articleItem.id}
+      title={articleItem.title}
+      year={articleItem.year}
+      image={articleItem.image}
+    />
   );
-};
+}
 
 export default MusicRender;

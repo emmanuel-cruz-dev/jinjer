@@ -1,11 +1,11 @@
-import ItemsRender from "./ItemsRender";
-import membersData from "../data/membersData.json";
+import { membersData } from "../data/membersData";
+import MediaItemsRender from "../pages/MediaItems/MediaItemsRender";
 
 function Members() {
   return (
-    <ItemsRender
+    <MediaItemsRender
       title="Members"
-      obj={membersData}
+      arr={membersData}
       route="members"
       image={true}
     />

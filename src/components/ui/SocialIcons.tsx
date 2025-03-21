@@ -13,7 +13,7 @@ function SocialIcons() {
           className={`social-icons hover:drop-shadow-[0_2px_6px_rgba(255,255,255,0.6)] transition-all duration-300 ${item.color}`}
           aria-label={item.name}
         >
-          {<item.icon size={30} />}
+          {<item.icon size={28} />}
         </a>
       ))}
     </article>

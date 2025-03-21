@@ -92,3 +92,24 @@ export interface UseShopReturn {
   handleProducts: () => void;
   handleArr: (num: number) => void;
 }
+
+export interface MediaDataProps {
+  id: number;
+  date: string;
+  title: string;
+  text1: string;
+  link1: string;
+  link2: string;
+}
+
+export interface MediaItemsRenderProps {
+  title: string;
+  arr: MediaDataProps[];
+  route: string;
+  formVideo: string;
+  image: string;
+}
+
+export interface TitleArticleProps {
+  title: string;
+}
