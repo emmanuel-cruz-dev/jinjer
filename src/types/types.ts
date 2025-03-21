@@ -1,5 +1,11 @@
-import { ChangeEvent, ReactElement } from "react";
+import { ChangeEvent, MutableRefObject, ReactElement } from "react";
 import { IconType } from "react-icons";
+
+export interface HeaderSideBarProps {
+  isOpen: boolean;
+  toggleMenu: () => void;
+  ref?: MutableRefObject<HTMLElement | null>;
+}
 
 export interface MemberArticleProps {
   image: string;

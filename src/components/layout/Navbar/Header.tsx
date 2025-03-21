@@ -1,38 +1,25 @@
 import { MdQueueMusic } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitch from "../../ui/LanguageSwitch";
-import SocialLinks from "../../ui/SocialLinks";
 import Name from "../../ui/Name";
-
-import SideAreaImg from "../../../assets/images/latest-post-02.webp";
 import useScroll from "../../../hooks/useScroll";
 import useClickOutside from "../../../hooks/useClickOutside";
 import useMenu from "../../../hooks/useMenu";
 import useLatestAlbum from "../../../hooks/useLatestAlbum";
+import HeaderSideBar from "./HeaderSideBar";
+import useGoToSection from "../../../hooks/useGoToSection";
 
 function Header() {
-  const navigate = useNavigate();
   const isScrolled = useScroll(160);
   const { isMenuOpen, toggleMenu } = useMenu();
   const { isLatestAlbumOpen, toggleLatestAlbum, setIsLatestAlbumOpen } =
     useLatestAlbum();
   const latestAlbumRef = useRef(null);
   const { t } = useTranslation();
+  const goToSection = useGoToSection();
 
   useClickOutside(latestAlbumRef, () => setIsLatestAlbumOpen(false));
-
-  const goToSection = (path, sectionId) => {
-    navigate(path);
-
-    setTimeout(() => {
-      const section = document.getElementById(sectionId);
-      if (!section) return;
-      else section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 200);
-    if (isMenuOpen) toggleMenu();
-  };
 
   const handleMenuAndNavigate = (sectionId: string) => {
     goToSection("/", sectionId);
@@ -46,44 +33,11 @@ function Header() {
           isScrolled ? "bg-background" : "bg-transparent"
         }`}
       >
-        <article
-          className={`latest-album z-10 ${isLatestAlbumOpen ? "active" : ""}`}
+        <HeaderSideBar
+          isOpen={isLatestAlbumOpen}
+          toggleMenu={toggleLatestAlbum}
           ref={latestAlbumRef}
-        >
-          <div className="flex items-center">
-            <span
-              title={t("navbar.closeButton")}
-              onClick={() => toggleLatestAlbum()}
-              className="material-symbols-outlined text-3xl cursor-pointer transition-transform duration-300 hover:rotate-90"
-            >
-              close
-            </span>
-          </div>
-
-          <div className="flex flex-col justify-evenly items-center px-4 text-center h-full">
-            <h2 className="text-2xl uppercase font-bold">
-              {t("navbar.albumTitle")}
-            </h2>
-            <p className="text-sm">{t("navbar.albumDescription")}.</p>
-            <span className="text-2xl">
-              <SocialLinks />
-            </span>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img
-                src={SideAreaImg}
-                alt="Portada del álbum Alucard"
-                width="200"
-                height="200"
-                loading="lazy"
-              />
-            </a>
-            <div className="mt-3">
-              <span className="uppercase font-extrabold text-lg">
-                © Jinjer 2024
-              </span>
-            </div>
-          </div>
-        </article>
+        />
         <nav
           className={`header__navbar ${
             isLatestAlbumOpen ? "translate-x" : ""
