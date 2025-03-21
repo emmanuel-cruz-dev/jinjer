@@ -95,9 +95,13 @@ export interface UseShopReturn {
 
 export interface MediaDataProps {
   id: number;
+  content?: string;
   date: string;
   title: string;
   text1: string;
+  text2?: string;
+  text3?: string;
+  text4?: string;
   link1: string;
   link2: string;
 }
@@ -106,8 +110,8 @@ export interface MediaItemsRenderProps {
   title: string;
   arr: MediaDataProps[];
   route: string;
-  formVideo: string;
-  image: string;
+  formVideo?: string;
+  image?: string;
 }
 
 export interface TitleArticleProps {

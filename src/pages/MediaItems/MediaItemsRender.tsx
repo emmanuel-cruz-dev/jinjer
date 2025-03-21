@@ -12,14 +12,19 @@ const MediaItemsRender: FC<MediaItemsRenderProps> = ({
   formVideo,
   image,
 }) => {
-  const { id } = useParams();
-  const article = arr.find((a) => a.id === parseInt(id));
+  const { id } = useParams<{ id: string }>();
+  const article = arr.find((a) => a.id === parseInt(id || ""));
+
+  if (!article) {
+    return (
+      <section className="newsblog second-page" id="newsblog">
+        <h2 className="text-3xl h-screen w-full">Artículo no encontrado</h2>
+      </section>
+    );
+  }
 
   return (
     <section className="newsblog second-page" id="newsblog">
-      {!article && (
-        <h2 className="text-3xl h-screen w-full">Artículo no encontrado</h2>
-      )}
       <article className="py-10">
         <article
           key={article.id}
