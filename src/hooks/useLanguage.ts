@@ -14,11 +14,18 @@ const useLanguage = () => {
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem("preferredLanguage");
-    if (savedLanguage) {
-      i18n.changeLanguage(savedLanguage);
-    }
+    // if (savedLanguage) {
+    //   i18n.changeLanguage(savedLanguage);
+    // }
 
-    setCurrentLanguage(i18n.language);
+    // setCurrentLanguage(i18n.language);
+    if (savedLanguage && savedLanguage !== i18n.language) {
+      i18n.changeLanguage(savedLanguage).then(() => {
+        setCurrentLanguage(savedLanguage);
+      });
+    } else {
+      setCurrentLanguage(i18n.language);
+    }
   }, [i18n]);
 
   return { currentLanguage, toggleLanguage };
