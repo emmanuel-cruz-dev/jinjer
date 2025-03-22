@@ -113,17 +113,16 @@ img {
   right: 0;
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
-}
 
-.header__navbar.translate-x {
-  transform: translateX(22.5rem);
-}
+  li a {
+    font-size: 15px;
 
-.header__navbar li a {
-  font-size: 15px;
-
-  &:hover {
-    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &.translate-x {
+    transform: translateX(22.5rem);
   }
 }
 
