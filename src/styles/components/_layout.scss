@@ -1,0 +1,100 @@
+@use "../variables" as *;
+
+// --- Inicio: Header --- //
+
+@media screen and (max-width: 768px) {
+  .header {
+    background-color: $primary-color;
+  }
+}
+
+.header__navbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+
+  li a {
+    font-size: 15px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+  &.translate-x {
+    transform: translateX(22.5rem);
+  }
+}
+
+.header__menu-list {
+  position: fixed;
+  top: -5rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  z-index: 4;
+  padding-block: 2rem;
+  background-color: $primary-color;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.header__menu-list.active {
+  top: 4.9rem;
+  transform: translateY(0);
+}
+
+.latest-album {
+  display: flex;
+  flex-direction: column;
+  width: 22.5rem;
+  height: 100vh;
+  padding: 1rem;
+  padding-block: 0.85rem;
+  background-color: $primary-color-fade;
+  transform: translateX(-130%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.latest-album.active {
+  transform: translateX(0);
+}
+
+.social-links {
+  a {
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      color: $accent-color;
+    }
+  }
+}
+
+.navbar__overlay {
+  transition: background-color 0.3s ease 0.2s;
+}
+
+.navbar__overlay.active {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1024px) {
+  .latest-album {
+    display: none;
+  }
+}
+
+// --- Fin: Header --- //
