@@ -1,62 +1,9 @@
 @use "./_variables.scss" as *;
 @use "./globals";
+@use "./components/loader";
+@use "./components/logo";
 @use "./pages/Home/hero";
 @use "./pages/Home/latestNews";
-
-// --- Inicio: Loader --- //
-.loader__container {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: $primary-color;
-  z-index: 1;
-  animation: fadeOut 0.6s ease forwards 4s;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-.loader {
-  img {
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    animation: fade 1.3s linear infinite alternate;
-  }
-}
-
-@keyframes fade {
-  0% {
-    transform: scale(1);
-    opacity: 0.4;
-  }
-
-  100% {
-    transform: scale(1.05);
-    opacity: 1;
-  }
-}
-
-// --- Fin: Loader --- //
-
-// --- Inicio: Logo --- //
-.logo {
-  font-family: $font-family-primary;
-  text-transform: uppercase;
-  padding: 0;
-
-  span {
-    color: $accent-color;
-  }
-}
-
-// --- Fin: Logo --- //
 
 // --- Inicio: Header --- //
 

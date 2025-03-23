@@ -1,0 +1,14 @@
+@use "../_variables.scss" as *;
+
+// --- Inicio: Logo --- //
+.logo {
+  font-family: $font-family-primary;
+  text-transform: uppercase;
+  padding: 0;
+
+  span {
+    color: $accent-color;
+  }
+}
+
+// --- Fin: Logo --- //
