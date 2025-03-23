@@ -1,48 +1,6 @@
 @use "./_variables.scss" as *;
-
-// --- Inicio: Estilos globales --- //
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  //border: 1px solid red;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: $font-family-roboto;
-  background-color: $primary-color;
-  overflow-x: hidden;
-  user-select: none;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-
-  &:hover {
-    color: inherit;
-  }
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-.scroll-top-margin {
-  scroll-margin-top: 5rem;
-}
-
-// --- Fin: Estilos globales --- //
+@use "./globals";
+@use "./pages/Home/hero";
 
 // --- Inicio: Loader --- //
 .loader__container {
@@ -287,61 +245,6 @@ img {
 }
 
 // --- Fin: Music Player --- //
-
-// --- Inicio: Hero --- //
-
-.hero__container {
-  background-image: radial-gradient(
-      circle,
-      rgba(0, 0, 0, 0.4) 40%,
-      rgba(0, 0, 0, 1) 100%
-    ),
-    radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%),
-    url("../assets/images/jinjer-bg1.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 72vh;
-  margin-top: 3.3rem;
-}
-
-@media (min-width: 640px) {
-  .hero__container {
-    background-image: radial-gradient(
-        circle,
-        rgba(0, 0, 0, 0.4) 40%,
-        rgba(0, 0, 0, 1) 100%
-      ),
-      radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%),
-      url("../assets/images/jinjer-bg.webp");
-  }
-}
-
-@media (min-width: 768px) {
-  .hero__container {
-    margin-top: 0;
-    height: 100vh;
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero__container {
-    height: 168vh;
-  }
-}
-
-.hero__title {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
-    url("../assets/images/gradient.avif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: fit-content;
-  height: fit-content;
-}
-
-// --- Fin: Hero --- //
 
 // --- Inicio: Latest News --- //
 
