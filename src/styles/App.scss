@@ -1,6 +1,7 @@
 @use "./_variables.scss" as *;
 @use "./globals";
 @use "./pages/Home/hero";
+@use "./pages/Home/latestNews";
 
 // --- Inicio: Loader --- //
 .loader__container {
@@ -245,69 +246,6 @@
 }
 
 // --- Fin: Music Player --- //
-
-// --- Inicio: Latest News --- //
-
-.news {
-  overflow: hidden;
-
-  .latest-news__carousel {
-    width: 92vw;
-    height: 23rem;
-
-    .latest-news__card {
-      display: flex;
-      flex-direction: column;
-      width: 21rem !important;
-      max-height: 18rem !important;
-    }
-
-    & .slick-list {
-      padding-left: 2rem;
-    }
-
-    .latest-news__carousel-slider {
-      cursor: grab;
-
-      &:active {
-        cursor: grabbing;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .latest-news__carousel {
-    max-height: 21rem;
-  }
-}
-
-/* Estilos de las flechas personalizadas */
-.slick-arrow.slick-prev,
-.slick-arrow.slick-next {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  border-radius: 50%;
-  cursor: pointer;
-  transform: translateY(-50%);
-}
-
-.slick-arrow.slick-prev::before,
-.slick-arrow.slick-next::before {
-  font-size: 32px;
-  color: #fff;
-}
-
-.slick-arrow.slick-prev {
-  left: -8px; /* Posición a la izquierda */
-}
-
-.slick-arrow.slick-next {
-  right: -8px; /* Posición a la derecha */
-}
-
-// --- Fin: Latest News --- //
 
 // --- Inicio: About --- //
 
