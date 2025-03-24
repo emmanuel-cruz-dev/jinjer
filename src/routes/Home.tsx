@@ -17,13 +17,13 @@ function Home() {
     <Suspense fallback={<Loader />}>
       <Hero />
       <MusicPlayer />
-      {/* <News /> */}
-      {/* <About /> */}
-      {/* <Tour /> */}
-      {/* <Albums /> */}
-      {/* <Media /> */}
-      {/* <Store /> */}
-      {/* <Follow /> */}
+      <News />
+      <About />
+      <Tour />
+      <Albums />
+      <Media />
+      <Store />
+      <Follow />
     </Suspense>
   );
 }

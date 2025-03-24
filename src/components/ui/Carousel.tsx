@@ -3,14 +3,9 @@ import { newsArticles } from "../../data/newsArticles";
 import useGoToSection from "../../hooks/useGoToSection";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useRef } from "react";
-// import "swiper/swiper-bundle.min.css";
-import { Pagination, A11y } from "swiper/modules";
-
-// import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-
-// SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+import { A11y } from "swiper/modules";
 
 function Carousel() {
   const { t } = useTranslation();
@@ -23,6 +18,7 @@ function Carousel() {
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
+        slidesPerView={1}
         spaceBetween={30}
         loop={true}
         pagination={{ clickable: false }}
@@ -40,7 +36,7 @@ function Carousel() {
             slidesPerView: 3,
           },
         }}
-        modules={[Pagination, A11y]}
+        modules={[A11y]}
       >
         {newsArticles.map((article) => (
           <SwiperSlide key={article.id}>
@@ -83,20 +79,20 @@ function Carousel() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex justify-center mt-8 gap-2">
+      <div className="flex justify-center mt-8 gap-4">
         <button
           onClick={() => swiperRef.current?.slidePrev()}
           className="square__btn"
           title="Previous"
         >
-          <AiOutlineLeft />
+          <FaChevronLeft />
         </button>
         <button
           onClick={() => swiperRef.current?.slideNext()}
           className="square__btn"
           title="Next"
         >
-          <AiOutlineRight />
+          <FaChevronRight />
         </button>
       </div>
     </div>
