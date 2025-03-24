@@ -1,0 +1,115 @@
+@use "../../variables" as *;
+
+// --- Inicio: Tour --- //
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td {
+    font-weight: 500;
+    padding: 1.2rem 0.75rem;
+    text-align: left;
+    letter-spacing: 0.8px;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  th {
+    padding: 1.5rem 0.75rem;
+    text-align: left;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: $accent-color;
+  }
+
+  tr:nth-child(odd) {
+    background-color: $primary-color-dark;
+  }
+
+  .table__header {
+    background-color: $primary-color !important;
+    font-size: 1.15em;
+  }
+
+  tr:not(:last-child) {
+    border-bottom: 1px solid #4b5563;
+  }
+
+  .table__date {
+    font-size: 0.9em;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .table__venue {
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.table__btn__container {
+  max-width: 9rem;
+}
+
+.table__btn-ticket {
+  font-weight: 500;
+  color: $background-color-white;
+  background-color: $background-color-black;
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  text-align: center;
+  width: 10rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $accent-color;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .table__date__title {
+    width: 6rem !important;
+  }
+
+  .table__venue__title {
+    width: 0.5rem;
+  }
+
+  .table__btn__container {
+    max-width: 5rem;
+  }
+
+  .table__btn-ticket {
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    max-width: 7rem;
+    white-space: nowrap;
+  }
+}
+
+.red__btn {
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.75rem 2.5rem;
+  font-size: 1.1em;
+  background-color: $background-color-black;
+  color: $background-color-white;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $accent-color;
+  }
+}
+
+// --- Fin: Tour --- //

@@ -1,0 +1,50 @@
+@use "../../variables" as *;
+
+// --- Inicio: About --- //
+
+.about__members__article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  .about__members__image-container {
+    background-color: $accent-color;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about__members__logo-container {
+    position: absolute;
+    right: -44px;
+    top: -44px;
+    border-radius: 50%;
+    width: 88px;
+    height: 88px;
+    border: 5px solid #e2e8f0;
+    background-color: $accent-color;
+    padding: 1rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &:hover .about__members__logo-container {
+    background-color: $background-color-black;
+  }
+
+  .about__members__image {
+    border-radius: 50%;
+  }
+
+  h4 {
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 18px;
+  }
+}
+
+// --- Fin: About --- //
