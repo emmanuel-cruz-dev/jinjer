@@ -10,10 +10,10 @@ function Footer() {
 
   return (
     <footer className="footer bg-footer">
-      <article className="grid grid-cols-4 gap-4 lg:px-8 py-16 border-b border-gray-600 mx-auto">
+      <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-8 py-16 border-b border-gray-600 mx-auto">
         <div className="flex flex-col items-center gap-6">
-          <div className="flex flex-col items-center gap-4 w-full">
-            <figure className="w-48 lg:w-32">
+          <div className="flex flex-col items-center gap-4 lg:w-full">
+            <figure className="w-28 lg:w-32">
               <img
                 className="footer__nephews-logo"
                 width="300"

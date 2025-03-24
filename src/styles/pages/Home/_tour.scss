@@ -97,19 +97,4 @@
   }
 }
 
-.red__btn {
-  white-space: nowrap;
-  text-transform: uppercase;
-  font-weight: 500;
-  padding: 0.75rem 2.5rem;
-  font-size: 1.1em;
-  background-color: $background-color-black;
-  color: $background-color-white;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: $accent-color;
-  }
-}
-
 // --- Fin: Tour --- //

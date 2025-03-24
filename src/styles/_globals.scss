@@ -16,7 +16,7 @@ html {
 body {
   font-family: $font-family-roboto;
   background-color: $primary-color;
-  // overflow-x: hidden;
+  overflow-x: hidden;
   user-select: none;
 }
 
@@ -48,4 +48,30 @@ img {
   margin: 0 auto;
 }
 
+.red__btn {
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.75rem 2.5rem;
+  font-size: 1.1em;
+  background-color: $background-color-black;
+  color: $background-color-white;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $accent-color;
+  }
+}
+
+.square__btn {
+  padding: 1rem;
+  background-color: $background-color-black;
+  border: 2px solid $background-color-white;
+  border-radius: 0;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $accent-color;
+  }
+}
 // --- Fin: Estilos globales --- //
