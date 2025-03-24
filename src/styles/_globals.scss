@@ -16,7 +16,7 @@ html {
 body {
   font-family: $font-family-roboto;
   background-color: $primary-color;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   user-select: none;
 }
 
@@ -40,6 +40,12 @@ img {
 
 .scroll-top-margin {
   scroll-margin-top: 5rem;
+}
+
+.container {
+  max-width: 1200px;
+  width: 88% !important;
+  margin: 0 auto;
 }
 
 // --- Fin: Estilos globales --- //

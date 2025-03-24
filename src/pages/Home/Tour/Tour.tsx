@@ -6,7 +6,7 @@ function Tour() {
 
   return (
     <section className="scroll-top-margin tour py-16 mx-auto" id="tour">
-      <article className="flex flex-col justify-center items-center gap-12 w-11/12 mx-auto">
+      <article className="container flex flex-col justify-center items-center gap-12 mx-auto">
         <div className="text-center flex flex-col gap-4">
           <h2 className="logo text-5xl">
             {t("tour.title1")}
@@ -15,7 +15,7 @@ function Tour() {
           </h2>
           <p className="text-lg">{t("tour.description")}.</p>
         </div>
-        <div className="w-full overflow-x-auto xl:w-5/6">
+        <div className="w-full overflow-x-auto">
           <TourTable />
           <div className="flex justify-center my-8">
             <a href="#" className="red__btn">

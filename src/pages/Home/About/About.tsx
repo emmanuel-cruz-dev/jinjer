@@ -17,7 +17,7 @@ function About() {
       className="scroll-top-margin about bg-slate-200 py-16 mx-auto"
       id="about"
     >
-      <article className="flex flex-col justify-center items-center gap-12 w-11/12 xl:w-[86%] text-black mx-auto">
+      <article className="container flex flex-col justify-center items-center gap-12 text-black mx-auto">
         <div className="text-center flex flex-col gap-4">
           <h2 className="logo text-5xl">
             <span>{t("about.title1")}</span> {t("about.title2")}

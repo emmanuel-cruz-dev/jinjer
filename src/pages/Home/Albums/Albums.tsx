@@ -10,7 +10,7 @@ function Albums() {
       className="scroll-top-margin albums py-16 mx-auto bg-slate-200 text-black"
       id="albums"
     >
-      <article className="flex flex-col justify-center items-center gap-12 w-11/12 mx-auto">
+      <article className="container flex flex-col justify-center items-center gap-12 mx-auto">
         <div className="text-center flex flex-col gap-4">
           <h2 className="logo text-5xl">
             {t("albums.title")}

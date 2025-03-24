@@ -6,7 +6,7 @@ function News() {
 
   return (
     <section className="scroll-top-margin news bg-background py-16" id="news">
-      <article className="flex flex-col justify-center items-center gap-16 w-11/12 mx-auto">
+      <article className="container flex flex-col justify-center items-center gap-16 mx-auto">
         <div className="text-center flex flex-col gap-4">
           <h2 className="logo text-5xl">
             {t("news.title1")}
