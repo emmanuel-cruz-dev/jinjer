@@ -32,7 +32,7 @@ function Carousel() {
             slidesPerView: 2,
           },
 
-          1024: {
+          1200: {
             slidesPerView: 3,
           },
         }}
@@ -40,10 +40,10 @@ function Carousel() {
       >
         {newsArticles.map((article) => (
           <SwiperSlide key={article.id}>
-            <div>
-              <figure className="overflow-hidden mb-3">
+            <div className="w-full max-w-96 mx-auto">
+              <figure className="w-fit overflow-hidden mb-3">
                 <img
-                  className="object-cover scale-110 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
+                  className="w-full object-cover scale-110 -rotate-3 hover:scale-100 hover:rotate-0 transition-transform duration-300"
                   src={article.image}
                   width="500"
                   height="325"

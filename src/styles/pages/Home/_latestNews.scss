@@ -2,14 +2,25 @@
 
 // --- Inicio: Latest News --- //
 
-.news {
+.news-section {
   overflow: hidden;
+  max-width: 100vw;
 
   .latest-news__carousel {
     width: 100%;
   }
 }
 
+.swiper {
+  width: 100%;
+  max-width: 1200px; /* Ajusta según tu diseño */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 // .news {
 //   overflow: hidden;
 
