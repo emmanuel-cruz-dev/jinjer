@@ -1,0 +1,11 @@
+// --- Inicio: Store --- //
+
+.store__custom-slider {
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+// --- Fin: Store --- //

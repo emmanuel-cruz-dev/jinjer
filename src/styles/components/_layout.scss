@@ -98,3 +98,61 @@
 }
 
 // --- Fin: Header --- //
+
+// --- Inicio: Footer --- //
+
+.footer {
+  width: 100vw;
+
+  .footer__legal-links {
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.footer__title {
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.posts {
+  h4 {
+    font-size: 18px;
+    transition: color 0.3s ease;
+    font-weight: 900;
+  }
+
+  a {
+    &:hover h4 {
+      color: $secondary-color;
+    }
+  }
+}
+
+.footer__list {
+  li {
+    padding: 0 10px; // ajusta el padding según sea necesario
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "|";
+      position: absolute;
+      right: -11px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    li:not(:last-child)::after {
+      content: "";
+    }
+  }
+}
+
+// --- Fin: Footer --- //

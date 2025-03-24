@@ -1,0 +1,34 @@
+@use "../../variables" as *;
+
+// --- Inicio: Follow --- //
+
+.follow__social__number {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.follow__social__text {
+  font-size: 1.1em;
+  font-style: italic;
+  color: $font-grey;
+}
+
+.follow__anchor__icon__line::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 44px;
+  background-color: $primary-color;
+}
+
+.follow__img__grid-container img {
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: blur(2px) grayscale(80%);
+  }
+}
+
+// --- Fin: Follow --- //
