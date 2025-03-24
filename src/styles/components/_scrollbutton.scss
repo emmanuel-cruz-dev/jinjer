@@ -1,0 +1,23 @@
+@use "../_variables" as *;
+
+// --- Inicio: Botón ir arriba --- //
+
+.up-btn {
+  background-color: $background-color-black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff0033;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+
+  &:hover::after {
+    background-color: $background-color-black;
+  }
+}
+
+// --- Fin: Botón ir arriba --- //

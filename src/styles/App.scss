@@ -3,98 +3,10 @@
 @use "./components/loader";
 @use "./components/logo";
 @use "./components/layout";
+@use "./components/scrollbutton";
 @use "./pages/Home/hero";
 @use "./pages/Home/latestNews";
-
-// --- Inicio: Botón ir arriba --- //
-
-.up-btn {
-  background-color: $background-color-black;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: #ff0033;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-  }
-
-  &:hover::after {
-    background-color: $background-color-black;
-  }
-}
-
-// --- Fin: Botón ir arriba --- //
-
-// --- Inicio: Music Player --- //
-
-.music-player__container {
-  width: 4.87rem;
-  overflow: hidden;
-  transition: width 0.3s ease-in-out;
-
-  img {
-    width: 3.4rem;
-    height: 3.4rem;
-  }
-
-  .music-player__text {
-    display: none;
-    opacity: 0;
-  }
-
-  .music-player__controls {
-    display: none;
-    opacity: 0;
-  }
-}
-
-.music-player__container.active {
-  width: 21.2rem;
-
-  .music-player__text {
-    display: block;
-    animation: musicPlayerItem 0.3s ease-in-out forwards 0.2s;
-  }
-
-  .music-player__controls {
-    display: flex;
-    animation: musicPlayerItem 0.3s ease-in-out forwards 0.2s;
-  }
-}
-
-@keyframes musicPlayerItem {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.music-player__close-open {
-  background-color: #1f2937;
-  width: 30px;
-  height: 30px;
-  font-size: 28px;
-  margin-block: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.music-player__article:hover .music-player__close-open {
-  opacity: 1;
-}
-
-// --- Fin: Music Player --- //
+@use "./pages/MusicPlayer/musicPlayer";
 
 // --- Inicio: About --- //
 
