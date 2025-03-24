@@ -83,14 +83,14 @@ function Carousel() {
         <button
           onClick={() => swiperRef.current?.slidePrev()}
           className="square__btn"
-          title="Previous"
+          title={t("news.prevButton")}
         >
           <FaChevronLeft />
         </button>
         <button
           onClick={() => swiperRef.current?.slideNext()}
           className="square__btn"
-          title="Next"
+          title={t("news.nextButton")}
         >
           <FaChevronRight />
         </button>
