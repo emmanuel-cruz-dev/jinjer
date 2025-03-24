@@ -1,0 +1,94 @@
+// Inicio: Music Page --- //
+
+.music.second-page {
+  ::-webkit-scrollbar {
+    width: 16px; /* Ancho de la barra */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3); /* Color del fondo de la barra */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: inherit; /* Color de la barra deslizadora */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: inherit; /* Color al pasar el mouse */
+  }
+
+  /* Para Firefox */
+
+  * {
+    scrollbar-width: inherit; /* 'thin' o 'auto' */
+    scrollbar-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.2); /* Color de la barra y del track */
+  }
+}
+
+.music__item-list:hover {
+  .music__number__song {
+    opacity: 0;
+  }
+
+  .music__number__play-icon {
+    opacity: 1;
+  }
+}
+
+.music__links__download-stream__anchor {
+  span {
+    transition: transform 0.3s ease;
+  }
+}
+
+.music__links__download-stream:hover {
+  .music__links__download-stream__anchor {
+    span {
+      transform: rotate(90deg);
+    }
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.music-player__actions-menu {
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #f1f2f3;
+    font-weight: 500;
+    height: 2.5rem;
+    padding-inline: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #000;
+    }
+  }
+}
+
+.progress-bar__input-item {
+  opacity: 0.8;
+  height: 0.34rem;
+  cursor: pointer;
+}
+
+.active-song {
+  background-color: red;
+}
+
+// Fin: Music Page --- //
