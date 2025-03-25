@@ -71,7 +71,10 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="#news-section" onClick={() => goToSection("/", "news")}>
+              <a
+                href="#news-section"
+                onClick={() => goToSection("/", "news-section")}
+              >
                 {t("navbar.news")}
               </a>
             </li>
