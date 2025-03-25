@@ -170,8 +170,8 @@ const resources = {
         pauseList: "Pause Song",
         privacy: "Privacy Policy",
         terms: "Terms and Conditions",
-        downloadBtn: "Download",
-        streamBtn: "Stream",
+        download: "Download",
+        stream: "Stream",
       },
       goTopButton: "Go to top",
       // ... más traducciones
@@ -343,8 +343,8 @@ const resources = {
         pauseList: "Pausar Canción",
         privacy: "Política de Privacidad",
         terms: "Términos y Condiciones",
-        downloadBtn: "Descargar",
-        streamBtn: "Transmitir",
+        download: "Descargar",
+        stream: "Transmitir",
       },
       goTopButton: "Ir arriba",
       // ... más traducciones

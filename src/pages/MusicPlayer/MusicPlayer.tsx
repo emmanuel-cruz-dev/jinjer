@@ -72,7 +72,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                   loading="lazy"
                 />
               </figure>
-              <div className="w-[22rem] md:w-auto h-[30.5rem] lg:h-96 flex flex-col relative rounded-lg overflow-hidden">
+              <div className="w-[22rem] md:w-[21rem] h-[30.5rem] lg:h-96 flex flex-col relative rounded-lg overflow-hidden">
                 <div className={`flex flex-col gap-2 ${color1} p-4`}>
                   <div className="flex gap-3 items-center relative">
                     <a
@@ -205,13 +205,13 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                       {t("musicPage.copyBtn")}
                     </a>
                   </div>
-                  <div className="flex text-sm justify-center gap-1">
+                  <div className="flex text-sm whitespace-nowrap gap-1">
                     <a href="#" className="hover:underline">
-                      Privacy Policy
+                      {t("musicPage.privacy")}
                     </a>
                     <span className="font-extrabold">·</span>
                     <a href="#" className="hover:underline">
-                      Terms and Conditions
+                      {t("musicPage.terms")}
                     </a>
                   </div>
                 </div>
@@ -227,7 +227,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                     href="#"
                     className="music__links__download-stream__anchor flex items-center"
                   >
-                    Download
+                    {t("musicPage.download")}
                     <span className="text-lg ml-2">
                       <FaChevronRight />
                     </span>
@@ -249,7 +249,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                     href="#"
                     className="music__links__download-stream__anchor flex items-center"
                   >
-                    Stream
+                    {t("musicPage.stream")}
                     <span className="text-lg ml-2">
                       <FaChevronRight />
                     </span>
