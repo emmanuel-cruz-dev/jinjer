@@ -1,4 +1,4 @@
-import { MdQueueMusic } from "react-icons/md";
+import { MdQueueMusic, MdClose, MdMenu } from "react-icons/md";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitch from "../../ui/LanguageSwitch";
@@ -45,9 +45,9 @@ function Header() {
         >
           <span
             onClick={() => toggleMenu()}
-            className="material-symbols-outlined text-3xl lg:hidden cursor-pointer"
+            className="text-3xl lg:hidden cursor-pointer"
           >
-            {isMenuOpen ? "close" : "menu"}
+            {isMenuOpen ? <MdClose /> : <MdMenu />}
           </span>
 
           <div className="hidden lg:block">
@@ -71,7 +71,7 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="#news" onClick={() => goToSection("/", "news")}>
+              <a href="#news-section" onClick={() => goToSection("/", "news")}>
                 {t("navbar.news")}
               </a>
             </li>

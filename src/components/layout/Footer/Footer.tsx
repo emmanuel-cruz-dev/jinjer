@@ -10,8 +10,8 @@ function Footer() {
 
   return (
     <footer className="footer bg-footer">
-      <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-8 py-16 border-b border-gray-600 mx-auto">
-        <div className="flex flex-col items-center gap-6">
+      <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-10 gap-6 px-8 pr-12 py-16 border-b border-gray-600 mx-auto">
+        <div className="xl:col-span-3 flex flex-col items-center gap-6">
           <div className="flex flex-col items-center gap-4 lg:w-full">
             <figure className="w-28 lg:w-32">
               <img
@@ -31,7 +31,7 @@ function Footer() {
           <SocialIcons />
         </div>
 
-        <div className="posts flex flex-col gap-4">
+        <div className="posts flex flex-col gap-4 xl:col-span-3">
           <h3 className="footer__title">{t("footer.latestPosts")}</h3>
           <a
             href="#"
@@ -52,7 +52,6 @@ function Footer() {
               <time>{t("footer.starts")}</time>
             </div>
           </a>
-
           <a href="#" className="flex gap-4 items-center">
             <figure className="w-[4.4rem]">
               <img
@@ -71,7 +70,7 @@ function Footer() {
           </a>
         </div>
 
-        <div className="bookings flex flex-col gap-4">
+        <div className="bookings flex flex-col gap-4 xl:col-span-2">
           <h3 className="footer__title">{t("footer.bookings")}</h3>
           <ul>
             <li>Atlanta, GA 30342</li>
@@ -86,7 +85,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 xl:col-span-2">
           <h3 className="footer__title">{t("footer.recordLabels")}</h3>
           <ul>
             <li>

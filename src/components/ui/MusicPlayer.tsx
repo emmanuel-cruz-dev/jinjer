@@ -1,4 +1,6 @@
 import {
+  FaChevronLeft,
+  FaChevronRight,
   FaPlay,
   FaPause,
   FaForwardStep,
@@ -99,10 +101,10 @@ function MusicPlayer() {
           title={
             isMenuOpen ? t("musicPlayer.expand") : t("musicPlayer.collapse")
           }
-          className="music-player__close-open material-symbols-outlined"
+          className="music-player__close-open"
           onClick={toggleMenu}
         >
-          {isMenuOpen ? "keyboard_arrow_right" : "keyboard_arrow_left"}
+          {isMenuOpen ? <FaChevronRight /> : <FaChevronLeft />}
         </span>
       </article>
     </article>
