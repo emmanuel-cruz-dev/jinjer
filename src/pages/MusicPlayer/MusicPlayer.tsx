@@ -7,7 +7,9 @@ import {
   FaBackwardStep,
   FaSpotify,
   FaChevronRight,
+  FaEllipsis,
 } from "react-icons/fa6";
+import { MdClose, MdAddCircle, MdShare } from "react-icons/md";
 import { AlbumItemProps } from "../../types/types";
 import ListItem from "./ListItem";
 import { musicPlayerList } from "../../data/musicPlayerList";
@@ -99,8 +101,8 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                         </a>
                       </div>
                       <p className="flex items-center text-sm opacity-90 gap-1 cursor-pointer hover:opacity-100">
-                        <span className="material-symbols-outlined text-[18px]">
-                          add_circle
+                        <span className="text-[18px]">
+                          <MdAddCircle />
                         </span>
                         Save on Spotify
                       </p>
@@ -138,8 +140,8 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                       className="music-player__more flex items-center border-none hover:scale-110 transition-all duration-300"
                       title="More"
                     >
-                      <span className="material-symbols-outlined opacity-80 hover:opacity-100">
-                        more_horiz
+                      <span className="opacity-80 hover:opacity-100">
+                        <FaEllipsis />
                       </span>
                     </button>
                     <button
@@ -179,7 +181,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                       title="Close"
                       className={`material-symbols-outlined text-3xl font-semibold cursor-pointer hover:scale-105 transition-all duration-300`}
                     >
-                      close
+                      <MdClose />
                     </span>
                   </div>
                   <div
@@ -189,14 +191,14 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                       <FaSpotify size={20} /> Play on Spotify
                     </a>
                     <a href="#">
-                      <span className="material-symbols-outlined text-xl">
-                        add_circle
+                      <span className="text-xl">
+                        <MdAddCircle />
                       </span>
                       Save on Spotify
                     </a>
                     <a href="#">
-                      <span className="material-symbols-outlined text-xl">
-                        share
+                      <span className=" text-xl">
+                        <MdShare />
                       </span>
                       Copy link
                     </a>
