@@ -106,7 +106,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                         <span className="text-[18px]">
                           <MdAddCircle />
                         </span>
-                        {t("musicPage.saveButton")}
+                        {t("musicPage.saveBtn")}
                       </p>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                       <button
                         onClick={handlePrevious}
                         className="opacity-80 hover:opacity-100 border-none text-xl focus:outline-none"
-                        title="Previous"
+                        title={t("musicPage.prevBtn")}
                       >
                         <FaBackwardStep />
                       </button>
@@ -131,7 +131,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                       <button
                         onClick={handleNext}
                         className="opacity-80 hover:opacity-100 border-none text-xl focus:outline-none"
-                        title="Next"
+                        title={t("musicPage.nextBtn")}
                       >
                         <FaForwardStep />
                       </button>
@@ -149,7 +149,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                     <button
                       onClick={handlePlayPause}
                       className={`rounded-full bg-white p-2 text-slate-800 w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300 focus:outline-none`}
-                      title={isPlaying ? "Pause" : "Play"}
+                      title={isPlaying ? t("musicPage.pauseBtn") : "Play"}
                     >
                       {isPlaying ? <FaPause /> : <FaPlay />}
                     </button>
@@ -180,8 +180,8 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                   <div className="flex justify-end w-full">
                     <span
                       onClick={toggleMenu}
-                      title="Close"
-                      className={`material-symbols-outlined text-3xl font-semibold cursor-pointer hover:scale-105 transition-all duration-300`}
+                      title={t("musicPage.closeMenu")}
+                      className={`text-3xl font-semibold cursor-pointer hover:scale-105 transition-all duration-300`}
                     >
                       <MdClose />
                     </span>
@@ -190,19 +190,19 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                     className={`music-player__actions-menu flex flex-col gap-2 mb-4`}
                   >
                     <a href="#">
-                      <FaSpotify size={20} /> {t("musicPage.playButton")}
+                      <FaSpotify size={20} /> {t("musicPage.playBtn")}
                     </a>
                     <a href="#">
                       <span className="text-xl">
                         <MdAddCircle />
                       </span>
-                      {t("musicPage.saveButton")}
+                      {t("musicPage.saveBtn")}
                     </a>
                     <a href="#">
                       <span className=" text-xl">
                         <MdShare />
                       </span>
-                      {t("musicPage.copyButton")}
+                      {t("musicPage.copyBtn")}
                     </a>
                   </div>
                   <div className="flex text-sm justify-center gap-1">
