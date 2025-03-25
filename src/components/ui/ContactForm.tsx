@@ -8,17 +8,36 @@ function ContactForm() {
         </p>
       </div>
 
-      <form method="post" className="form flex flex-col gap-4">
+      <form
+        method="post"
+        className="form flex flex-col gap-4"
+        id="contact-form"
+      >
         <textarea
           className="w-full max-w-lg min-h-[160px] p-2 px-4 sm:max-w-md md:min-h-[220px] lg:max-w-full"
-          placeholder="Comment *"
+          placeholder="Comment*"
           id="comment"
           name="comment"
         />
         <div className="flex flex-col gap-4 lg:w-1/2">
-          <input className="p-2 px-4" type="text" placeholder="Name *" />
-          <input className="p-2 px-4" type="email" placeholder="Email *" />
-          <input className="p-2 px-4" type="text" placeholder="Website" />
+          <input
+            className="p-2 px-4"
+            type="text"
+            placeholder="Name*"
+            id="contact-form__name"
+          />
+          <input
+            className="p-2 px-4"
+            type="email"
+            placeholder="Email*"
+            id="contact-form__email"
+          />
+          <input
+            className="p-2 px-4"
+            type="text"
+            placeholder="Website"
+            id="contact-form__website"
+          />
         </div>
         <div className="flex flex-col gap-6 mt-4">
           <label htmlFor="save" className="flex gap-2">

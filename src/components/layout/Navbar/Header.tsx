@@ -130,7 +130,10 @@ function Header() {
           </a>
         </li>
         <li>
-          <a href="#news" onClick={() => handleMenuAndNavigate("news")}>
+          <a
+            href="#news-section"
+            onClick={() => handleMenuAndNavigate("news-section")}
+          >
             {t("navbar.news")}
           </a>
         </li>
