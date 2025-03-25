@@ -7,8 +7,9 @@ const TShirtCard: FC<TShirtCardProps> = ({ title, price, img }) => {
 
   return (
     <article className="relative mx-6">
-      <figure>
+      <figure className="max-w-96 mx-auto">
         <img
+          className="w-full object-cover"
           src={img}
           width="500"
           height="566"

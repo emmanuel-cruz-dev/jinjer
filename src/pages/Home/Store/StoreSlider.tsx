@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y } from "swiper/modules";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 
 import TShirtCard from "./TShirtCard";
 import TShirt1 from "../../../assets/images/shop-skull.png";
@@ -15,8 +15,9 @@ function StoreSlider() {
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
+        navigation
         loop={true}
-        pagination={{ clickable: false }}
+        pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         breakpoints={{
           640: {
@@ -31,44 +32,32 @@ function StoreSlider() {
             slidesPerView: 4,
           },
         }}
-        modules={[A11y]}
+        modules={[Navigation, Pagination, A11y]}
       >
         <SwiperSlide>
-          <div>
-            {/* Card 1 */}
-            <TShirtCard title="Perennial" price={21.99} img={TShirt1} />
-          </div>
+          {/* Card 1 */}
+          <TShirtCard title="Perennial" price={21.99} img={TShirt1} />
         </SwiperSlide>
 
         <SwiperSlide>
-          <div>
-            {/* Card 2 */}
-            <TShirtCard title="Ape" price={18.69} img={TShirt2} />
-          </div>
+          {/* Card 2 */}
+          <TShirtCard title="Ape" price={18.69} img={TShirt2} />
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            {/* Card 3 */}
-            <TShirtCard title="Pisces" price={24.79} img={TShirt3} />
-          </div>
+          {/* Card 3 */}
+          <TShirtCard title="Pisces" price={24.79} img={TShirt3} />
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            {/* Card 4 */}
-            <TShirtCard title="Noha" price={23.95} img={TShirt4} />
-          </div>
+          {/* Card 4 */}
+          <TShirtCard title="Noha" price={23.95} img={TShirt4} />
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            {/* Card 5 */}
-            <TShirtCard title="True Believer" price={23.95} img={TShirt5} />
-          </div>
+          {/* Card 5 */}
+          <TShirtCard title="True Believer" price={23.95} img={TShirt5} />
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            {/* Card 6 */}
-            <TShirtCard title="Cloud Factory" price={19.99} img={TShirt6} />
-          </div>
+          {/* Card 6 */}
+          <TShirtCard title="Cloud Factory" price={19.99} img={TShirt6} />
         </SwiperSlide>
       </Swiper>
     </article>
