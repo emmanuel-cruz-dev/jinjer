@@ -1,7 +1,8 @@
 export const newsMediaData = [
   {
     id: 1,
-    content: "https://www.youtube.com/embed/637ER6dlGDg?si=TVLz5uklEssO0hWd",
+    content:
+      "https://www.youtube-nocookie.com/embed/637ER6dlGDg?modestbranding=1&rel=0&autoplay=0&controls=1",
     date: "26 November, 2024",
     title: "NEW SINGLE OUT NOW!",
     text1:
@@ -17,7 +18,8 @@ export const newsMediaData = [
   },
   {
     id: 2,
-    content: "https://www.youtube.com/embed/tRbpT5dGOmQ?si=PuIAKLPQWjCwYxQH",
+    content:
+      "https://www.youtube-nocookie.com/embed/tRbpT5dGOmQ?modestbranding=1&rel=0&autoplay=0&controls=1",
     date: "10 September, 2024",
     title: "NEW SINGLE OUT NOW!",
     text1:
@@ -33,7 +35,8 @@ export const newsMediaData = [
   },
   {
     id: 3,
-    content: "https://www.youtube.com/embed/9Uaecbh8ta0?si=1md1Y5AjPNibVFqE",
+    content:
+      "https://www.youtube-nocookie.com/embed/9Uaecbh8ta0?modestbranding=1&rel=0&autoplay=0&controls=1",
     date: "10 September, 2008",
     title: "Rogue",
     text1:
@@ -48,7 +51,8 @@ export const newsMediaData = [
   },
   {
     id: 4,
-    content: "https://www.youtube.com/embed/djsH7ngox_s?si=PW5KzXJSVgYTgRE2",
+    content:
+      "https://www.youtube-nocookie.com/embed/djsH7ngox_s?modestbranding=1&rel=0&autoplay=0&controls=1",
     date: "1 August, 2024",
     title: "Someone's Daughter",
     text1:
@@ -64,7 +68,8 @@ export const newsMediaData = [
   },
   {
     id: 5,
-    content: "https://www.youtube.com/embed/vBiQyM3I40o?si=YUPZxbjhZMLmFkgm",
+    content:
+      "https://www.youtube-nocookie.com/embed/vBiQyM3I40o?modestbranding=1&rel=0&autoplay=0&controls=1",
     date: "25 June, 2024",
     title: "SURPRISE!!!💥",
     text1: "JINJER - From Nothing drops today!",
@@ -78,7 +83,8 @@ export const newsMediaData = [
   },
   {
     id: 6,
-    content: "https://www.youtube.com/embed/92pDl74Tb-Y?si=mFy5aC3ctXYLkDrF",
+    content:
+      "https://www.youtube-nocookie.com/embed/92pDl74Tb-Y?modestbranding=1&rel=0&autoplay=0&controls=1",
     date: "February 3, 2008",
     title: "Call me a Symbol",
     text1: "Drum Playthrough",
