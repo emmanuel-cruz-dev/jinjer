@@ -1,5 +1,6 @@
 import ReactCountryFlag from "react-country-flag";
 import useLanguage from "../../hooks/useLanguage";
+import i18n from "../../i18n/i18n";
 
 function LanguageSwitch() {
   const { currentLanguage, changeLanguage } = useLanguage();
@@ -10,7 +11,7 @@ function LanguageSwitch() {
       className="w-8 h-8 rounded-full overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out"
     >
       <ReactCountryFlag
-        countryCode={currentLanguage === "en" ? "US" : "AR"}
+        countryCode={i18n.language === "en" ? "US" : "AR"}
         svg
         style={{
           width: "100%",

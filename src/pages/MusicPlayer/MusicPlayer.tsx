@@ -6,6 +6,7 @@ import {
   FaForwardStep,
   FaBackwardStep,
   FaSpotify,
+  FaChevronRight,
 } from "react-icons/fa6";
 import { AlbumItemProps } from "../../types/types";
 import ListItem from "./ListItem";
@@ -39,7 +40,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
 
   return (
     <section className="music second-page" id="music">
-      <article className="py-10">
+      <article className="py-10 container">
         <article
           key={id}
           className="relative w-full mt-20 lg:w-11/12 mb-12 bg-black/90 flex flex-col justify-center items-center mx-auto"
@@ -55,9 +56,9 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
           <div className="w-full px-12 p-8 z-[1]">
             <h2 className="text-3xl font-bold text-white">{title}</h2>
           </div>
-          <article className="w-full py-8 md:p-12 xl:pt-28 gap-12 flex flex-col items-center">
+          <article className="w-full py-8 xl:pt-28 gap-12 flex flex-col items-center">
             <div className="flex justify-center gap-2">
-              <figure className="w-96 hidden lg:block">
+              <figure className="max-w-96 hidden lg:block">
                 <img
                   className="w-full"
                   src={cover}
@@ -223,8 +224,8 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                     className="music__links__download-stream__anchor flex items-center"
                   >
                     Download
-                    <span className="material-symbols-outlined">
-                      arrow_right
+                    <span className="text-lg ml-2">
+                      <FaChevronRight />
                     </span>
                   </a>
                   <ul className="absolute top-10 w-40 bg-white text-black p-4 px-8 rounded-sm normal-case text-center text-base flex-col gap-2 hidden">
@@ -245,8 +246,8 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                     className="music__links__download-stream__anchor flex items-center"
                   >
                     Stream
-                    <span className="material-symbols-outlined">
-                      arrow_right
+                    <span className="text-lg ml-2">
+                      <FaChevronRight />
                     </span>
                   </a>
                   <ul className="absolute top-10 w-40 bg-white text-black p-4 px-8 rounded-sm normal-case text-center text-base flex-col gap-2 hidden">

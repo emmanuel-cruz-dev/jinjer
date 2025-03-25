@@ -91,7 +91,7 @@ table .hidden {
   .table__venue,
   .table__btn-ticket,
   table .hidden {
-    font-size: 1em;
+    font-size: 1em !important;
     white-space: nowrap;
   }
 
@@ -103,6 +103,10 @@ table .hidden {
 }
 
 @media screen and (min-width: 1200px) {
+  .table__btn-ticket {
+    width: 9rem;
+  }
+
   .table__btn__container {
     max-width: 5rem;
   }
