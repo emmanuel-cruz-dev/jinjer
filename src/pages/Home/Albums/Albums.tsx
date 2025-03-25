@@ -18,7 +18,7 @@ function Albums() {
           </h2>
           <p className="text-lg">{t("albums.description")}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-40 gap-y-12 w-full md:w-5/6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-12 w-full">
           {albumsData.map((article) => (
             <AlbumItem
               key={article.id}
