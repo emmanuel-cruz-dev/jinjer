@@ -1,12 +1,21 @@
 @use "../../variables" as *;
 
 // --- Inicio: Store --- //
+
 .store__custom-slider {
   cursor: grab;
 
   &:active {
     cursor: grabbing;
   }
+}
+
+.store__tshirt-img {
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+.swiper-scrollbar {
+  background: transparent !important;
 }
 
 .swiper-button-next,
@@ -18,7 +27,7 @@
 .swiper-button-next::after,
 .swiper-button-prev::after {
   color: $background-color-black;
-  font-size: 1.75rem !important;
+  font-size: 1.85rem !important;
 }
 
 // --- Fin: Store --- //

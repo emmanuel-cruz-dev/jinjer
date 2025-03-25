@@ -6,10 +6,10 @@ const TShirtCard: FC<TShirtCardProps> = ({ title, price, img }) => {
   const { t } = useTranslation();
 
   return (
-    <article className="relative mx-6">
-      <figure className="max-w-96 mx-auto">
+    <article className="w-full relative lg:mx-auto">
+      <figure className="max-w-64 mx-auto">
         <img
-          className="w-full object-cover"
+          className="w-full object-cover store__tshirt-img"
           src={img}
           width="500"
           height="566"
@@ -23,7 +23,7 @@ const TShirtCard: FC<TShirtCardProps> = ({ title, price, img }) => {
       </div>
       <a
         href="#"
-        className="absolute top-2/3 right-0 bg-red-600 px-2 py-1 text-sm text-white font-semibold hover:text-white hover:bg-red-700 transition-colors duration-300"
+        className="absolute top-2/3 right-24 lg:right-4 bg-red-600 px-2 py-1 text-sm text-white font-semibold hover:text-white hover:bg-red-700 transition-colors duration-300"
       >
         {t("store.addToCart")}
       </a>

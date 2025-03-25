@@ -11,10 +11,10 @@ import TShirt6 from "../../../assets/images/shop-tour.png";
 
 function StoreSlider() {
   return (
-    <article style={{ padding: "12px" }}>
+    <article className="store__custom-slider" style={{ padding: "12px" }}>
       <Swiper
         slidesPerView={1}
-        spaceBetween={30}
+        spaceBetween={4}
         navigation
         loop={true}
         pagination={{ clickable: true }}
@@ -38,7 +38,6 @@ function StoreSlider() {
           {/* Card 1 */}
           <TShirtCard title="Perennial" price={21.99} img={TShirt1} />
         </SwiperSlide>
-
         <SwiperSlide>
           {/* Card 2 */}
           <TShirtCard title="Ape" price={18.69} img={TShirt2} />
