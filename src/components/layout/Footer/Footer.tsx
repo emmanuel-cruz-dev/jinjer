@@ -31,7 +31,7 @@ function Footer() {
           <SocialIcons />
         </div>
 
-        <div className="posts flex flex-col gap-4 xl:col-span-3">
+        <div className="posts flex flex-col gap-3 xl:col-span-3">
           <h3 className="footer__title">{t("footer.latestPosts")}</h3>
           <a
             href="#"
@@ -70,7 +70,7 @@ function Footer() {
           </a>
         </div>
 
-        <div className="bookings flex flex-col gap-4 xl:col-span-2">
+        <div className="bookings flex flex-col gap-3 xl:col-span-2">
           <h3 className="footer__title">{t("footer.bookings")}</h3>
           <ul>
             <li>Atlanta, GA 30342</li>
@@ -85,7 +85,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-4 xl:col-span-2">
+        <div className="flex flex-col gap-3 xl:col-span-2">
           <h3 className="footer__title">{t("footer.recordLabels")}</h3>
           <ul>
             <li>
