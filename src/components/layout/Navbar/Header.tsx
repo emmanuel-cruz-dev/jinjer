@@ -29,7 +29,7 @@ function Header() {
   return (
     <>
       <header
-        className={`header fixed top-0 left-0 w-full flex transition-colors duration-300 z-10 h-20 lg:h-28 ${
+        className={`header fixed top-0 left-0 w-full flex transition-colors duration-300 z-10 h-20 lg:h-24 ${
           isScrolled ? "bg-background" : "bg-transparent"
         }`}
       >

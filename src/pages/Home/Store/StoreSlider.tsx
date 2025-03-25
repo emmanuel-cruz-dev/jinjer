@@ -36,27 +36,21 @@ function StoreSlider() {
         modules={[Navigation, Pagination, A11y]}
       >
         <SwiperSlide>
-          {/* Card 1 */}
           <TShirtCard title="Perennial" price={21.99} img={TShirt1} />
         </SwiperSlide>
         <SwiperSlide>
-          {/* Card 2 */}
           <TShirtCard title="Ape" price={18.69} img={TShirt2} />
         </SwiperSlide>
         <SwiperSlide>
-          {/* Card 3 */}
           <TShirtCard title="Pisces" price={24.79} img={TShirt3} />
         </SwiperSlide>
         <SwiperSlide>
-          {/* Card 4 */}
           <TShirtCard title="Noha" price={23.95} img={TShirt4} />
         </SwiperSlide>
         <SwiperSlide>
-          {/* Card 5 */}
           <TShirtCard title="True Believer" price={23.95} img={TShirt5} />
         </SwiperSlide>
         <SwiperSlide>
-          {/* Card 6 */}
           <TShirtCard title="Cloud Factory" price={19.99} img={TShirt6} />
         </SwiperSlide>
       </Swiper>

@@ -21,7 +21,7 @@ function Home() {
       <About />
       <Tour />
       <Albums />
-      {/* <Media /> */}
+      <Media />
       <Store />
       <Follow />
     </Suspense>
