@@ -18,7 +18,7 @@ function Media() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-44 gap-y-12 w-full md:w-5/6">
           <VideoCard
             video={
-              "https://www.youtube.com/embed/637ER6dlGDg?si=aEpuXwqMSITyNBYl?rel=0&modestbranding=1&playsinline=1"
+              "https://www.youtube-nocookie.com/embed/637ER6dlGDg?si=aEpuXwqMSITyNBYl?rel=0&modestbranding=1&playsinline=1"
             }
             title="Green Serpent (Official Video)"
             paragraph={t("media.greenSerpent")}
@@ -26,7 +26,7 @@ function Media() {
           />
           <VideoCard
             video={
-              "https://www.youtube.com/embed/SQNtGoM3FVU?si=E4vzKQxLpqDFZzrk?rel=0&modestbranding=1&playsinline=1"
+              "https://www.youtube-nocookie.com/embed/SQNtGoM3FVU?si=E4vzKQxLpqDFZzrk?rel=0&modestbranding=1&playsinline=1"
             }
             title="Pisces (Live Session)"
             paragraph={t("media.pisces")}
@@ -35,7 +35,7 @@ function Media() {
 
           <VideoCard
             video={
-              "https://www.youtube.com/embed/KJoPIgg17U4?si=hF3pOee2fA6haLkd?rel=0&modestbranding=1&playsinline=1"
+              "https://www.youtube-nocookie.com/embed/KJoPIgg17U4?si=hF3pOee2fA6haLkd?rel=0&modestbranding=1&playsinline=1"
             }
             title="I Speak Astronomy (Official Video)"
             paragraph={t("media.iSpeakAstronomy")}
@@ -46,7 +46,7 @@ function Media() {
             <>
               <VideoCard
                 video={
-                  "https://www.youtube.com/embed/AiaOSGZTwtY?si=4MRl3gl0LEOMdhWg?rel=0&modestbranding=1&playsinline=1"
+                  "https://www.youtube-nocookie.com/embed/AiaOSGZTwtY?si=4MRl3gl0LEOMdhWg?rel=0&modestbranding=1&playsinline=1"
                 }
                 title="Vortex (Official Video)"
                 paragraph={t("media.vortex")}
@@ -54,7 +54,7 @@ function Media() {
               />
               <VideoCard
                 video={
-                  "https://www.youtube.com/embed/U6rv5qi8-8s?si=-b2VVP9febdjlYgI?rel=0&modestbranding=1&playsinline=1"
+                  "https://www.youtube-nocookie.com/embed/U6rv5qi8-8s?si=-b2VVP9febdjlYgI?rel=0&modestbranding=1&playsinline=1"
                 }
                 title="Who Is Gonna Be The One (Live)"
                 paragraph={t("media.whoIsGonnaBeTheOne")}
@@ -62,7 +62,7 @@ function Media() {
               />
               <VideoCard
                 video={
-                  "https://www.youtube.com/embed/DZ_WDLA9i7c?si=DiANW26qAS0gv6UZ?rel=0&modestbranding=1&playsinline=1"
+                  "https://www.youtube-nocookie.com/embed/DZ_WDLA9i7c?si=DiANW26qAS0gv6UZ?rel=0&modestbranding=1&playsinline=1"
                 }
                 title="Scissors (OFFICIAL MUSIC VIDEO)"
                 paragraph={t("media.scissors")}

@@ -2,12 +2,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 
 import TShirtCard from "./TShirtCard";
-import TShirt1 from "../../../assets/images/shop-skull.png";
-import TShirt2 from "../../../assets/images/shop-gorilla.png";
-import TShirt3 from "../../../assets/images/shop-sharks.png";
-import TShirt4 from "../../../assets/images/shop-fire.png";
-import TShirt5 from "../../../assets/images/shop-death.png";
-import TShirt6 from "../../../assets/images/shop-tour.png";
+import TShirt1 from "../../../assets/images/shop-skull.avif";
+import TShirt2 from "../../../assets/images/shop-gorilla.avif";
+import TShirt3 from "../../../assets/images/shop-sharks.avif";
+import TShirt4 from "../../../assets/images/shop-fire.avif";
+import TShirt5 from "../../../assets/images/shop-death.avif";
+import TShirt6 from "../../../assets/images/shop-tour.avif";
 
 function StoreSlider() {
   return (

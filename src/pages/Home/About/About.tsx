@@ -42,7 +42,8 @@ function About() {
               className="w-full"
               width="680"
               height="440"
-              src="https://www.youtube.com/embed/B48xIcvgzYM?si=2H2C59TYlcnHn1l4"
+              //src="https://www.youtube.com/embed/B48xIcvgzYM?si=2H2C59TYlcnHn1l4"
+              src="https://www.youtube-nocookie.com/embed/B48xIcvgzYM?modestbranding=1&rel=0&autoplay=0&controls=1"
               title="YouTube video player"
               frameBorder={0}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
