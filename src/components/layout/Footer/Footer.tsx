@@ -150,7 +150,7 @@ function Footer() {
             </a>
           </li>
         </ul>
-        <p>
+        <p className="w-2/3 text-center mt-3 sm:w-full sm:mt-0">
           © 2024 Jinjer Band Website. {t("footer.powered")}{" "}
           <a
             className="footer__legal-links"

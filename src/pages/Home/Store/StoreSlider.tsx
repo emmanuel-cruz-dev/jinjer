@@ -20,14 +20,15 @@ function StoreSlider() {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         breakpoints={{
-          640: {
+          480: {
             slidesPerView: 1,
           },
-
-          768: {
+          640: {
             slidesPerView: 2,
           },
-
+          768: {
+            slidesPerView: 3,
+          },
           1200: {
             slidesPerView: 4,
           },
