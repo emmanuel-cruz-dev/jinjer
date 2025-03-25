@@ -29,7 +29,7 @@ function MusicPlayer() {
 
   return (
     <article className={`${isVisible ? "opacity-100" : "opacity-0"}`}>
-      <article className="music-player__article fixed bottom-3 left-2 flex gap-[6px] z-[100] select-none">
+      <article className="music-player__article fixed bottom-4 left-2 lg:left-8 flex gap-[6px] z-[100] select-none">
         <div
           className={`music-player__container ${
             isMenuOpen ? "" : "active"
@@ -79,7 +79,7 @@ function MusicPlayer() {
             <button
               title={isPlaying ? t("musicPlayer.pause") : t("musicPlayer.play")}
               onClick={handlePlayPause}
-              className="bg-accent hover:bg-black p-3 rounded-full transition-colors duration-300 border-none"
+              className="bg-accent hover:bg-black p-[.55rem] rounded-full transition-colors duration-300 border-none"
             >
               {isPlaying ? <FaPause size={18} /> : <FaPlay size={18} />}
             </button>

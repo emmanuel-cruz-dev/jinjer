@@ -1,13 +1,13 @@
 // --- Inicio: Music Player --- //
 
 .music-player__container {
-  width: 4.87rem;
+  width: 4.6rem;
   overflow: hidden;
   transition: width 0.3s ease-in-out;
 
   img {
-    width: 3.4rem;
-    height: 3.4rem;
+    width: 3rem;
+    height: 3rem;
   }
 
   .music-player__text {
@@ -22,7 +22,7 @@
 }
 
 .music-player__container.active {
-  width: 21.2rem;
+  width: 20.5rem;
 
   .music-player__text {
     display: block;
@@ -49,7 +49,7 @@
   background-color: #1f2937;
   width: 30px;
   height: 30px;
-  font-size: 18px;
+  font-size: 16px;
   margin-block: auto;
   display: flex;
   justify-content: center;

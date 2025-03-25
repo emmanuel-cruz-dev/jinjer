@@ -9,7 +9,7 @@ function ScrollToTopButton() {
 
   return (
     <button
-      className={`up-btn fixed bottom-6 right-6 z-50 hover:bg-black text-white rounded-full cursor-pointer transition-all duration-300 w-14 h-14 flex justify-center items-center ${
+      className={`up-btn fixed bottom-6 right-6 lg:right-8 z-50 hover:bg-black text-white rounded-full cursor-pointer transition-all duration-300 w-14 h-14 flex justify-center items-center ${
         isVisible ? "opacity-100" : "opacity-0"
       } focus:outline-none focus:ring-0 focus:ring-offset-0`}
       onClick={scrollToTop}
