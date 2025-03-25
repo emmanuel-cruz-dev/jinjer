@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import microfono from "../../../assets/icons/microfono.png";
-import guitarra from "../../../assets/icons/guitarra.png";
-import bajo from "../../../assets/icons/bajo-electrico.png";
-import bateria from "../../../assets/icons/bateria.png";
+import microfono from "../../../assets/icons/microfono.avif";
+import guitarra from "../../../assets/icons/guitarra.avif";
+import bajo from "../../../assets/icons/bajo-electrico.avif";
+import bateria from "../../../assets/icons/bateria.avif";
 import Tatiana from "../../../assets/images/tatiana.webp";
 import Roman from "../../../assets/images/roman.webp";
 import Eugene from "../../../assets/images/eugene.webp";
