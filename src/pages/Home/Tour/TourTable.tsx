@@ -10,7 +10,7 @@ function TourTable() {
         <tr className="table__header">
           <th className="table__date__title">{t("tour.table.th1")}</th>
           <th className="table__venue__title">{t("tour.table.th2")}</th>
-          <th className="hidden lg:table-cell">{t("tour.table.th3")}</th>
+          <th className="hidden md:table-cell">{t("tour.table.th3")}</th>
           <th>{t("tour.table.th4")}</th>
         </tr>
       </thead>
@@ -20,7 +20,7 @@ function TourTable() {
           <td>
             <AnchorItem title="Rock Am Ring Festival" id="1" />
           </td>
-          <td className="hidden lg:table-cell">
+          <td className="hidden md:table-cell">
             Paris/<span>{t("tour.table.france")}</span>
           </td>
           <td className="table__btn__container">
@@ -34,7 +34,7 @@ function TourTable() {
           <td>
             <AnchorItem title="Resurrection Fest" id="2" />
           </td>
-          <td className="hidden lg:table-cell">
+          <td className="hidden md:table-cell">
             Galicia/<span>{t("tour.table.spain")}</span>
           </td>
           <td className="table__btn__container">
@@ -48,7 +48,7 @@ function TourTable() {
           <td>
             <AnchorItem title="Rock'n'Roll Camping" id="3" />
           </td>
-          <td className="hidden lg:table-cell">
+          <td className="hidden md:table-cell">
             <span>Austria</span>
           </td>
           <td className="table__btn__container">
@@ -62,7 +62,7 @@ function TourTable() {
           <td>
             <AnchorItem title="Electric Daisy Carnival" id="4" />
           </td>
-          <td className="hidden lg:table-cell">
+          <td className="hidden md:table-cell">
             Las Vegas/<span>{t("tour.table.usa")}</span>
           </td>
           <td className="table__btn__container">
@@ -76,7 +76,7 @@ function TourTable() {
           <td>
             <AnchorItem title="Glastonbury Festival" id="5" />
           </td>
-          <td className="hidden lg:table-cell">
+          <td className="hidden md:table-cell">
             Somerset/<span>{t("tour.table.uk")}</span>
           </td>
           <td className="table__btn__container">
@@ -90,7 +90,7 @@ function TourTable() {
           <td>
             <AnchorItem title="Tomorrowland" id="6" />
           </td>
-          <td className="hidden lg:table-cell">
+          <td className="hidden md:table-cell">
             <span>{t("tour.table.belgium")}</span>
           </td>
           <td className="table__btn__container">
@@ -104,7 +104,7 @@ function TourTable() {
           <td>
             <AnchorItem title="Wacken Open Air" id="7" />
           </td>
-          <td className="hidden lg:table-cell">
+          <td className="hidden md:table-cell">
             Wacken/<span>{t("tour.table.germany")}</span>
           </td>
           <td className="table__btn__container">
@@ -118,7 +118,7 @@ function TourTable() {
           <td>
             <AnchorItem title="Sziget Festival" id="8" />
           </td>
-          <td className="hidden lg:table-cell">
+          <td className="hidden md:table-cell">
             Budapest/<span>{t("tour.table.hungary")}</span>
           </td>
           <td className="table__btn__container">
