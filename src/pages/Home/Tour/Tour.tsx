@@ -15,7 +15,7 @@ function Tour() {
           </h2>
           <p className="text-lg">{t("tour.description")}.</p>
         </div>
-        <div className="w-full overflow-x-auto">
+        <div className="w-full">
           <TourTable />
           <div className="flex justify-center my-8">
             <a href="#" className="red__btn">
