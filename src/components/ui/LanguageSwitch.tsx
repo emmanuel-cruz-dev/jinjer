@@ -11,7 +11,7 @@ function LanguageSwitch() {
       className="w-8 h-8 rounded-full overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out"
     >
       <ReactCountryFlag
-        countryCode={i18n.language === "en" ? "US" : "AR"}
+        countryCode={currentLanguage === "en" ? "US" : "AR"}
         svg
         style={{
           width: "100%",

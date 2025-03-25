@@ -1,6 +1,6 @@
+import { useTranslation } from "react-i18next";
 import SocialLinks from "../../ui/SocialLinks";
 import SideAreaImg from "../../../assets/images/latest-post-02.webp";
-import { useTranslation } from "react-i18next";
 import { forwardRef } from "react";
 import { HeaderSideBarProps } from "../../../types/types";
 import { MdClose } from "react-icons/md";

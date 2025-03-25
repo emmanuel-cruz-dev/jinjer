@@ -1,6 +1,6 @@
+import { useTranslation } from "react-i18next";
 import { MdQueueMusic, MdClose, MdMenu } from "react-icons/md";
 import { useRef } from "react";
-import { useTranslation } from "react-i18next";
 import LanguageSwitch from "../../ui/LanguageSwitch";
 import Name from "../../ui/Name";
 import useScroll from "../../../hooks/useScroll";
