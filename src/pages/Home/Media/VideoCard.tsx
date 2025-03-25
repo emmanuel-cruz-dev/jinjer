@@ -9,7 +9,7 @@ const VideoCard: FC<VideoCardProps> = ({ video, title, paragraph, views }) => {
     <div className="flex justify-center flex-col gap-4">
       <iframe
         loading="lazy"
-        className="grow w-full md:w-72 xl:w-[22rem]"
+        className="grow w-full"
         width="320"
         height="220"
         src={video}

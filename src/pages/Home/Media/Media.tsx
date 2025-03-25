@@ -15,7 +15,7 @@ function Media() {
           </h2>
           <p className="text-lg">{t("media.description")}.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-44 gap-y-12 w-full md:w-5/6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 w-full">
           <VideoCard
             video={
               "https://www.youtube-nocookie.com/embed/637ER6dlGDg?si=aEpuXwqMSITyNBYl?rel=0&modestbranding=1&playsinline=1"
