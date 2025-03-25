@@ -157,6 +157,12 @@ const resources = {
         expand: "Expand",
         collapse: "Collapse",
       },
+      musicPage: {
+        moreMenu: "More",
+        playButton: "Play on Spotify",
+        saveButton: "Save on Spotify",
+        copyButton: "Copy Link",
+      },
       goTopButton: "Go to top",
       // ... más traducciones
     },
@@ -313,6 +319,12 @@ const resources = {
         next: "Siguiente",
         expand: "Expandir",
         collapse: "Contraer",
+      },
+      musicPage: {
+        moreMenu: "Más",
+        playButton: "Reproducir en Spotify",
+        saveButton: "Guardar en Spotify",
+        copyButton: "Copiar Enlace",
       },
       goTopButton: "Ir arriba",
       // ... más traducciones

@@ -16,8 +16,10 @@ import { musicPlayerList } from "../../data/musicPlayerList";
 import { backgroundColors } from "../../data/backgroundColors";
 import useMediaPlayer from "../../hooks/useMediaPlayer";
 import useMenu from "../../hooks/useMenu";
+import { useTranslation } from "react-i18next";
 
 const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
+  const { t } = useTranslation();
   const { isMenuOpen, toggleMenu } = useMenu();
   const {
     isPlaying,
@@ -59,7 +61,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
             <h2 className="text-3xl font-bold text-white">{title}</h2>
           </div>
           <article className="w-full py-8 xl:pt-28 gap-12 flex flex-col items-center">
-            <div className="flex justify-center gap-2">
+            <div className="flex justify-center gap-4">
               <figure className="max-w-96 hidden lg:block">
                 <img
                   className="w-full"
@@ -104,7 +106,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                         <span className="text-[18px]">
                           <MdAddCircle />
                         </span>
-                        Save on Spotify
+                        {t("musicPage.saveButton")}
                       </p>
                     </div>
                   </div>
@@ -138,7 +140,7 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                     <button
                       onClick={toggleMenu}
                       className="music-player__more flex items-center border-none hover:scale-110 transition-all duration-300"
-                      title="More"
+                      title={t("musicPage.moreMenu")}
                     >
                       <span className="opacity-80 hover:opacity-100">
                         <FaEllipsis />
@@ -188,19 +190,19 @@ const MusicPlayer: FC<AlbumItemProps> = ({ id, title, year, cover }) => {
                     className={`music-player__actions-menu flex flex-col gap-2 mb-4`}
                   >
                     <a href="#">
-                      <FaSpotify size={20} /> Play on Spotify
+                      <FaSpotify size={20} /> {t("musicPage.playButton")}
                     </a>
                     <a href="#">
                       <span className="text-xl">
                         <MdAddCircle />
                       </span>
-                      Save on Spotify
+                      {t("musicPage.saveButton")}
                     </a>
                     <a href="#">
                       <span className=" text-xl">
                         <MdShare />
                       </span>
-                      Copy link
+                      {t("musicPage.copyButton")}
                     </a>
                   </div>
                   <div className="flex text-sm justify-center gap-1">
