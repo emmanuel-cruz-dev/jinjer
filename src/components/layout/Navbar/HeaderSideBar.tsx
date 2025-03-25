@@ -3,6 +3,7 @@ import SideAreaImg from "../../../assets/images/latest-post-02.webp";
 import { useTranslation } from "react-i18next";
 import { forwardRef } from "react";
 import { HeaderSideBarProps } from "../../../types/types";
+import { MdClose } from "react-icons/md";
 
 const HeaderSideBar = forwardRef<HTMLElement, HeaderSideBarProps>(
   ({ isOpen, toggleMenu }, ref) => {
@@ -17,9 +18,9 @@ const HeaderSideBar = forwardRef<HTMLElement, HeaderSideBarProps>(
           <span
             title={t("navbar.closeButton")}
             onClick={toggleMenu}
-            className="material-symbols-outlined text-3xl cursor-pointer transition-transform duration-300 hover:rotate-90"
+            className="text-3xl cursor-pointer transition-transform duration-300 hover:rotate-90"
           >
-            close
+            <MdClose />
           </span>
         </div>
 

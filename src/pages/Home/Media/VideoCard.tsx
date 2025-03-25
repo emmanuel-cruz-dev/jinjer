@@ -17,6 +17,7 @@ const VideoCard: FC<VideoCardProps> = ({ video, title, paragraph, views }) => {
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
+        sandbox="allow-same-origin allow-scripts allow-presentation"
         allowFullScreen={true}
       ></iframe>
       <div className="flex flex-col gap-3 tracking-wide">
