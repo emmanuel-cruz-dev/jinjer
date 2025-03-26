@@ -186,6 +186,23 @@ const resources = {
       },
       newsBlog: {
         title: "News and Blog",
+        greenSerpent: {
+          date: "26 November, 2024",
+          title: "NEW SINGLE OUT NOW!",
+          text1:
+            "GREEN SERPENT is here! Watch the music video now on YouTube and listen on all streaming platforms!",
+          text2:
+            "This track has quickly become one of our favorites from the upcoming album. It sonically captures everything we've been, where we are now, and where we're headed. It's the quintessence of all our musical endeavors!",
+          text3:
+            "Give it a like, share it, and drop a comment to let us know what you think!",
+          text4:
+            "🔥PRE-ORDER🔥 Our brand new album: DUÉL, will be out on February 7th, 2025! Get ready for it!",
+        },
+        kafka: {},
+        rogue: {},
+        daughter: {},
+        surprise: {},
+        symbol: {},
       },
       members: {
         title: "Members",
@@ -410,6 +427,23 @@ const resources = {
       },
       newsBlog: {
         title: "Noticias y Blog",
+        greenSerpent: {
+          date: "26 de Noviembre de 2024",
+          title: "NUEVO SENCILLO YA DISPONIBLE!",
+          text1:
+            "GREEN SERPENT ya está aquí! ¡Mira el videoclip ahora en YouTube y escúchalo en todas las plataformas de streaming!",
+          text2:
+            "Esta canción se ha convertido rápidamente en una de nuestras favoritas del próximo álbum. Captura con su sonido todo lo que hemos sido, dónde estamos ahora y hacia dónde nos dirigimos. ¡Es la quintaesencia de todos nuestros proyectos musicales!",
+          text3:
+            "¡Dale a me gusta, compártelo y deja un comentario para decirnos qué te parece!",
+          text4:
+            "🔥RESERVA🔥 ¡Nuestro nuevo álbum, DUÉL, saldrá el 7 de febrero de 2025! ¡Prepárate!",
+        },
+        kafka: {},
+        rogue: {},
+        daughter: {},
+        surprise: {},
+        symbol: {},
       },
       members: {
         title: "Integrantes",
