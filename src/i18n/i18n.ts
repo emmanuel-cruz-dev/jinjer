@@ -184,6 +184,16 @@ const resources = {
         website: "Website",
         post: "Post Comment",
       },
+      members: {
+        tatiana: {
+          date: "26 November, 2024",
+          title: "Tatiana Shmaylyuk - Lead Vocals 🎤",
+          text1:
+            "Tatiana Shmaylyuk is the iconic voice of Jinjer, renowned for her remarkable vocal range and dynamic performances. Joining the band in 2010, she brought a unique energy that helped redefine their sound. Her ability to seamlessly transition between brutal growls and angelic clean vocals has set her apart as one of the most versatile vocalists in the metal scene. Tatiana's lyrical contributions often explore themes of personal growth, societal struggles, and philosophical introspection, adding depth to Jinjer's music.",
+          text2:
+            "On stage, Tatiana commands attention with her magnetic presence and raw emotion. Her performances are a captivating blend of intensity and vulnerability, drawing fans into the heart of each song. Whether performing at massive festivals or intimate venues, she connects deeply with the audience, making every show unforgettable. Her bold fashion sense and striking appearance further reflect her individuality and artistic spirit.",
+        },
+      },
       goTopButton: "Go to top",
       // ... más traducciones
     },
