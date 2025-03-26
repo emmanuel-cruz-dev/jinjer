@@ -299,8 +299,20 @@ const resources = {
           text2:
             "With a passionate audience and an adrenaline-fueled atmosphere, this festival promises to be an unforgettable experience for lovers of heavy music. From aggressive anthems to hypnotic melodies, Jinjer will demonstrate why they are one of the most innovative bands on the metal scene today.",
         },
-        resurrection: {},
-        rockRoll: {},
+        resurrection: {
+          date: "05 March, 2025",
+          text1:
+            "Spain once again welcomes the metal titans to the legendary Resurrection Fest. Galicia becomes the epicenter of headbanging when Jinjer takes the stage, bringing their brutal blend of djent, groove, and progressive metal to an audience that vibrates with every riff.",
+          text2:
+            "With a setlist that combines their most aggressive classics and their most technical compositions, the Ukrainian band is ready to make history at this event. Resurrection Fest isn't just a festival; it's a community of metalheads who come together to experience a unique experience, and this year, Jinjer is one of the main reasons not to miss it.",
+        },
+        rockRoll: {
+          date: "18 March, 2025",
+          text1:
+            "Rock 'n' Roll Camping in Austria isn't just a festival; it's an immersive experience where music, nature, and the metal community merge. Jinjer will bring their signature devastating sound to this event, turning the stage into a whirlwind of energy.",
+          text2:
+            "This festival is known for its authentic atmosphere, where fans can enjoy days of music and nights camping under the stars. Jinjer's power, combined with the festival's unique atmosphere, promises to be one of the most electrifying moments of the year.",
+        },
         electricDaisy: {},
         glastonBury: {},
         tomorrowland: {},
@@ -606,8 +618,20 @@ const resources = {
           text2:
             "Con un público apasionado y un ambiente cargado de adrenalina, este festival promete ser una experiencia inolvidable para los amantes de la música pesada. Desde himnos agresivos hasta melodías hipnóticas, Jinjer demostrará por qué es una de las bandas más innovadoras de la escena metal actual.",
         },
-        resurrection: {},
-        rockRoll: {},
+        resurrection: {
+          date: "05 de Marzo de 2025",
+          text1:
+            "España vuelve a recibir a los titanes del metal en el legendario Resurrection Fest. Galicia se convierte en el epicentro del headbanging cuando Jinjer sube al escenario, llevando su brutal mezcla de djent, groove y metal progresivo a un público que vibra con cada riff.",
+          text2:
+            "Con un setlist que combina sus clásicos más agresivos y sus composiciones más técnicas, la banda ucraniana está lista para hacer historia en este evento. Resurrection Fest no solo es un festival, es una comunidad de metalheads que se reúnen para vivir una experiencia única, y este año, Jinjer es una de las razones principales para no perdérselo.",
+        },
+        rockRoll: {
+          date: "18 de Marzo de 2025",
+          text1:
+            "El Rock 'n' Roll Camping en Austria no es solo un festival, es una experiencia inmersiva donde la música, la naturaleza y la comunidad metalera se fusionan. Jinjer traerá su característico sonido demoledor a este evento, convirtiendo el escenario en un torbellino de energía.",
+          text2:
+            "Este festival es conocido por su ambiente auténtico, donde los fans pueden disfrutar de días enteros de música y noches de camping bajo las estrellas. La potencia de Jinjer, combinada con la atmósfera única del festival, promete ser uno de los momentos más electrizantes del año.",
+        },
         electricDaisy: {},
         glastonBury: {},
         tomorrowland: {},
