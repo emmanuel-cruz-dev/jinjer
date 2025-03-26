@@ -173,6 +173,16 @@ const resources = {
         download: "Download",
         stream: "Stream",
       },
+      contactForm: {
+        comment: "Leave a Comment",
+        required:
+          "Your email address will not be published. Required fields are marked *.",
+        save: "Save my name, email and website in this browser for the next time I comment.",
+        message: "Comment",
+        name: "Name*",
+        website: "Website",
+        post: "Post Comment",
+      },
       goTopButton: "Go to top",
       // ... más traducciones
     },
@@ -345,6 +355,16 @@ const resources = {
         terms: "Términos y Condiciones",
         download: "Descargar",
         stream: "Transmitir",
+      },
+      contactForm: {
+        comment: "Deja un Comentario",
+        required:
+          "Tu dirección de correo no se publicará. Los campos obligatorios están marcados con *.",
+        save: "Guarda mi nombre, correo electrónico y sitio web en este navegador para la próxima vez que comente.",
+        message: "Mensaje",
+        name: "Nombre*",
+        website: "Sitio web",
+        post: "Publicar Comentario",
       },
       goTopButton: "Ir arriba",
       // ... más traducciones
