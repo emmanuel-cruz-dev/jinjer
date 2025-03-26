@@ -1,11 +1,13 @@
+import { useTranslation } from "react-i18next";
+
 function ContactForm() {
+  const { t } = useTranslation();
+
   return (
     <article className="flex flex-col gap-4 mx-auto">
       <div className="flex flex-col gap-2 my-2">
-        <h2 className="text-2xl font-semibold">Leave a Reply</h2>
-        <p className="text-gray-400 text-[15px]">
-          Your email address will not be published. Required fields are marked *
-        </p>
+        <h2 className="text-2xl font-semibold">{t("contactForm.comment")}</h2>
+        <p className="text-gray-400 text-[15px]">{t("contactForm.required")}</p>
       </div>
 
       <form
@@ -15,7 +17,7 @@ function ContactForm() {
       >
         <textarea
           className="w-full max-w-lg min-h-[160px] p-2 px-4 sm:max-w-md md:min-h-[220px] lg:max-w-full"
-          placeholder="Comment*"
+          placeholder={t("contactForm.message")}
           id="comment"
           name="comment"
         />
@@ -23,19 +25,19 @@ function ContactForm() {
           <input
             className="p-2 px-4"
             type="text"
-            placeholder="Name*"
+            placeholder={t("contactForm.name")}
             id="contact-form__name"
           />
           <input
             className="p-2 px-4"
             type="email"
-            placeholder="Email*"
+            placeholder={t("contactForm.email")}
             id="contact-form__email"
           />
           <input
             className="p-2 px-4"
             type="text"
-            placeholder="Website"
+            placeholder={t("contactForm.website")}
             id="contact-form__website"
           />
         </div>
@@ -43,16 +45,15 @@ function ContactForm() {
           <label htmlFor="save" className="flex gap-2">
             <input type="checkbox" name="save" value="save" id="save" />
             <span className="text-gray-400 text-[15px]">
-              Save my name, email, and website in this browser for the next time
-              I comment.
+              {t("contactForm.save")}
             </span>
           </label>
           <button
             type="submit"
             onClick={(e) => e.preventDefault()}
-            className="red__btn lg:w-1/3 rounded-none"
+            className="red__btn lg:w-fit rounded-none"
           >
-            Post Comment
+            {t("contactForm.post")}
           </button>
         </div>
       </form>

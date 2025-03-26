@@ -178,8 +178,9 @@ const resources = {
         required:
           "Your email address will not be published. Required fields are marked *.",
         save: "Save my name, email and website in this browser for the next time I comment.",
-        message: "Comment",
+        message: "Comment*",
         name: "Name*",
+        email: "Email*",
         website: "Website",
         post: "Post Comment",
       },
@@ -361,9 +362,10 @@ const resources = {
         required:
           "Tu dirección de correo no se publicará. Los campos obligatorios están marcados con *.",
         save: "Guarda mi nombre, correo electrónico y sitio web en este navegador para la próxima vez que comente.",
-        message: "Mensaje",
+        message: "Mensaje*",
         name: "Nombre*",
-        website: "Sitio web",
+        email: "Correo Electrónico*",
+        website: "Sitio Web",
         post: "Publicar Comentario",
       },
       goTopButton: "Ir arriba",
