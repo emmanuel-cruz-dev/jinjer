@@ -1,9 +1,20 @@
-import { createContext, ReactNode } from "react";
+import {
+  createContext,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useState,
+} from "react";
 
-interface FiltersContextType {
+interface FiltersProps {
   color: string;
   minPrice: number;
   maxPrice: number;
+}
+
+interface FiltersContextType {
+  filters: FiltersProps;
+  setFilters: Dispatch<SetStateAction<FiltersProps>>;
 }
 
 interface FiltersProviderProps {
@@ -15,10 +26,14 @@ export const FiltersContext = createContext<FiltersContextType | undefined>(
 );
 
 export function FiltersProvider({ children }: FiltersProviderProps) {
+  const [filters, setFilters] = useState<FiltersProps>({
+    color: "all",
+    minPrice: 10,
+    maxPrice: 50,
+  });
+
   return (
-    <FiltersContext.Provider
-      value={{ color: "all", minPrice: 10, maxPrice: 50 }}
-    >
+    <FiltersContext.Provider value={{ filters, setFilters }}>
       {children}
     </FiltersContext.Provider>
   );
