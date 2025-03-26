@@ -74,8 +74,8 @@ const MediaItemsRender: FC<MediaItemsRenderProps> = ({
               <div className="flex flex-col gap-4 border-b border-slate-700 pb-4">
                 <p className="text-gray-400">{t(article.text1)}</p>
                 <p className="text-gray-400">{t(article.text2)}</p>
-                <p className="text-gray-400">{t(article.text3)}</p>
-                <p className="text-gray-400">{t(article.text4)}</p>
+                <p className="text-gray-400">{t(article.text3 || "")}</p>
+                <p className="text-gray-400">{t(article.text4 || "")}</p>
               </div>
 
               <div className="flex flex-row gap-4 justify-between text-gray-300 border-b border-slate-700 pb-4">
