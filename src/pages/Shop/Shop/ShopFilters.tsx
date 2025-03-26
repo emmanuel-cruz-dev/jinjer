@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useId } from "react";
 
 function ShopFilters() {
   const [minPrice, setMinPrice] = useState(0);
+  const minPriceFilterId = useId();
+  const colorFilterId = useId();
 
   const handleChangeMinPrice = (event) => {
     setMinPrice(event.target.value);
@@ -10,11 +12,11 @@ function ShopFilters() {
   return (
     <section className="flex flex-col gap-4">
       <div>
-        <label htmlFor="price">Precio a partir de:</label>
+        <label htmlFor={minPriceFilterId}>Precio a partir de:</label>
         <br />
         <input
           type="range"
-          id="price"
+          id={minPriceFilterId}
           min={0}
           max={100}
           value={minPrice}
@@ -26,7 +28,7 @@ function ShopFilters() {
       <div>
         <label htmlFor="color">Filtro de Color</label>
         <br />
-        <select name="" id="color">
+        <select name="" id={colorFilterId}>
           <option value="all">Todos</option>
           <option value="red">Rojo</option>
           <option value="blue">Azul</option>
