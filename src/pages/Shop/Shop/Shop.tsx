@@ -3,6 +3,8 @@ import ShopCard from "./ShopCard";
 import { shopProductsList } from "../../../data/shopProducts";
 import useShop from "../../../hooks/useShop";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import ShopFilters from "./ShopFilters";
 
 function Shop() {
   const { t } = useTranslation();
@@ -16,6 +18,22 @@ function Shop() {
     handleProducts,
     handleArr,
   } = useShop(shopProductsList);
+  const [filters, setFilters] = useState({
+    color: "all",
+    minPrice: 10,
+    maxPrice: 50,
+  });
+
+  const filterProducts = (products) => {
+    return products.filter((product) => {
+      return (
+        product.price >= filters.minPrice &&
+        (filters.color === "all" || product.color === filters.color)
+      );
+    });
+  };
+
+  const filteredProducts = filterProducts(shopProductsList);
 
   return (
     <section className="shop second-page" id="shop">
@@ -69,8 +87,8 @@ function Shop() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-8 w-full">
-                {products.map((product) => (
-                  <ShopCard {...product} />
+                {filteredProducts.map((product) => (
+                  <ShopCard key={product.id} {...product} />
                 ))}
               </div>
               <div className="flex justify-between items-center border border-gray-600 mb-8">
@@ -108,7 +126,7 @@ function Shop() {
                 )}
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-6 md:gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:gap-8 lg:h-fit w-full lg:w-80">
+            <aside className="grid grid-cols-2 gap-6 md:gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:gap-8 lg:h-fit w-full lg:w-80">
               <div>
                 <h2 className="font-bold text-lg mb-1">{t("shop.cart")}</h2>
                 <p>{t("shop.cartMessage")}</p>
@@ -141,7 +159,9 @@ function Shop() {
                   </ul>
                 </div>
               </div>
-            </div>
+
+              <ShopFilters />
+            </aside>
           </div>
         </article>
       </article>

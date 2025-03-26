@@ -10,6 +10,20 @@ const useShop = (productsList: ShopProductsProps[]): UseShopReturn => {
     top: 0,
     behavior: "smooth",
   };
+  const [filters, setFilters] = useState({
+    color: "all",
+    minPrice: 10,
+    maxPrice: 50,
+  });
+
+  const filterProducts = (products) => {
+    return products.filter((product) => {
+      return (
+        product.price >= filters.minPrice &&
+        (filters.color === "all" || product.color === filters.color)
+      );
+    });
+  };
 
   const handleFilter = (e: ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = e.target.value;
@@ -57,11 +71,6 @@ const useShop = (productsList: ShopProductsProps[]): UseShopReturn => {
       case "blue":
         setProducts(
           [...shopProducts2].filter((product) => product.color === "blue")
-        );
-        break;
-      case "green":
-        setProducts(
-          [...shopProducts2].filter((product) => product.color === "green")
         );
         break;
       case "yellow":
