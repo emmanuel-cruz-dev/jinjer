@@ -290,6 +290,23 @@ const resources = {
             "Vlad's drumming is characterized by its speed, power, and complexity, blending elements of groove, blast beats, and polyrhythms. His ability to seamlessly transition between different styles and tempos adds depth and dimension to Jinjer's music, creating a dynamic and engaging listening experience. Vlad's stage presence is equally impressive, with his energetic performances captivating audiences around the world.",
         },
       },
+      tourData: {
+        title: "Tour Dates",
+        rockRing: {
+          date: "23 February, 2025",
+          text1:
+            "The Rock am Ring Festival arrives in Paris with a special edition that brings together the best of metal and alternative rock on a single stage. Jinjer will be one of the most anticipated bands of the night, offering their powerful progressive sound and the unmistakable voice of Tatiana Shmayluk.",
+          text2:
+            "With a passionate audience and an adrenaline-fueled atmosphere, this festival promises to be an unforgettable experience for lovers of heavy music. From aggressive anthems to hypnotic melodies, Jinjer will demonstrate why they are one of the most innovative bands on the metal scene today.",
+        },
+        resurrection: {},
+        rockRoll: {},
+        electricDaisy: {},
+        glastonBury: {},
+        tomorrowland: {},
+        wacken: {},
+        sziget: {},
+      },
       goTopButton: "Go to top",
       // ... más traducciones
     },
@@ -579,6 +596,23 @@ const resources = {
           text2:
             "La batería de Vlad se caracteriza por su velocidad, potencia y complejidad, combinando elementos de groove, blast beats y polirritmos. Su capacidad para transicionar fluidamente entre diferentes estilos y tempos añade profundidad y dimensión a la música de Jinjer, creando una experiencia auditiva dinámica y cautivadora. La presencia escénica de Vlad es igualmente impresionante, con sus enérgicas actuaciones que cautivan al público de todo el mundo.",
         },
+      },
+      tourData: {
+        title: "Fechas de la Gira",
+        rockRing: {
+          date: "23 de Febrero de 2025",
+          text1:
+            "El Rock am Ring Festival llega a París con una edición especial que reúne lo mejor del metal y el rock alternativo en un solo escenario. Jinjer será una de las bandas más esperadas de la noche, ofreciendo su poderoso sonido progresivo y la inconfundible voz de Tatiana Shmayluk.",
+          text2:
+            "Con un público apasionado y un ambiente cargado de adrenalina, este festival promete ser una experiencia inolvidable para los amantes de la música pesada. Desde himnos agresivos hasta melodías hipnóticas, Jinjer demostrará por qué es una de las bandas más innovadoras de la escena metal actual.",
+        },
+        resurrection: {},
+        rockRoll: {},
+        electricDaisy: {},
+        glastonBury: {},
+        tomorrowland: {},
+        wacken: {},
+        sziget: {},
       },
       goTopButton: "Ir arriba",
       // ... más traducciones
