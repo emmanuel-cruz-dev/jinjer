@@ -233,7 +233,16 @@ const resources = {
           text4:
             "Don't forget to WATCH-STREAM-SHARE Someone's Daughter as much as you can!",
         },
-        surprise: {},
+        surprise: {
+          date: "25 June, 2024",
+          title: "SURPRISE!!!💥",
+          text1: "JINJER - From Nothing drops today!",
+          text2:
+            "We teamed up with Audiotree for an in-depth talk about not only our 15 year history, our creativity and our relationships with each other…but we also recorded three exclusive tracks live in their studio in Chicago!",
+          text3:
+            "It doesn't get more personal than this and it's a must see for all JINJER fans!",
+          text4: "Check out the full episode.",
+        },
         symbol: {},
       },
       members: {
@@ -506,7 +515,16 @@ const resources = {
           text4:
             "¡No olviden ver, transmitir y compartir Someone's Daughter tanto como puedan!",
         },
-        surprise: {},
+        surprise: {
+          date: "25 de Junio de 2024",
+          title: "¡¡¡SORPRESA!!!💥",
+          text1: "JINJER - From Nothing sale hoy!",
+          text2:
+            "Nos asociamos con Audiotree para una charla a fondo sobre no solo nuestros 15 años de historia, nuestra creatividad y nuestra relación... ¡sino que también grabamos tres temas exclusivos en vivo en su estudio de Chicago!",
+          text3:
+            "¡Es imposible ser más personal que esto y es imprescindible para todos los fans de JINJER!",
+          text4: "No te pierdas el episodio completo.",
+        },
         symbol: {},
       },
       members: {

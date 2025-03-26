@@ -55,14 +55,12 @@ export const newsMediaData = [
     id: 5,
     content:
       "https://www.youtube-nocookie.com/embed/vBiQyM3I40o?modestbranding=1&rel=0&autoplay=0&controls=1",
-    date: "25 June, 2024",
-    title: "SURPRISE!!!💥",
-    text1: "JINJER - From Nothing drops today!",
-    text2:
-      "We teamed up with Audiotree for an in-depth talk about not only our 15 year history, our creativity and our relationships with each other…but we also recorded three exclusive tracks live in their studio in Chicago!",
-    text3:
-      "It doesn't get more personal than this and it's a must see for all JINJER fans!",
-    text4: "Check out the full episode",
+    date: "newsBlog.surprise.date",
+    title: "newsBlog.surprise.title",
+    text1: "newsBlog.surprise.text1",
+    text2: "newsBlog.surprise.text2",
+    text3: "newsBlog.surprise.text3",
+    text4: "newsBlog.surprise.text4",
     link1: "Someone's Daughter",
     link2: "Drum Playthrough",
   },
