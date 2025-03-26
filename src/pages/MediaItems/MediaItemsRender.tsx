@@ -85,7 +85,7 @@ const MediaItemsRender: FC<MediaItemsRenderProps> = ({
                     onClick={() => goToSection(`/${route}/`, `${article.id}`)}
                     href={`/${route}/${article.id - 1}`}
                   >
-                    Previous - {article.link1}
+                    {t("members.prev")} - {article.link1}
                   </a>
                 ) : (
                   <span></span>
@@ -96,7 +96,7 @@ const MediaItemsRender: FC<MediaItemsRenderProps> = ({
                     onClick={() => goToSection(`/${route}/`, `${article.id}`)}
                     href={`/${route}/${article.id + 1}`}
                   >
-                    Next - {article.link2}
+                    {t("members.next")} - {article.link2}
                   </a>
                 ) : (
                   <span></span>

@@ -185,6 +185,9 @@ const resources = {
         post: "Post Comment",
       },
       members: {
+        title: "Members",
+        prev: "Previous",
+        next: "Next",
         tatiana: {
           date: "26 November, 2024",
           title: "Tatiana Shmaylyuk - Lead Vocals 🎤",
@@ -403,6 +406,9 @@ const resources = {
         post: "Publicar Comentario",
       },
       members: {
+        title: "Integrantes",
+        prev: "Anterior",
+        next: "Siguiente",
         tatiana: {
           date: "26 de Noviembre de 2024",
           title: "Tatiana Shmaylyuk - Vocalista Lider 🎤",
