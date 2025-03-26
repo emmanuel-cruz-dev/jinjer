@@ -313,9 +313,27 @@ const resources = {
           text2:
             "This festival is known for its authentic atmosphere, where fans can enjoy days of music and nights camping under the stars. Jinjer's power, combined with the festival's unique atmosphere, promises to be one of the most electrifying moments of the year.",
         },
-        electricDaisy: {},
-        glastonBury: {},
-        tomorrowland: {},
+        electricDaisy: {
+          date: "01 April, 2025",
+          text1:
+            "The Electric Daisy Carnival (EDC) is world-famous for its focus on electronic music, but this year it surprises with a special section dedicated to the fusion of extreme genres.",
+          text2:
+            "Jinjer will be one of the stars of this innovative offering, bringing their progressive metal to an audience accustomed to electronic rhythms. In a show where lights, energy, and intensity combine perfectly, the band will demonstrate that their sound can conquer any stage.",
+        },
+        glastonBury: {
+          date: "25 May, 2025",
+          text1:
+            "The Glastonbury Festival is a legendary event that brings together artists from all genres, and this year, Jinjer joins the lineup with an unmissable performance.",
+          text2:
+            "At a festival where musical diversity is key, the Ukrainian band will bring their power and technique to the British audience. With their blend of progressive metal and groove, Jinjer is ready to break the mold and prove that metal has a prominent place at this iconic event.",
+        },
+        tomorrowland: {
+          date: "19 June, 2025",
+          text1:
+            "This year, Tomorrowland opens a space for sonic experimentation, and Jinjer will be the band tasked with taking metal to new heights. With an immersive stage presence and their signature progressive sound, the Ukrainian band promises a unique performance at this festival.",
+          text2:
+            "Tomorrowland has always been a place of innovation, and Jinjer fits perfectly with its spirit of breaking boundaries and offering unforgettable experiences.",
+        },
         wacken: {},
         sziget: {},
       },
@@ -632,9 +650,27 @@ const resources = {
           text2:
             "Este festival es conocido por su ambiente auténtico, donde los fans pueden disfrutar de días enteros de música y noches de camping bajo las estrellas. La potencia de Jinjer, combinada con la atmósfera única del festival, promete ser uno de los momentos más electrizantes del año.",
         },
-        electricDaisy: {},
-        glastonBury: {},
-        tomorrowland: {},
+        electricDaisy: {
+          date: "01 de Abril de 2025",
+          text1:
+            "El Electric Daisy Carnival (EDC) es mundialmente famoso por su enfoque en la música electrónica, pero este año sorprende con una sección especial dedicada a la fusión de géneros extremos.",
+          text2:
+            "Jinjer será uno de los protagonistas en esta innovadora propuesta, llevando su metal progresivo a una audiencia acostumbrada a los ritmos electrónicos. En un espectáculo donde las luces, la energía y la intensidad se combinan a la perfección, la banda demostrará que su sonido puede conquistar cualquier escenario.",
+        },
+        glastonBury: {
+          date: "25 de Mayo de 2025",
+          text1:
+            "El Glastonbury Festival es un evento legendario que reúne a artistas de todos los géneros, y este año, Jinjer se suma al cartel con una actuación imperdible.",
+          text2:
+            "En un festival donde la diversidad musical es la clave, la banda ucraniana llevará su potencia y técnica al público británico. Con su mezcla de metal progresivo y groove, Jinjer está listo para romper los esquemas y demostrar que el metal tiene un lugar destacado en este evento icónico.",
+        },
+        tomorrowland: {
+          date: "19 de Junio de 2025",
+          text1:
+            "Este año Tomorrowland abre un espacio para la experimentación sonora, y Jinjer será la banda encargada de llevar el metal a nuevas dimensiones. Con una puesta en escena envolvente y su característico sonido progresivo, la banda ucraniana promete una actuación única en este festival.",
+          text2:
+            "Tomorrowland siempre ha sido un lugar de innovación, y Jinjer encaja perfectamente con su espíritu de romper fronteras y ofrecer experiencias inolvidables.",
+        },
         wacken: {},
         sziget: {},
       },

@@ -28,28 +28,28 @@ export const tourData = [
   },
   {
     id: 4,
-    date: "01 April, 2025",
+    date: "tourData.electricDaisy.date",
     title: "Electric Daysi Carnival",
-    text1:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    text1: "tourData.electricDaisy.text1",
+    text2: "tourData.electricDaisy.text2",
     link1: "Rock 'n' Roll Camping",
     link2: "Glastonbury Festival",
   },
   {
     id: 5,
-    date: "25 May, 2025",
+    date: "tourData.glastonBury.date",
     title: "Glastonbury Festival",
-    text1:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    text1: "tourData.glastonBury.text1",
+    text2: "tourData.glastonBury.text2",
     link1: "Electric Daysi Carnival",
     link2: "Tomorrowland Festival",
   },
   {
     id: 6,
-    date: "19 June, 2025",
+    date: "tourData.tomorrowland.date",
     title: "Tomorrowland Festival",
-    text1:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    text1: "tourData.tomorrowland.text1",
+    text2: "tourData.tomorrowland.text2",
     link1: "Glastonbury Festival",
     link2: "Wacken Open Air",
   },
