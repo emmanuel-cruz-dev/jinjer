@@ -105,7 +105,7 @@ export interface MediaDataProps {
   date: string;
   title: string;
   text1: string;
-  text2?: string;
+  text2?: string | string[];
   text3?: string;
   text4?: string;
   link1: string;

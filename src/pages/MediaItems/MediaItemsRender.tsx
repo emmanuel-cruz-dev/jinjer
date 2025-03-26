@@ -4,6 +4,7 @@ import TitleArticle from "./TitleArticle";
 import { MediaItemsRenderProps } from "../../types/types";
 import useGoToSection from "../../hooks/useGoToSection";
 import useArticle from "../../hooks/useArticle";
+import { useTranslation } from "react-i18next";
 
 const MediaItemsRender: FC<MediaItemsRenderProps> = ({
   title,
@@ -14,6 +15,7 @@ const MediaItemsRender: FC<MediaItemsRenderProps> = ({
 }) => {
   const article = useArticle(arr);
   const goToSection = useGoToSection();
+  const { t } = useTranslation();
 
   if (!article) {
     return (
@@ -60,7 +62,7 @@ const MediaItemsRender: FC<MediaItemsRenderProps> = ({
             </div>
             <div className="flex flex-col gap-4 w-11/12 lg:w-4/6">
               <p className="text-sm text-gray-400 uppercase">
-                {article.date} -{" "}
+                {t(article.date)} -{" "}
                 <a
                   href="#"
                   className="uppercase hover:text-slate-100 transition-colors duration-300"
@@ -68,12 +70,12 @@ const MediaItemsRender: FC<MediaItemsRenderProps> = ({
                   Admin
                 </a>
               </p>
-              <h3 className="text-3xl font-semibold">{article.title}</h3>
+              <h3 className="text-3xl font-semibold">{t(article.title)}</h3>
               <div className="flex flex-col gap-4 border-b border-slate-700 pb-4">
-                <p className="text-gray-400">{article.text1}</p>
-                <p className="text-gray-400">{article.text2}</p>
-                <p className="text-gray-400">{article.text3}</p>
-                <p className="text-gray-400">{article.text4}</p>
+                <p className="text-gray-400">{t(article.text1)}</p>
+                <p className="text-gray-400">{t(article.text2)}</p>
+                <p className="text-gray-400">{t(article.text3)}</p>
+                <p className="text-gray-400">{t(article.text4)}</p>
               </div>
 
               <div className="flex flex-row gap-4 justify-between text-gray-300 border-b border-slate-700 pb-4">
