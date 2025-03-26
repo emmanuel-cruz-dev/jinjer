@@ -29,15 +29,12 @@ export const newsMediaData = [
     id: 3,
     content:
       "https://www.youtube-nocookie.com/embed/9Uaecbh8ta0?modestbranding=1&rel=0&autoplay=0&controls=1",
-    date: "10 September, 2008",
-    title: "Rogue",
-    text1:
-      "Rogue is the 2nd single taken from the new JINJER album titled DUÉL, which will be released on February 7th 2025. Music & Merch Pre-orders are live now!",
-    text2:
-      "Our new single Rogue is a reaction to many things … it's brutally honest, it's in-your-face and one of the most intense tracks JINJER has ever released.",
-    text3: "Give it a like-view-comment-share and read the lyrics!",
-    text4:
-      "We are so excited about this new track, about the new album and everything that's on the way… we hope you really like too",
+    date: "newsBlog.rogue.date",
+    title: "newsBlog.rogue.title",
+    text1: "newsBlog.rogue.text1",
+    text2: "newsBlog.rogue.text2",
+    text3: "newsBlog.rogue.text3",
+    text4: "newsBlog.rogue.text4",
     link1: "Kafka",
     link2: "Someone's Daughter",
   },

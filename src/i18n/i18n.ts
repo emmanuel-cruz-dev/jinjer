@@ -210,7 +210,17 @@ const resources = {
           text4:
             "The fact that we still challenge ourselves to release the best music we have ever made with each new release, is what keeps JINJER moving forward… and we're happy you're on this journey with us 💪",
         },
-        rogue: {},
+        rogue: {
+          date: "10 September, 2008",
+          title: "Rogue",
+          text1:
+            "Rogue is the 2nd single taken from the new JINJER album titled DUÉL, which will be released on February 7th 2025. Music & Merch Pre-orders are live now!",
+          text2:
+            "Our new single Rogue is a reaction to many things… it's brutally honest, it's in-your-face and one of the most intense tracks JINJER has ever released.",
+          text3: "Give it a like-view-comment-share and read the lyrics!",
+          text4:
+            "We are so excited about this new track, about the new album and everything that's on the way… we hope you really like too",
+        },
         daughter: {},
         surprise: {},
         symbol: {},
@@ -462,7 +472,17 @@ const resources = {
           text4:
             "El hecho de que sigamos desafiándonos a nosotros mismos para lanzar la mejor música que hemos hecho con cada nuevo lanzamiento es lo que impulsa a JINJER a seguir adelante… y estamos felices de que estés en este viaje con nosotros 💪",
         },
-        rogue: {},
+        rogue: {
+          date: "10 de Septiembre de 2008",
+          title: "Rogue",
+          text1:
+            "Rogue es el segundo sencillo del nuevo álbum de JINJER, titulado DUÉL, que se lanzará el 7 de febrero de 2025. ¡Ya puedes reservar música y merchandising!",
+          text2:
+            "Nuestro nuevo sencillo, Rogue, es una reacción a muchas cosas... es brutalmente honesto, directo y uno de los temas más intensos que JINJER ha lanzado jamás.",
+          text3: "¡Dale a me gusta, míralo, comenta, comparte y lee la letra!",
+          text4:
+            "Estamos muy emocionados con este nuevo tema, con el nuevo álbum y con todo lo que viene en camino... ¡Esperamos que a ti también te guste!",
+        },
         daughter: {},
         surprise: {},
         symbol: {},
