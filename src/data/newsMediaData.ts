@@ -3,16 +3,12 @@ export const newsMediaData = [
     id: 1,
     content:
       "https://www.youtube-nocookie.com/embed/637ER6dlGDg?modestbranding=1&rel=0&autoplay=0&controls=1",
-    date: "26 November, 2024",
-    title: "NEW SINGLE OUT NOW!",
-    text1:
-      "GREEN SERPENT is here! Watch the music video now on YouTube and listen on all streaming platforms!",
-    text2:
-      "This track has quickly become one of our favorites from the upcoming album. It sonically captures everything we've been, where we are now, and where we're headed. It's the quintessence of all our musical endeavors!",
-    text3:
-      "Give it a like, share it, and drop a comment to let us know what you think!",
-    text4:
-      "🔥PRE-ORDER🔥 Our brand new album: DUÉL, will be out on February 7th, 2025! Get ready for it!",
+    date: "newsBlog.greenSerpent.date",
+    title: "newsBlog.greenSerpent.title",
+    text1: "newsBlog.greenSerpent.text1",
+    text2: "newsBlog.greenSerpent.text2",
+    text3: "newsBlog.greenSerpent.text3",
+    text4: "newsBlog.greenSerpent.text4",
     link1: "",
     link2: "Kafka",
   },
@@ -20,16 +16,12 @@ export const newsMediaData = [
     id: 2,
     content:
       "https://www.youtube-nocookie.com/embed/tRbpT5dGOmQ?modestbranding=1&rel=0&autoplay=0&controls=1",
-    date: "10 September, 2024",
-    title: "NEW SINGLE OUT NOW!",
-    text1:
-      "We are very excited to present our brand new single: KAFKA! The music and the message is something we wanted to convey for a very long time and we're stoked it's final out! Give it a like-view-comment-share and read the lyrics!",
-    text2:
-      "Kafka is the 3rd single taken from the new JINJER album titled DUÉL, which will be released on February 7th 2025. Music & Merch Pre-orders are live now!",
-    text3:
-      "Of all the releases we’ve made so far, finally having Duél in our hands and ready to be shared with the world, makes us very proud that our band still hasn't run out of creativity and inspiration.",
-    text4:
-      "The fact that we still challenge ourselves to release the best music we have ever made with each new release, is what keeps JINJER moving forward… and we're happy you're on this journey with us 💪",
+    date: "newsBlog.kafka.date",
+    title: "newsBlog.kafka.title",
+    text1: "newsBlog.kafka.text1",
+    text2: "newsBlog.kafka.text2",
+    text3: "newsBlog.kafka.text3",
+    text4: "newsBlog.kafka.text4",
     link1: "Green Serpent",
     link2: "Rogue",
   },

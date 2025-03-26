@@ -198,7 +198,18 @@ const resources = {
           text4:
             "🔥PRE-ORDER🔥 Our brand new album: DUÉL, will be out on February 7th, 2025! Get ready for it!",
         },
-        kafka: {},
+        kafka: {
+          date: "10 September, 2024",
+          title: "NEW SINGLE OUT NOW!",
+          text1:
+            "We are very excited to present our brand new single: KAFKA! The music and the message is something we wanted to convey for a very long time and we're stoked it's final out! Give it a like-view-comment-share and read the lyrics!",
+          text2:
+            "Kafka is the 3rd single taken from the new JINJER album titled DUÉL, which will be released on February 7th 2025. Music & Merch Pre-orders are live now!",
+          text3:
+            "Of all the releases we've made so far, finally having Duél in our hands and ready to be shared with the world, makes us very proud that our band still hasn't run out of creativity and inspiration.",
+          text4:
+            "The fact that we still challenge ourselves to release the best music we have ever made with each new release, is what keeps JINJER moving forward… and we're happy you're on this journey with us 💪",
+        },
         rogue: {},
         daughter: {},
         surprise: {},
@@ -439,7 +450,18 @@ const resources = {
           text4:
             "🔥RESERVA🔥 ¡Nuestro nuevo álbum, DUÉL, saldrá el 7 de febrero de 2025! ¡Prepárate!",
         },
-        kafka: {},
+        kafka: {
+          date: "10 Septiembre de 2024",
+          title: "NUEVO SENCILLO YA DISPONIBLE!",
+          text1:
+            "¡Estamos muy emocionados de presentar nuestro nuevo sencillo: KAFKA! La música y el mensaje son algo que queríamos transmitir desde hace mucho tiempo y estamos encantados de que ya esté disponible. ¡Dale a 'Me gusta', 'Mira', 'Comenta', 'Comparte' y lee la letra!",
+          text2:
+            "Kafka es el tercer sencillo del nuevo álbum de JINJER, titulado DUÉL, que se lanzará el 7 de febrero de 2025. ¡Ya puedes reservar música y merchandising!",
+          text3:
+            "De todos los lanzamientos que hemos hecho hasta ahora, tener finalmente Duél en nuestras manos y listo para compartirlo con el mundo nos enorgullece mucho de que nuestra banda aún no se haya quedado sin creatividad e inspiración.",
+          text4:
+            "El hecho de que sigamos desafiándonos a nosotros mismos para lanzar la mejor música que hemos hecho con cada nuevo lanzamiento es lo que impulsa a JINJER a seguir adelante… y estamos felices de que estés en este viaje con nosotros 💪",
+        },
         rogue: {},
         daughter: {},
         surprise: {},
