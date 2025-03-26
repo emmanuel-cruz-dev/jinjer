@@ -261,7 +261,7 @@ const resources = {
           date: "26 November, 2024",
           title: "Tatiana Shmaylyuk - Lead Vocals 🎤",
           text1:
-            "Tatiana Shmaylyuk is the iconic voice of Jinjer, renowned for her remarkable vocal range and dynamic performances. Joining the band in 2010, she brought a unique energy that helped redefine their sound. Her ability to seamlessly transition between brutal growls and angelic clean vocals has set her apart as one of the most versatile vocalists in the metal scene. Tatiana's lyrical contributions often explore themes of personal growth, societal struggles, and philosophical introspection, adding depth to Jinjer's music.",
+            "Tatiana is the iconic voice of Jinjer, renowned for her remarkable vocal range and dynamic performances. Joining the band in 2010, she brought a unique energy that helped redefine their sound. Her ability to seamlessly transition between brutal growls and angelic clean vocals has set her apart as one of the most versatile vocalists in the metal scene. Tatiana's lyrical contributions often explore themes of personal growth, societal struggles, and philosophical introspection, adding depth to Jinjer's music.",
           text2:
             "On stage, Tatiana commands attention with her magnetic presence and raw emotion. Her performances are a captivating blend of intensity and vulnerability, drawing fans into the heart of each song. Whether performing at massive festivals or intimate venues, she connects deeply with the audience, making every show unforgettable. Her bold fashion sense and striking appearance further reflect her individuality and artistic spirit.",
         },
@@ -269,7 +269,7 @@ const resources = {
           date: "20 December, 2024",
           title: "Roman Ibramkhalilov - Guitar 🎸",
           text1:
-            "Roman Ibramkhalilov is the mastermind behind Jinjer's intricate guitar work, crafting the heavy yet melodic soundscapes that define the band. A founding member of Jinjer, Roman's technical proficiency and innovative approach to guitar playing have been pivotal to their success. His ability to blend complex riffs, soaring solos, and atmospheric melodies showcases his deep understanding of progressive metal and beyond.",
+            "Roman is the mastermind behind Jinjer's intricate guitar work, crafting the heavy yet melodic soundscapes that define the band. A founding member of Jinjer, Roman's technical proficiency and innovative approach to guitar playing have been pivotal to their success. His ability to blend complex riffs, soaring solos, and atmospheric melodies showcases his deep understanding of progressive metal and beyond.",
           text2:
             "Roman's compositions often serve as the backbone of Jinjer's songs, providing both structure and emotion. He draws inspiration from a wide range of genres, seamlessly integrating elements of jazz, funk, and traditional metal into his playing. This fusion creates a distinctive style that sets Jinjer apart from their peers. Roman's meticulous attention to detail ensures that every note contributes to the band's signature sound, making their music as dynamic as it is memorable.",
         },
@@ -277,7 +277,7 @@ const resources = {
           date: "1 January, 2025",
           title: "Eugene Abdukhanov - Bass 🎸",
           text1:
-            "Eugene Abdukhanov is the driving force behind Jinjer's powerful bass lines, anchoring the band's sound with his dynamic playing. As a founding member of Jinjer, Eugene has been instrumental in shaping their distinctive blend of groove, melody, and aggression. His deep understanding of rhythm and harmony allows him to craft bass lines that elevate the band's music to new heights.",
+            "Eugene is the driving force behind Jinjer's powerful bass lines, anchoring the band's sound with his dynamic playing. As a founding member of Jinjer, Eugene has been instrumental in shaping their distinctive blend of groove, melody, and aggression. His deep understanding of rhythm and harmony allows him to craft bass lines that elevate the band's music to new heights.",
           text2:
             "Eugene's bass playing is characterized by its versatility and creativity, seamlessly transitioning between heavy grooves, melodic leads, and intricate fills. His ability to lock in with the drums while adding depth and texture to the music is a key element of Jinjer's sound. Eugene's contributions extend beyond the bass, with his songwriting and production skills playing a crucial role in the band's evolution.",
         },
@@ -285,7 +285,7 @@ const resources = {
           date: "19 February, 2025",
           title: "Vlad Ulasevich - Drums 🥁",
           text1:
-            "Vlad Ulasevich is the powerhouse drummer behind Jinjer's explosive rhythms, driving the band's music with his precision and intensity. Joining Jinjer in 2016, Vlad brought a new energy and creativity to the band's sound, elevating their live performances to new heights. His technical proficiency and dynamic playing have made him a standout figure in the metal scene.",
+            "Vlad is the powerhouse drummer behind Jinjer's explosive rhythms, driving the band's music with his precision and intensity. Joining Jinjer in 2016, Vlad brought a new energy and creativity to the band's sound, elevating their live performances to new heights. His technical proficiency and dynamic playing have made him a standout figure in the metal scene.",
           text2:
             "Vlad's drumming is characterized by its speed, power, and complexity, blending elements of groove, blast beats, and polyrhythms. His ability to seamlessly transition between different styles and tempos adds depth and dimension to Jinjer's music, creating a dynamic and engaging listening experience. Vlad's stage presence is equally impressive, with his energetic performances captivating audiences around the world.",
         },
@@ -630,7 +630,7 @@ const resources = {
           date: "26 de Noviembre de 2024",
           title: "Tatiana Shmaylyuk - Vocalista Lider 🎤",
           text1:
-            "Tatiana Shmaylyuk es la voz icónica de Jinjer, reconocida por su extraordinario rango vocal y sus dinámicas interpretaciones. Al unirse a la banda en 2010, aportó una energía única que ayudó a redefinir su sonido. Su capacidad para transicionar fluidamente entre gruñidos brutales y voces angelicales y limpias la ha distinguido como una de las vocalistas más versátiles de la escena metalera. Las contribuciones líricas de Tatiana a menudo exploran temas de crecimiento personal, luchas sociales e instrospección filosófica, aportando profundidad a la música de Jinjer.",
+            "Tatiana es la voz icónica de Jinjer, reconocida por su extraordinario rango vocal y sus dinámicas interpretaciones. Al unirse a la banda en 2010, aportó una energía única que ayudó a redefinir su sonido. Su capacidad para transicionar fluidamente entre gruñidos brutales y voces angelicales y limpias la ha distinguido como una de las vocalistas más versátiles de la escena metalera. Las contribuciones líricas de Tatiana a menudo exploran temas de crecimiento personal, luchas sociales e instrospección filosófica, aportando profundidad a la música de Jinjer.",
           text2:
             "En el escenario, Tatiana cautiva con su presencia magnética y su emoción pura. Sus interpretaciones son una cautivadora mezcla de intensidad y vulnerabilidad, que lleva a los fans al corazón de cada canción. Ya sea en festivales masivos o en recintos íntimos, conecta profundamente con el público, haciendo que cada espectáculo sea inolvidable. Su audaz sentido de la moda y su impactante apariencia reflejan aún más su individualidad y espíritu artístico.",
         },
@@ -638,7 +638,7 @@ const resources = {
           date: "20 de Diciembre de 2024",
           title: "Roman Ibramkhalilov - Guitarra 🎸",
           text1:
-            "Roman Ibramkhalilov es la mente maestra detrás del intrincado trabajo de guitarra de Jinjer, creando los paisajes sonoros pesados ​​pero melódicos que definen a la banda. Miembro fundador de Jinjer, la destreza técnica de Roman y su enfoque innovador al tocar la guitarra han sido fundamentales para su éxito. Su habilidad para combinar riffs complejos, solos imponentes y melodías atmosféricas demuestra su profundo conocimiento del metal progresivo y más allá.",
+            "Roman es la mente maestra detrás del intrincado trabajo de guitarra de Jinjer, creando los paisajes sonoros pesados ​​pero melódicos que definen a la banda. Miembro fundador de Jinjer, la destreza técnica de Roman y su enfoque innovador al tocar la guitarra han sido fundamentales para su éxito. Su habilidad para combinar riffs complejos, solos imponentes y melodías atmosféricas demuestra su profundo conocimiento del metal progresivo y más allá.",
           text2:
             "Las composiciones de Roman a menudo sirven como la columna vertebral de las canciones de Jinjer, aportando estructura y emoción. Se inspira en una amplia gama de géneros, integrando a la perfección elementos del jazz, el funk y el metal tradicional en su forma de tocar. Esta fusión crea un estilo distintivo que distingue a Jinjer de sus colegas. La meticulosa atención de Roman al detalle garantiza que cada nota contribuya al sonido característico de la banda, haciendo que su música sea tan dinámica como memorable.",
         },
@@ -646,7 +646,7 @@ const resources = {
           date: "1 de Enero de 2025",
           title: "Eugene Abdukhanov - Bajo 🎸",
           text1:
-            "Eugene Abdukhanov es la fuerza impulsora detrás de las potentes líneas de bajo de Jinjer, anclando el sonido de la banda con su dinámica interpretación. Como miembro fundador de Jinjer, Eugene ha sido fundamental en la creación de su distintiva mezcla de groove, melodía y agresividad. Su profundo conocimiento del ritmo y la armonía le permite crear líneas de bajo que elevan la música de la banda a nuevas alturas.",
+            "Eugene es la fuerza impulsora detrás de las potentes líneas de bajo de Jinjer, anclando el sonido de la banda con su dinámica interpretación. Como miembro fundador de Jinjer, Eugene ha sido fundamental en la creación de su distintiva mezcla de groove, melodía y agresividad. Su profundo conocimiento del ritmo y la armonía le permite crear líneas de bajo que elevan la música de la banda a nuevas alturas.",
           text2:
             "La interpretación de Eugene al bajo se caracteriza por su versatilidad y creatividad, con transiciones fluidas entre grooves potentes, solos melódicos y rellenos intrincados. Su capacidad para integrarse con la batería a la vez que añade profundidad y textura a la música es un elemento clave del sonido de Jinjer. Las contribuciones de Eugene van más allá del bajo, y sus habilidades de composición y producción han jugado un papel crucial en la evolución de la banda.",
         },
@@ -654,7 +654,7 @@ const resources = {
           date: "19 de Febrero de 2025",
           title: "Vlad Ulasevich - Batería 🥁",
           text1:
-            "Vlad Ulasevich es el baterista potente detrás de los ritmos explosivos de Jinjer, impulsando la música de la banda con su precisión e intensidad. Al unirse a Jinjer en 2016, Vlad aportó una nueva energía y creatividad al sonido de la banda, elevando sus presentaciones en vivo a nuevas alturas. Su dominio técnico y su dinamismo al tocar lo han convertido en una figura destacada en la escena del metal.",
+            "Vlad es el baterista potente detrás de los ritmos explosivos de Jinjer, impulsando la música de la banda con su precisión e intensidad. Al unirse a Jinjer en 2016, Vlad aportó una nueva energía y creatividad al sonido de la banda, elevando sus presentaciones en vivo a nuevas alturas. Su dominio técnico y su dinamismo al tocar lo han convertido en una figura destacada en la escena del metal.",
           text2:
             "La batería de Vlad se caracteriza por su velocidad, potencia y complejidad, combinando elementos de groove, blast beats y polirritmos. Su capacidad para transicionar fluidamente entre diferentes estilos y tempos añade profundidad y dimensión a la música de Jinjer, creando una experiencia auditiva dinámica y cautivadora. La presencia escénica de Vlad es igualmente impresionante, con sus enérgicas actuaciones que cautivan al público de todo el mundo.",
         },
