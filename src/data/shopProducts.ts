@@ -26,7 +26,7 @@ export const shopProductsList: ShopProductsProps[] = [
     img: TShirt1,
     name: "Perennial",
     rating: 5,
-    price: 20.99,
+    price: 36.99,
     sale: true,
   },
   {
@@ -50,7 +50,7 @@ export const shopProductsList: ShopProductsProps[] = [
     img: TShirt5,
     name: "True Believer",
     rating: 5,
-    price: 30.99,
+    price: 38.99,
     sale: true,
   },
   {
@@ -90,7 +90,7 @@ export const shopProductsList: ShopProductsProps[] = [
     img: TShirt4,
     name: "Noha",
     rating: 3,
-    price: 30.99,
+    price: 34.89,
     sale: false,
   },
   {

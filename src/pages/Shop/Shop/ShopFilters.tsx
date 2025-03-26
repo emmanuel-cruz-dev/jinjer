@@ -1,12 +1,26 @@
-import { useState, useId } from "react";
+import { useState, useId, useContext } from "react";
+import { FiltersContext } from "../../../context/filters";
 
 function ShopFilters() {
-  const [minPrice, setMinPrice] = useState(0);
+  const { setFilters } = useContext(FiltersContext);
+  const [minPrice, setMinPrice] = useState(10);
   const minPriceFilterId = useId();
   const colorFilterId = useId();
 
   const handleChangeMinPrice = (event) => {
     setMinPrice(event.target.value);
+    setFilters((prevState) => ({
+      ...prevState,
+      minPrice: event.target.value,
+    }));
+  };
+
+  const handleChangeColor = (event) => {
+    // setMinPrice(event.target.value);
+    setFilters((prevState) => ({
+      ...prevState,
+      color: event.target.value,
+    }));
   };
 
   return (
@@ -18,7 +32,7 @@ function ShopFilters() {
           type="range"
           id={minPriceFilterId}
           min={0}
-          max={100}
+          max={40}
           value={minPrice}
           onChange={handleChangeMinPrice}
         />
@@ -28,7 +42,7 @@ function ShopFilters() {
       <div>
         <label htmlFor="color">Filtro de Color</label>
         <br />
-        <select name="" id={colorFilterId}>
+        <select name="" id={colorFilterId} onChange={handleChangeColor}>
           <option value="all">Todos</option>
           <option value="red">Rojo</option>
           <option value="blue">Azul</option>

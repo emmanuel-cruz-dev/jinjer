@@ -1,4 +1,11 @@
-import { ChangeEvent, MutableRefObject, ReactElement } from "react";
+import {
+  ChangeEvent,
+  Dispatch,
+  MutableRefObject,
+  ReactElement,
+  ReactNode,
+  SetStateAction,
+} from "react";
 import { IconType } from "react-icons";
 
 export interface HeaderSideBarProps {
@@ -145,4 +152,19 @@ export interface ListItemProps {
 
 export interface UseMediaPlayerProps {
   musicList: MusicPlayerListProps[];
+}
+
+export interface FiltersProps {
+  color: string;
+  minPrice: number;
+  maxPrice: number;
+}
+
+export interface FiltersContextType {
+  filters: FiltersProps;
+  setFilters: Dispatch<SetStateAction<FiltersProps>>;
+}
+
+export interface FiltersProviderProps {
+  children: ReactNode;
 }

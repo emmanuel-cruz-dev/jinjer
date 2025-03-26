@@ -3,30 +3,10 @@ import ShopCard from "./ShopCard";
 import { shopProductsList } from "../../../data/shopProducts";
 import useShop from "../../../hooks/useShop";
 import { useTranslation } from "react-i18next";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import ShopFilters from "./ShopFilters";
 import ShopFooter from "./ShopFooter";
-import { FiltersContext } from "../../../context/filters";
-
-function useFilters() {
-  // const [filters, setFilters] = useState({
-  //   color: "all",
-  //   minPrice: 10,
-  //   maxPrice: 50,
-  // });
-  const filters = useContext(FiltersContext);
-  const setFilters = () => {};
-
-  const filterProducts = (products) => {
-    return products.filter((product) => {
-      return (
-        product.price >= filters.minPrice &&
-        (filters?.color === "all" || product.color === filters?.color)
-      );
-    });
-  };
-  return { filters, filterProducts, setFilters };
-}
+import useFilters from "../../../hooks/useFilters";
 
 function Shop() {
   const { t } = useTranslation();
