@@ -2,6 +2,7 @@ import { FC } from "react";
 import { ShopProductsProps } from "../../../types/types";
 import { calculateDiscount } from "../../../utils/utils";
 import StarRating from "../../../components/ui/StarRating";
+import { useTranslation } from "react-i18next";
 
 const ShopCard: FC<ShopProductsProps> = ({
   id,
@@ -11,6 +12,7 @@ const ShopCard: FC<ShopProductsProps> = ({
   img,
   sale,
 }) => {
+  const { t } = useTranslation();
   const discount = calculateDiscount(price);
 
   return (
@@ -20,7 +22,7 @@ const ShopCard: FC<ShopProductsProps> = ({
     >
       {sale && (
         <span className="absolute top-0 right-0 bg-red-600 px-2 py-1 text-sm text-white font-semibold">
-          Sale!
+          {t("shop.sale")}
         </span>
       )}
       <figure>
@@ -42,7 +44,7 @@ const ShopCard: FC<ShopProductsProps> = ({
       </div>
 
       <button className="w-full bg-accent py-1 mt-4 text-white font-semibold hover:bg-accent/80 transition-colors duration-300">
-        Add to cart
+        {t("shop.addCart")}
       </button>
     </article>
   );

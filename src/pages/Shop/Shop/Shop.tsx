@@ -48,22 +48,22 @@ function Shop() {
                   defaultValue="menu-order"
                   onChange={(e) => handleFilter(e)}
                   aria-label="Shop order"
-                  className="text-sm text-gray-300 cursor-pointer"
+                  className="p-2 rounded-sm text-sm text-gray-300 cursor-pointer"
                 >
                   <option key="menu-order" value="menu-order">
-                    Default Sorting
+                    {t("shop.default")}
                   </option>
                   <option key="rating" value="rating">
-                    Sort by Rating
+                    {t("shop.sortRating")}
                   </option>
                   <option key="sale" value="sale">
-                    Sort by Sale
+                    {t("shop.sortSale")}
                   </option>
                   <option key="price" value="price">
-                    Sort by Price: Low to High
+                    {t("shop.sortLowHigh")}
                   </option>
                   <option key="price-desc" value="price-desc">
-                    Sort by Price: High to Low
+                    {t("shop.sortHighLow")}
                   </option>
                 </select>
               </div>
@@ -110,29 +110,31 @@ function Shop() {
             </div>
             <div className="grid grid-cols-2 gap-6 md:gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:gap-8 lg:h-fit w-full lg:w-80">
               <div>
-                <h2 className="font-bold text-lg mb-1">Cart</h2>
-                <p>No products in the cart.</p>
+                <h2 className="font-bold text-lg mb-1">{t("shop.cart")}</h2>
+                <p>{t("shop.cartMessage")}</p>
               </div>
 
               <div>
-                <h2 className="font-bold text-lg mb-1">Filter by Color</h2>
+                <h2 className="font-bold text-lg mb-1">
+                  {t("shop.filterColor")}
+                </h2>
                 <div className="flex flex-col gap-4">
                   <ul>
                     <li>
                       <a href="#" onClick={() => handleColor("blue")}>
-                        Blue
+                        {t("shop.blue")}
                         <span>(2)</span>
                       </a>
                     </li>
                     <li>
                       <a href="#" onClick={() => handleColor("red")}>
-                        Red
+                        {t("shop.red")}
                         <span>(3)</span>
                       </a>
                     </li>
                     <li>
                       <a href="#" onClick={() => handleColor("yellow")}>
-                        Yellow
+                        {t("shop.yellow")}
                         <span>(1)</span>
                       </a>
                     </li>
