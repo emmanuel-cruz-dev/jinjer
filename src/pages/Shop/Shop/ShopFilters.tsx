@@ -1,14 +1,12 @@
-import { useState, useId, useContext } from "react";
+import { useId, useContext } from "react";
 import { FiltersContext } from "../../../context/filters";
 
 function ShopFilters() {
-  const { setFilters } = useContext(FiltersContext);
-  const [minPrice, setMinPrice] = useState(10);
+  const { filters, setFilters } = useContext(FiltersContext);
   const minPriceFilterId = useId();
   const colorFilterId = useId();
 
   const handleChangeMinPrice = (event) => {
-    setMinPrice(event.target.value);
     setFilters((prevState) => ({
       ...prevState,
       minPrice: event.target.value,
@@ -33,10 +31,10 @@ function ShopFilters() {
           id={minPriceFilterId}
           min={0}
           max={40}
-          value={minPrice}
+          value={filters.minPrice}
           onChange={handleChangeMinPrice}
         />
-        <span>${minPrice}</span>
+        <span>${filters.minPrice}</span>
       </div>
 
       <div>

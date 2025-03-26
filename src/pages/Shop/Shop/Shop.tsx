@@ -22,7 +22,7 @@ function Shop() {
   } = useShop(shopProductsList);
 
   const [products] = useState(shopProductsList);
-  const { filters, filterProducts, setFilters } = useFilters();
+  const { filters, filterProducts } = useFilters();
   const filteredProducts = filterProducts(shopProductsList);
 
   return (

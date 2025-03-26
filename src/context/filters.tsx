@@ -12,7 +12,7 @@ export const FiltersContext = createContext<FiltersContextType | undefined>(
 export function FiltersProvider({ children }: FiltersProviderProps) {
   const [filters, setFilters] = useState<FiltersProps>({
     color: "all",
-    minPrice: 10,
+    minPrice: 8,
     maxPrice: 40,
   });
 
