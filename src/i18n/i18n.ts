@@ -184,6 +184,9 @@ const resources = {
         website: "Website",
         post: "Post Comment",
       },
+      newsBlog: {
+        title: "News and Blog",
+      },
       members: {
         title: "Members",
         prev: "Previous",
@@ -404,6 +407,9 @@ const resources = {
         email: "Correo Electrónico*",
         website: "Sitio Web",
         post: "Publicar Comentario",
+      },
+      newsBlog: {
+        title: "Noticias y Blog",
       },
       members: {
         title: "Integrantes",
