@@ -221,7 +221,18 @@ const resources = {
           text4:
             "We are so excited about this new track, about the new album and everything that's on the way… we hope you really like too",
         },
-        daughter: {},
+        daughter: {
+          date: "1 August, 2024",
+          title: "Someone's Daughter",
+          text1:
+            "We made a promise to ourselves to always strive to evolve and progress musically and lyrically with each new release.",
+          text2:
+            "This new single is the outcome of that belief.. that hard work, focus and determination to be better than before, to always keep on growing is the only way we can exist as a band.",
+          text3:
+            "We really hope you like this new JINJER chapter because we feel like this is the best work we've ever done!",
+          text4:
+            "Don't forget to WATCH-STREAM-SHARE Someone's Daughter as much as you can!",
+        },
         surprise: {},
         symbol: {},
       },
@@ -483,7 +494,18 @@ const resources = {
           text4:
             "Estamos muy emocionados con este nuevo tema, con el nuevo álbum y con todo lo que viene en camino... ¡Esperamos que a ti también te guste!",
         },
-        daughter: {},
+        daughter: {
+          date: "1 de Agosto de 2024",
+          title: "Someone's Daughter",
+          text1:
+            "Nos prometimos a nosotros mismos esforzarnos siempre por evolucionar y progresar musical y líricamente con cada nuevo lanzamiento.",
+          text2:
+            "Este nuevo sencillo es el resultado de esa convicción... que el trabajo duro, la concentración y la determinación para ser mejores que antes, para seguir creciendo siempre, es la única manera de existir como banda.",
+          text3:
+            "¡Esperamos que les guste este nuevo capítulo de JINJER porque creemos que es el mejor trabajo que hemos hecho!",
+          text4:
+            "¡No olviden ver, transmitir y compartir Someone's Daughter tanto como puedan!",
+        },
         surprise: {},
         symbol: {},
       },

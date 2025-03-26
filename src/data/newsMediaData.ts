@@ -42,16 +42,12 @@ export const newsMediaData = [
     id: 4,
     content:
       "https://www.youtube-nocookie.com/embed/djsH7ngox_s?modestbranding=1&rel=0&autoplay=0&controls=1",
-    date: "1 August, 2024",
+    date: "newsBlog.daughter.date",
     title: "Someone's Daughter",
-    text1:
-      "We made a promise to ourselves to always strive to evolve and progress musically and lyrically with each new release.",
-    text2:
-      "This new single is the outcome of that belief.. that hard work, focus and determination to be better than before, to always keep on growing is the only way we can exist as a band.",
-    text3:
-      "We really hope you like this new JINJER chapter because we feel like this is the best work we’ve ever done!",
-    text4:
-      "Don’t forget to WATCH-STREAM-SHARE Someone’s Daughter as much as you can!",
+    text1: "newsBlog.daughter.text1",
+    text2: "newsBlog.daughter.text2",
+    text3: "newsBlog.daughter.text3",
+    text4: "newsBlog.daughter.text4",
     link1: "Rogue",
     link2: "From Nothing",
   },
