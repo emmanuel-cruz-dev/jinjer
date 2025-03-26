@@ -243,7 +243,15 @@ const resources = {
             "It doesn't get more personal than this and it's a must see for all JINJER fans!",
           text4: "Check out the full episode.",
         },
-        symbol: {},
+        symbol: {
+          date: "February 3, 2008",
+          title: "Call me a Symbol",
+          text1: "Drum Playthrough",
+          text2:
+            "Check out the brand new drum playthrough for “CALL ME A SYMBOL” by JINJER drummer Vlad Ulasevich, taken from the latest album Wallflowers.",
+          text3: "It's a must see for all drummers and fans alike 🤘🥁🤘",
+          text4: "We hope you like it!",
+        },
       },
       members: {
         title: "Members",
@@ -525,7 +533,15 @@ const resources = {
             "¡Es imposible ser más personal que esto y es imprescindible para todos los fans de JINJER!",
           text4: "No te pierdas el episodio completo.",
         },
-        symbol: {},
+        symbol: {
+          date: "3 de Febrero de 2008",
+          title: "Call me a Symbol",
+          text1: "Sesión de Batería",
+          text2:
+            "No te pierdas la nueva interpretación de batería de “CALL ME A SYMBOL” del baterista de JINJER, Vlad Ulasevich, del último álbum Wallflowers.",
+          text3: "Es una visita obligada para bateristas y fans 🤘🥁🤘",
+          text4: "¡Esperamos que te guste!",
+        },
       },
       members: {
         title: "Integrantes",
