@@ -291,7 +291,7 @@ const resources = {
         },
       },
       tourData: {
-        title: "Tour Dates",
+        title: "Tour Info",
         rockRing: {
           date: "23 February, 2025",
           text1:
@@ -334,8 +334,40 @@ const resources = {
           text2:
             "Tomorrowland has always been a place of innovation, and Jinjer fits perfectly with its spirit of breaking boundaries and offering unforgettable experiences.",
         },
-        wacken: {},
-        sziget: {},
+        wacken: {
+          date: "30 July, 2025",
+          text1:
+            "If there's one festival that defines the essence of metal, it's Wacken Open Air. Jinjer returns to Germany to shake the foundations of this iconic event. With a devastating setlist and a unique connection with the audience, the band is ready to deliver one of their most intense performances of the year.",
+          text2:
+            "With a devastating setlist and a unique connection with the audience, the band is ready to deliver one of their most intense performances of the year.",
+          text3:
+            "Wacken isn't just a festival; it's a sanctuary for metal lovers, and Jinjer is ready to give it their all on this legendary stage.",
+        },
+        sziget: {
+          date: "06 August, 2025",
+          text1:
+            "The Sziget Festival is one of Europe's most diverse events, and this year Jinjer joins its impressive lineup. With their ability to blend brutality and melody, the Ukrainian band will deliver an unforgettable show in Budapest.",
+          text2:
+            "Sziget is known for its vibrant atmosphere, where music unites people from all over the world, and Jinjer promises to take this energy to the next level with a performance full of power and passion.",
+        },
+      },
+      shop: {
+        showing: "Showing",
+        of: "of",
+        results: "results",
+        default: "Default Sorting",
+        sortRating: "Sort by Rating",
+        sortSale: "Sort by Sale",
+        sortLowHigh: "Sort by Price: Low to High",
+        sortHighLow: "Sort by Price: High to Low",
+        sale: "Sale!",
+        add: "Add to Cart",
+        cart: "Cart",
+        cartMessage: "No products in the cart.",
+        filter: "Filter by color",
+        blue: "Blue",
+        red: "Red",
+        yellow: "Yellow",
       },
       goTopButton: "Go to top",
       // ... más traducciones
@@ -628,7 +660,7 @@ const resources = {
         },
       },
       tourData: {
-        title: "Fechas de la Gira",
+        title: "Info de la Gira",
         rockRing: {
           date: "23 de Febrero de 2025",
           text1:
@@ -671,8 +703,40 @@ const resources = {
           text2:
             "Tomorrowland siempre ha sido un lugar de innovación, y Jinjer encaja perfectamente con su espíritu de romper fronteras y ofrecer experiencias inolvidables.",
         },
-        wacken: {},
-        sziget: {},
+        wacken: {
+          date: "30 de Julio de 2025",
+          text1:
+            "Si hay un festival que define la esencia del metal, ese es el Wacken Open Air. Jinjer regresa a Alemania para hacer temblar los cimientos de este icónico evento.",
+          text2:
+            "Con un setlist demoledor y una conexión única con el público, la banda está lista para ofrecer una de sus actuaciones más intensas del año.",
+          text3:
+            "Wacken no es solo un festival, es un santuario para los amantes del metal, y Jinjer está preparado para darlo todo en este escenario legendario.",
+        },
+        sziget: {
+          date: "06 de Agosto de 2025",
+          text1:
+            "El Sziget Festival es uno de los eventos más diversos de Europa, y este año Jinjer se une a su impresionante alineación. Con su capacidad de mezclar brutalidad y melodía, la banda ucraniana ofrecerá un show inolvidable en Budapest.",
+          text2:
+            "El Sziget es conocido por su atmósfera vibrante, donde la música une a personas de todo el mundo, y Jinjer promete llevar esta energía al siguiente nivel con una actuación llena de potencia y pasión.",
+        },
+      },
+      shop: {
+        showing: "Mostrando",
+        of: "de",
+        results: "resultados",
+        default: "Default Sorting",
+        sortRating: "Sort by Rating",
+        sortSale: "Sort by Sale",
+        sortLowHigh: "Sort by Price: Low to High",
+        sortHighLow: "Sort by Price: High to Low",
+        sale: "Sale!",
+        add: "Add to Cart",
+        cart: "Cart",
+        cartMessage: "No products in the cart.",
+        filter: "Filter by color",
+        blue: "Blue",
+        red: "Red",
+        yellow: "Yellow",
       },
       goTopButton: "Ir arriba",
       // ... más traducciones

@@ -2,8 +2,10 @@ import Background from "../../../assets/images/gradient.avif";
 import ShopCard from "./ShopCard";
 import { shopProductsList } from "../../../data/shopProducts";
 import useShop from "../../../hooks/useShop";
+import { useTranslation } from "react-i18next";
 
 function Shop() {
+  const { t } = useTranslation();
   const {
     products,
     shopProducts1,
@@ -34,11 +36,11 @@ function Shop() {
             <div className="flex flex-col justify-center items-center gap-2 w-full mx-auto lg:w-5/6">
               <div className="flex justify-between gap-4 w-full">
                 <p className="text-sm text-gray-400">
-                  Showing{" "}
+                  {t("shop.showing")}{" "}
                   {shopProducts1.length == 12
                     ? "1 - 12"
                     : `13 - ${productsTotal}`}{" "}
-                  of {productsTotal} results
+                  {t("shop.of")} {productsTotal} {t("shop.results")}
                 </p>
                 <select
                   name="dropdown"
