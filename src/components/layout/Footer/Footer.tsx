@@ -47,7 +47,7 @@ function Footer() {
                 loading="lazy"
               />
             </figure>
-            <div className="flex flex-col justify-around h-full">
+            <div className="flex flex-col justify-evenly h-full">
               <h4>{t("footer.bandOnTour")}</h4>
               <time>{t("footer.starts")}</time>
             </div>
@@ -63,7 +63,7 @@ function Footer() {
                 loading="lazy"
               />
             </figure>
-            <div className="flex flex-col justify-around h-full">
+            <div className="flex flex-col justify-evenly h-full">
               <h4>{t("footer.review")}</h4>
               <time>{t("footer.reviewDate")}</time>
             </div>

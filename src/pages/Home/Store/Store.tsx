@@ -18,7 +18,7 @@ function Store() {
           </h2>
           <p className="text-lg">{t("store.description")}</p>
         </div>
-        <div className="w-screen">
+        <div className="w-screen px-5 xl:w-full lg:px-4 xl:px-0">
           <StoreSlider />
         </div>
         <a onClick={goToSection} href="/shop/" className="red__btn">
