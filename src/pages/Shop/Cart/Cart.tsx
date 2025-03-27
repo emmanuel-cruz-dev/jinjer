@@ -33,10 +33,10 @@ function Cart() {
 
   return (
     <>
-      <label className="cart-button" htmlFor={cartCheckboxId}>
+      {/* <label className="cart-button" htmlFor={cartCheckboxId}>
         <FaShoppingCart />
       </label>
-      <input type="checkbox" id={cartCheckboxId} hidden />
+      <input type="checkbox" id={cartCheckboxId} hidden /> */}
       <aside className="cart">
         <ul>
           {cart.map((product) => (

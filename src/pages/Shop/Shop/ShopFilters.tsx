@@ -1,4 +1,4 @@
-import { useId, useContext } from "react";
+import { useId, useContext, ChangeEvent } from "react";
 import { FiltersContext } from "../../../context/filters";
 
 function ShopFilters() {
@@ -6,14 +6,14 @@ function ShopFilters() {
   const minPriceFilterId = useId();
   const colorFilterId = useId();
 
-  const handleChangeMinPrice = (event) => {
+  const handleChangeMinPrice = (event: ChangeEvent<HTMLInputElement>) => {
     setFilters((prevState) => ({
       ...prevState,
-      minPrice: event.target.value,
+      minPrice: Number(event.target.value),
     }));
   };
 
-  const handleChangeColor = (event) => {
+  const handleChangeColor = (event: ChangeEvent<HTMLSelectElement>) => {
     setFilters((prevState) => ({
       ...prevState,
       color: event.target.value,

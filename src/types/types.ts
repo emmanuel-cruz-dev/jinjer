@@ -90,6 +90,10 @@ export interface ShopProductsProps {
   color?: string;
 }
 
+export interface ShopCardProps {
+  product: ShopProductsProps;
+}
+
 export interface StarRatingProps {
   rating: number;
   totalStars?: number;
@@ -175,8 +179,8 @@ export interface CartItemProps {
   price: number;
   name: string;
   quantity: number;
-  subtractProduct?: () => void;
-  addToCart?: () => void;
+  subtractProduct: () => void;
+  addToCart: () => void;
 }
 
 export interface CartContextType {

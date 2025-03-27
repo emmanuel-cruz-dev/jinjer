@@ -1,16 +1,16 @@
-import { FC } from "react";
-import { ShopProductsProps } from "../../../types/types";
 import { calculateDiscount } from "../../../utils/utils";
 import StarRating from "../../../components/ui/StarRating";
 import { useTranslation } from "react-i18next";
 import { useCart } from "../../../hooks/useCart";
+import { FC } from "react";
+import { ShopCardProps, ShopProductsProps } from "../../../types/types";
 
-const ShopCard: FC<ShopProductsProps> = ({ product }) => {
+const ShopCard: FC<ShopCardProps> = ({ product }) => {
   const { t } = useTranslation();
   const discount = calculateDiscount(product.price);
   const { addToCart, cart, removeFromCart } = useCart();
 
-  const checkProductInCart = (product) => {
+  const checkProductInCart = (product: ShopProductsProps) => {
     return cart.some((item) => item.id === product.id);
   };
 
