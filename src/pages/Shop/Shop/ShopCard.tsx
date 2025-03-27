@@ -3,6 +3,7 @@ import { ShopProductsProps } from "../../../types/types";
 import { calculateDiscount } from "../../../utils/utils";
 import StarRating from "../../../components/ui/StarRating";
 import { useTranslation } from "react-i18next";
+import { useCart } from "../../../hooks/useCart";
 
 const ShopCard: FC<ShopProductsProps> = ({
   id,
@@ -14,6 +15,7 @@ const ShopCard: FC<ShopProductsProps> = ({
 }) => {
   const { t } = useTranslation();
   const discount = calculateDiscount(price);
+  const { addToCart } = useCart();
 
   return (
     <article
@@ -43,7 +45,10 @@ const ShopCard: FC<ShopProductsProps> = ({
         )}
       </div>
 
-      <button className="w-full bg-accent py-1 mt-4 text-white font-semibold hover:bg-accent/80 transition-colors duration-300">
+      <button
+        className="w-full bg-accent py-1 mt-4 text-white font-semibold hover:bg-accent/80 transition-colors duration-300"
+        onClick={() => addToCart(id)}
+      >
         {t("shop.addCart")}
       </button>
     </article>
