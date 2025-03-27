@@ -7,6 +7,7 @@ import { useState } from "react";
 import ShopFilters from "./ShopFilters";
 import ShopFooter from "./ShopFooter";
 import useFilters from "../../../hooks/useFilters";
+import Cart from "../Cart/Cart";
 
 function Shop() {
   const { t } = useTranslation();
@@ -21,8 +22,8 @@ function Shop() {
     handleArr,
   } = useShop(shopProductsList);
 
-  const [products] = useState(shopProductsList);
-  const { filters, filterProducts } = useFilters();
+  const [products] = useState(shopProductsList); // Eliminar esta constante
+  const { filterProducts } = useFilters();
   const filteredProducts = filterProducts(shopProductsList);
 
   return (
@@ -117,6 +118,7 @@ function Shop() {
               </div>
             </div>
             <aside className="grid grid-cols-2 gap-6 md:gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:gap-8 lg:h-fit w-full lg:w-80">
+              <Cart />
               <div>
                 <h2 className="font-bold text-lg mb-1">{t("shop.cart")}</h2>
                 <p>{t("shop.cartMessage")}</p>
@@ -151,7 +153,7 @@ function Shop() {
               </div>
 
               <ShopFilters />
-              <ShopFooter filters={filters} />
+              <ShopFooter />
             </aside>
           </div>
         </article>

@@ -14,7 +14,6 @@ function ShopFilters() {
   };
 
   const handleChangeColor = (event) => {
-    // setMinPrice(event.target.value);
     setFilters((prevState) => ({
       ...prevState,
       color: event.target.value,
@@ -38,7 +37,7 @@ function ShopFilters() {
       </div>
 
       <div>
-        <label htmlFor="color">Filtro de Color</label>
+        <label htmlFor={colorFilterId}>Filtro de Color</label>
         <br />
         <select name="" id={colorFilterId} onChange={handleChangeColor}>
           <option value="all">Todos</option>
