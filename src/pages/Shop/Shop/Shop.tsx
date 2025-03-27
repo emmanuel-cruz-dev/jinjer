@@ -48,33 +48,8 @@ function Shop() {
                   : `13 - ${productsTotal}`}{" "}
                 {t("shop.of")} {productsTotal} {t("shop.results")}
               </p>
-              <div className="flex justify-between gap-4 w-full">
-                <ShopFilters />
-                <select
-                  name="dropdown"
-                  id="dropdown"
-                  defaultValue="menu-order"
-                  onChange={(e) => handleFilter(e)}
-                  aria-label="Shop order"
-                  className="p-2 rounded-sm text-sm text-gray-300 cursor-pointer"
-                >
-                  <option key="menu-order" value="menu-order">
-                    {t("shop.default")}
-                  </option>
-                  <option key="rating" value="rating">
-                    {t("shop.sortRating")}
-                  </option>
-                  <option key="sale" value="sale">
-                    {t("shop.sortSale")}
-                  </option>
-                  <option key="price" value="price">
-                    {t("shop.sortLowHigh")}
-                  </option>
-                  <option key="price-desc" value="price-desc">
-                    {t("shop.sortHighLow")}
-                  </option>
-                </select>
-              </div>
+
+              <ShopFilters />
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-8 w-full">
                 {filteredProducts.map((product) => (

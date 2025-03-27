@@ -23,9 +23,9 @@ function ShopFilters() {
   };
 
   return (
-    <section className="flex gap-4">
-      <div>
-        <label htmlFor={minPriceFilterId}>Precio a partir de:</label>
+    <section className="w-full flex justify-between items-center gap-4">
+      <div className="flex items-center gap-2">
+        <label htmlFor={minPriceFilterId}>{t("shop.pricesFrom")}:</label>
         <input
           type="range"
           id={minPriceFilterId}
@@ -37,15 +37,44 @@ function ShopFilters() {
         <span>${filters.minPrice}</span>
       </div>
 
-      <div className="flex">
+      <div className="flex items-center gap-2">
         <label htmlFor={colorFilterId}>{t("shop.filterColor")}</label>
-        <select name="" id={colorFilterId} onChange={handleChangeColor}>
+        <select
+          className="p-2 rounded-sm text-gray-300 cursor-pointer"
+          name=""
+          id={colorFilterId}
+          onChange={handleChangeColor}
+        >
           <option value="all">{t("shop.all")}</option>
           <option value="red">{t("shop.red")}</option>
           <option value="blue">{t("shop.blue")}</option>
           <option value="yellow">{t("shop.yellow")}</option>
         </select>
       </div>
+
+      <select
+        name="dropdown"
+        id="dropdown"
+        defaultValue="menu-order"
+        aria-label="Shop order"
+        className="p-2 rounded-sm text-gray-300 cursor-pointer"
+      >
+        <option key="menu-order" value="menu-order">
+          {t("shop.default")}
+        </option>
+        <option key="rating" value="rating">
+          {t("shop.sortRating")}
+        </option>
+        <option key="sale" value="sale">
+          {t("shop.sortSale")}
+        </option>
+        <option key="price" value="price">
+          {t("shop.sortLowHigh")}
+        </option>
+        <option key="price-desc" value="price-desc">
+          {t("shop.sortHighLow")}
+        </option>
+      </select>
     </section>
   );
 }

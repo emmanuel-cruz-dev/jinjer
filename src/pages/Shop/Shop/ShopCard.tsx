@@ -52,7 +52,7 @@ const ShopCard: FC<ShopCardProps> = ({ product }) => {
           isProductInCart ? removeFromCart(product) : addToCart(product);
         }}
       >
-        {isProductInCart ? "Quitar del carrito" : t("shop.addCart")}
+        {isProductInCart ? t("shop.removeCart") : t("shop.addCart")}
       </button>
     </article>
   );
