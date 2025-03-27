@@ -1,11 +1,18 @@
 import { createContext, useState } from "react";
+import {
+  CartContextType,
+  CartItemProps,
+  CartProviderProps,
+} from "../types/types";
 
-export const CartContext = createContext();
+export const CartContext = createContext<CartContextType | undefined>(
+  undefined
+);
 
-export function CartProvider({ children }) {
-  const [cart, setCart] = useState([]);
+export function CartProvider({ children }: CartProviderProps) {
+  const [cart, setCart] = useState<CartItemProps[]>([]);
 
-  const subtractProduct = (product) => {
+  const subtractProduct = (product: CartItemProps) => {
     const productInCartIndex = cart.findIndex((item) => item.id === product.id);
 
     if (productInCartIndex >= 0) {
@@ -22,7 +29,7 @@ export function CartProvider({ children }) {
     }
   };
 
-  const addToCart = (product) => {
+  const addToCart = (product: CartItemProps) => {
     // Checkear si el producto ya esta en el carrito
     const productInCartIndex = cart.findIndex((item) => item.id === product.id);
 
@@ -42,7 +49,7 @@ export function CartProvider({ children }) {
     ]);
   };
 
-  const removeFromCart = (product) => {
+  const removeFromCart = (product: CartItemProps) => {
     setCart((prevState) => prevState.filter((item) => item.id != product.id));
   };
 

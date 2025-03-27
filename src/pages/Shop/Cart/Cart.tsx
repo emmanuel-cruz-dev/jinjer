@@ -1,14 +1,22 @@
-import { useId } from "react";
+import { FC, useId } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { MdRemoveShoppingCart } from "react-icons/md";
 import { useCart } from "../../../hooks/useCart";
+import { CartItemProps } from "../../../types/types";
 
-function CartItem({ img, price, title, quantity, subtractProduct, addToCart }) {
+const CartItem: FC<CartItemProps> = ({
+  img,
+  price,
+  name,
+  quantity,
+  subtractProduct,
+  addToCart,
+}) => {
   return (
     <li>
-      <img className="max-w-20 mx-auto" src={img} alt={title} />
+      <img className="max-w-16 mx-auto" src={img} alt={name} />
       <div>
-        <strong>{title}</strong> - ${price}
+        <strong>{name}</strong> - ${price}
       </div>
       <footer>
         <button onClick={subtractProduct}>-</button>
@@ -17,7 +25,7 @@ function CartItem({ img, price, title, quantity, subtractProduct, addToCart }) {
       </footer>
     </li>
   );
-}
+};
 
 function Cart() {
   const cartCheckboxId = useId();

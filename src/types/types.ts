@@ -168,3 +168,25 @@ export interface FiltersContextType {
 export interface FiltersProviderProps {
   children: ReactNode;
 }
+
+export interface CartItemProps {
+  id?: number;
+  img: string;
+  price: number;
+  name: string;
+  quantity: number;
+  subtractProduct?: () => void;
+  addToCart?: () => void;
+}
+
+export interface CartContextType {
+  cart: CartItemProps[];
+  addToCart: (product: CartItemProps) => void;
+  subtractProduct: (product: CartItemProps) => void;
+  removeFromCart: (product: CartItemProps) => void;
+  clearCart: () => void;
+}
+
+export interface CartProviderProps {
+  children: ReactNode;
+}
