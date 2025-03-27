@@ -14,19 +14,24 @@
 }
 
 .cart li {
+  // display: flex;
   border-bottom: 1px solid #444;
   padding-block: 16px;
 }
 
 .cart footer {
   display: flex;
-  gap: 8px;
-  justify-content: center;
+  gap: 1rem;
+  // justify-content: center;
   align-items: center;
 }
 
 .cart footer button {
-  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
 }
 
 // .cart-button {

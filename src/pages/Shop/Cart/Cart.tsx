@@ -1,5 +1,4 @@
-import { FC, useId } from "react";
-import { FaShoppingCart } from "react-icons/fa";
+import { FC } from "react";
 import { MdRemoveShoppingCart } from "react-icons/md";
 import { useCart } from "../../../hooks/useCart";
 import { CartItemProps } from "../../../types/types";
@@ -14,55 +13,56 @@ const CartItem: FC<CartItemProps> = ({
   addToCart,
 }) => {
   return (
-    <li>
-      <img className="max-w-16 mx-auto" src={img} alt={name} />
-      <div>
-        <strong>{name}</strong> - ${price}
+    <li className="flex justify-between px-2">
+      <img className="max-w-16" src={img} alt={name} />
+      <div className="w-full flex flex-col items-center gap-2">
+        <p>
+          <strong>{name}</strong> - ${price}
+        </p>
+        <footer>
+          <button className="square__btn" onClick={subtractProduct}>
+            -
+          </button>
+          <small>{quantity}</small>
+          <button className="square__btn" onClick={addToCart}>
+            +
+          </button>
+        </footer>
       </div>
-      <footer>
-        <button onClick={subtractProduct}>-</button>
-        <small>Qty: {quantity}</small>
-        <button onClick={addToCart}>+</button>
-      </footer>
     </li>
   );
 };
 
 function Cart() {
-  // const cartCheckboxId = useId();
   const { t } = useTranslation();
   const { cart, clearCart, subtractProduct, addToCart } = useCart();
 
   return (
-    <>
-      {/* <label className="cart-button" htmlFor={cartCheckboxId}>
-        <FaShoppingCart />
-      </label>
-      <input type="checkbox" id={cartCheckboxId} hidden /> */}
-      {cart.length == 0 && (
-        <div>
-          <h2 className="font-bold text-lg mb-1">{t("shop.cart")}</h2>
-          <p>{t("shop.cartMessage")}</p>
-        </div>
-      )}
-      <aside className="cart">
-        <ul>
-          {cart.map((product) => (
-            <CartItem
-              key={product.id}
-              subtractProduct={() => subtractProduct(product)}
-              addToCart={() => addToCart(product)}
-              {...product}
-            />
-          ))}
-        </ul>
-        {cart.length !== 0 && (
-          <button onClick={clearCart} title="Clear Cart">
+    <aside className="cart">
+      <h2 className="font-bold text-lg">{t("shop.cart")}</h2>
+      {cart.length == 0 && <p>{t("shop.cartMessage")}</p>}
+      <ul>
+        {cart.map((product) => (
+          <CartItem
+            key={product.id}
+            subtractProduct={() => subtractProduct(product)}
+            addToCart={() => addToCart(product)}
+            {...product}
+          />
+        ))}
+      </ul>
+      {cart.length !== 0 && (
+        <div className="w-full flex justify-center mt-4">
+          <button
+            className="square__btn"
+            onClick={clearCart}
+            title="Clear Cart"
+          >
             <MdRemoveShoppingCart />
           </button>
-        )}
-      </aside>
-    </>
+        </div>
+      )}
+    </aside>
   );
 }
 
