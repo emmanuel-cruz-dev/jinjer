@@ -60,9 +60,9 @@ function Cart() {
         ))}
       </ul>
       {cart.length !== 0 && (
-        <>
-          <p className="mt-4">Total: ${shopTotalPrice(cart)}</p>
-          <div className="w-full flex justify-center my-2">
+        <div className="mt-2">
+          <strong className="text-xl">Total: ${shopTotalPrice(cart)}</strong>
+          <div className="w-full flex justify-center mt-2 mb-4">
             <button
               className="square__btn"
               onClick={clearCart}
@@ -71,7 +71,7 @@ function Cart() {
               <MdRemoveShoppingCart />
             </button>
           </div>
-        </>
+        </div>
       )}
     </aside>
   );
