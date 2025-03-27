@@ -5,19 +5,17 @@ import useShop from "../../../hooks/useShop";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import ShopFilters from "./ShopFilters";
-import ShopFooter from "./ShopFooter";
+// import ShopFooter from "./ShopFooter";
 import useFilters from "../../../hooks/useFilters";
 import Cart from "../Cart/Cart";
 
 function Shop() {
   const { t } = useTranslation();
   const {
-    // products,
     shopProducts1,
     shopProducts2,
     productsTotal,
     handleFilter,
-    handleColor,
     handleProducts,
     handleArr,
   } = useShop(shopProductsList);
@@ -43,14 +41,14 @@ function Shop() {
           </div>
           <div className="flex flex-col lg:flex-row gap-8 w-full px-4 md:px-12 mt-8">
             <div className="flex flex-col items-center gap-2 w-full mx-auto lg:w-5/6">
+              <p className="text-sm text-gray-400">
+                {t("shop.showing")}{" "}
+                {shopProducts1.length == 12
+                  ? "1 - 12"
+                  : `13 - ${productsTotal}`}{" "}
+                {t("shop.of")} {productsTotal} {t("shop.results")}
+              </p>
               <div className="flex justify-between gap-4 w-full">
-                {/* <p className="text-sm text-gray-400">
-                  {t("shop.showing")}{" "}
-                  {shopProducts1.length == 12
-                    ? "1 - 12"
-                    : `13 - ${productsTotal}`}{" "}
-                  {t("shop.of")} {productsTotal} {t("shop.results")}
-                </p> */}
                 <ShopFilters />
                 <select
                   name="dropdown"
@@ -118,13 +116,9 @@ function Shop() {
                 )}
               </div>
             </div>
-            <aside className="grid grid-cols-2 gap-6 md:gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:gap-8 lg:h-fit w-full lg:w-80">
+            <aside className="-order-1 lg:order-2 w-full lg:w-80">
               <Cart />
-              {/* <div>
-                <h2 className="font-bold text-lg mb-1">{t("shop.cart")}</h2>
-                <p>{t("shop.cartMessage")}</p>
-              </div> */}
-              <ShopFooter />
+              {/* <ShopFooter /> */}
             </aside>
           </div>
         </article>

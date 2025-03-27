@@ -7,9 +7,9 @@ const ShopFooter = () => {
 
   return (
     <footer>
-      {/* <h3>Footer Carrito</h3> */}
+      <h3>Footer Carrito</h3>
       {JSON.stringify(filters, null, 2)}
-      {/* {JSON.stringify(cart, null, 2)} */}
+      {JSON.stringify(cart, null, 2)}
     </footer>
   );
 };

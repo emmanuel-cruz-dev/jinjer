@@ -52,7 +52,7 @@ function Cart() {
         ))}
       </ul>
       {cart.length !== 0 && (
-        <div className="w-full flex justify-center mt-4">
+        <div className="w-full flex justify-center my-4">
           <button
             className="square__btn"
             onClick={clearCart}
