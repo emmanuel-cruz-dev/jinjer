@@ -22,12 +22,13 @@ const ShopCard: FC<ShopCardProps> = ({ product }) => {
       className="relative flex flex-col justify-center gap-1 mx-6 md:w-40"
     >
       {product.sale && (
-        <span className="absolute top-0 right-0 bg-red-600 px-2 py-1 text-sm text-white font-semibold">
+        <span className="absolute top-0 right-0 bg-red-600 px-2 py-1 text-sm text-white font-semibold z-[2]">
           {t("shop.sale")}
         </span>
       )}
       <figure>
         <img
+          className="shop__img-shadow"
           src={product.img}
           alt="Remera negra de Jinjer con un logotipo en el centro"
           width="500"

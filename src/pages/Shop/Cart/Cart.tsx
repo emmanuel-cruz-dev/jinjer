@@ -14,7 +14,7 @@ const CartItem: FC<CartItemProps> = ({
 }) => {
   return (
     <li className="flex justify-between px-2">
-      <img className="max-w-16" src={img} alt={name} />
+      <img className="max-w-16 shop__img-shadow" src={img} alt={name} />
       <div className="w-full flex flex-col items-center gap-2">
         <div>
           <strong>{name}</strong> - ${price}
