@@ -23,10 +23,11 @@ function ShopFilters() {
   };
 
   return (
-    <section className="w-full flex justify-between items-center gap-4">
+    <section className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 justify-between items-center gap-6">
       <div className="flex items-center gap-2">
         <label htmlFor={minPriceFilterId}>{t("shop.pricesFrom")}:</label>
         <input
+          className="cursor-pointer lg:w-1/3"
           type="range"
           id={minPriceFilterId}
           min={0}

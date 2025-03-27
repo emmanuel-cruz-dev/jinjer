@@ -13,9 +13,9 @@ const CartItem: FC<CartItemProps> = ({
   addToCart,
 }) => {
   return (
-    <li className="flex justify-between px-2">
+    <li className="w-full flex justify-between px-2">
       <img className="max-w-16 shop__img-shadow" src={img} alt={name} />
-      <div className="w-full flex flex-col items-center gap-2">
+      <div className="w-full flex flex-col items-end lg:items-center gap-2">
         <div>
           <strong>{name}</strong> - ${price}
         </div>
@@ -56,7 +56,7 @@ function Cart() {
           <button
             className="square__btn"
             onClick={clearCart}
-            title="Clear Cart"
+            title={t("shop.clearCart")}
           >
             <MdRemoveShoppingCart />
           </button>
