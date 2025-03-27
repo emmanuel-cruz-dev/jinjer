@@ -14,7 +14,11 @@ const CartItem: FC<CartItemProps> = ({
 }) => {
   return (
     <li className="w-full flex justify-between px-2">
-      <img className="max-w-16 shop__img-shadow" src={img} alt={name} />
+      <img
+        className="object-cover max-w-16 shop__img-shadow"
+        src={img}
+        alt={name}
+      />
       <div className="text-right">
         <div className="mb-2 text-sm">
           <strong>{name}</strong> - ${price}
@@ -28,6 +32,9 @@ const CartItem: FC<CartItemProps> = ({
             +
           </button>
         </footer>
+        <p className="mt-2 text-sm">
+          Subtotal: ${(price * quantity).toFixed(2)}
+        </p>
       </div>
     </li>
   );
@@ -52,15 +59,24 @@ function Cart() {
         ))}
       </ul>
       {cart.length !== 0 && (
-        <div className="w-full flex justify-center my-4">
-          <button
-            className="square__btn"
-            onClick={clearCart}
-            title={t("shop.clearCart")}
-          >
-            <MdRemoveShoppingCart />
-          </button>
-        </div>
+        <>
+          {/* <span>
+            Total: $
+            {product.map((item) => {
+              const subtotal = item.price * item.quantity;
+              return subtotal;
+            })}
+          </span> */}
+          <div className="w-full flex justify-center my-4">
+            <button
+              className="square__btn"
+              onClick={clearCart}
+              title={t("shop.clearCart")}
+            >
+              <MdRemoveShoppingCart />
+            </button>
+          </div>
+        </>
       )}
     </aside>
   );

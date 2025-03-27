@@ -11,6 +11,7 @@ export const CartContext = createContext<CartContextType | undefined>(
 
 export function CartProvider({ children }: CartProviderProps) {
   const [cart, setCart] = useState<CartItemProps[]>([]);
+  console.log("Esto es cart", cart);
 
   const subtractProduct = (product: CartItemProps) => {
     const productInCartIndex = cart.findIndex((item) => item.id === product.id);
