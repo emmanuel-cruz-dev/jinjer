@@ -3,6 +3,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { MdRemoveShoppingCart } from "react-icons/md";
 import { useCart } from "../../../hooks/useCart";
 import { CartItemProps } from "../../../types/types";
+import { useTranslation } from "react-i18next";
 
 const CartItem: FC<CartItemProps> = ({
   img,
@@ -28,7 +29,8 @@ const CartItem: FC<CartItemProps> = ({
 };
 
 function Cart() {
-  const cartCheckboxId = useId();
+  // const cartCheckboxId = useId();
+  const { t } = useTranslation();
   const { cart, clearCart, subtractProduct, addToCart } = useCart();
 
   return (
@@ -37,6 +39,12 @@ function Cart() {
         <FaShoppingCart />
       </label>
       <input type="checkbox" id={cartCheckboxId} hidden /> */}
+      {cart.length == 0 && (
+        <div>
+          <h2 className="font-bold text-lg mb-1">{t("shop.cart")}</h2>
+          <p>{t("shop.cartMessage")}</p>
+        </div>
+      )}
       <aside className="cart">
         <ul>
           {cart.map((product) => (
@@ -48,10 +56,11 @@ function Cart() {
             />
           ))}
         </ul>
-
-        <button onClick={clearCart} title="Clear Cart">
-          <MdRemoveShoppingCart />
-        </button>
+        {cart.length !== 0 && (
+          <button onClick={clearCart} title="Clear Cart">
+            <MdRemoveShoppingCart />
+          </button>
+        )}
       </aside>
     </>
   );

@@ -119,10 +119,10 @@ function Shop() {
             </div>
             <aside className="grid grid-cols-2 gap-6 md:gap-16 -order-1 lg:order-2 lg:grid-cols-1 lg:gap-8 lg:h-fit w-full lg:w-80">
               <Cart />
-              <div>
+              {/* <div>
                 <h2 className="font-bold text-lg mb-1">{t("shop.cart")}</h2>
                 <p>{t("shop.cartMessage")}</p>
-              </div>
+              </div> */}
 
               <div>
                 <h2 className="font-bold text-lg mb-1">
