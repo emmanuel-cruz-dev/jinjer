@@ -45,6 +45,7 @@ const ShopCard: FC<ShopProductsProps> = ({ product }) => {
       </div>
 
       <button
+        style={{ backgroundColor: isProductInCart ? "#000" : "" }}
         className="w-full bg-accent py-1 mt-4 text-white font-semibold hover:bg-accent/80 transition-colors duration-300"
         onClick={() => {
           isProductInCart ? removeFromCart(product) : addToCart(product);
