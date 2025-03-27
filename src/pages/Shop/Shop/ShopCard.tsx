@@ -8,7 +8,13 @@ import { useCart } from "../../../hooks/useCart";
 const ShopCard: FC<ShopProductsProps> = ({ product }) => {
   const { t } = useTranslation();
   const discount = calculateDiscount(product.price);
-  const { addToCart } = useCart();
+  const { addToCart, cart, removeFromCart } = useCart();
+
+  const checkProductInCart = (product) => {
+    return cart.some((item) => item.id === product.id);
+  };
+
+  const isProductInCart = checkProductInCart(product);
 
   return (
     <article
@@ -40,9 +46,11 @@ const ShopCard: FC<ShopProductsProps> = ({ product }) => {
 
       <button
         className="w-full bg-accent py-1 mt-4 text-white font-semibold hover:bg-accent/80 transition-colors duration-300"
-        onClick={() => addToCart(product)}
+        onClick={() => {
+          isProductInCart ? removeFromCart(product) : addToCart(product);
+        }}
       >
-        {t("shop.addCart")}
+        {isProductInCart ? "Quitar del carrito" : t("shop.addCart")}
       </button>
     </article>
   );
