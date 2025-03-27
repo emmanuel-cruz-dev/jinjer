@@ -15,11 +15,11 @@ const CartItem: FC<CartItemProps> = ({
   return (
     <li className="w-full flex justify-between px-2">
       <img className="max-w-16 shop__img-shadow" src={img} alt={name} />
-      <div className="w-full flex flex-col items-end lg:items-center gap-2">
-        <div>
+      <div className="text-right">
+        <div className="mb-2 text-sm">
           <strong>{name}</strong> - ${price}
         </div>
-        <footer>
+        <footer className="flex justify-end">
           <button className="square__btn" onClick={subtractProduct}>
             -
           </button>
