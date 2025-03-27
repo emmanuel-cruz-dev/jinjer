@@ -189,6 +189,7 @@ export interface CartContextType {
   subtractProduct: (product: CartItemProps) => void;
   removeFromCart: (product: CartItemProps) => void;
   clearCart: () => void;
+  shopTotalPrice: (product: CartItemProps) => number;
 }
 
 export interface CartProviderProps {

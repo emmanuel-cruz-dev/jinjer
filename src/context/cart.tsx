@@ -11,7 +11,13 @@ export const CartContext = createContext<CartContextType | undefined>(
 
 export function CartProvider({ children }: CartProviderProps) {
   const [cart, setCart] = useState<CartItemProps[]>([]);
-  console.log("Esto es cart", cart);
+
+  const shopTotalPrice = (cart) => {
+    const subtotal = cart.map((product) => product.price * product.quantity);
+    const total = subtotal.reduce((a, b) => a + b, 0);
+
+    return total.toFixed(2);
+  };
 
   const subtractProduct = (product: CartItemProps) => {
     const productInCartIndex = cart.findIndex((item) => item.id === product.id);
@@ -66,6 +72,7 @@ export function CartProvider({ children }: CartProviderProps) {
         addToCart,
         removeFromCart,
         clearCart,
+        shopTotalPrice,
       }}
     >
       {children}

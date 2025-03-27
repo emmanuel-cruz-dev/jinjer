@@ -42,7 +42,8 @@ const CartItem: FC<CartItemProps> = ({
 
 function Cart() {
   const { t } = useTranslation();
-  const { cart, clearCart, subtractProduct, addToCart } = useCart();
+  const { cart, clearCart, subtractProduct, addToCart, shopTotalPrice } =
+    useCart();
 
   return (
     <aside className="cart">
@@ -60,14 +61,8 @@ function Cart() {
       </ul>
       {cart.length !== 0 && (
         <>
-          {/* <span>
-            Total: $
-            {product.map((item) => {
-              const subtotal = item.price * item.quantity;
-              return subtotal;
-            })}
-          </span> */}
-          <div className="w-full flex justify-center my-4">
+          <p className="mt-4">Total: ${shopTotalPrice(cart)}</p>
+          <div className="w-full flex justify-center my-2">
             <button
               className="square__btn"
               onClick={clearCart}
