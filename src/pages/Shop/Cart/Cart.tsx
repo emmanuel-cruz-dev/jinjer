@@ -1,4 +1,6 @@
 import { useId } from "react";
+import { FaShoppingCart } from "react-icons/fa";
+import { MdRemoveShoppingCart } from "react-icons/md";
 import TShirtImg from "../../../assets/images/shop-fire-skull.avif";
 
 function Cart() {
@@ -6,12 +8,14 @@ function Cart() {
 
   return (
     <>
-      <label className="cart-button" htmlFor={cartCheckboxId}></label>
+      <label className="cart-button" htmlFor={cartCheckboxId}>
+        <FaShoppingCart />
+      </label>
       <input type="checkbox" id={cartCheckboxId} hidden />
       <aside className="cart">
         <ul>
           <li>
-            <img className="max-w-32" src={TShirtImg} alt="Remera Fire Skull" />
+            <img src={TShirtImg} alt="Remera Fire Skull" />
             <div>
               <strong>TShirt</strong> - $35.99
             </div>
@@ -22,7 +26,9 @@ function Cart() {
           </li>
         </ul>
 
-        <button>Clear Cart</button>
+        <button>
+          <MdRemoveShoppingCart />
+        </button>
       </aside>
     </>
   );
