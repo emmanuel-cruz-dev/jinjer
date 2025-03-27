@@ -16,14 +16,14 @@ const CartItem: FC<CartItemProps> = ({
     <li className="flex justify-between px-2">
       <img className="max-w-16" src={img} alt={name} />
       <div className="w-full flex flex-col items-center gap-2">
-        <p>
+        <div>
           <strong>{name}</strong> - ${price}
-        </p>
+        </div>
         <footer>
           <button className="square__btn" onClick={subtractProduct}>
             -
           </button>
-          <small>{quantity}</small>
+          <strong>{quantity}</strong>
           <button className="square__btn" onClick={addToCart}>
             +
           </button>

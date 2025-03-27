@@ -42,15 +42,16 @@ function Shop() {
             <h2 className="text-3xl font-bold text-white">Shop</h2>
           </div>
           <div className="flex flex-col lg:flex-row gap-8 w-full px-4 md:px-12 mt-8">
-            <div className="flex flex-col justify-center items-center gap-2 w-full mx-auto lg:w-5/6">
+            <div className="flex flex-col items-center gap-2 w-full mx-auto lg:w-5/6">
               <div className="flex justify-between gap-4 w-full">
-                <p className="text-sm text-gray-400">
+                {/* <p className="text-sm text-gray-400">
                   {t("shop.showing")}{" "}
                   {shopProducts1.length == 12
                     ? "1 - 12"
                     : `13 - ${productsTotal}`}{" "}
                   {t("shop.of")} {productsTotal} {t("shop.results")}
-                </p>
+                </p> */}
+                <ShopFilters />
                 <select
                   name="dropdown"
                   id="dropdown"
@@ -123,36 +124,6 @@ function Shop() {
                 <h2 className="font-bold text-lg mb-1">{t("shop.cart")}</h2>
                 <p>{t("shop.cartMessage")}</p>
               </div> */}
-
-              <div>
-                <h2 className="font-bold text-lg mb-1">
-                  {t("shop.filterColor")}
-                </h2>
-                <div className="flex flex-col gap-4">
-                  <ul>
-                    <li>
-                      <a href="#" onClick={() => handleColor("blue")}>
-                        {t("shop.blue")}
-                        <span>(2)</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" onClick={() => handleColor("red")}>
-                        {t("shop.red")}
-                        <span>(3)</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" onClick={() => handleColor("yellow")}>
-                        {t("shop.yellow")}
-                        <span>(1)</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <ShopFilters />
               <ShopFooter />
             </aside>
           </div>
