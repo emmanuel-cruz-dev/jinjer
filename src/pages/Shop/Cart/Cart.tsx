@@ -71,6 +71,9 @@ function Cart() {
               <MdRemoveShoppingCart />
             </button>
           </div>
+          <div className="flex justify-center mt-8">
+            <button className="square__btn text-xs">Realizar Compra</button>
+          </div>
         </div>
       )}
     </aside>
