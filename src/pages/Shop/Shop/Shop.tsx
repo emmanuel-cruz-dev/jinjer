@@ -79,7 +79,7 @@ function Shop() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-8 w-full">
                 {filteredProducts.map((product) => (
-                  <ShopCard key={product.id} {...product} />
+                  <ShopCard key={product.id} product={product} />
                 ))}
               </div>
               <div className="flex justify-between items-center border border-gray-600 mb-8">
