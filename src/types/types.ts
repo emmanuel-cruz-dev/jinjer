@@ -193,6 +193,7 @@ export interface CartContextType {
   removeFromCart: (product: CartItemProps) => void;
   clearCart: () => void;
   shopTotalPrice: () => string;
+  totalProductsInCart: () => number;
 }
 
 export interface CartProviderProps {

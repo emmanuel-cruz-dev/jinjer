@@ -22,6 +22,16 @@ export function CartProvider({ children }: CartProviderProps) {
     return total.toFixed(2);
   };
 
+  const totalProductsInCart = (): number => {
+    const subtotal = cart.map((product: CartItemProps) => {
+      const quantity = product.quantity ?? 0;
+      return quantity;
+    });
+    const total = subtotal.reduce((a, b) => a + b, 0);
+
+    return total;
+  };
+
   const subtractProduct = (product: CartItemProps) => {
     const productInCartIndex = cart.findIndex((item) => item.id === product.id);
 
@@ -82,6 +92,7 @@ export function CartProvider({ children }: CartProviderProps) {
         removeFromCart,
         clearCart,
         shopTotalPrice,
+        totalProductsInCart,
       }}
     >
       {children}

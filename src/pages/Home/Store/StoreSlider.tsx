@@ -31,7 +31,7 @@ function StoreSlider() {
       >
         {shopProductsList.slice(0, 8).map((product) => (
           <SwiperSlide>
-            <TShirtCard {...product} />
+            <TShirtCard product={product} />
           </SwiperSlide>
         ))}
       </Swiper>

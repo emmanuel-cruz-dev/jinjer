@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import StoreSlider from "./StoreSlider";
 import useStoreNavigation from "../../../hooks/useStoreNavigation";
+import StoreCartItem from "./StoreCartItem";
 
 function Store() {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ function Store() {
       className="scroll-top-margin store py-16 mx-auto bg-slate-200 text-black"
       id="store"
     >
-      <article className="container flex flex-col justify-center items-center gap-12 mx-auto">
+      <article className="container relative flex flex-col justify-center items-center gap-12 mx-auto">
         <div className="text-center flex flex-col gap-4">
           <h2 className="logo text-5xl">
             <span>{t("store.titleSpan")}</span> {t("store.title")}
@@ -24,6 +25,7 @@ function Store() {
         <a onClick={goToSection} href="/shop/" className="red__btn">
           {t("store.storeButton")}
         </a>
+        <StoreCartItem />
       </article>
     </section>
   );
