@@ -13,9 +13,10 @@ export function CartProvider({ children }: CartProviderProps) {
   const [cart, setCart] = useState<CartItemProps[]>([]);
 
   const shopTotalPrice = (): string => {
-    const subtotal = cart.map(
-      (product: CartItemProps) => product.price * product.quantity
-    );
+    const subtotal = cart.map((product: CartItemProps) => {
+      const quantity = product.quantity ?? 0;
+      return product.price * quantity;
+    });
     const total = subtotal.reduce((a, b) => a + b, 0);
 
     return total.toFixed(2);
@@ -27,13 +28,16 @@ export function CartProvider({ children }: CartProviderProps) {
     if (productInCartIndex >= 0) {
       const newCart = structuredClone(cart);
 
-      if (newCart[productInCartIndex].quantity === 1) {
+      const productInCart = newCart[productInCartIndex];
+      if (!productInCart) return;
+
+      if (productInCart.quantity === 1) {
         removeFromCart(product);
       }
 
-      if (newCart[productInCartIndex].quantity > 1) {
-        newCart[productInCartIndex].quantity -= 1;
-        return setCart(newCart);
+      if (productInCart.quantity && productInCart.quantity > 1) {
+        productInCart.quantity -= 1;
+        setCart(newCart);
       }
     }
   };
@@ -44,7 +48,10 @@ export function CartProvider({ children }: CartProviderProps) {
 
     if (productInCartIndex >= 0) {
       const newCart = structuredClone(cart);
-      newCart[productInCartIndex].quantity += 1;
+      const productInCart = newCart[productInCartIndex];
+
+      if (!productInCart || productInCart.quantity == undefined) return;
+      productInCart.quantity += 1;
       return setCart(newCart);
     }
 
