@@ -29,11 +29,11 @@ function MusicPlayer() {
 
   return (
     <article className={`${isVisible ? "opacity-100" : "opacity-0"}`}>
-      <article className="music-player__article fixed bottom-4 left-2 lg:left-8 flex gap-[6px] z-[100] select-none">
+      <article className="music-player__article fixed bottom-5 left-2 lg:left-8 flex gap-[6px] z-[100] select-none">
         <div
           className={`music-player__container ${
             isMenuOpen ? "" : "active"
-          } hidden lg:flex justify-between items-center rounded-md bg-gray-800 text-white p-3`}
+          } hidden lg:flex justify-between items-center rounded-md bg-gray-800 text-white p-[10px]`}
         >
           {/* Imagen de portada */}
           <div className="flex-shrink-0 flex items-center gap-2">
