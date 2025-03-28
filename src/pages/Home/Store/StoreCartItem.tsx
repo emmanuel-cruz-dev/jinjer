@@ -3,12 +3,11 @@ import { useCart } from "../../../hooks/useCart";
 import { useTranslation } from "react-i18next";
 import useStoreNavigation from "../../../hooks/useStoreNavigation";
 
-const StoreCartItem = () => {
+function StoreCartItem() {
   const { t } = useTranslation();
-  const { totalProductsInCart, cart } = useCart();
+  const { totalProductsInCart } = useCart();
   const isProductInCart = totalProductsInCart();
   const goToSection = useStoreNavigation();
-  console.log(cart);
 
   return (
     <article className="absolute top-0 right-0">
@@ -16,7 +15,7 @@ const StoreCartItem = () => {
         <a
           onClick={goToSection}
           href="/shop/"
-          className="bg-black text-white flex justify-center items-center hover:bg-red-500 hover:text-white text-xl w-14 h-14 rounded-full border-none focus:outline-none transition-colors duration-300 ease-in-out"
+          className="bg-black text-white flex justify-center items-center hover:bg-red-600 hover:text-white text-xl w-14 h-14 rounded-full border-none focus:outline-none transition-colors duration-300 ease-in-out"
           title={t("store.storeButton")}
         >
           <FaShoppingCart />
@@ -27,6 +26,6 @@ const StoreCartItem = () => {
       )}
     </article>
   );
-};
+}
 
 export default StoreCartItem;
