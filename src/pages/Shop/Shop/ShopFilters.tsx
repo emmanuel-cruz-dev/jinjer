@@ -3,10 +3,17 @@ import { FiltersContext } from "../../../context/filters";
 import { useTranslation } from "react-i18next";
 
 function ShopFilters() {
-  const { filters, setFilters } = useContext(FiltersContext);
+  // const { filters, setFilters } = useContext(FiltersContext);
   const { t } = useTranslation();
   const minPriceFilterId = useId();
   const colorFilterId = useId();
+  const context = useContext(FiltersContext);
+
+  if (!context) {
+    throw new Error("useFilters debe ser usado dentro de FiltersProvider");
+  }
+
+  const { filters, setFilters } = context;
 
   const handleChangeMinPrice = (event: ChangeEvent<HTMLInputElement>) => {
     setFilters((prevState) => ({

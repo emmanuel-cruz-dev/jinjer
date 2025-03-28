@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { FiltersContext } from "../context/filters";
-import { CartItemProps, ShopProductsProps } from "../types/types";
+import { ShopProductsProps } from "../types/types";
 
 function useFilters() {
   const context = useContext(FiltersContext);
