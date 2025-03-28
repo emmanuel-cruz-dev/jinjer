@@ -60,9 +60,10 @@ function Cart() {
         ))}
       </ul>
       {cart.length !== 0 && (
-        <div className="mt-2">
-          <strong className="text-xl">Total: ${shopTotalPrice(cart)}</strong>
-          <div className="w-full flex justify-center mt-2 mb-4">
+        <div className="mt-4">
+          <strong className="text-xl">Total: ${shopTotalPrice()}</strong>
+          <div className="w-full flex justify-between my-4">
+            <button className="square__btn text-xs">{t("shop.buyNow")}</button>
             <button
               className="square__btn"
               onClick={clearCart}
@@ -70,9 +71,6 @@ function Cart() {
             >
               <MdRemoveShoppingCart />
             </button>
-          </div>
-          <div className="flex justify-center mt-8">
-            <button className="square__btn text-xs">Realizar Compra</button>
           </div>
         </div>
       )}

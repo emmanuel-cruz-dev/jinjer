@@ -12,8 +12,10 @@ export const CartContext = createContext<CartContextType | undefined>(
 export function CartProvider({ children }: CartProviderProps) {
   const [cart, setCart] = useState<CartItemProps[]>([]);
 
-  const shopTotalPrice = (cart) => {
-    const subtotal = cart.map((product) => product.price * product.quantity);
+  const shopTotalPrice = (): string => {
+    const subtotal = cart.map(
+      (product: CartItemProps) => product.price * product.quantity
+    );
     const total = subtotal.reduce((a, b) => a + b, 0);
 
     return total.toFixed(2);
