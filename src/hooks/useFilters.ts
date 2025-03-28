@@ -16,11 +16,19 @@ function useFilters() {
       return (
         product.price >= filters.minPrice &&
         (filters.color === "all" || product.color === filters.color) &&
-        (filters.selectSort === "default" || product.sale == true)
+        (filters.selectSort !== "sale" || product.sale == true)
       );
     });
     if (filters.selectSort === "rating") {
-      return products.sort((a, b) => b.rating - a.rating);
+      return filteredProducts.sort((a, b) => b.rating - a.rating);
+    }
+
+    if (filters.selectSort === "price-low-high") {
+      return filteredProducts.sort((a, b) => a.price - b.price);
+    }
+
+    if (filters.selectSort === "price-high-low") {
+      return filteredProducts.sort((a, b) => b.price - a.price);
     }
 
     return filteredProducts;

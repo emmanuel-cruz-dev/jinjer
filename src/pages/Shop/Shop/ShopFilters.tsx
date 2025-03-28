@@ -6,6 +6,7 @@ function ShopFilters() {
   const { t } = useTranslation();
   const minPriceFilterId = useId();
   const colorFilterId = useId();
+  const sortFilterId = useId();
   const context = useContext(FiltersContext);
 
   if (!context) {
@@ -67,14 +68,14 @@ function ShopFilters() {
       </div>
 
       <select
+        id={sortFilterId}
         name="dropdown"
-        id="dropdown"
-        defaultValue="menu-order"
+        value={filters.selectSort}
         aria-label="Shop order"
         className="p-2 rounded-sm text-gray-300 cursor-pointer"
         onChange={handleSelectSorting}
       >
-        <option key="menu-order" value="default">
+        <option key="default" value="default">
           {t("shop.default")}
         </option>
         <option key="sale" value="sale">
@@ -83,10 +84,10 @@ function ShopFilters() {
         <option key="rating" value="rating">
           {t("shop.sortRating")}
         </option>
-        <option key="price" value="price">
+        <option key="price" value="price-low-high">
           {t("shop.sortLowHigh")}
         </option>
-        <option key="price-desc" value="price-desc">
+        <option key="price-desc" value="price-high-low">
           {t("shop.sortHighLow")}
         </option>
       </select>
