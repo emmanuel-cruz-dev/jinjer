@@ -18,7 +18,7 @@ const resources = {
         contact: "Contact",
         albumTitle: "Latest Album",
         albumDescription:
-          "Metallic fury emerges from the shadows, transforming suffering into a hymn of resistance and absolute redemption",
+          "'Duél' fuses aggression and technique, highlighting Tatiana Shmayluk's vocal versatility and consolidating her evolution in progressive metal",
         closeButton: "Close",
       },
       news: {
@@ -392,7 +392,7 @@ const resources = {
         contact: "Contacto",
         albumTitle: "Último Lanzamiento",
         albumDescription:
-          "Furia metálica que emerge de las sombras, transformando el sufrimiento en un himno de resistencia y redención absoluta",
+          "'Duél' fusiona agresividad y técnica, destacando la versatilidad vocal de Tatiana Shmayluk y consolidando su evolución en el metal progresivo",
         closeButton: "Cerrar",
       },
       news: {
