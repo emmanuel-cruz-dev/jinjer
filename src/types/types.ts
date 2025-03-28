@@ -52,7 +52,7 @@ export interface VideoCardProps {
 }
 
 export interface TShirtCardProps {
-  title: string;
+  name: string;
   price: number;
   img: string;
 }

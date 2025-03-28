@@ -1,13 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
-
 import TShirtCard from "./TShirtCard";
-import TShirt1 from "../../../assets/images/shop-skull.avif";
-import TShirt2 from "../../../assets/images/shop-gorilla.avif";
-import TShirt3 from "../../../assets/images/shop-sharks.avif";
-import TShirt4 from "../../../assets/images/shop-fire.avif";
-import TShirt5 from "../../../assets/images/shop-death.avif";
-import TShirt6 from "../../../assets/images/shop-tour.avif";
+import { shopProductsList } from "../../../data/shopProducts";
 
 function StoreSlider() {
   return (
@@ -35,24 +29,11 @@ function StoreSlider() {
         }}
         modules={[Navigation, Pagination, A11y]}
       >
-        <SwiperSlide>
-          <TShirtCard title="Perennial" price={21.99} img={TShirt1} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TShirtCard title="Ape" price={18.69} img={TShirt2} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TShirtCard title="Pisces" price={24.79} img={TShirt3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TShirtCard title="Noha" price={23.95} img={TShirt4} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TShirtCard title="True Believer" price={23.95} img={TShirt5} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TShirtCard title="Cloud Factory" price={19.99} img={TShirt6} />
-        </SwiperSlide>
+        {shopProductsList.slice(0, 8).map((product) => (
+          <SwiperSlide>
+            <TShirtCard {...product} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </article>
   );

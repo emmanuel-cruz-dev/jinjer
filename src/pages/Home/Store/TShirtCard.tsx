@@ -2,7 +2,7 @@ import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { TShirtCardProps } from "../../../types/types";
 
-const TShirtCard: FC<TShirtCardProps> = ({ title, price, img }) => {
+const TShirtCard: FC<TShirtCardProps> = ({ name, price, img }) => {
   const { t } = useTranslation();
 
   return (
@@ -13,12 +13,12 @@ const TShirtCard: FC<TShirtCardProps> = ({ title, price, img }) => {
           src={img}
           width="500"
           height="566"
-          alt={`Remera negra ${title}`}
+          alt={`Remera negra ${name}`}
           loading="lazy"
         />
       </figure>
       <div className="flex justify-around">
-        <h3 className="font-bold">{title}</h3>
+        <h3 className="font-bold">{name}</h3>
         <span className="text-gray-700">${price}</span>
       </div>
       <a
