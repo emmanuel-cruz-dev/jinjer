@@ -5,24 +5,18 @@ import useShop from "../../../hooks/useShop";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import ShopFilters from "./ShopFilters";
-// import ShopFooter from "./ShopFooter";
 import useFilters from "../../../hooks/useFilters";
 import Cart from "../Cart/Cart";
-import { ShopProductsProps } from "../../../types/types";
 
 function Shop() {
   const { t } = useTranslation();
-  const {
-    shopProducts1,
-    shopProducts2,
-    productsTotal,
-    handleProducts,
-    handleArr,
-  } = useShop(shopProductsList);
+  const { shopProducts1, shopProducts2 } = useShop(shopProductsList);
 
   const [products] = useState(shopProductsList); // Eliminar esta constante
   const { filterProducts } = useFilters();
   const filteredProducts = filterProducts(shopProductsList);
+  const productsLength = filteredProducts.length;
+  const productsTotalLength = shopProductsList.length;
 
   return (
     <section className="shop second-page" id="shop">
@@ -42,11 +36,8 @@ function Shop() {
           <div className="w-11/12 flex flex-col lg:flex-row gap-8 lg:w-full lg:px-12 mt-8 mx-auto">
             <div className="flex flex-col items-center gap-2 w-full mx-auto lg:w-5/6">
               <p className="text-sm text-gray-400">
-                {t("shop.showing")}{" "}
-                {shopProducts1.length == 12
-                  ? "1 - 12"
-                  : `13 - ${productsTotal}`}{" "}
-                {t("shop.of")} {productsTotal} {t("shop.results")}
+                {t("shop.showing")} {productsLength} {t("shop.of")}{" "}
+                {productsTotalLength} {t("shop.results")}
               </p>
 
               <ShopFilters />
@@ -58,42 +49,33 @@ function Shop() {
               </div>
               <div className="flex justify-between items-center border border-gray-600 mb-8">
                 {products === shopProducts2 && (
-                  <a
-                    onClick={handleProducts}
-                    className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400 cursor-pointer"
-                  >
+                  <button className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400 cursor-pointer">
                     chevron_left
-                  </a>
+                  </button>
                 )}
-                <a
-                  onClick={() => handleArr(1)}
+                <button
                   className={`${
                     products === shopProducts1 ? "bg-gray-400" : ""
                   } w-10 h-10 flex justify-center items-center hover:bg-gray-400 cursor-pointer`}
                 >
                   1
-                </a>
-                <a
-                  onClick={() => handleArr(2)}
+                </button>
+                <button
                   className={`${
                     products === shopProducts2 ? "bg-gray-400" : ""
                   } w-10 h-10 flex justify-center items-center hover:bg-gray-400 cursor-pointer`}
                 >
                   2
-                </a>
+                </button>
                 {products === shopProducts1 && (
-                  <a
-                    onClick={handleProducts}
-                    className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400 cursor-pointer"
-                  >
+                  <button className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400 cursor-pointer">
                     chevron_right
-                  </a>
+                  </button>
                 )}
               </div>
             </div>
             <aside className="-order-1 lg:order-2 w-full lg:w-80">
               <Cart />
-              {/* <ShopFooter /> */}
             </aside>
           </div>
         </article>

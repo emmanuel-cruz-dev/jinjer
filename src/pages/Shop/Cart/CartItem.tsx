@@ -15,6 +15,9 @@ const CartItem: FC<CartItemProps> = ({
         className="object-cover max-w-16 shop__img-shadow"
         src={img}
         alt={name}
+        width={500}
+        height={566}
+        loading="lazy"
       />
       <div className="text-right">
         <div className="mb-2 text-sm">
@@ -30,7 +33,7 @@ const CartItem: FC<CartItemProps> = ({
           </button>
         </footer>
         <p className="mt-2 text-sm">
-          Subtotal: ${(price * quantity).toFixed(2)}
+          Subtotal: ${(price * (quantity ?? 0)).toFixed(2)}
         </p>
       </div>
     </li>

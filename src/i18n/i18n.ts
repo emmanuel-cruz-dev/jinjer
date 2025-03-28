@@ -354,7 +354,7 @@ const resources = {
       shop: {
         showing: "Showing",
         of: "of",
-        results: "results.",
+        results: "total products.",
         pricesFrom: "Prices from",
         default: "Default Sorting",
         sortRating: "Sort by Rating",
@@ -727,8 +727,8 @@ const resources = {
       },
       shop: {
         showing: "Mostrando",
-        of: "de",
-        results: "resultados.",
+        of: "de un total de",
+        results: "productos.",
         pricesFrom: "Precios desde",
         default: "Orden Predeterminado",
         sortRating: "Filtrar por Rating",
