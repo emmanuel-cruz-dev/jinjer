@@ -8,6 +8,7 @@ import ShopFilters from "./ShopFilters";
 // import ShopFooter from "./ShopFooter";
 import useFilters from "../../../hooks/useFilters";
 import Cart from "../Cart/Cart";
+import { ShopProductsProps } from "../../../types/types";
 
 function Shop() {
   const { t } = useTranslation();
@@ -52,7 +53,7 @@ function Shop() {
               <ShopFilters />
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-8 w-full">
-                {filteredProducts.map((product) => (
+                {filteredProducts.map((product: ShopProductsProps) => (
                   <ShopCard key={product.id} product={product} />
                 ))}
               </div>

@@ -178,6 +178,7 @@ export interface CartItemProps {
   img: string;
   price: number;
   name: string;
+  rating?: number;
   quantity: number;
   subtractProduct: () => void;
   addToCart: () => void;
