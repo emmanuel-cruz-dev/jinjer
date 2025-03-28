@@ -77,11 +77,11 @@ function ShopFilters() {
         <option key="menu-order" value="default">
           {t("shop.default")}
         </option>
-        <option key="rating" value="rating">
-          {t("shop.sortRating")}
-        </option>
         <option key="sale" value="sale">
           {t("shop.sortSale")}
+        </option>
+        <option key="rating" value="rating">
+          {t("shop.sortRating")}
         </option>
         <option key="price" value="price">
           {t("shop.sortLowHigh")}

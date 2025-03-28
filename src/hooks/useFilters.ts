@@ -12,14 +12,20 @@ function useFilters() {
   const { filters, setFilters } = context;
 
   const filterProducts = (products: ShopProductsProps[]) => {
-    return products.filter((product) => {
+    const filteredProducts = products.filter((product) => {
       return (
         product.price >= filters.minPrice &&
         (filters.color === "all" || product.color === filters.color) &&
         (filters.selectSort === "default" || product.sale == true)
       );
     });
+    if (filters.selectSort === "rating") {
+      return products.sort((a, b) => b.rating - a.rating);
+    }
+
+    return filteredProducts;
   };
+
   return { filters, filterProducts, setFilters };
 }
 
