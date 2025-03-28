@@ -31,11 +31,16 @@ Plataforma de artista dedicada a Jinjer, una banda de metal progresivo originari
 
 ## Funcionalidades
 
-- Selector de idioma: Soporte para inglés y español(página principal).
-- Diseño responsive: Adaptado a dispositivos de todos los tamaños.
-- Giras: Fechas y lugares de sus próximos conciertos.
-- Sección de álbumes: Incluye reproductor y lista de canciones.
+- Selector de idioma: Soporte para inglés y español.
 - Navbar funcional: Navegación fluida entre secciones y páginas.
+- Diseño responsive: Adaptado a dispositivos de todos los tamaños.
+- Carrito de compras:
+  - Agregar productos al carrito.
+  - Incrementar o disminuir la cantidad de productos.
+  - Eliminar productos del carrito.
+  - Persistencia del carrito entre recargas de la página usando `localStorage`.
+  - Cálculo automático del precio total y la cantidad de productos.
+- Sección de álbumes: Incluye reproductor y lista de canciones.
 
 ## Estado
 
