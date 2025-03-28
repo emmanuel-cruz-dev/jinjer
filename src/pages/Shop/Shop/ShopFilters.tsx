@@ -1,40 +1,14 @@
-import { useId, useContext, ChangeEvent } from "react";
-import { FiltersContext } from "../../../context/filters";
+import { useId } from "react";
 import { useTranslation } from "react-i18next";
+import useShopFilters from "../../../hooks/useShopFilters";
 
 function ShopFilters() {
   const { t } = useTranslation();
   const minPriceFilterId = useId();
   const colorFilterId = useId();
   const sortFilterId = useId();
-  const context = useContext(FiltersContext);
-
-  if (!context) {
-    throw new Error("useFilters debe ser usado dentro de FiltersProvider");
-  }
-
-  const { filters, setFilters } = context;
-
-  const handleChangeMinPrice = (event: ChangeEvent<HTMLInputElement>) => {
-    setFilters((prevState) => ({
-      ...prevState,
-      minPrice: Number(event.target.value),
-    }));
-  };
-
-  const handleChangeColor = (event: ChangeEvent<HTMLSelectElement>) => {
-    setFilters((prevState) => ({
-      ...prevState,
-      color: event.target.value,
-    }));
-  };
-
-  const handleSelectSorting = (event: ChangeEvent<HTMLSelectElement>) => {
-    setFilters((prevState) => ({
-      ...prevState,
-      selectSort: event.target.value,
-    }));
-  };
+  const { filters, handleChangeMinPrice, handleChangeColor, handleChangeSort } =
+    useShopFilters();
 
   return (
     <section className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 justify-between items-center gap-6">
@@ -73,7 +47,7 @@ function ShopFilters() {
         value={filters.selectSort}
         aria-label="Shop order"
         className="p-2 rounded-sm text-gray-300 cursor-pointer"
-        onChange={handleSelectSorting}
+        onChange={handleChangeSort}
       >
         <option key="default" value="default">
           {t("shop.default")}

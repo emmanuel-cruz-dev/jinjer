@@ -16,7 +16,6 @@ function Shop() {
     shopProducts1,
     shopProducts2,
     productsTotal,
-    handleFilter,
     handleProducts,
     handleArr,
   } = useShop(shopProductsList);
