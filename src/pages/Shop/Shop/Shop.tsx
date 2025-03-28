@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import ShopFilters from "./ShopFilters";
 import useFilters from "../../../hooks/useFilters";
 import Cart from "../Cart/Cart";
+//import { useState } from "react";
 
 function Shop() {
   const { t } = useTranslation();
@@ -12,6 +13,36 @@ function Shop() {
   const filteredProducts = filterProducts(shopProductsList);
   const productsLength = filteredProducts.length;
   const productsTotalLength = shopProductsList.length;
+
+  // ------- Inicio: Lógica de Paginado ------- //
+
+  // const [currentPage, setCurrentPage] = useState(1); // Página actual
+  // const itemsPerPage = 12; // Número de productos por página
+
+  // // Calcular los índices de los productos a mostrar
+  // const indexOfLastItem = currentPage * itemsPerPage;
+  // const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  // const currentProducts = shopProductsList.slice(
+  //   indexOfFirstItem,
+  //   indexOfLastItem
+  // );
+
+  // // Calcular el número total de páginas
+  // const totalPages = Math.ceil(shopProductsList.length / itemsPerPage);
+
+  // const handleNextPage = () => {
+  //   if (currentPage < totalPages) {
+  //     setCurrentPage((prevPage) => prevPage + 1);
+  //   }
+  // };
+
+  // const handlePreviousPage = () => {
+  //   if (currentPage > 1) {
+  //     setCurrentPage((prevPage) => prevPage - 1);
+  //   }
+  // };
+
+  // ------- Fin: Lógica de Paginado ------- //
 
   return (
     <section className="shop second-page" id="shop">
@@ -35,11 +66,14 @@ function Shop() {
                 {productsTotalLength} {t("shop.results")}
               </p>
               <ShopFilters />
+              {/* Renderizado original terminado y funcional */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-12 w-full">
                 {filteredProducts.map((product) => (
                   <ShopCard key={product.id} product={product} />
                 ))}
               </div>
+
+              {/* Controles de paginación viejos */}
               {/* <div className="flex justify-between items-center border border-gray-600 mb-8">
                 {products === shopProducts2 && (
                   <button className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400 cursor-pointer">
@@ -66,6 +100,41 @@ function Shop() {
                   </button>
                 )}
               </div> */}
+
+              {/* Inicio paginado nuevo de pilot */}
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-12 w-full">
+                {currentProducts.map((product) => (
+                  <ShopCard key={product.id} product={product} />
+                ))}
+              </div>
+              <div className="flex justify-center items-center gap-4 my-4">
+                <button
+                  onClick={handlePreviousPage}
+                  disabled={currentPage === 1}
+                  className={`px-4 py-2 rounded ${
+                    currentPage === 1
+                      ? "bg-gray-300 cursor-not-allowed"
+                      : "bg-blue-500 text-white hover:bg-blue-600"
+                  }`}
+                >
+                  Anterior
+                </button>
+                <span>
+                  Página {currentPage} de {totalPages}
+                </span>
+                <button
+                  onClick={handleNextPage}
+                  disabled={currentPage === totalPages}
+                  className={`px-4 py-2 rounded ${
+                    currentPage === totalPages
+                      ? "bg-gray-300 cursor-not-allowed"
+                      : "bg-blue-500 text-white hover:bg-blue-600"
+                  }`}
+                >
+                  Siguiente
+                </button>
+              </div> */}
+              {/* Fin paginado nuevo de pilot */}
             </div>
             <aside className="-order-1 lg:order-2 w-full lg:w-80 mb-4">
               <Cart />
