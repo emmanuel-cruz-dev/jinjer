@@ -14,6 +14,7 @@ export function FiltersProvider({ children }: FiltersProviderProps) {
     color: "all",
     minPrice: 8,
     maxPrice: 40,
+    selectSort: "default",
   });
 
   return (

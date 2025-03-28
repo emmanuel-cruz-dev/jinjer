@@ -162,6 +162,7 @@ export interface FiltersProps {
   color: string;
   minPrice: number;
   maxPrice: number;
+  selectSort: string;
 }
 
 export interface FiltersContextType {

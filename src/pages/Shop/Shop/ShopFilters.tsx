@@ -28,6 +28,13 @@ function ShopFilters() {
     }));
   };
 
+  const handleSelectSorting = (event: ChangeEvent<HTMLSelectElement>) => {
+    setFilters((prevState) => ({
+      ...prevState,
+      selectSort: event.target.value,
+    }));
+  };
+
   return (
     <section className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 justify-between items-center gap-6">
       <div className="flex items-center gap-2">
@@ -65,8 +72,9 @@ function ShopFilters() {
         defaultValue="menu-order"
         aria-label="Shop order"
         className="p-2 rounded-sm text-gray-300 cursor-pointer"
+        onChange={handleSelectSorting}
       >
-        <option key="menu-order" value="menu-order">
+        <option key="menu-order" value="default">
           {t("shop.default")}
         </option>
         <option key="rating" value="rating">

@@ -15,7 +15,8 @@ function useFilters() {
     return products.filter((product) => {
       return (
         product.price >= filters.minPrice &&
-        (filters.color === "all" || product.color === filters.color)
+        (filters.color === "all" || product.color === filters.color) &&
+        (filters.selectSort === "default" || product.sale == true)
       );
     });
   };
