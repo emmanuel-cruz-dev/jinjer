@@ -30,7 +30,7 @@ function StoreSlider() {
         modules={[Navigation, Pagination, A11y]}
       >
         {shopProductsList.slice(0, 8).map((product) => (
-          <SwiperSlide>
+          <SwiperSlide key={product.id}>
             <TShirtCard product={product} />
           </SwiperSlide>
         ))}

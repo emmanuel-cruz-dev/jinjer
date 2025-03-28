@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import {
   CartContextType,
   CartItemProps,
@@ -10,7 +10,16 @@ export const CartContext = createContext<CartContextType | undefined>(
 );
 
 export function CartProvider({ children }: CartProviderProps) {
-  const [cart, setCart] = useState<CartItemProps[]>([]);
+  const [cart, setCart] = useState<CartItemProps[]>(() => {
+    // Leer el carrito desde localStorage al inicializar el estado
+    const storedCart = localStorage.getItem("cart");
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
+
+  // Sincronizar el carrito con localStorage
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const shopTotalPrice = (): string => {
     const subtotal = cart.map((product: CartItemProps) => {
