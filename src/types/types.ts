@@ -179,12 +179,13 @@ export interface CartItemProps {
   price: number;
   name: string;
   rating?: number;
-  quantity: number;
-  subtractProduct: () => void;
-  addToCart: () => void;
+  quantity?: number;
+  subtractProduct?: () => void;
+  addToCart?: () => void;
 }
 
 export interface CartContextType {
+  product?: ShopProductsProps;
   cart: CartItemProps[];
   addToCart: (product: CartItemProps) => void;
   subtractProduct: (product: CartItemProps) => void;

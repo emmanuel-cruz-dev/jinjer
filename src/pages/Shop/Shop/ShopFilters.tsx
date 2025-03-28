@@ -3,7 +3,6 @@ import { FiltersContext } from "../../../context/filters";
 import { useTranslation } from "react-i18next";
 
 function ShopFilters() {
-  // const { filters, setFilters } = useContext(FiltersContext);
   const { t } = useTranslation();
   const minPriceFilterId = useId();
   const colorFilterId = useId();

@@ -3,10 +3,15 @@ import StarRating from "../../../components/ui/StarRating";
 import { useTranslation } from "react-i18next";
 import { useCart } from "../../../hooks/useCart";
 import { FC } from "react";
-import { ShopCardProps, ShopProductsProps } from "../../../types/types";
+import { CartContextType, ShopProductsProps } from "../../../types/types";
 
-const ShopCard: FC<ShopCardProps> = ({ product }) => {
+const ShopCard: FC<CartContextType> = ({ product }) => {
   const { t } = useTranslation();
+
+  if (!product) {
+    throw new Error("Product is undefined.");
+  }
+
   const discount = calculateDiscount(product.price);
   const { addToCart, cart, removeFromCart } = useCart();
 
