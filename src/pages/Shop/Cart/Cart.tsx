@@ -9,7 +9,7 @@ function Cart() {
     useCart();
 
   return (
-    <aside className="cart">
+    <article className="cart">
       <h2 className="font-bold text-lg">{t("shop.cart")}</h2>
       {cart.length == 0 && <p>{t("shop.cartMessage")}</p>}
       <ul>
@@ -37,7 +37,7 @@ function Cart() {
           </div>
         </div>
       )}
-    </aside>
+    </article>
   );
 }
 

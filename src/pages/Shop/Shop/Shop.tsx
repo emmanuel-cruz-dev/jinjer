@@ -1,18 +1,13 @@
 import Background from "../../../assets/images/gradient.avif";
 import ShopCard from "./ShopCard";
 import { shopProductsList } from "../../../data/shopProducts";
-import useShop from "../../../hooks/useShop";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
 import ShopFilters from "./ShopFilters";
 import useFilters from "../../../hooks/useFilters";
 import Cart from "../Cart/Cart";
 
 function Shop() {
   const { t } = useTranslation();
-  const { shopProducts1, shopProducts2 } = useShop(shopProductsList);
-
-  const [products] = useState(shopProductsList); // Eliminar esta constante
   const { filterProducts } = useFilters();
   const filteredProducts = filterProducts(shopProductsList);
   const productsLength = filteredProducts.length;
@@ -39,15 +34,13 @@ function Shop() {
                 {t("shop.showing")} {productsLength} {t("shop.of")}{" "}
                 {productsTotalLength} {t("shop.results")}
               </p>
-
               <ShopFilters />
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-8 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-12 pt-8 pb-12 w-full">
                 {filteredProducts.map((product) => (
                   <ShopCard key={product.id} product={product} />
                 ))}
               </div>
-              <div className="flex justify-between items-center border border-gray-600 mb-8">
+              {/* <div className="flex justify-between items-center border border-gray-600 mb-8">
                 {products === shopProducts2 && (
                   <button className="w-10 h-10 flex justify-center items-center material-symbols-outlined hover:bg-gray-400 cursor-pointer">
                     chevron_left
@@ -72,9 +65,9 @@ function Shop() {
                     chevron_right
                   </button>
                 )}
-              </div>
+              </div> */}
             </div>
-            <aside className="-order-1 lg:order-2 w-full lg:w-80">
+            <aside className="-order-1 lg:order-2 w-full lg:w-80 mb-4">
               <Cart />
             </aside>
           </div>
