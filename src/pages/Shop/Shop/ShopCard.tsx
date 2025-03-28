@@ -1,25 +1,14 @@
 import { calculateDiscount } from "../../../utils/utils";
 import StarRating from "../../../components/ui/StarRating";
 import { useTranslation } from "react-i18next";
-import { useCart } from "../../../hooks/useCart";
 import { FC } from "react";
-import { CartContextType, ShopProductsProps } from "../../../types/types";
+import { ShopCardProps } from "../../../types/types";
+import useShopCard from "../../../hooks/useShopCard";
 
-const ShopCard: FC<CartContextType> = ({ product }) => {
+const ShopCard: FC<ShopCardProps> = ({ product }) => {
   const { t } = useTranslation();
-
-  if (!product) {
-    throw new Error("Product is undefined.");
-  }
-
+  const { isProductInCart, handleCartAction } = useShopCard(product);
   const discount = calculateDiscount(product.price);
-  const { addToCart, cart, removeFromCart } = useCart();
-
-  const checkProductInCart = (product: ShopProductsProps) => {
-    return cart.some((item) => item.id === product.id);
-  };
-
-  const isProductInCart = checkProductInCart(product);
 
   return (
     <article
@@ -53,9 +42,7 @@ const ShopCard: FC<CartContextType> = ({ product }) => {
       <button
         style={{ backgroundColor: isProductInCart ? "#000" : "" }}
         className="w-full bg-accent py-1 mt-4 text-white font-semibold hover:bg-accent/80 transition-colors duration-300"
-        onClick={() => {
-          isProductInCart ? removeFromCart(product) : addToCart(product);
-        }}
+        onClick={handleCartAction}
       >
         {isProductInCart ? t("shop.removeCart") : t("shop.addCart")}
       </button>

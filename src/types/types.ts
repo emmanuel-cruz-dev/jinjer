@@ -199,3 +199,7 @@ export interface CartContextType {
 export interface CartProviderProps {
   children: ReactNode;
 }
+
+export interface ShopCardProps {
+  product: ShopProductsProps;
+}
