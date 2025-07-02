@@ -2,7 +2,6 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
-// Importa tus archivos de traducción
 const resources = {
   en: {
     translation: {
@@ -375,7 +374,6 @@ const resources = {
         yellow: "Yellow",
       },
       goTopButton: "Go to top",
-      // ... más traducciones
     },
   },
   es: {
@@ -749,7 +747,6 @@ const resources = {
         yellow: "Amarillo",
       },
       goTopButton: "Ir arriba",
-      // ... más traducciones
     },
   },
 };
@@ -760,7 +757,7 @@ i18n
   .init({
     resources,
     fallbackLng: "en",
-    lng: localStorage.getItem("preferredLanguage") || "en", // idioma por defecto
+    lng: localStorage.getItem("preferredLanguage") || "en",
     interpolation: {
       escapeValue: false,
     },
