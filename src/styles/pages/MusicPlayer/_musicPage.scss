@@ -1,28 +1,26 @@
-// Inicio: Music Page --- //
-
 .music.second-page {
   ::-webkit-scrollbar {
-    width: 16px; /* Ancho de la barra */
+    width: 16px;
   }
 
   ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.3); /* Color del fondo de la barra */
+    background: rgba(0, 0, 0, 0.3);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: inherit; /* Color de la barra deslizadora */
-    border-radius: 5px; /* Bordes redondeados */
+    background: inherit;
+    border-radius: 5px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: inherit; /* Color al pasar el mouse */
+    background: inherit;
   }
 
   /* Para Firefox */
 
   * {
-    scrollbar-width: inherit; /* 'thin' o 'auto' */
-    scrollbar-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.2); /* Color de la barra y del track */
+    scrollbar-width: inherit;
+    scrollbar-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -90,5 +88,3 @@
 .active-song {
   background-color: red;
 }
-
-// Fin: Music Page --- //
