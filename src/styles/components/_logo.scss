@@ -1,6 +1,5 @@
 @use "../_variables.scss" as *;
 
-// --- Inicio: Logo --- //
 .logo {
   font-family: $font-family-primary;
   text-transform: uppercase;
@@ -10,5 +9,3 @@
     color: $accent-color;
   }
 }
-
-// --- Fin: Logo --- //

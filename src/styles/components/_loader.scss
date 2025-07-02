@@ -1,6 +1,5 @@
 @use "../_variables.scss" as *;
 
-// --- Inicio: Loader --- //
 .loader__container {
   position: fixed;
   top: 0;
@@ -39,5 +38,3 @@
     opacity: 1;
   }
 }
-
-// --- Fin: Loader --- //
