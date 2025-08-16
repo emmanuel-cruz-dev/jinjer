@@ -9,13 +9,13 @@ function Media() {
   return (
     <section className="scroll-top-margin media py-16 mx-auto" id="media">
       <article className="container flex flex-col justify-center items-center gap-12 mx-auto">
-        <div className="text-center flex flex-col gap-4">
+        <header className="text-center flex flex-col gap-4">
           <h2 className="logo text-5xl">
             Multi<span>media</span>
           </h2>
           <p className="text-lg">{t("media.description")}.</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 w-full">
+        </header>
+        <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 w-full">
           <VideoCard
             video={
               "https://www.youtube-nocookie.com/embed/637ER6dlGDg?si=aEpuXwqMSITyNBYl?rel=0&modestbranding=1&playsinline=1"
@@ -70,7 +70,7 @@ function Media() {
               />
             </>
           )}
-        </div>
+        </main>
         <button onClick={toggleVisibility} className="red__btn rounded-none">
           {isVisible ? t("media.seeLess") : t("media.seeMore")}
         </button>
