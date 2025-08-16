@@ -10,18 +10,18 @@ function News() {
       id="news-section"
     >
       <article className="container flex flex-col justify-center items-center gap-16 mx-auto">
-        <div className="text-center flex flex-col gap-4">
+        <header className="text-center flex flex-col gap-4">
           <h2 className="logo text-5xl">
             {t("news.title1")}
             <span>{t("news.titleSpan")}</span>
             {t("news.title2")}
           </h2>
           <p className="text-lg">{t("news.description")}</p>
-        </div>
+        </header>
 
-        <div className="latest-news__carousel">
+        <main className="latest-news__carousel">
           <Carousel />
-        </div>
+        </main>
       </article>
     </section>
   );
