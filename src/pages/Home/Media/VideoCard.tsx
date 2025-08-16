@@ -6,7 +6,7 @@ const VideoCard: FC<VideoCardProps> = ({ video, title, paragraph, views }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex justify-center flex-col gap-4">
+    <article className="flex justify-center flex-col gap-4">
       <iframe
         loading="lazy"
         className="grow w-full"
@@ -38,7 +38,7 @@ const VideoCard: FC<VideoCardProps> = ({ video, title, paragraph, views }) => {
           <span>{t("media.watch")}</span>
         </a>
       </div>
-    </div>
+    </article>
   );
 };
 
